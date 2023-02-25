@@ -1,8 +1,0 @@
-//
-// File created by:  xrun
-// Do not modify this file
-
-s1::(25Feb2023:04:26:38):( irun -access +rwc pid.sv pid_checker.sv handshake_classifier.sv handshake_lenght_monitor.sv top.sv tb.sv )
-s2::(25Feb2023:06:31:51):( irun -access +rwc pid.sv pid_checker.sv handshake_classifier.sv handshake_lenght_monitor.sv top.sv tb.sv )
-s3::(25Feb2023:06:33:58):( irun -access +rwc pid.sv pid_checker.sv handshake_classifier.sv handshake_lenght_monitor.sv top.sv tb_new.sv )
-s4::(25Feb2023:16:46:51):( irun -access +rwc pid.sv pid_checker.sv handshake_classifier.sv handshake_lenght_monitor.sv top.sv tb_new.sv )
