@@ -1,5 +1,5 @@
 xrun(64): 20.09-s009: (c) Copyright 1995-2021 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	20.09-s009: Started on Mar 24, 2023 at 21:50:48 IST
+TOOL:	xrun(64)	20.09-s009: Started on Mar 24, 2023 at 22:27:40 IST
 xrun
 	-uvm
 	-sv
@@ -253,9 +253,9 @@ xrun
 	+PTE_HEX_FILE=/home/train70/Desktop/print_checker/dc_jalr/c_tests/bin/pte.hex
 	+UVM_TESTNAME=trace_test
 	+C_TEST=dc_jalr
-	+ntb_random_seed=60013
-	+log_dir=/home/train70/Desktop/print_checker/dc_jalr/sim/results/logs/pinaka_60013
-	-l /home/train70/Desktop/print_checker/dc_jalr/sim/results/logs/pinaka_60013/rtl_run.log
+	+ntb_random_seed=64858
+	+log_dir=/home/train70/Desktop/print_checker/dc_jalr/sim/results/logs/pinaka_64858
+	-l /home/train70/Desktop/print_checker/dc_jalr/sim/results/logs/pinaka_64858/rtl_run.log
 
    User defined plus("+") options:
 	+pte_resp_delay=0
@@ -263,8 +263,8 @@ xrun
 	+DATA_FILE=/home/train70/Desktop/print_checker/dc_jalr/c_tests/bin/dc_jalr_data.hex
 	+PTE_HEX_FILE=/home/train70/Desktop/print_checker/dc_jalr/c_tests/bin/pte.hex
 	+C_TEST=dc_jalr
-	+ntb_random_seed=60013
-	+log_dir=/home/train70/Desktop/print_checker/dc_jalr/sim/results/logs/pinaka_60013
+	+ntb_random_seed=64858
+	+log_dir=/home/train70/Desktop/print_checker/dc_jalr/sim/results/logs/pinaka_64858
 
 Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /tools/eda/cadence/XCELIUM2009/tools/methodology/UVM/CDNS-1.1d
 file: ../rtl/ip/axi2apb_bridge/axi_typedef_pkg.sv
@@ -941,11 +941,8 @@ file: ../dv/tb/pkg/tb_sync_pkg.sv
 	package worklib.tb_sync_pkg:sv
 		errors: 0, warnings: 0
 file: ../dv/tb/pkg/soc_tb_pkg.sv
-            expected_queue.pop_front();
-                                   |
-xmvlog: *W,FUNTSK (../dv/tb/agents/trace_agent/trace_scoreboard.sv,969|35): function called as a task without void'().
 	package worklib.tb_pkg:sv
-		errors: 0, warnings: 1
+		errors: 0, warnings: 0
 file: ../dv/tb/top/chip_top_tb.v
 	interface worklib.i2c_if:sv
 		errors: 0, warnings: 0
@@ -1514,461 +1511,461 @@ xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-
 			streams:  22, words: 19375
 		worklib.uvm_pkg:sv <0x496cda04>
 			streams:  23, words: 29436
-		worklib.uvm_pkg:sv <0x1128764b>
+		worklib.uvm_pkg:sv <0x619dedb1>
 			streams:  26, words: 50090
-		worklib.uvm_pkg:sv <0x17369954>
+		worklib.uvm_pkg:sv <0x7d91e57f>
 			streams:  22, words: 22495
-		worklib.uvm_pkg:sv <0x02ab0704>
+		worklib.uvm_pkg:sv <0x04d553da>
 			streams:  22, words: 17750
-		worklib.uvm_pkg:sv <0x4c3b4571>
+		worklib.uvm_pkg:sv <0x189b877a>
 			streams:  22, words: 30050
-		worklib.uvm_pkg:sv <0x08c358cd>
+		worklib.uvm_pkg:sv <0x60936dd7>
 			streams:  22, words: 22122
-		worklib.uvm_pkg:sv <0x36de1745>
+		worklib.uvm_pkg:sv <0x54a9b5a9>
 			streams:  22, words: 36908
-		worklib.uvm_pkg:sv <0x3fc6c99b>
+		worklib.uvm_pkg:sv <0x7f88ebe0>
 			streams:  21, words: 19072
-		worklib.uvm_pkg:sv <0x56331b4e>
+		worklib.uvm_pkg:sv <0x6df12995>
 			streams:  21, words: 17492
-		worklib.uvm_pkg:sv <0x7abc6c0a>
+		worklib.uvm_pkg:sv <0x4caba85e>
 			streams:  21, words: 21458
-		worklib.uvm_pkg:sv <0x037cd9d7>
+		worklib.uvm_pkg:sv <0x64647ba7>
 			streams:  21, words: 27409
-		worklib.uvm_pkg:sv <0x7f494814>
+		worklib.uvm_pkg:sv <0x23149968>
 			streams:  23, words: 47210
-		worklib.uvm_pkg:sv <0x3ca6fae9>
+		worklib.uvm_pkg:sv <0x07e8508c>
 			streams:  23, words: 35028
-		worklib.uvm_pkg:sv <0x35218dbb>
+		worklib.uvm_pkg:sv <0x35498437>
 			streams:  20, words: 58127
-		worklib.uvm_pkg:sv <0x4b9720ea>
+		worklib.uvm_pkg:sv <0x28d7c0b6>
 			streams:  30, words: 164778
-		worklib.uvm_pkg:sv <0x5fd842e3>
+		worklib.uvm_pkg:sv <0x30fdc193>
 			streams:  21, words: 24120
-		worklib.uvm_pkg:sv <0x64cabdb2>
+		worklib.uvm_pkg:sv <0x21e97c18>
 			streams:  20, words: 17585
-		worklib.uvm_pkg:sv <0x3d46b4e8>
+		worklib.uvm_pkg:sv <0x409ffd84>
 			streams:  20, words: 22661
-		worklib.uvm_pkg:sv <0x1a708547>
+		worklib.uvm_pkg:sv <0x6886b05b>
 			streams:  20, words: 19115
-		worklib.uvm_pkg:sv <0x28783507>
+		worklib.uvm_pkg:sv <0x5f81f6de>
 			streams:  21, words: 25799
-		worklib.uvm_pkg:sv <0x4450effb>
+		worklib.uvm_pkg:sv <0x7e3c8c41>
 			streams:  21, words: 30398
-		worklib.uvm_pkg:sv <0x17cc5c87>
+		worklib.uvm_pkg:sv <0x4b53e187>
 			streams:  20, words: 28121
-		worklib.uvm_pkg:sv <0x6bff3d6a>
+		worklib.uvm_pkg:sv <0x4ecfc8ea>
 			streams:  20, words: 34516
-		worklib.uvm_pkg:sv <0x60ca7c9e>
+		worklib.uvm_pkg:sv <0x2394d9c8>
 			streams:  20, words: 29783
-		worklib.uvm_pkg:sv <0x4e0fd0c7>
+		worklib.uvm_pkg:sv <0x7ac5fc34>
 			streams:  21, words: 18204
-		worklib.uvm_pkg:sv <0x7dd4a475>
+		worklib.uvm_pkg:sv <0x2979c455>
 			streams:  20, words: 16622
-		worklib.uvm_pkg:sv <0x1777b551>
+		worklib.uvm_pkg:sv <0x7948b748>
 			streams:  24, words: 49855
-		worklib.uvm_pkg:sv <0x7edfa187>
+		worklib.uvm_pkg:sv <0x5544a907>
 			streams:  20, words: 16622
-		worklib.uvm_pkg:sv <0x6caaf609>
+		worklib.uvm_pkg:sv <0x7f738803>
 			streams:  24, words: 52616
-		worklib.uvm_pkg:sv <0x2c709d30>
+		worklib.uvm_pkg:sv <0x165c7fcd>
 			streams:  20, words: 15351
-		worklib.uvm_pkg:sv <0x3e3acaff>
+		worklib.uvm_pkg:sv <0x16c7fcfd>
 			streams:  21, words: 17519
-		worklib.uvm_pkg:sv <0x2c6db34a>
+		worklib.uvm_pkg:sv <0x3c35c840>
 			streams:  24, words: 49875
-		worklib.uvm_pkg:sv <0x67bab9b4>
+		worklib.uvm_pkg:sv <0x4cb6546a>
 			streams:  20, words: 16622
-		worklib.uvm_pkg:sv <0x2bb8e919>
+		worklib.uvm_pkg:sv <0x294c5cf7>
 			streams:  24, words: 44615
-		worklib.uvm_pkg:sv <0x0175a91f>
+		worklib.uvm_pkg:sv <0x3e70adf7>
 			streams:  20, words: 16622
-		worklib.uvm_pkg:sv <0x697f0e33>
+		worklib.uvm_pkg:sv <0x559c1154>
 			streams:  24, words: 44621
-		worklib.uvm_pkg:sv <0x6cf65498>
+		worklib.uvm_pkg:sv <0x63cc7b05>
 			streams:  20, words: 16622
-		worklib.uvm_pkg:sv <0x06801c88>
+		worklib.uvm_pkg:sv <0x2067e43f>
 			streams:  24, words: 49875
-		worklib.uvm_pkg:sv <0x1c7b2c56>
+		worklib.uvm_pkg:sv <0x53eb766d>
 			streams:  20, words: 16622
-		worklib.uvm_pkg:sv <0x01555d8a>
+		worklib.uvm_pkg:sv <0x2f4cce60>
 			streams:  24, words: 49067
-		worklib.uvm_pkg:sv <0x60c5381f>
+		worklib.uvm_pkg:sv <0x0dd1ba40>
 			streams:  20, words: 16622
-		worklib.uvm_pkg:sv <0x4bae37cc>
+		worklib.uvm_pkg:sv <0x3ece1a51>
 			streams:  24, words: 50579
-		worklib.uvm_pkg:sv <0x4ae1831c>
+		worklib.uvm_pkg:sv <0x704315ac>
 			streams:  20, words: 16622
-		worklib.uvm_pkg:sv <0x5cbc1a26>
+		worklib.uvm_pkg:sv <0x007daef8>
 			streams:  24, words: 49869
-		worklib.uvm_pkg:sv <0x09e6c499>
+		worklib.uvm_pkg:sv <0x6b115102>
 			streams:  20, words: 16622
-		worklib.uvm_pkg:sv <0x247e86f7>
+		worklib.uvm_pkg:sv <0x7e390b61>
 			streams:  24, words: 49047
-		worklib.uvm_pkg:sv <0x58c232ea>
+		worklib.uvm_pkg:sv <0x055e3fa0>
 			streams:  20, words: 16622
-		worklib.uvm_pkg:sv <0x58f432de>
+		worklib.uvm_pkg:sv <0x0389e144>
 			streams:  24, words: 49865
-		worklib.uvm_pkg:sv <0x5bd3bbcd>
+		worklib.uvm_pkg:sv <0x172bddb6>
 			streams:  20, words: 16622
-		worklib.uvm_pkg:sv <0x02235602>
+		worklib.uvm_pkg:sv <0x264b8fc2>
 			streams:  24, words: 49875
-		worklib.uvm_pkg:sv <0x56e8440c>
+		worklib.uvm_pkg:sv <0x03a74e13>
 			streams:  20, words: 16622
-		worklib.uvm_pkg:sv <0x47bb267d>
+		worklib.uvm_pkg:sv <0x03cc1aa2>
 			streams:  24, words: 49067
-		worklib.uvm_pkg:sv <0x391617a8>
+		worklib.uvm_pkg:sv <0x06d4cf74>
 			streams:  20, words: 16622
-		worklib.uvm_pkg:sv <0x6af394c1>
+		worklib.uvm_pkg:sv <0x14ea924e>
 			streams:  24, words: 49865
-		worklib.uvm_pkg:sv <0x2ecb0eb0>
+		worklib.uvm_pkg:sv <0x04c4201d>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x7c58d398>
+		worklib.uvm_pkg:sv <0x2befe9b4>
 			streams:  23, words: 25557
-		worklib.uvm_pkg:sv <0x0b5cef41>
+		worklib.uvm_pkg:sv <0x03779e4c>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x7822ecfe>
+		worklib.uvm_pkg:sv <0x33a8f89f>
 			streams:  23, words: 27747
-		worklib.uvm_pkg:sv <0x61582c08>
+		worklib.uvm_pkg:sv <0x6909f401>
 			streams:  23, words: 139900
-		worklib.uvm_pkg:sv <0x2ca915d6>
+		worklib.uvm_pkg:sv <0x72f96672>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x3f953479>
+		worklib.uvm_pkg:sv <0x0c05f6ee>
 			streams:  23, words: 25557
-		worklib.uvm_pkg:sv <0x4541229c>
+		worklib.uvm_pkg:sv <0x4c223477>
 			streams:  23, words: 71543
-		worklib.uvm_pkg:sv <0x14aefbee>
+		worklib.uvm_pkg:sv <0x658f2770>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x4b920c09>
+		worklib.uvm_pkg:sv <0x3518cccb>
 			streams:  23, words: 25557
-		worklib.uvm_pkg:sv <0x670ea372>
+		worklib.uvm_pkg:sv <0x1ad999ec>
 			streams:  23, words: 99475
-		worklib.uvm_pkg:sv <0x14901951>
+		worklib.uvm_pkg:sv <0x0ec1d224>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x019782d9>
+		worklib.uvm_pkg:sv <0x14034fd8>
 			streams:  23, words: 25557
-		worklib.uvm_pkg:sv <0x7a4649d2>
+		worklib.uvm_pkg:sv <0x64c4d782>
 			streams:  23, words: 71549
-		worklib.uvm_pkg:sv <0x1a6c77ce>
+		worklib.uvm_pkg:sv <0x387cb239>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x1b3e4e38>
+		worklib.uvm_pkg:sv <0x29062570>
 			streams:  23, words: 25557
-		worklib.uvm_pkg:sv <0x26d8c75e>
+		worklib.uvm_pkg:sv <0x75a84109>
 			streams:  23, words: 98195
-		worklib.uvm_pkg:sv <0x522db730>
+		worklib.uvm_pkg:sv <0x1bfaf7db>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x0bcda820>
+		worklib.uvm_pkg:sv <0x301a10f1>
 			streams:  23, words: 25557
-		worklib.uvm_pkg:sv <0x0caa48f1>
+		worklib.uvm_pkg:sv <0x762d3554>
 			streams:  23, words: 71549
-		worklib.uvm_pkg:sv <0x0335d145>
+		worklib.uvm_pkg:sv <0x63789e27>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x6b4ca527>
+		worklib.uvm_pkg:sv <0x1d36785b>
 			streams:  23, words: 25557
-		worklib.uvm_pkg:sv <0x3d6b264c>
+		worklib.uvm_pkg:sv <0x4bc43e88>
 			streams:  23, words: 99487
-		worklib.uvm_pkg:sv <0x35281c30>
+		worklib.uvm_pkg:sv <0x2d5be2f1>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x4c1b9fbd>
+		worklib.uvm_pkg:sv <0x1dbfe22d>
 			streams:  23, words: 25557
-		worklib.uvm_pkg:sv <0x7505889c>
+		worklib.uvm_pkg:sv <0x0f82f539>
 			streams:  23, words: 71543
-		worklib.uvm_pkg:sv <0x28add4a1>
+		worklib.uvm_pkg:sv <0x3827b219>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x635d1991>
+		worklib.uvm_pkg:sv <0x7642654e>
 			streams:  23, words: 25557
-		worklib.uvm_pkg:sv <0x28208d27>
+		worklib.uvm_pkg:sv <0x7b26935e>
 			streams:  23, words: 99475
-		worklib.uvm_pkg:sv <0x0b103659>
+		worklib.uvm_pkg:sv <0x79356216>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x0b8c52df>
+		worklib.uvm_pkg:sv <0x762a490e>
 			streams:  23, words: 25557
-		worklib.uvm_pkg:sv <0x700c2aa9>
+		worklib.uvm_pkg:sv <0x653930e1>
 			streams:  23, words: 29802
-		worklib.uvm_pkg:sv <0x40af4d18>
+		worklib.uvm_pkg:sv <0x0a8aafbb>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x329b80fb>
+		worklib.uvm_pkg:sv <0x1d72d853>
 			streams:  23, words: 56036
-		worklib.uvm_pkg:sv <0x02a4be91>
+		worklib.uvm_pkg:sv <0x434cc649>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x60cb0ffd>
+		worklib.uvm_pkg:sv <0x0d35c17f>
 			streams:  23, words: 44318
-		worklib.uvm_pkg:sv <0x678a318c>
+		worklib.uvm_pkg:sv <0x5a692852>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x0a1527b9>
+		worklib.uvm_pkg:sv <0x19c2f12e>
 			streams:  23, words: 54137
-		worklib.uvm_pkg:sv <0x5d131622>
+		worklib.uvm_pkg:sv <0x3ee43d52>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x017da5fc>
+		worklib.uvm_pkg:sv <0x773564a3>
 			streams:  23, words: 62438
-		worklib.uvm_pkg:sv <0x47ac064c>
+		worklib.uvm_pkg:sv <0x1caa2348>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x4cc4bdfb>
+		worklib.uvm_pkg:sv <0x4c936ca0>
 			streams:  23, words: 47130
-		worklib.uvm_pkg:sv <0x7d29e924>
+		worklib.uvm_pkg:sv <0x2a9c0556>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x01c09a61>
+		worklib.uvm_pkg:sv <0x5a3b1fc9>
 			streams:  23, words: 62042
-		worklib.uvm_pkg:sv <0x3b86d22d>
+		worklib.uvm_pkg:sv <0x01eb8a55>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x1f62cb41>
+		worklib.uvm_pkg:sv <0x51393575>
 			streams:  23, words: 51983
-		worklib.uvm_pkg:sv <0x316878c4>
+		worklib.uvm_pkg:sv <0x483eeda7>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x08223419>
+		worklib.uvm_pkg:sv <0x12194494>
 			streams:  23, words: 46473
-		worklib.uvm_pkg:sv <0x12e87d14>
+		worklib.uvm_pkg:sv <0x5e1b7e70>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x1ca76d98>
+		worklib.uvm_pkg:sv <0x5ea68329>
 			streams:  23, words: 41385
-		worklib.uvm_pkg:sv <0x469411f1>
+		worklib.uvm_pkg:sv <0x31600263>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x1ff97158>
+		worklib.uvm_pkg:sv <0x48cadce6>
 			streams:  23, words: 47206
-		worklib.uvm_pkg:sv <0x2f7480ba>
+		worklib.uvm_pkg:sv <0x53770b04>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x74f6dda5>
+		worklib.uvm_pkg:sv <0x7e34335c>
 			streams:  23, words: 29810
-		worklib.uvm_pkg:sv <0x321f65fa>
+		worklib.uvm_pkg:sv <0x40861d40>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x467a34b0>
+		worklib.uvm_pkg:sv <0x7a23baa7>
 			streams:  23, words: 24349
-		worklib.uvm_pkg:sv <0x6ed2b7a2>
+		worklib.uvm_pkg:sv <0x471e0d50>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x556dd153>
+		worklib.uvm_pkg:sv <0x3a1dd532>
 			streams:  23, words: 35112
-		worklib.uvm_pkg:sv <0x3d5239c3>
+		worklib.uvm_pkg:sv <0x7d324bf8>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x41201e2c>
+		worklib.uvm_pkg:sv <0x184b0e19>
 			streams:  23, words: 35106
-		worklib.uvm_pkg:sv <0x0cd2052e>
+		worklib.uvm_pkg:sv <0x0c65afa3>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x150727e5>
+		worklib.uvm_pkg:sv <0x6427629e>
 			streams:  23, words: 35565
-		worklib.uvm_pkg:sv <0x792671a5>
+		worklib.uvm_pkg:sv <0x7c63b3a1>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x3996befc>
+		worklib.uvm_pkg:sv <0x5a79b22a>
 			streams:  23, words: 34257
-		worklib.uvm_pkg:sv <0x61c150a3>
+		worklib.uvm_pkg:sv <0x7f5cb1db>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x2034946a>
+		worklib.uvm_pkg:sv <0x0f082776>
 			streams:  23, words: 45467
-		worklib.uvm_pkg:sv <0x7096ab7d>
+		worklib.uvm_pkg:sv <0x15a80c6e>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x66359a23>
+		worklib.uvm_pkg:sv <0x7a3be957>
 			streams:  23, words: 32818
-		worklib.uvm_pkg:sv <0x126d415e>
+		worklib.uvm_pkg:sv <0x77ec18f4>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x2514935d>
+		worklib.uvm_pkg:sv <0x0d1f3e49>
 			streams:  23, words: 34502
-		worklib.uvm_pkg:sv <0x1a9694ed>
+		worklib.uvm_pkg:sv <0x34c3516b>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x5ae15e54>
+		worklib.uvm_pkg:sv <0x3970f3c6>
 			streams:  23, words: 34790
-		worklib.uvm_pkg:sv <0x757b863a>
+		worklib.uvm_pkg:sv <0x6478300d>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x0a6867ec>
+		worklib.uvm_pkg:sv <0x79a32b06>
 			streams:  23, words: 37184
-		worklib.uvm_pkg:sv <0x0d00645e>
+		worklib.uvm_pkg:sv <0x68007e5b>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x379a9e08>
+		worklib.uvm_pkg:sv <0x4e228231>
 			streams:  23, words: 37184
-		worklib.uvm_pkg:sv <0x642f2b43>
+		worklib.uvm_pkg:sv <0x69f2da7f>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x077334e4>
+		worklib.uvm_pkg:sv <0x3b8c5a22>
 			streams:  23, words: 53575
-		worklib.uvm_pkg:sv <0x43166ef5>
+		worklib.uvm_pkg:sv <0x0a116146>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x10d20e1a>
+		worklib.uvm_pkg:sv <0x0a229945>
 			streams:  23, words: 29763
-		worklib.uvm_pkg:sv <0x53036644>
+		worklib.uvm_pkg:sv <0x64156d7c>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x0223e99c>
+		worklib.uvm_pkg:sv <0x48cdb742>
 			streams:  24, words: 37974
-		worklib.uvm_pkg:sv <0x375deb1e>
+		worklib.uvm_pkg:sv <0x41eb5e6e>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x21d614c8>
+		worklib.uvm_pkg:sv <0x5062b0fd>
 			streams:  24, words: 37128
-		worklib.uvm_pkg:sv <0x2ee339bf>
+		worklib.uvm_pkg:sv <0x407bba0d>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x5fee20d0>
+		worklib.uvm_pkg:sv <0x23fb60d5>
 			streams:  23, words: 37097
-		worklib.uvm_pkg:sv <0x05b01406>
+		worklib.uvm_pkg:sv <0x3d1d7eaa>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x2194b9be>
+		worklib.uvm_pkg:sv <0x161d740d>
 			streams:  23, words: 87343
-		worklib.uvm_pkg:sv <0x196956f7>
+		worklib.uvm_pkg:sv <0x220ab342>
 			streams:  21, words: 15646
-		worklib.uvm_pkg:sv <0x79345b99>
+		worklib.uvm_pkg:sv <0x09ba5d39>
 			streams:  23, words: 24250
-		worklib.uvm_pkg:sv <0x71ee65b2>
+		worklib.uvm_pkg:sv <0x7ac45c4a>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x4b745df1>
+		worklib.uvm_pkg:sv <0x31e1ca88>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x7404c796>
+		worklib.uvm_pkg:sv <0x5fcb1ea2>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x27b3ee47>
+		worklib.uvm_pkg:sv <0x3ff5dfd7>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x5e78a605>
+		worklib.uvm_pkg:sv <0x1729c1b9>
 			streams:  23, words: 47044
-		worklib.uvm_pkg:sv <0x63aa19dc>
+		worklib.uvm_pkg:sv <0x6915357c>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x75f67804>
+		worklib.uvm_pkg:sv <0x04703093>
 			streams:  23, words: 29268
-		worklib.uvm_pkg:sv <0x564e931c>
+		worklib.uvm_pkg:sv <0x754d4d5c>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x438a7a4a>
+		worklib.uvm_pkg:sv <0x11d7f332>
 			streams:  23, words: 29036
-		worklib.uvm_pkg:sv <0x1571ab1d>
+		worklib.uvm_pkg:sv <0x11019c06>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x0b5570c0>
+		worklib.uvm_pkg:sv <0x430f68d7>
 			streams:  23, words: 142991
-		worklib.uvm_pkg:sv <0x53bdcf62>
+		worklib.uvm_pkg:sv <0x04f4a229>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x08f9bcf8>
+		worklib.uvm_pkg:sv <0x5b11b3f2>
 			streams:  23, words: 44099
-		worklib.uvm_pkg:sv <0x2de51fe1>
+		worklib.uvm_pkg:sv <0x72200a53>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x47018c66>
+		worklib.uvm_pkg:sv <0x0504d85c>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x1bb9be6f>
+		worklib.uvm_pkg:sv <0x73db0efd>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x2f88ab98>
+		worklib.uvm_pkg:sv <0x5748d9cb>
 			streams:  23, words: 41584
-		worklib.uvm_pkg:sv <0x07d18d6b>
+		worklib.uvm_pkg:sv <0x4db98eff>
 			streams:  23, words: 70287
-		worklib.uvm_pkg:sv <0x534d21e7>
+		worklib.uvm_pkg:sv <0x15a04a92>
 			streams:  23, words: 28882
-		worklib.uvm_pkg:sv <0x34d53e26>
+		worklib.uvm_pkg:sv <0x311b095e>
 			streams:  23, words: 29380
-		worklib.uvm_pkg:sv <0x03eef3a1>
+		worklib.uvm_pkg:sv <0x51f3419a>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x7f975687>
+		worklib.uvm_pkg:sv <0x0a030274>
 			streams:  23, words: 50877
-		worklib.uvm_pkg:sv <0x66e1be82>
+		worklib.uvm_pkg:sv <0x529cc787>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x50425705>
+		worklib.uvm_pkg:sv <0x14050f52>
 			streams:  23, words: 52357
-		worklib.uvm_pkg:sv <0x61fbd5d0>
+		worklib.uvm_pkg:sv <0x11e0e331>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x7a4c178e>
+		worklib.uvm_pkg:sv <0x5b6f2c2b>
 			streams:  23, words: 29179
-		worklib.uvm_pkg:sv <0x64e4a506>
+		worklib.uvm_pkg:sv <0x3a248b94>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x4d016c9c>
+		worklib.uvm_pkg:sv <0x5c7f1f43>
 			streams:  23, words: 38883
-		worklib.uvm_pkg:sv <0x0428f4bf>
+		worklib.uvm_pkg:sv <0x3e351140>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x769ccb5e>
+		worklib.uvm_pkg:sv <0x66719593>
 			streams:  23, words: 42056
-		worklib.uvm_pkg:sv <0x5041adf2>
+		worklib.uvm_pkg:sv <0x77b4f2e2>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x5cbb857d>
+		worklib.uvm_pkg:sv <0x5364cb9c>
 			streams:  23, words: 41272
-		worklib.uvm_pkg:sv <0x18eef50b>
+		worklib.uvm_pkg:sv <0x3299e30e>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x05e52ef8>
+		worklib.uvm_pkg:sv <0x069e5554>
 			streams:  23, words: 51162
-		worklib.uvm_pkg:sv <0x73b0f980>
+		worklib.uvm_pkg:sv <0x77237a5a>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x2529c0cc>
+		worklib.uvm_pkg:sv <0x4d62fd9a>
 			streams:  23, words: 50877
-		worklib.uvm_pkg:sv <0x3c868de3>
+		worklib.uvm_pkg:sv <0x452b3507>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x608726c8>
+		worklib.uvm_pkg:sv <0x5744384b>
 			streams:  23, words: 29663
-		worklib.uvm_pkg:sv <0x0dd46614>
+		worklib.uvm_pkg:sv <0x711cd3cf>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x64867c75>
+		worklib.uvm_pkg:sv <0x7f59fbdb>
 			streams:  23, words: 72268
-		worklib.uvm_pkg:sv <0x188472e3>
+		worklib.uvm_pkg:sv <0x5ef9982b>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x0d468109>
+		worklib.uvm_pkg:sv <0x44fa62a3>
 			streams:  23, words: 29663
-		worklib.uvm_pkg:sv <0x1f3b43ed>
+		worklib.uvm_pkg:sv <0x4be34cc0>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x238c87f2>
+		worklib.uvm_pkg:sv <0x123c5eec>
 			streams:  23, words: 57143
-		worklib.uvm_pkg:sv <0x4ee0e7a9>
+		worklib.uvm_pkg:sv <0x55b8f6ad>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x3dfab4f0>
+		worklib.uvm_pkg:sv <0x55338be2>
 			streams:  23, words: 58576
-		worklib.uvm_pkg:sv <0x7e5b49a1>
+		worklib.uvm_pkg:sv <0x7b204d6d>
 			streams:  20, words: 17550
-		worklib.uvm_pkg:sv <0x09e8f535>
+		worklib.uvm_pkg:sv <0x67832d92>
 			streams:  20, words: 16301
-		worklib.uvm_pkg:sv <0x3ed2aa2f>
+		worklib.uvm_pkg:sv <0x71241bbc>
 			streams:  20, words: 17550
-		worklib.uvm_pkg:sv <0x1b56a9b0>
+		worklib.uvm_pkg:sv <0x60c95744>
 			streams:  20, words: 15392
-		worklib.uvm_pkg:sv <0x54631fcb>
+		worklib.uvm_pkg:sv <0x28157cc6>
 			streams:  20, words: 18620
-		worklib.uvm_pkg:sv <0x23ece9b4>
+		worklib.uvm_pkg:sv <0x02fd1083>
 			streams:  20, words: 15670
-		worklib.uvm_pkg:sv <0x14c358de>
+		worklib.uvm_pkg:sv <0x163cd9e5>
 			streams:  20, words: 53010
-		worklib.uvm_pkg:sv <0x26d7d807>
+		worklib.uvm_pkg:sv <0x48ce0493>
 			streams:  21, words: 22326
-		worklib.uvm_pkg:sv <0x5d16d26c>
+		worklib.uvm_pkg:sv <0x32c0e6b3>
 			streams:  20, words: 15392
-		worklib.uvm_pkg:sv <0x11d09b09>
+		worklib.uvm_pkg:sv <0x2fd306c3>
 			streams:  20, words: 22650
-		worklib.uvm_pkg:sv <0x7eb5abaf>
+		worklib.uvm_pkg:sv <0x0cd3e8e0>
 			streams:  21, words: 23826
-		worklib.uvm_pkg:sv <0x788af5fc>
+		worklib.uvm_pkg:sv <0x797dabb6>
 			streams:  28, words: 29353
-		worklib.uvm_pkg:sv <0x40ff723c>
+		worklib.uvm_pkg:sv <0x53c5af2b>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x65f7dd75>
+		worklib.uvm_pkg:sv <0x7df723db>
 			streams:  23, words: 51945
-		worklib.uvm_pkg:sv <0x7328074e>
+		worklib.uvm_pkg:sv <0x1e9a6971>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x03452144>
+		worklib.uvm_pkg:sv <0x03c5425a>
 			streams:  23, words: 25664
-		worklib.uvm_pkg:sv <0x7d63a570>
+		worklib.uvm_pkg:sv <0x3cb8da4a>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x475850f6>
+		worklib.uvm_pkg:sv <0x3119fa87>
 			streams:  23, words: 60539
-		worklib.uvm_pkg:sv <0x24598f3e>
+		worklib.uvm_pkg:sv <0x334638c1>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x1baeed0e>
+		worklib.uvm_pkg:sv <0x2c7f21b1>
 			streams:  23, words: 67203
-		worklib.uvm_pkg:sv <0x019bba18>
+		worklib.uvm_pkg:sv <0x58e82b2b>
 			streams:  23, words: 29811
-		worklib.uvm_pkg:sv <0x19ffb11d>
+		worklib.uvm_pkg:sv <0x02392af5>
 			streams:  23, words: 29811
-		worklib.uvm_pkg:sv <0x7bb1ac1e>
+		worklib.uvm_pkg:sv <0x1eb8eb8f>
 			streams:  21, words: 30862
-		worklib.tb_pkg:sv <0x5e33adf6>
+		worklib.tb_pkg:sv <0x10881468>
 			streams:  22, words: 19823
-		worklib.tb_pkg:sv <0x17c9b13a>
+		worklib.tb_pkg:sv <0x03ae6139>
 			streams:  22, words: 37517
 		worklib.uvm_pkg:sv <0x444fa360>
 			streams:   7, words:  3099
-		worklib.uvm_pkg:sv <0x20c80fd0>
+		worklib.uvm_pkg:sv <0x3d29b0f8>
 			streams:  22, words: 19679
-		worklib.uvm_pkg:sv <0x4a7cd394>
+		worklib.uvm_pkg:sv <0x19cc64b4>
 			streams:  22, words: 19536
-		worklib.uvm_pkg:sv <0x631c29dd>
+		worklib.uvm_pkg:sv <0x7cec7caa>
 			streams:  46, words: 62353
-		worklib.uvm_pkg:sv <0x35d1c98c>
+		worklib.uvm_pkg:sv <0x5614aa2c>
 			streams: 111, words: 138975
-		worklib.tb_pkg:sv <0x1b172f57>
+		worklib.tb_pkg:sv <0x227e530b>
 			streams:  24, words: 77129
-		worklib.uvm_pkg:sv <0x4f608226>
+		worklib.uvm_pkg:sv <0x31ab16bb>
 			streams:  22, words: 24622
-		worklib.uvm_pkg:sv <0x13613bbd>
+		worklib.uvm_pkg:sv <0x30959883>
 			streams:  28, words: 21466
-		worklib.uvm_pkg:sv <0x1eac96ba>
+		worklib.uvm_pkg:sv <0x0865f9d8>
 			streams:  25, words: 62567
-		worklib.uvm_pkg:sv <0x56882a76>
+		worklib.uvm_pkg:sv <0x78321dd8>
 			streams:  22, words: 27046
-		worklib.uvm_pkg:sv <0x3e9f7c8c>
+		worklib.uvm_pkg:sv <0x02cc2a58>
 			streams:  21, words: 18395
 		worklib.uvm_pkg:sv <0x02e0c2f0>
 			streams:  79, words: 119607
 		worklib.uvm_pkg:sv <0x73028341>
 			streams:  22, words: 22212
-		worklib.uvm_pkg:sv <0x77684fc8>
+		worklib.uvm_pkg:sv <0x76a123dc>
 			streams:  81, words: 108828
 		worklib.uvm_pkg:sv <0x186327e4>
 			streams:  22, words: 42438
@@ -1996,61 +1993,61 @@ xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-
 			streams:  24, words: 49997
 		worklib.uvm_pkg:sv <0x3ecd92c3>
 			streams:  22, words: 30294
-		worklib.tb_pkg:sv <0x2e26707e>
-			streams:  45, words: 126193
+		worklib.tb_pkg:sv <0x17b00bbc>
+			streams:  45, words: 127937
 		worklib.uvm_pkg:sv <0x33516d65>
 			streams: 176, words: 200591
 		worklib.uvm_pkg:sv <0x004460f9>
 			streams:  22, words: 21500
-		worklib.uvm_pkg:sv <0x43735484>
+		worklib.uvm_pkg:sv <0x1e20f2b5>
 			streams:  22, words: 22458
-		worklib.uvm_pkg:sv <0x35c6cfe1>
+		worklib.uvm_pkg:sv <0x1f91a78b>
 			streams:  21, words: 19610
-		worklib.uvm_pkg:sv <0x391ce7b3>
+		worklib.uvm_pkg:sv <0x24c8391d>
 			streams: 101, words: 119753
-		worklib.uvm_pkg:sv <0x54151872>
+		worklib.uvm_pkg:sv <0x578137cc>
 			streams:  22, words: 20450
-		worklib.uvm_pkg:sv <0x0ec7d0eb>
+		worklib.uvm_pkg:sv <0x21115de6>
 			streams: 258, words: 311193
-		worklib.uvm_pkg:sv <0x79d88734>
+		worklib.uvm_pkg:sv <0x1407beb6>
 			streams:  22, words: 27254
-		worklib.uvm_pkg:sv <0x39a8e100>
+		worklib.uvm_pkg:sv <0x68827f51>
 			streams: 111, words: 129515
-		worklib.uvm_pkg:sv <0x52ff7e93>
+		worklib.uvm_pkg:sv <0x414dba6d>
 			streams:  81, words: 114428
-		worklib.uvm_pkg:sv <0x3ca11b9f>
+		worklib.uvm_pkg:sv <0x2dfc277c>
 			streams: 321, words: 384180
-		worklib.uvm_pkg:sv <0x7a347668>
+		worklib.uvm_pkg:sv <0x42ae95db>
 			streams:  22, words: 34495
-		worklib.uvm_pkg:sv <0x396a6bfc>
+		worklib.uvm_pkg:sv <0x31d28ee3>
 			streams:  20, words: 23219
-		worklib.uvm_pkg:sv <0x0ae777ca>
+		worklib.uvm_pkg:sv <0x547575a4>
 			streams:  76, words: 98930
 		worklib.uvm_pkg:sv <0x2277f042>
 			streams:   8, words:  4212
-		worklib.uvm_pkg:sv <0x02ee7817>
+		worklib.uvm_pkg:sv <0x1650f061>
 			streams:  23, words: 22148
-		worklib.uvm_pkg:sv <0x7f4bb82f>
+		worklib.uvm_pkg:sv <0x79e6c19f>
 			streams:  23, words: 37279
-		worklib.uvm_pkg:sv <0x676f39f7>
+		worklib.uvm_pkg:sv <0x0e9ac3e4>
 			streams: 175, words: 192363
-		worklib.uvm_pkg:sv <0x39bc7e7c>
+		worklib.uvm_pkg:sv <0x7224c477>
 			streams:  22, words: 59290
-		worklib.uvm_pkg:sv <0x1b64344b>
+		worklib.uvm_pkg:sv <0x15eb1864>
 			streams: 186, words: 235259
 		worklib.uvm_pkg:sv <0x15e46590>
 			streams:   7, words:  3099
-		worklib.uvm_pkg:sv <0x25da57f0>
+		worklib.uvm_pkg:sv <0x6475d9d2>
 			streams:  81, words: 114449
 		worklib.uvm_pkg:sv <0x0665fe5d>
 			streams:   7, words:  3099
-		worklib.uvm_pkg:sv <0x6b690ef8>
+		worklib.uvm_pkg:sv <0x49b79c05>
 			streams:  94, words: 191199
-		worklib.uvm_pkg:sv <0x562598a2>
+		worklib.uvm_pkg:sv <0x12538903>
 			streams:  22, words: 20548
-		worklib.uvm_pkg:sv <0x24aa92da>
+		worklib.uvm_pkg:sv <0x3031ccf2>
 			streams:  22, words: 38379
-		worklib.uvm_pkg:sv <0x695d2937>
+		worklib.uvm_pkg:sv <0x47fe8819>
 			streams:  23, words: 72461
 		worklib.chip_top_tb:v <0x643b698d>
 			streams: 651, words: 791747
@@ -10426,7 +10423,8 @@ TIME=2434639000
 ATVALID=1
 ATDATA = f091
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(926) @ 2434638750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434639000 ATVALID=1 ATDATA=f091
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2434638750: uvm_test_top.env_h.sb [SB] Waiting... DUT=f091 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(956) @ 2434638750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=9
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(968) @ 2434638750: uvm_test_top.env_h.sb [SB] Waiting... DUT=f091 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(65) @ 2434643750: uvm_test_top.env_h.agt.out_mon [MON_CLK] CLK : atvalid=1 atready=1 atdata=0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(106) @ 2434643750: uvm_test_top.env_h.agt.out_mon [MONITOR] Captured : atvalid=1 atdata=0000
 --------------------------------
@@ -10434,7 +10432,8 @@ TIME=2434644000
 ATVALID=1
 ATDATA = 0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(926) @ 2434643750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434644000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2434643750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(956) @ 2434643750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=9
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(968) @ 2434643750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434643750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0794 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(261) @ 2434643750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0794 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(346) @ 2434643750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0794
@@ -10445,7 +10444,8 @@ TIME=2434649000
 ATVALID=1
 ATDATA = 0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(926) @ 2434648750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434649000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2434648750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(956) @ 2434648750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=9
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(968) @ 2434648750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(65) @ 2434653750: uvm_test_top.env_h.agt.out_mon [MON_CLK] CLK : atvalid=1 atready=1 atdata=0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(106) @ 2434653750: uvm_test_top.env_h.agt.out_mon [MONITOR] Captured : atvalid=1 atdata=0000
 --------------------------------
@@ -10453,7 +10453,8 @@ TIME=2434654000
 ATVALID=1
 ATDATA = 0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(926) @ 2434653750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434654000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2434653750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(956) @ 2434653750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=9
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(968) @ 2434653750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(65) @ 2434678750: uvm_test_top.env_h.agt.out_mon [MON_CLK] CLK : atvalid=1 atready=1 atdata=f191
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(106) @ 2434678750: uvm_test_top.env_h.agt.out_mon [MONITOR] Captured : atvalid=1 atdata=f191
 --------------------------------
@@ -10461,7 +10462,8 @@ TIME=2434679000
 ATVALID=1
 ATDATA = f191
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(926) @ 2434678750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434679000 ATVALID=1 ATDATA=f191
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2434678750: uvm_test_top.env_h.sb [SB] Waiting... DUT=f191 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(956) @ 2434678750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=9
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(968) @ 2434678750: uvm_test_top.env_h.sb [SB] Waiting... DUT=f191 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(65) @ 2434683750: uvm_test_top.env_h.agt.out_mon [MON_CLK] CLK : atvalid=1 atready=1 atdata=0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(106) @ 2434683750: uvm_test_top.env_h.agt.out_mon [MONITOR] Captured : atvalid=1 atdata=0000
 --------------------------------
@@ -10469,7 +10471,8 @@ TIME=2434684000
 ATVALID=1
 ATDATA = 0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(926) @ 2434683750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434684000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2434683750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(956) @ 2434683750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=9
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(968) @ 2434683750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(65) @ 2434688750: uvm_test_top.env_h.agt.out_mon [MON_CLK] CLK : atvalid=1 atready=1 atdata=0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(106) @ 2434688750: uvm_test_top.env_h.agt.out_mon [MONITOR] Captured : atvalid=1 atdata=0000
 --------------------------------
@@ -10477,7 +10480,8 @@ TIME=2434689000
 ATVALID=1
 ATDATA = 0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(926) @ 2434688750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434689000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2434688750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(956) @ 2434688750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=9
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(968) @ 2434688750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(65) @ 2434693750: uvm_test_top.env_h.agt.out_mon [MON_CLK] CLK : atvalid=1 atready=1 atdata=0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(106) @ 2434693750: uvm_test_top.env_h.agt.out_mon [MONITOR] Captured : atvalid=1 atdata=0000
 --------------------------------
@@ -10485,7 +10489,8 @@ TIME=2434694000
 ATVALID=1
 ATDATA = 0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(926) @ 2434693750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434694000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2434693750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(956) @ 2434693750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=9
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(968) @ 2434693750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434693750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0798 del_valid=1 delta=0079c first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(261) @ 2434693750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0798 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(346) @ 2434693750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0798
@@ -10590,7 +10595,8 @@ TIME=2434999000
 ATVALID=1
 ATDATA = f491
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(926) @ 2434998750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434999000 ATVALID=1 ATDATA=f491
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2434998750: uvm_test_top.env_h.sb [SB] Waiting... DUT=f491 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(956) @ 2434998750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=11
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(968) @ 2434998750: uvm_test_top.env_h.sb [SB] Waiting... DUT=f491 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434998750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=07ec del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(261) @ 2434998750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07ec itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(346) @ 2434998750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=07ec
@@ -10601,7 +10607,8 @@ TIME=2435004000
 ATVALID=1
 ATDATA = 0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(926) @ 2435003750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435004000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2435003750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(956) @ 2435003750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=11
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(968) @ 2435003750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2435003750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=07f0 del_valid=1 delta=00078 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(261) @ 2435003750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07f0 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(346) @ 2435003750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=07f0
@@ -10612,7 +10619,8 @@ TIME=2435009000
 ATVALID=1
 ATDATA = 0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(926) @ 2435008750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435009000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2435008750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(956) @ 2435008750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=11
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(968) @ 2435008750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(65) @ 2435013750: uvm_test_top.env_h.agt.out_mon [MON_CLK] CLK : atvalid=1 atready=1 atdata=0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(106) @ 2435013750: uvm_test_top.env_h.agt.out_mon [MONITOR] Captured : atvalid=1 atdata=0000
 --------------------------------
@@ -10620,7 +10628,8 @@ TIME=2435014000
 ATVALID=1
 ATDATA = 0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(926) @ 2435013750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435014000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2435013750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(956) @ 2435013750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=11
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(968) @ 2435013750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2435023750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0078 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(261) @ 2435023750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0078 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(346) @ 2435023750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0078
@@ -10637,7 +10646,8 @@ TIME=2435039000
 ATVALID=1
 ATDATA = fb11
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(926) @ 2435038750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435039000 ATVALID=1 ATDATA=fb11
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2435038750: uvm_test_top.env_h.sb [SB] Waiting... DUT=fb11 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(956) @ 2435038750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=11
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(968) @ 2435038750: uvm_test_top.env_h.sb [SB] Waiting... DUT=fb11 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(65) @ 2435043750: uvm_test_top.env_h.agt.out_mon [MON_CLK] CLK : atvalid=1 atready=1 atdata=0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(106) @ 2435043750: uvm_test_top.env_h.agt.out_mon [MONITOR] Captured : atvalid=1 atdata=0000
 --------------------------------
@@ -10645,7 +10655,8 @@ TIME=2435044000
 ATVALID=1
 ATDATA = 0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(926) @ 2435043750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435044000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2435043750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(956) @ 2435043750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=11
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(968) @ 2435043750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(65) @ 2435048750: uvm_test_top.env_h.agt.out_mon [MON_CLK] CLK : atvalid=1 atready=1 atdata=0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(106) @ 2435048750: uvm_test_top.env_h.agt.out_mon [MONITOR] Captured : atvalid=1 atdata=0000
 --------------------------------
@@ -10653,7 +10664,8 @@ TIME=2435049000
 ATVALID=1
 ATDATA = 0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(926) @ 2435048750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435049000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2435048750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(956) @ 2435048750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=11
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(968) @ 2435048750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(65) @ 2435053750: uvm_test_top.env_h.agt.out_mon [MON_CLK] CLK : atvalid=1 atready=1 atdata=0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(106) @ 2435053750: uvm_test_top.env_h.agt.out_mon [MONITOR] Captured : atvalid=1 atdata=0000
 --------------------------------
@@ -10661,7 +10673,8 @@ TIME=2435054000
 ATVALID=1
 ATDATA = 0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(926) @ 2435053750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435054000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2435053750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(956) @ 2435053750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=11
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(968) @ 2435053750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2435058750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0084 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(261) @ 2435058750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0084 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(346) @ 2435058750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0084
@@ -10730,7 +10743,8 @@ TIME=2435269000
 ATVALID=1
 ATDATA = fe91
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(926) @ 2435268750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435269000 ATVALID=1 ATDATA=fe91
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2435268750: uvm_test_top.env_h.sb [SB] Waiting... DUT=fe91 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(956) @ 2435268750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=13
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(968) @ 2435268750: uvm_test_top.env_h.sb [SB] Waiting... DUT=fe91 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(65) @ 2435273750: uvm_test_top.env_h.agt.out_mon [MON_CLK] CLK : atvalid=1 atready=1 atdata=0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(106) @ 2435273750: uvm_test_top.env_h.agt.out_mon [MONITOR] Captured : atvalid=1 atdata=0000
 --------------------------------
@@ -10738,7 +10752,8 @@ TIME=2435274000
 ATVALID=1
 ATDATA = 0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(926) @ 2435273750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435274000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2435273750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(956) @ 2435273750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=13
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(968) @ 2435273750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(65) @ 2435278750: uvm_test_top.env_h.agt.out_mon [MON_CLK] CLK : atvalid=1 atready=1 atdata=0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(106) @ 2435278750: uvm_test_top.env_h.agt.out_mon [MONITOR] Captured : atvalid=1 atdata=0000
 --------------------------------
@@ -10746,7 +10761,8 @@ TIME=2435279000
 ATVALID=1
 ATDATA = 0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(926) @ 2435278750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435279000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2435278750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(956) @ 2435278750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=13
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(968) @ 2435278750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(65) @ 2435283750: uvm_test_top.env_h.agt.out_mon [MON_CLK] CLK : atvalid=1 atready=1 atdata=0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(106) @ 2435283750: uvm_test_top.env_h.agt.out_mon [MONITOR] Captured : atvalid=1 atdata=0000
 --------------------------------
@@ -10754,7 +10770,8 @@ TIME=2435284000
 ATVALID=1
 ATDATA = 0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(926) @ 2435283750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435284000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2435283750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(956) @ 2435283750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=13
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(968) @ 2435283750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(65) @ 2435308750: uvm_test_top.env_h.agt.out_mon [MON_CLK] CLK : atvalid=1 atready=1 atdata=0391
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(106) @ 2435308750: uvm_test_top.env_h.agt.out_mon [MONITOR] Captured : atvalid=1 atdata=0391
 --------------------------------
@@ -10762,7 +10779,8 @@ TIME=2435309000
 ATVALID=1
 ATDATA = 0391
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(926) @ 2435308750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435309000 ATVALID=1 ATDATA=0391
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2435308750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0391 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(956) @ 2435308750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=13
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(968) @ 2435308750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0391 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(65) @ 2435313750: uvm_test_top.env_h.agt.out_mon [MON_CLK] CLK : atvalid=1 atready=1 atdata=0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(106) @ 2435313750: uvm_test_top.env_h.agt.out_mon [MONITOR] Captured : atvalid=1 atdata=0000
 --------------------------------
@@ -10770,7 +10788,8 @@ TIME=2435314000
 ATVALID=1
 ATDATA = 0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(926) @ 2435313750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435314000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2435313750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(956) @ 2435313750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=13
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(968) @ 2435313750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(65) @ 2435318750: uvm_test_top.env_h.agt.out_mon [MON_CLK] CLK : atvalid=1 atready=1 atdata=0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(106) @ 2435318750: uvm_test_top.env_h.agt.out_mon [MONITOR] Captured : atvalid=1 atdata=0000
 --------------------------------
@@ -10778,7 +10797,8 @@ TIME=2435319000
 ATVALID=1
 ATDATA = 0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(926) @ 2435318750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435319000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2435318750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(956) @ 2435318750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=13
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(968) @ 2435318750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(65) @ 2435323750: uvm_test_top.env_h.agt.out_mon [MON_CLK] CLK : atvalid=1 atready=1 atdata=0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(106) @ 2435323750: uvm_test_top.env_h.agt.out_mon [MONITOR] Captured : atvalid=1 atdata=0000
 --------------------------------
@@ -10786,7 +10806,15 @@ TIME=2435324000
 ATVALID=1
 ATDATA = 0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(926) @ 2435323750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435324000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2435323750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(956) @ 2435323750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=13
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(968) @ 2435323750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
+Simulation interrupted at 3724317 NS + 0
+xcelium> 
+xcelium> 
+xcelium> 
+xcelium> 
+xcelium> 
+xcelium> run
              4431805sent handshake from sv to c
 2--Handshake Reeived from C to SV
 
@@ -10818,7 +10846,7 @@ Number of caught UVM_WARNING reports :    0
 --- UVM Report Summary ---
 
 ** Report counts by severity
-UVM_INFO : 1850
+UVM_INFO : 1874
 UVM_WARNING :    0
 UVM_ERROR :    0
 UVM_FATAL :    0
@@ -10836,6 +10864,7 @@ UVM_FATAL :    0
 [MON_CLK]    24
 [OUTPUT_SB]    24
 [PERIOD_USED1]     1
+[QUEUE_HEAD]    24
 [RNTST]     1
 [SB]    24
 [SB_REPORT]     2
@@ -10846,5 +10875,4 @@ UVM_FATAL :    0
 [i2c_monitor]     1
 Simulation complete via $finish(1) at time 4431805 NS + 55
 /tools/eda/cadence/XCELIUM2009/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_root.svh:457     $finish;
-xcelium> exit
-TOOL:	xrun(64)	20.09-s009: Exiting on Mar 24, 2023 at 21:54:09 IST  (total: 00:03:21)
+xcelium> 

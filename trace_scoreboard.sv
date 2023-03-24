@@ -945,6 +945,15 @@ virtual function void write_OUT(trace_transaction tr);
             //------------------------------------------------
             curr_pkt = expected_queue[0];
 
+`uvm_info("QUEUE_HEAD",
+    $sformatf(
+        "QUEUE HEAD: word0=%04h byte_word0=%04h atb_mode=%0b queue_size=%0d",
+        curr_pkt.word0,
+        curr_pkt.byte_word0,
+        curr_pkt.atb_mode,
+        expected_queue.size()
+    ),
+    UVM_NONE)
 
             //------------------------------------------------
             // Wait until DUT gives expected first word
@@ -966,7 +975,7 @@ virtual function void write_OUT(trace_transaction tr);
             // First word matched
             // NOW remove packet from queue
             //------------------------------------------------
-            expected_queue.pop_front();
+            void'(expected_queue.pop_front());
 
             packet_started = 1;
             compare_count = 0;
