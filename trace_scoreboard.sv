@@ -289,9 +289,10 @@ virtual function void write_IN(trace_transaction tr);
         // Format2
         //--------------------------------------------------
         else if (tr.it_del_adr_valid &&
-                 ((tr.it_itype == 4'b0101) ||
-                  (tr.it_itype == 4'b0100)))
-        begin
+         ((tr.it_itype == 4'b0101) ||
+          (tr.it_itype == 4'b0100) ||
+          (tr.it_itype == 4'b0110))) 
+       begin
 
             predict_format2();
 
