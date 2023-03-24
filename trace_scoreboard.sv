@@ -240,9 +240,8 @@ virtual function void write_IN(trace_transaction tr);
 
     input_tr = tr;
 
-    if (tr.it_itype_valid)
-    begin
-
+    if (tr.it_itype_valid && tr.trace_enable)
+begin
         
 
      `uvm_info("INPUT_DEBUG",
