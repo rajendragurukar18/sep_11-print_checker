@@ -423,7 +423,18 @@ function void predict_sf0();
     //----------------------------------------------------------
     // Store expected packet
     //----------------------------------------------------------
-    expected_queue.push_back(exp_pkt);
+
+
+    `uvm_info("SF0_QUEUE",
+    $sformatf(
+        "SF0 PUSH: word0=%04h byte_word0=%04h queue_size_before=%0d",
+        exp_pkt.word0,
+        exp_pkt.byte_word0,
+        expected_queue.size()
+    ),
+    UVM_NONE)
+
+expected_queue.push_back(exp_pkt);
 
 endfunction
 
@@ -701,7 +712,21 @@ function void predict_format2();
     //----------------------------------------------------------
     // Store expected packet
     //----------------------------------------------------------
-    expected_queue.push_back(exp_pkt);
+
+
+   `uvm_info("FORMAT2_QUEUE",
+    $sformatf(
+        "FORMAT2 PUSH: itype=%04h iaddr=%04h delta=%05h word0=%04h byte_word0=%04h queue_size_before=%0d",
+        input_tr.it_itype,
+        input_tr.it_iaddr,
+        input_tr.it_delta_addr,
+        exp_pkt.word0,
+        exp_pkt.byte_word0,
+        expected_queue.size()
+    ),
+    UVM_NONE)
+
+expected_queue.push_back(exp_pkt);
 
 endfunction
 
@@ -780,7 +805,16 @@ function void predict_format1();
     //----------------------------------------------------------
     // Store expected packet
     //----------------------------------------------------------
-    expected_queue.push_back(exp_pkt);
+   `uvm_info("FORMAT1_QUEUE",
+    $sformatf(
+        "FORMAT1 PUSH: word0=%04h byte_word0=%04h queue_size_before=%0d",
+        exp_pkt.word0,
+        exp_pkt.byte_word0,
+        expected_queue.size()
+    ),
+    UVM_NONE)
+
+expected_queue.push_back(exp_pkt);
 
 endfunction
 
@@ -944,6 +978,16 @@ virtual function void write_OUT(trace_transaction tr);
             //------------------------------------------------
             curr_pkt = expected_queue[0];
 
+
+`uvm_info("QUEUE_HEAD",
+    $sformatf(
+        "QUEUE HEAD: word0=%04h byte_word0=%04h atb_mode=%0b queue_size=%0d",
+        curr_pkt.word0,
+        curr_pkt.byte_word0,
+        curr_pkt.atb_mode,
+        expected_queue.size()
+    ),
+    UVM_NONE)
 
             //------------------------------------------------
             // Wait until DUT gives expected first word

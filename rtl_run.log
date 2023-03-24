@@ -1,5 +1,5 @@
 xrun(64): 20.09-s009: (c) Copyright 1995-2021 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	20.09-s009: Started on Mar 24, 2023 at 05:53:41 IST
+TOOL:	xrun(64)	20.09-s009: Started on Mar 24, 2023 at 17:12:04 IST
 xrun
 	-uvm
 	-sv
@@ -253,9 +253,9 @@ xrun
 	+PTE_HEX_FILE=/home/train70/Desktop/print_checker/dc_jalr/c_tests/bin/pte.hex
 	+UVM_TESTNAME=trace_test
 	+C_TEST=dc_jalr
-	+ntb_random_seed=14122
-	+log_dir=/home/train70/Desktop/print_checker/dc_jalr/sim/results/logs/pinaka_14122
-	-l /home/train70/Desktop/print_checker/dc_jalr/sim/results/logs/pinaka_14122/rtl_run.log
+	+ntb_random_seed=58484
+	+log_dir=/home/train70/Desktop/print_checker/dc_jalr/sim/results/logs/pinaka_58484
+	-l /home/train70/Desktop/print_checker/dc_jalr/sim/results/logs/pinaka_58484/rtl_run.log
 
    User defined plus("+") options:
 	+pte_resp_delay=0
@@ -263,8 +263,8 @@ xrun
 	+DATA_FILE=/home/train70/Desktop/print_checker/dc_jalr/c_tests/bin/dc_jalr_data.hex
 	+PTE_HEX_FILE=/home/train70/Desktop/print_checker/dc_jalr/c_tests/bin/pte.hex
 	+C_TEST=dc_jalr
-	+ntb_random_seed=14122
-	+log_dir=/home/train70/Desktop/print_checker/dc_jalr/sim/results/logs/pinaka_14122
+	+ntb_random_seed=58484
+	+log_dir=/home/train70/Desktop/print_checker/dc_jalr/sim/results/logs/pinaka_58484
 
 Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /tools/eda/cadence/XCELIUM2009/tools/methodology/UVM/CDNS-1.1d
 file: ../rtl/ip/axi2apb_bridge/axi_typedef_pkg.sv
@@ -943,7 +943,7 @@ file: ../dv/tb/pkg/tb_sync_pkg.sv
 file: ../dv/tb/pkg/soc_tb_pkg.sv
             expected_queue.pop_front();
                                    |
-xmvlog: *W,FUNTSK (../dv/tb/agents/trace_agent/trace_scoreboard.sv,968|35): function called as a task without void'().
+xmvlog: *W,FUNTSK (../dv/tb/agents/trace_agent/trace_scoreboard.sv,1012|35): function called as a task without void'().
 	package worklib.tb_pkg:sv
 		errors: 0, warnings: 1
 file: ../dv/tb/top/chip_top_tb.v
@@ -1514,461 +1514,461 @@ xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-
 			streams:  22, words: 19375
 		worklib.uvm_pkg:sv <0x58eb6a44>
 			streams:  23, words: 29436
-		worklib.uvm_pkg:sv <0x2ed409ea>
+		worklib.uvm_pkg:sv <0x3a4d8c18>
 			streams:  26, words: 50090
-		worklib.uvm_pkg:sv <0x1ea4c4a6>
+		worklib.uvm_pkg:sv <0x6e0f961a>
 			streams:  22, words: 22495
-		worklib.uvm_pkg:sv <0x0a7f7fbc>
+		worklib.uvm_pkg:sv <0x20c14a0e>
 			streams:  22, words: 17750
-		worklib.uvm_pkg:sv <0x2422c91a>
+		worklib.uvm_pkg:sv <0x7e721ef0>
 			streams:  22, words: 30050
-		worklib.uvm_pkg:sv <0x3f97fd83>
+		worklib.uvm_pkg:sv <0x56168d8d>
 			streams:  22, words: 22122
-		worklib.uvm_pkg:sv <0x12e96691>
+		worklib.uvm_pkg:sv <0x251c11af>
 			streams:  22, words: 36908
-		worklib.uvm_pkg:sv <0x29d26d97>
+		worklib.uvm_pkg:sv <0x5fed2c36>
 			streams:  21, words: 19072
-		worklib.uvm_pkg:sv <0x3dca840a>
+		worklib.uvm_pkg:sv <0x774100c8>
 			streams:  21, words: 17492
-		worklib.uvm_pkg:sv <0x0564fc78>
+		worklib.uvm_pkg:sv <0x040868ee>
 			streams:  21, words: 21458
-		worklib.uvm_pkg:sv <0x4d891195>
+		worklib.uvm_pkg:sv <0x4b1e9e3a>
 			streams:  21, words: 27409
-		worklib.uvm_pkg:sv <0x46fcaa2c>
+		worklib.uvm_pkg:sv <0x024ee350>
 			streams:  23, words: 47210
-		worklib.uvm_pkg:sv <0x067d8386>
+		worklib.uvm_pkg:sv <0x160e4200>
 			streams:  23, words: 35028
-		worklib.uvm_pkg:sv <0x4ca478dd>
+		worklib.uvm_pkg:sv <0x24d35318>
 			streams:  20, words: 58127
-		worklib.uvm_pkg:sv <0x0d7cb450>
+		worklib.uvm_pkg:sv <0x722aab71>
 			streams:  30, words: 164778
-		worklib.uvm_pkg:sv <0x4e43f643>
+		worklib.uvm_pkg:sv <0x778f538f>
 			streams:  21, words: 24120
-		worklib.uvm_pkg:sv <0x3e30517a>
+		worklib.uvm_pkg:sv <0x699519b8>
 			streams:  20, words: 17585
-		worklib.uvm_pkg:sv <0x53a3aeca>
+		worklib.uvm_pkg:sv <0x27817867>
 			streams:  20, words: 22661
-		worklib.uvm_pkg:sv <0x64a3c876>
+		worklib.uvm_pkg:sv <0x17ec08e8>
 			streams:  20, words: 19115
-		worklib.uvm_pkg:sv <0x4ec8ea10>
+		worklib.uvm_pkg:sv <0x3c314b84>
 			streams:  21, words: 25799
-		worklib.uvm_pkg:sv <0x16da36b3>
+		worklib.uvm_pkg:sv <0x5da13a02>
 			streams:  21, words: 30398
-		worklib.uvm_pkg:sv <0x4a0fdec8>
+		worklib.uvm_pkg:sv <0x0a4d43e4>
 			streams:  20, words: 28121
-		worklib.uvm_pkg:sv <0x0a27bfaa>
+		worklib.uvm_pkg:sv <0x590ef5ca>
 			streams:  20, words: 34516
-		worklib.uvm_pkg:sv <0x6362a64b>
+		worklib.uvm_pkg:sv <0x082de596>
 			streams:  20, words: 29783
-		worklib.uvm_pkg:sv <0x5b36f728>
+		worklib.uvm_pkg:sv <0x72830e81>
 			streams:  21, words: 18204
-		worklib.uvm_pkg:sv <0x44efe0ed>
+		worklib.uvm_pkg:sv <0x046097a7>
 			streams:  20, words: 16622
-		worklib.uvm_pkg:sv <0x346b40cf>
+		worklib.uvm_pkg:sv <0x5982bfbe>
 			streams:  24, words: 49855
-		worklib.uvm_pkg:sv <0x38c338c8>
+		worklib.uvm_pkg:sv <0x2755332c>
 			streams:  20, words: 16622
-		worklib.uvm_pkg:sv <0x6804978c>
+		worklib.uvm_pkg:sv <0x5ee02015>
 			streams:  24, words: 52616
-		worklib.uvm_pkg:sv <0x4389cc8f>
+		worklib.uvm_pkg:sv <0x40d8f5eb>
 			streams:  20, words: 15351
-		worklib.uvm_pkg:sv <0x34c93b39>
+		worklib.uvm_pkg:sv <0x49be872e>
 			streams:  21, words: 17519
-		worklib.uvm_pkg:sv <0x6887b10d>
+		worklib.uvm_pkg:sv <0x7eec85b2>
 			streams:  24, words: 49875
-		worklib.uvm_pkg:sv <0x35acad49>
+		worklib.uvm_pkg:sv <0x6b8167aa>
 			streams:  20, words: 16622
-		worklib.uvm_pkg:sv <0x11a9437e>
+		worklib.uvm_pkg:sv <0x4f784833>
 			streams:  24, words: 44615
-		worklib.uvm_pkg:sv <0x60e3f63a>
+		worklib.uvm_pkg:sv <0x1bd3d7ea>
 			streams:  20, words: 16622
-		worklib.uvm_pkg:sv <0x53457b64>
+		worklib.uvm_pkg:sv <0x5679c963>
 			streams:  24, words: 44621
-		worklib.uvm_pkg:sv <0x63253820>
+		worklib.uvm_pkg:sv <0x49e49714>
 			streams:  20, words: 16622
-		worklib.uvm_pkg:sv <0x463172b8>
+		worklib.uvm_pkg:sv <0x72f8859b>
 			streams:  24, words: 49875
-		worklib.uvm_pkg:sv <0x6eaa98fe>
+		worklib.uvm_pkg:sv <0x6a03632f>
 			streams:  20, words: 16622
-		worklib.uvm_pkg:sv <0x26b98060>
+		worklib.uvm_pkg:sv <0x1edd413a>
 			streams:  24, words: 49067
-		worklib.uvm_pkg:sv <0x70f0ac71>
+		worklib.uvm_pkg:sv <0x641e21f9>
 			streams:  20, words: 16622
-		worklib.uvm_pkg:sv <0x1f49a11f>
+		worklib.uvm_pkg:sv <0x02283b0c>
 			streams:  24, words: 50579
-		worklib.uvm_pkg:sv <0x321f0ce6>
+		worklib.uvm_pkg:sv <0x3d8de2d9>
 			streams:  20, words: 16622
-		worklib.uvm_pkg:sv <0x14b304a8>
+		worklib.uvm_pkg:sv <0x08422553>
 			streams:  24, words: 49869
-		worklib.uvm_pkg:sv <0x7dbd3b6d>
+		worklib.uvm_pkg:sv <0x52ff821e>
 			streams:  20, words: 16622
-		worklib.uvm_pkg:sv <0x558c8e15>
+		worklib.uvm_pkg:sv <0x007b445a>
 			streams:  24, words: 49047
-		worklib.uvm_pkg:sv <0x5b32c3f3>
+		worklib.uvm_pkg:sv <0x70d8471d>
 			streams:  20, words: 16622
-		worklib.uvm_pkg:sv <0x5845a9c4>
+		worklib.uvm_pkg:sv <0x7c79930c>
 			streams:  24, words: 49865
-		worklib.uvm_pkg:sv <0x6df1bfc1>
+		worklib.uvm_pkg:sv <0x72b431fa>
 			streams:  20, words: 16622
-		worklib.uvm_pkg:sv <0x54c2f66d>
+		worklib.uvm_pkg:sv <0x0fe5a1a6>
 			streams:  24, words: 49875
-		worklib.uvm_pkg:sv <0x0795530a>
+		worklib.uvm_pkg:sv <0x55004068>
 			streams:  20, words: 16622
-		worklib.uvm_pkg:sv <0x7d75da95>
+		worklib.uvm_pkg:sv <0x41f1dd11>
 			streams:  24, words: 49067
-		worklib.uvm_pkg:sv <0x32d921e7>
+		worklib.uvm_pkg:sv <0x6caae892>
 			streams:  20, words: 16622
-		worklib.uvm_pkg:sv <0x2c0f8dc7>
+		worklib.uvm_pkg:sv <0x3ecc2ae9>
 			streams:  24, words: 49865
-		worklib.uvm_pkg:sv <0x47914631>
+		worklib.uvm_pkg:sv <0x53c918a8>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x7f5240dc>
+		worklib.uvm_pkg:sv <0x11068a8f>
 			streams:  23, words: 25557
-		worklib.uvm_pkg:sv <0x16f8fcc1>
+		worklib.uvm_pkg:sv <0x4ea24ff7>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x563bcf57>
+		worklib.uvm_pkg:sv <0x61b34a4a>
 			streams:  23, words: 27747
-		worklib.uvm_pkg:sv <0x3c7879ff>
+		worklib.uvm_pkg:sv <0x09f2d8ea>
 			streams:  23, words: 139900
-		worklib.uvm_pkg:sv <0x5984bc66>
+		worklib.uvm_pkg:sv <0x605049b8>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x5c88c1e5>
+		worklib.uvm_pkg:sv <0x00bc9723>
 			streams:  23, words: 25557
-		worklib.uvm_pkg:sv <0x288f9bdc>
+		worklib.uvm_pkg:sv <0x5db24f08>
 			streams:  23, words: 71543
-		worklib.uvm_pkg:sv <0x437cb7f9>
+		worklib.uvm_pkg:sv <0x5cea8fec>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x71991151>
+		worklib.uvm_pkg:sv <0x75842ca4>
 			streams:  23, words: 25557
-		worklib.uvm_pkg:sv <0x7aa7278e>
+		worklib.uvm_pkg:sv <0x7d541392>
 			streams:  23, words: 99475
-		worklib.uvm_pkg:sv <0x15fcb2d8>
+		worklib.uvm_pkg:sv <0x020af839>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x68247393>
+		worklib.uvm_pkg:sv <0x39978773>
 			streams:  23, words: 25557
-		worklib.uvm_pkg:sv <0x1ca645d0>
+		worklib.uvm_pkg:sv <0x2ac3bb8c>
 			streams:  23, words: 71549
-		worklib.uvm_pkg:sv <0x33375876>
+		worklib.uvm_pkg:sv <0x576d2666>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x64d06854>
+		worklib.uvm_pkg:sv <0x19ff3753>
 			streams:  23, words: 25557
-		worklib.uvm_pkg:sv <0x14fbc8e0>
+		worklib.uvm_pkg:sv <0x34b4d16c>
 			streams:  23, words: 98195
-		worklib.uvm_pkg:sv <0x5504d2dc>
+		worklib.uvm_pkg:sv <0x36022c7b>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x42000962>
+		worklib.uvm_pkg:sv <0x7a5863c0>
 			streams:  23, words: 25557
-		worklib.uvm_pkg:sv <0x12809aff>
+		worklib.uvm_pkg:sv <0x7053b585>
 			streams:  23, words: 71549
-		worklib.uvm_pkg:sv <0x5cd9ba78>
+		worklib.uvm_pkg:sv <0x05ddec5c>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x08ff8de4>
+		worklib.uvm_pkg:sv <0x4ee61b1b>
 			streams:  23, words: 25557
-		worklib.uvm_pkg:sv <0x16ab4459>
+		worklib.uvm_pkg:sv <0x313b8db6>
 			streams:  23, words: 99487
-		worklib.uvm_pkg:sv <0x04d3a494>
+		worklib.uvm_pkg:sv <0x5e8935cb>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x27a2f57d>
+		worklib.uvm_pkg:sv <0x185c57f5>
 			streams:  23, words: 25557
-		worklib.uvm_pkg:sv <0x6b2f5a92>
+		worklib.uvm_pkg:sv <0x4c2cd9db>
 			streams:  23, words: 71543
-		worklib.uvm_pkg:sv <0x73c51239>
+		worklib.uvm_pkg:sv <0x08e75987>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x489cf65a>
+		worklib.uvm_pkg:sv <0x0d7a8f67>
 			streams:  23, words: 25557
-		worklib.uvm_pkg:sv <0x16afb0da>
+		worklib.uvm_pkg:sv <0x313f7935>
 			streams:  23, words: 99475
-		worklib.uvm_pkg:sv <0x36b98ed8>
+		worklib.uvm_pkg:sv <0x047e65e6>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x1983f9be>
+		worklib.uvm_pkg:sv <0x72cf5f53>
 			streams:  23, words: 25557
-		worklib.uvm_pkg:sv <0x49a8f638>
+		worklib.uvm_pkg:sv <0x29e90608>
 			streams:  23, words: 29802
-		worklib.uvm_pkg:sv <0x701c76ab>
+		worklib.uvm_pkg:sv <0x03d5c2cd>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x00829723>
+		worklib.uvm_pkg:sv <0x759fa1db>
 			streams:  23, words: 56036
-		worklib.uvm_pkg:sv <0x21959047>
+		worklib.uvm_pkg:sv <0x4a935226>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x345d3a01>
+		worklib.uvm_pkg:sv <0x0602fbe0>
 			streams:  23, words: 44318
-		worklib.uvm_pkg:sv <0x4d6968c1>
+		worklib.uvm_pkg:sv <0x2255ac43>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x63168f05>
+		worklib.uvm_pkg:sv <0x6da879a0>
 			streams:  23, words: 54137
-		worklib.uvm_pkg:sv <0x5d55ee96>
+		worklib.uvm_pkg:sv <0x1f68ca56>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x709aa7e2>
+		worklib.uvm_pkg:sv <0x2c618456>
 			streams:  23, words: 62438
-		worklib.uvm_pkg:sv <0x68cd3d76>
+		worklib.uvm_pkg:sv <0x768d16b7>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x54126a55>
+		worklib.uvm_pkg:sv <0x4b265307>
 			streams:  23, words: 47130
-		worklib.uvm_pkg:sv <0x00ecdb61>
+		worklib.uvm_pkg:sv <0x7cefce4b>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x1098dd4c>
+		worklib.uvm_pkg:sv <0x6d67263f>
 			streams:  23, words: 62042
-		worklib.uvm_pkg:sv <0x07953e91>
+		worklib.uvm_pkg:sv <0x7b9c4825>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x36faa14f>
+		worklib.uvm_pkg:sv <0x72bfed59>
 			streams:  23, words: 51983
-		worklib.uvm_pkg:sv <0x764bceec>
+		worklib.uvm_pkg:sv <0x6f70ef8d>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x77681d25>
+		worklib.uvm_pkg:sv <0x64dbcbf1>
 			streams:  23, words: 46473
-		worklib.uvm_pkg:sv <0x7f0928a2>
+		worklib.uvm_pkg:sv <0x1a7ed12a>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x79eb79ec>
+		worklib.uvm_pkg:sv <0x1376d633>
 			streams:  23, words: 41385
-		worklib.uvm_pkg:sv <0x61f320ee>
+		worklib.uvm_pkg:sv <0x4e2f554f>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x6691eeda>
+		worklib.uvm_pkg:sv <0x79785ce4>
 			streams:  23, words: 47206
-		worklib.uvm_pkg:sv <0x518b03c2>
+		worklib.uvm_pkg:sv <0x0be1dc4f>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x4ef1ec7a>
+		worklib.uvm_pkg:sv <0x71db3530>
 			streams:  23, words: 29810
-		worklib.uvm_pkg:sv <0x3289ebd8>
+		worklib.uvm_pkg:sv <0x2c434ebb>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x7d225991>
+		worklib.uvm_pkg:sv <0x477833dc>
 			streams:  23, words: 24349
-		worklib.uvm_pkg:sv <0x240dd6c4>
+		worklib.uvm_pkg:sv <0x2c78a0c3>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x77e4519e>
+		worklib.uvm_pkg:sv <0x5c28f626>
 			streams:  23, words: 35112
-		worklib.uvm_pkg:sv <0x61a0327c>
+		worklib.uvm_pkg:sv <0x6d39de6c>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x337f0a24>
+		worklib.uvm_pkg:sv <0x6a8f3ae8>
 			streams:  23, words: 35106
-		worklib.uvm_pkg:sv <0x54861e94>
+		worklib.uvm_pkg:sv <0x7519eb59>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x086529cf>
+		worklib.uvm_pkg:sv <0x0a3e2d4f>
 			streams:  23, words: 35565
-		worklib.uvm_pkg:sv <0x3c6beab0>
+		worklib.uvm_pkg:sv <0x11160ef3>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x1ab0b9c3>
+		worklib.uvm_pkg:sv <0x48a77840>
 			streams:  23, words: 34257
-		worklib.uvm_pkg:sv <0x0e0bc6ac>
+		worklib.uvm_pkg:sv <0x07cbcb16>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x1da9db44>
+		worklib.uvm_pkg:sv <0x62378cab>
 			streams:  23, words: 45467
-		worklib.uvm_pkg:sv <0x3b7c761e>
+		worklib.uvm_pkg:sv <0x5d458b0f>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x5c27ede9>
+		worklib.uvm_pkg:sv <0x688c67ce>
 			streams:  23, words: 32818
-		worklib.uvm_pkg:sv <0x2ffed069>
+		worklib.uvm_pkg:sv <0x7cf9d336>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x7b661bb9>
+		worklib.uvm_pkg:sv <0x6e0515f8>
 			streams:  23, words: 34502
-		worklib.uvm_pkg:sv <0x7d9a1fa8>
+		worklib.uvm_pkg:sv <0x6cc820e3>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x6a0bb2a6>
+		worklib.uvm_pkg:sv <0x40b1875e>
 			streams:  23, words: 34790
-		worklib.uvm_pkg:sv <0x3cb534d8>
+		worklib.uvm_pkg:sv <0x0e42dfac>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x730b6f5a>
+		worklib.uvm_pkg:sv <0x537b74c4>
 			streams:  23, words: 37184
-		worklib.uvm_pkg:sv <0x203875fe>
+		worklib.uvm_pkg:sv <0x44230266>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x28860604>
+		worklib.uvm_pkg:sv <0x262fd756>
 			streams:  23, words: 37184
-		worklib.uvm_pkg:sv <0x5bcb028d>
+		worklib.uvm_pkg:sv <0x3e6beaea>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x14d20207>
+		worklib.uvm_pkg:sv <0x07b3b1fb>
 			streams:  23, words: 53575
-		worklib.uvm_pkg:sv <0x3a4328f1>
+		worklib.uvm_pkg:sv <0x6e3f5c85>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x70629665>
+		worklib.uvm_pkg:sv <0x450ac4c8>
 			streams:  23, words: 29763
-		worklib.uvm_pkg:sv <0x2737f129>
+		worklib.uvm_pkg:sv <0x081ddfc3>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x154f9a64>
+		worklib.uvm_pkg:sv <0x40e9ed03>
 			streams:  24, words: 37974
-		worklib.uvm_pkg:sv <0x5c89bfba>
+		worklib.uvm_pkg:sv <0x436a0aa0>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x52f817fe>
+		worklib.uvm_pkg:sv <0x6ad67961>
 			streams:  24, words: 37128
-		worklib.uvm_pkg:sv <0x3766a4b8>
+		worklib.uvm_pkg:sv <0x7944e378>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x327b7677>
+		worklib.uvm_pkg:sv <0x62eea2b8>
 			streams:  23, words: 37097
-		worklib.uvm_pkg:sv <0x5f68788b>
+		worklib.uvm_pkg:sv <0x4228bee9>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x698bee4b>
+		worklib.uvm_pkg:sv <0x3d4d597c>
 			streams:  23, words: 87343
-		worklib.uvm_pkg:sv <0x1f7c4fe8>
+		worklib.uvm_pkg:sv <0x48a86789>
 			streams:  21, words: 15646
-		worklib.uvm_pkg:sv <0x754e0fa6>
+		worklib.uvm_pkg:sv <0x43c53fc8>
 			streams:  23, words: 24250
-		worklib.uvm_pkg:sv <0x65d96652>
+		worklib.uvm_pkg:sv <0x7ff72833>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x436a7c87>
+		worklib.uvm_pkg:sv <0x0f16a44c>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x4aa7efdd>
+		worklib.uvm_pkg:sv <0x6a8709f3>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x7a52e1fa>
+		worklib.uvm_pkg:sv <0x0fd34b77>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x7ea8474b>
+		worklib.uvm_pkg:sv <0x3fd90bb1>
 			streams:  23, words: 47044
-		worklib.uvm_pkg:sv <0x0398c820>
+		worklib.uvm_pkg:sv <0x589be6d9>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x31adc865>
+		worklib.uvm_pkg:sv <0x4aef1a73>
 			streams:  23, words: 29268
-		worklib.uvm_pkg:sv <0x07d38d55>
+		worklib.uvm_pkg:sv <0x51dcf778>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x71f8104a>
+		worklib.uvm_pkg:sv <0x7758fa38>
 			streams:  23, words: 29036
-		worklib.uvm_pkg:sv <0x316ffe6b>
+		worklib.uvm_pkg:sv <0x3851081f>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x2ec9bc38>
+		worklib.uvm_pkg:sv <0x19acf701>
 			streams:  23, words: 142991
-		worklib.uvm_pkg:sv <0x68cf1f3f>
+		worklib.uvm_pkg:sv <0x58437929>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x1482e543>
+		worklib.uvm_pkg:sv <0x0948a1a7>
 			streams:  23, words: 44099
-		worklib.uvm_pkg:sv <0x4f5562e8>
+		worklib.uvm_pkg:sv <0x5ef536c3>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x66e5474f>
+		worklib.uvm_pkg:sv <0x622d4bb9>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x6925d164>
+		worklib.uvm_pkg:sv <0x6faa6241>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x47df44ac>
+		worklib.uvm_pkg:sv <0x25173c55>
 			streams:  23, words: 41584
-		worklib.uvm_pkg:sv <0x2e086877>
+		worklib.uvm_pkg:sv <0x4705588a>
 			streams:  23, words: 70287
-		worklib.uvm_pkg:sv <0x78e1169d>
+		worklib.uvm_pkg:sv <0x4df2b680>
 			streams:  23, words: 28882
-		worklib.uvm_pkg:sv <0x63f7e987>
+		worklib.uvm_pkg:sv <0x36adf800>
 			streams:  23, words: 29380
-		worklib.uvm_pkg:sv <0x1038e813>
+		worklib.uvm_pkg:sv <0x1261a171>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x413ebe23>
+		worklib.uvm_pkg:sv <0x79a08fe6>
 			streams:  23, words: 50877
-		worklib.uvm_pkg:sv <0x1a6698f5>
+		worklib.uvm_pkg:sv <0x5628efad>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x2f1cc2fe>
+		worklib.uvm_pkg:sv <0x73f5e1a7>
 			streams:  23, words: 52357
-		worklib.uvm_pkg:sv <0x56f79c6f>
+		worklib.uvm_pkg:sv <0x2f0d980a>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x6d75d847>
+		worklib.uvm_pkg:sv <0x23b3afa4>
 			streams:  23, words: 29179
-		worklib.uvm_pkg:sv <0x6d6adc42>
+		worklib.uvm_pkg:sv <0x072663e7>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x4a5d49c0>
+		worklib.uvm_pkg:sv <0x3b82842f>
 			streams:  23, words: 38883
-		worklib.uvm_pkg:sv <0x4e085eb9>
+		worklib.uvm_pkg:sv <0x597d5e84>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x5804457e>
+		worklib.uvm_pkg:sv <0x2d57fa55>
 			streams:  23, words: 42056
-		worklib.uvm_pkg:sv <0x6b91670e>
+		worklib.uvm_pkg:sv <0x1f309e3f>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x2ce549c1>
+		worklib.uvm_pkg:sv <0x7b329b8c>
 			streams:  23, words: 41272
-		worklib.uvm_pkg:sv <0x16a9ae88>
+		worklib.uvm_pkg:sv <0x360484be>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x0dccd179>
+		worklib.uvm_pkg:sv <0x7acc4a6b>
 			streams:  23, words: 51162
-		worklib.uvm_pkg:sv <0x478b047c>
+		worklib.uvm_pkg:sv <0x077eebe8>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x399b975c>
+		worklib.uvm_pkg:sv <0x010f49e6>
 			streams:  23, words: 50877
-		worklib.uvm_pkg:sv <0x64380403>
+		worklib.uvm_pkg:sv <0x31796e83>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x724cbd70>
+		worklib.uvm_pkg:sv <0x2f33b56a>
 			streams:  23, words: 29663
-		worklib.uvm_pkg:sv <0x340962ad>
+		worklib.uvm_pkg:sv <0x17f87042>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x17ee975f>
+		worklib.uvm_pkg:sv <0x3e36b27d>
 			streams:  23, words: 72268
-		worklib.uvm_pkg:sv <0x4096029e>
+		worklib.uvm_pkg:sv <0x54d6fa7c>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x0df9bbd7>
+		worklib.uvm_pkg:sv <0x75effb4f>
 			streams:  23, words: 29663
-		worklib.uvm_pkg:sv <0x46701ae3>
+		worklib.uvm_pkg:sv <0x33998d9b>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x6fa40fbd>
+		worklib.uvm_pkg:sv <0x4fb9cacd>
 			streams:  23, words: 57143
-		worklib.uvm_pkg:sv <0x611c0d03>
+		worklib.uvm_pkg:sv <0x6e5155d1>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x0df3c099>
+		worklib.uvm_pkg:sv <0x6c839a39>
 			streams:  23, words: 58576
-		worklib.uvm_pkg:sv <0x3a5934ab>
+		worklib.uvm_pkg:sv <0x41beff4f>
 			streams:  20, words: 17550
-		worklib.uvm_pkg:sv <0x16bf0916>
+		worklib.uvm_pkg:sv <0x7c26fe37>
 			streams:  20, words: 16301
-		worklib.uvm_pkg:sv <0x1747441d>
+		worklib.uvm_pkg:sv <0x6c2f9e70>
 			streams:  20, words: 17550
-		worklib.uvm_pkg:sv <0x4d1a7281>
+		worklib.uvm_pkg:sv <0x7ba8e380>
 			streams:  20, words: 15392
-		worklib.uvm_pkg:sv <0x3f9749e4>
+		worklib.uvm_pkg:sv <0x17248b7e>
 			streams:  20, words: 18620
-		worklib.uvm_pkg:sv <0x64b2233b>
+		worklib.uvm_pkg:sv <0x54544da0>
 			streams:  20, words: 15670
-		worklib.uvm_pkg:sv <0x09a4fc7b>
+		worklib.uvm_pkg:sv <0x418ef3ff>
 			streams:  20, words: 53010
-		worklib.uvm_pkg:sv <0x0c94fa8d>
+		worklib.uvm_pkg:sv <0x7afd4b27>
 			streams:  21, words: 22326
-		worklib.uvm_pkg:sv <0x50ca86e4>
+		worklib.uvm_pkg:sv <0x52e3690f>
 			streams:  20, words: 15392
-		worklib.uvm_pkg:sv <0x0e16e3f4>
+		worklib.uvm_pkg:sv <0x3b623ead>
 			streams:  20, words: 22650
-		worklib.uvm_pkg:sv <0x76c3b9a8>
+		worklib.uvm_pkg:sv <0x6efb0ad3>
 			streams:  21, words: 23826
-		worklib.uvm_pkg:sv <0x12143b54>
+		worklib.uvm_pkg:sv <0x25433d9f>
 			streams:  28, words: 29353
-		worklib.uvm_pkg:sv <0x64d29d03>
+		worklib.uvm_pkg:sv <0x3aac62b8>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x65ddd7ea>
+		worklib.uvm_pkg:sv <0x1d4832d1>
 			streams:  23, words: 51945
-		worklib.uvm_pkg:sv <0x4dcd781d>
+		worklib.uvm_pkg:sv <0x61d5ed5e>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x518230d6>
+		worklib.uvm_pkg:sv <0x25409567>
 			streams:  23, words: 25664
-		worklib.uvm_pkg:sv <0x75d8573a>
+		worklib.uvm_pkg:sv <0x390e2256>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x31914289>
+		worklib.uvm_pkg:sv <0x3221d67c>
 			streams:  23, words: 60539
-		worklib.uvm_pkg:sv <0x66fc960b>
+		worklib.uvm_pkg:sv <0x6099c7af>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x7bfd1232>
+		worklib.uvm_pkg:sv <0x164fb290>
 			streams:  23, words: 67203
-		worklib.uvm_pkg:sv <0x1718ac04>
+		worklib.uvm_pkg:sv <0x5b75672b>
 			streams:  23, words: 29811
-		worklib.uvm_pkg:sv <0x39e37b2a>
+		worklib.uvm_pkg:sv <0x15cfa9b6>
 			streams:  23, words: 29811
-		worklib.uvm_pkg:sv <0x17315f8b>
+		worklib.uvm_pkg:sv <0x0dec9c14>
 			streams:  21, words: 30862
-		worklib.tb_pkg:sv <0x4da6da05>
+		worklib.tb_pkg:sv <0x24395170>
 			streams:  22, words: 19823
-		worklib.tb_pkg:sv <0x3bf7155f>
+		worklib.tb_pkg:sv <0x037b48ea>
 			streams:  22, words: 37517
 		worklib.uvm_pkg:sv <0x444fa360>
 			streams:   7, words:  3099
-		worklib.uvm_pkg:sv <0x153dafc6>
+		worklib.uvm_pkg:sv <0x067083e6>
 			streams:  22, words: 19679
-		worklib.uvm_pkg:sv <0x7c06098a>
+		worklib.uvm_pkg:sv <0x6cb84dd0>
 			streams:  22, words: 19536
-		worklib.uvm_pkg:sv <0x1b4d0d84>
+		worklib.uvm_pkg:sv <0x5816617e>
 			streams:  46, words: 62353
-		worklib.uvm_pkg:sv <0x1e2532b3>
+		worklib.uvm_pkg:sv <0x0c9e2c41>
 			streams: 111, words: 138975
-		worklib.tb_pkg:sv <0x29ad451f>
+		worklib.tb_pkg:sv <0x76ced850>
 			streams:  24, words: 77129
-		worklib.uvm_pkg:sv <0x166498f5>
+		worklib.uvm_pkg:sv <0x2511bbde>
 			streams:  22, words: 24622
-		worklib.uvm_pkg:sv <0x298ce545>
+		worklib.uvm_pkg:sv <0x715cd721>
 			streams:  28, words: 21466
-		worklib.uvm_pkg:sv <0x7c305821>
+		worklib.uvm_pkg:sv <0x6db98ea1>
 			streams:  25, words: 62567
-		worklib.uvm_pkg:sv <0x69df8191>
+		worklib.uvm_pkg:sv <0x19e165d1>
 			streams:  22, words: 27046
-		worklib.uvm_pkg:sv <0x3decbdd0>
+		worklib.uvm_pkg:sv <0x08262b9b>
 			streams:  21, words: 18395
 		worklib.uvm_pkg:sv <0x02e0c2f0>
 			streams:  79, words: 119607
 		worklib.uvm_pkg:sv <0x73028341>
 			streams:  22, words: 22212
-		worklib.uvm_pkg:sv <0x4e2eb996>
+		worklib.uvm_pkg:sv <0x204ffa65>
 			streams:  81, words: 108828
 		worklib.uvm_pkg:sv <0x186327e4>
 			streams:  22, words: 42438
@@ -1996,61 +1996,61 @@ xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-
 			streams:  24, words: 48495
 		worklib.uvm_pkg:sv <0x4dfce0e4>
 			streams:  22, words: 30294
-		worklib.tb_pkg:sv <0x6364b0cd>
-			streams:  45, words: 126112
+		worklib.tb_pkg:sv <0x0f633c35>
+			streams:  45, words: 133035
 		worklib.uvm_pkg:sv <0x183308f8>
 			streams: 176, words: 200591
 		worklib.uvm_pkg:sv <0x425f295b>
 			streams:  22, words: 21106
-		worklib.uvm_pkg:sv <0x6980bb53>
+		worklib.uvm_pkg:sv <0x598b8ba6>
 			streams:  22, words: 22458
-		worklib.uvm_pkg:sv <0x0e2a4b5c>
+		worklib.uvm_pkg:sv <0x08385531>
 			streams:  21, words: 19610
-		worklib.uvm_pkg:sv <0x4c6672c3>
+		worklib.uvm_pkg:sv <0x1f53227e>
 			streams: 101, words: 119753
-		worklib.uvm_pkg:sv <0x7e5ab6d5>
+		worklib.uvm_pkg:sv <0x1d6561f0>
 			streams:  22, words: 20450
-		worklib.uvm_pkg:sv <0x67de801b>
+		worklib.uvm_pkg:sv <0x5e931bf9>
 			streams: 258, words: 311193
-		worklib.uvm_pkg:sv <0x2a15f209>
+		worklib.uvm_pkg:sv <0x52f8e580>
 			streams:  22, words: 27254
-		worklib.uvm_pkg:sv <0x7a545e15>
+		worklib.uvm_pkg:sv <0x3f7c76a3>
 			streams: 111, words: 129515
-		worklib.uvm_pkg:sv <0x549cc459>
+		worklib.uvm_pkg:sv <0x785aa541>
 			streams:  81, words: 114428
-		worklib.uvm_pkg:sv <0x46be4080>
+		worklib.uvm_pkg:sv <0x4d7d90f4>
 			streams: 321, words: 384180
-		worklib.uvm_pkg:sv <0x7817538d>
+		worklib.uvm_pkg:sv <0x6048a398>
 			streams:  22, words: 34495
-		worklib.uvm_pkg:sv <0x4e2d20c6>
+		worklib.uvm_pkg:sv <0x130cf27c>
 			streams:  20, words: 23219
-		worklib.uvm_pkg:sv <0x58ed2f37>
+		worklib.uvm_pkg:sv <0x7ef0b609>
 			streams:  76, words: 98930
 		worklib.uvm_pkg:sv <0x2277f042>
 			streams:   8, words:  4212
-		worklib.uvm_pkg:sv <0x77fbb67d>
+		worklib.uvm_pkg:sv <0x4067780d>
 			streams:  23, words: 22148
-		worklib.uvm_pkg:sv <0x487f4f54>
+		worklib.uvm_pkg:sv <0x4d924d86>
 			streams:  23, words: 37279
-		worklib.uvm_pkg:sv <0x0432103e>
+		worklib.uvm_pkg:sv <0x27debfcc>
 			streams: 175, words: 192363
-		worklib.uvm_pkg:sv <0x0ddb6a52>
+		worklib.uvm_pkg:sv <0x4c57e0f9>
 			streams:  22, words: 59290
-		worklib.uvm_pkg:sv <0x7758a1ef>
+		worklib.uvm_pkg:sv <0x381e7199>
 			streams: 186, words: 235259
 		worklib.uvm_pkg:sv <0x15e46590>
 			streams:   7, words:  3099
-		worklib.uvm_pkg:sv <0x797aad16>
+		worklib.uvm_pkg:sv <0x7edece91>
 			streams:  81, words: 114449
 		worklib.uvm_pkg:sv <0x0665fe5d>
 			streams:   7, words:  3099
-		worklib.uvm_pkg:sv <0x4e190456>
+		worklib.uvm_pkg:sv <0x1f9bdb2e>
 			streams:  94, words: 191199
-		worklib.uvm_pkg:sv <0x1034009a>
+		worklib.uvm_pkg:sv <0x2329286e>
 			streams:  22, words: 20548
-		worklib.uvm_pkg:sv <0x6080ff23>
+		worklib.uvm_pkg:sv <0x47e0efaf>
 			streams:  22, words: 38379
-		worklib.uvm_pkg:sv <0x008dbc93>
+		worklib.uvm_pkg:sv <0x5e8cd42a>
 			streams:  23, words: 72461
 		worklib.chip_top_tb:v <0x643b698d>
 			streams: 651, words: 791747
@@ -9992,10 +9992,11 @@ UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2432373750: uvm_
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(348) @ 2432373750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=011c
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(130) @ 2432383750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0006 iaddr=0120 del_valid=1 delta=00718 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2432383750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0120 itype=0006 context=00 cause=00 tval=00000000 atb_mode=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(684) @ 2432383750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word0 = e311
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(689) @ 2432383750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word1 = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(694) @ 2432383750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word2 = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(699) @ 2432383750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word3 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(695) @ 2432383750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word0 = e311
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(700) @ 2432383750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word1 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(705) @ 2432383750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word2 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(710) @ 2432383750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word3 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(727) @ 2432383750: uvm_test_top.env_h.sb [FORMAT2_QUEUE] FORMAT2 PUSH: itype=0006 iaddr=0120 delta=00718 word0=e311 byte_word0=1100 queue_size_before=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(130) @ 2432388750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0120 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2432388750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0120 itype=0000 context=00 cause=00 tval=00000000 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(348) @ 2432388750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0120
@@ -10065,10 +10066,11 @@ UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2432718750: uvm_
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(348) @ 2432718750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=011c
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(130) @ 2432728750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0006 iaddr=0120 del_valid=1 delta=00730 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2432728750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0120 itype=0006 context=00 cause=00 tval=00000000 atb_mode=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(684) @ 2432728750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word0 = e611
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(689) @ 2432728750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word1 = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(694) @ 2432728750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word2 = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(699) @ 2432728750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word3 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(695) @ 2432728750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word0 = e611
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(700) @ 2432728750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word1 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(705) @ 2432728750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word2 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(710) @ 2432728750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word3 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(727) @ 2432728750: uvm_test_top.env_h.sb [FORMAT2_QUEUE] FORMAT2 PUSH: itype=0006 iaddr=0120 delta=00730 word0=e611 byte_word0=1100 queue_size_before=1
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(130) @ 2432733750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0120 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2432733750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0120 itype=0000 context=00 cause=00 tval=00000000 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(348) @ 2432733750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0120
@@ -10105,10 +10107,11 @@ UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2432823750: uvm_
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(348) @ 2432823750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=011c
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(130) @ 2432833750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0006 iaddr=0120 del_valid=1 delta=0073c first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2432833750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0120 itype=0006 context=00 cause=00 tval=00000000 atb_mode=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(684) @ 2432833750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word0 = e791
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(689) @ 2432833750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word1 = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(694) @ 2432833750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word2 = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(699) @ 2432833750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word3 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(695) @ 2432833750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word0 = e791
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(700) @ 2432833750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word1 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(705) @ 2432833750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word2 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(710) @ 2432833750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word3 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(727) @ 2432833750: uvm_test_top.env_h.sb [FORMAT2_QUEUE] FORMAT2 PUSH: itype=0006 iaddr=0120 delta=0073c word0=e791 byte_word0=9100 queue_size_before=2
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(130) @ 2432838750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0120 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2432838750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0120 itype=0000 context=00 cause=00 tval=00000000 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(348) @ 2432838750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0120
@@ -10150,10 +10153,11 @@ UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2433113750: uvm_
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(348) @ 2433113750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0048
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(130) @ 2433138750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0006 iaddr=004c del_valid=1 delta=0074c first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2433138750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=004c itype=0006 context=00 cause=00 tval=00000000 atb_mode=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(684) @ 2433138750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word0 = e991
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(689) @ 2433138750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word1 = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(694) @ 2433138750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word2 = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(699) @ 2433138750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word3 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(695) @ 2433138750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word0 = e991
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(700) @ 2433138750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word1 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(705) @ 2433138750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word2 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(710) @ 2433138750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word3 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(727) @ 2433138750: uvm_test_top.env_h.sb [FORMAT2_QUEUE] FORMAT2 PUSH: itype=0006 iaddr=004c delta=0074c word0=e991 byte_word0=9100 queue_size_before=3
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(130) @ 2433143750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=004c del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2433143750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=004c itype=0000 context=00 cause=00 tval=00000000 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(348) @ 2433143750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=004c
@@ -10199,10 +10203,11 @@ UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2433318750: uvm_
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(348) @ 2433318750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=011c
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(130) @ 2433343750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0006 iaddr=0120 del_valid=1 delta=00754 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2433343750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0120 itype=0006 context=00 cause=00 tval=00000000 atb_mode=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(684) @ 2433343750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word0 = ea91
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(689) @ 2433343750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word1 = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(694) @ 2433343750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word2 = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(699) @ 2433343750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word3 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(695) @ 2433343750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word0 = ea91
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(700) @ 2433343750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word1 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(705) @ 2433343750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word2 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(710) @ 2433343750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word3 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(727) @ 2433343750: uvm_test_top.env_h.sb [FORMAT2_QUEUE] FORMAT2 PUSH: itype=0006 iaddr=0120 delta=00754 word0=ea91 byte_word0=9100 queue_size_before=4
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(130) @ 2433348750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0120 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2433348750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0120 itype=0000 context=00 cause=00 tval=00000000 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(348) @ 2433348750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0120
@@ -10248,10 +10253,11 @@ UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2433523750: uvm_
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(348) @ 2433523750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=011c
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(130) @ 2433548750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0006 iaddr=0120 del_valid=1 delta=0075c first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2433548750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0120 itype=0006 context=00 cause=00 tval=00000000 atb_mode=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(684) @ 2433548750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word0 = eb91
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(689) @ 2433548750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word1 = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(694) @ 2433548750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word2 = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(699) @ 2433548750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word3 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(695) @ 2433548750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word0 = eb91
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(700) @ 2433548750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word1 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(705) @ 2433548750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word2 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(710) @ 2433548750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word3 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(727) @ 2433548750: uvm_test_top.env_h.sb [FORMAT2_QUEUE] FORMAT2 PUSH: itype=0006 iaddr=0120 delta=0075c word0=eb91 byte_word0=9100 queue_size_before=5
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(130) @ 2433553750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0120 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2433553750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0120 itype=0000 context=00 cause=00 tval=00000000 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(348) @ 2433553750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0120
@@ -10307,10 +10313,11 @@ UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2433868750: uvm_
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(348) @ 2433868750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0048
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(130) @ 2433893750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0006 iaddr=004c del_valid=1 delta=00770 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2433893750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=004c itype=0006 context=00 cause=00 tval=00000000 atb_mode=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(684) @ 2433893750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word0 = ee11
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(689) @ 2433893750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word1 = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(694) @ 2433893750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word2 = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(699) @ 2433893750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word3 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(695) @ 2433893750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word0 = ee11
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(700) @ 2433893750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word1 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(705) @ 2433893750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word2 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(710) @ 2433893750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word3 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(727) @ 2433893750: uvm_test_top.env_h.sb [FORMAT2_QUEUE] FORMAT2 PUSH: itype=0006 iaddr=004c delta=00770 word0=ee11 byte_word0=1100 queue_size_before=6
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(130) @ 2433898750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=004c del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2433898750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=004c itype=0000 context=00 cause=00 tval=00000000 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(348) @ 2433898750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=004c
@@ -10364,10 +10371,11 @@ UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2434263750: uvm_
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(348) @ 2434263750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0048
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(130) @ 2434288750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0006 iaddr=004c del_valid=1 delta=00784 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2434288750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=004c itype=0006 context=00 cause=00 tval=00000000 atb_mode=1
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(684) @ 2434288750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word0 = f091
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(689) @ 2434288750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word1 = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(694) @ 2434288750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word2 = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(699) @ 2434288750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word3 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(695) @ 2434288750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word0 = f091
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(700) @ 2434288750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word1 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(705) @ 2434288750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word2 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(710) @ 2434288750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word3 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(727) @ 2434288750: uvm_test_top.env_h.sb [FORMAT2_QUEUE] FORMAT2 PUSH: itype=0006 iaddr=004c delta=00784 word0=f091 byte_word0=9100 queue_size_before=7
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(130) @ 2434293750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=004c del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2434293750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=004c itype=0000 context=00 cause=00 tval=00000000 atb_mode=1
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(348) @ 2434293750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=004c
@@ -10406,10 +10414,11 @@ UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2434568750: uvm_
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(348) @ 2434568750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0070
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(130) @ 2434593750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0006 iaddr=0074 del_valid=1 delta=0078c first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2434593750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0074 itype=0006 context=00 cause=00 tval=00000000 atb_mode=1
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(684) @ 2434593750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word0 = f191
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(689) @ 2434593750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word1 = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(694) @ 2434593750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word2 = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(699) @ 2434593750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word3 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(695) @ 2434593750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word0 = f191
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(700) @ 2434593750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word1 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(705) @ 2434593750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word2 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(710) @ 2434593750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word3 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(727) @ 2434593750: uvm_test_top.env_h.sb [FORMAT2_QUEUE] FORMAT2 PUSH: itype=0006 iaddr=0074 delta=0078c word0=f191 byte_word0=9100 queue_size_before=8
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(130) @ 2434598750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0074 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2434598750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0074 itype=0000 context=00 cause=00 tval=00000000 atb_mode=1
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(348) @ 2434598750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0074
@@ -10425,16 +10434,18 @@ UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(106) @ 2434638750: 
 TIME=2434639000
 ATVALID=1
 ATDATA = f091
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(925) @ 2434638750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434639000 ATVALID=1 ATDATA=f091
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(958) @ 2434638750: uvm_test_top.env_h.sb [SB] Waiting... DUT=f091 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2434638750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434639000 ATVALID=1 ATDATA=f091
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(990) @ 2434638750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=9
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1002) @ 2434638750: uvm_test_top.env_h.sb [SB] Waiting... DUT=f091 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(65) @ 2434643750: uvm_test_top.env_h.agt.out_mon [MON_CLK] CLK : atvalid=1 atready=1 atdata=0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(106) @ 2434643750: uvm_test_top.env_h.agt.out_mon [MONITOR] Captured : atvalid=1 atdata=0000
 --------------------------------
 TIME=2434644000
 ATVALID=1
 ATDATA = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(925) @ 2434643750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434644000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(958) @ 2434643750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2434643750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434644000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(990) @ 2434643750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=9
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1002) @ 2434643750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(130) @ 2434643750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0794 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2434643750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0794 itype=0000 context=00 cause=00 tval=00000000 atb_mode=1
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(348) @ 2434643750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0794
@@ -10444,54 +10455,61 @@ UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(106) @ 2434648750: 
 TIME=2434649000
 ATVALID=1
 ATDATA = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(925) @ 2434648750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434649000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(958) @ 2434648750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2434648750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434649000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(990) @ 2434648750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=9
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1002) @ 2434648750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(65) @ 2434653750: uvm_test_top.env_h.agt.out_mon [MON_CLK] CLK : atvalid=1 atready=1 atdata=0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(106) @ 2434653750: uvm_test_top.env_h.agt.out_mon [MONITOR] Captured : atvalid=1 atdata=0000
 --------------------------------
 TIME=2434654000
 ATVALID=1
 ATDATA = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(925) @ 2434653750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434654000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(958) @ 2434653750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2434653750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434654000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(990) @ 2434653750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=9
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1002) @ 2434653750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(65) @ 2434678750: uvm_test_top.env_h.agt.out_mon [MON_CLK] CLK : atvalid=1 atready=1 atdata=f191
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(106) @ 2434678750: uvm_test_top.env_h.agt.out_mon [MONITOR] Captured : atvalid=1 atdata=f191
 --------------------------------
 TIME=2434679000
 ATVALID=1
 ATDATA = f191
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(925) @ 2434678750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434679000 ATVALID=1 ATDATA=f191
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(958) @ 2434678750: uvm_test_top.env_h.sb [SB] Waiting... DUT=f191 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2434678750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434679000 ATVALID=1 ATDATA=f191
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(990) @ 2434678750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=9
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1002) @ 2434678750: uvm_test_top.env_h.sb [SB] Waiting... DUT=f191 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(65) @ 2434683750: uvm_test_top.env_h.agt.out_mon [MON_CLK] CLK : atvalid=1 atready=1 atdata=0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(106) @ 2434683750: uvm_test_top.env_h.agt.out_mon [MONITOR] Captured : atvalid=1 atdata=0000
 --------------------------------
 TIME=2434684000
 ATVALID=1
 ATDATA = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(925) @ 2434683750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434684000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(958) @ 2434683750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2434683750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434684000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(990) @ 2434683750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=9
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1002) @ 2434683750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(65) @ 2434688750: uvm_test_top.env_h.agt.out_mon [MON_CLK] CLK : atvalid=1 atready=1 atdata=0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(106) @ 2434688750: uvm_test_top.env_h.agt.out_mon [MONITOR] Captured : atvalid=1 atdata=0000
 --------------------------------
 TIME=2434689000
 ATVALID=1
 ATDATA = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(925) @ 2434688750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434689000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(958) @ 2434688750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2434688750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434689000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(990) @ 2434688750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=9
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1002) @ 2434688750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(65) @ 2434693750: uvm_test_top.env_h.agt.out_mon [MON_CLK] CLK : atvalid=1 atready=1 atdata=0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(106) @ 2434693750: uvm_test_top.env_h.agt.out_mon [MONITOR] Captured : atvalid=1 atdata=0000
 --------------------------------
 TIME=2434694000
 ATVALID=1
 ATDATA = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(925) @ 2434693750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434694000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(958) @ 2434693750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2434693750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434694000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(990) @ 2434693750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=9
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1002) @ 2434693750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(130) @ 2434693750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0004 iaddr=0798 del_valid=1 delta=0079c first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2434693750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0798 itype=0004 context=00 cause=00 tval=00000000 atb_mode=1
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(684) @ 2434693750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word0 = f391
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(689) @ 2434693750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word1 = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(694) @ 2434693750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word2 = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(699) @ 2434693750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word3 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(695) @ 2434693750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word0 = f391
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(700) @ 2434693750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word1 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(705) @ 2434693750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word2 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(710) @ 2434693750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word3 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(727) @ 2434693750: uvm_test_top.env_h.sb [FORMAT2_QUEUE] FORMAT2 PUSH: itype=0004 iaddr=0798 delta=0079c word0=f391 byte_word0=9100 queue_size_before=9
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(130) @ 2434698750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=079c del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2434698750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=079c itype=0000 context=00 cause=00 tval=00000000 atb_mode=1
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(348) @ 2434698750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=079c
@@ -10534,10 +10552,11 @@ UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2434858750: uvm_
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(348) @ 2434858750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=011c
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(130) @ 2434883750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0006 iaddr=0120 del_valid=1 delta=007a4 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2434883750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0120 itype=0006 context=00 cause=00 tval=00000000 atb_mode=1
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(684) @ 2434883750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word0 = f491
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(689) @ 2434883750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word1 = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(694) @ 2434883750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word2 = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(699) @ 2434883750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word3 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(695) @ 2434883750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word0 = f491
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(700) @ 2434883750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word1 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(705) @ 2434883750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word2 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(710) @ 2434883750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word3 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(727) @ 2434883750: uvm_test_top.env_h.sb [FORMAT2_QUEUE] FORMAT2 PUSH: itype=0006 iaddr=0120 delta=007a4 word0=f491 byte_word0=9100 queue_size_before=10
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(130) @ 2434888750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0120 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2434888750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0120 itype=0000 context=00 cause=00 tval=00000000 atb_mode=1
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(348) @ 2434888750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0120
@@ -10553,8 +10572,9 @@ UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(106) @ 2434928750: 
 TIME=2434929000
 ATVALID=1
 ATDATA = f391
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(925) @ 2434928750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434929000 ATVALID=1 ATDATA=f391
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(958) @ 2434928750: uvm_test_top.env_h.sb [SB] Waiting... DUT=f391 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2434928750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434929000 ATVALID=1 ATDATA=f391
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(990) @ 2434928750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=11
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1002) @ 2434928750: uvm_test_top.env_h.sb [SB] Waiting... DUT=f391 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(130) @ 2434928750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=07b4 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2434928750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07b4 itype=0000 context=00 cause=00 tval=00000000 atb_mode=1
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(348) @ 2434928750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=07b4
@@ -10564,8 +10584,9 @@ UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(106) @ 2434933750: 
 TIME=2434934000
 ATVALID=1
 ATDATA = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(925) @ 2434933750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434934000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(958) @ 2434933750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2434933750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434934000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(990) @ 2434933750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=11
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1002) @ 2434933750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(130) @ 2434933750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=07b8 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2434933750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07b8 itype=0000 context=00 cause=00 tval=00000000 atb_mode=1
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(348) @ 2434933750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=07b8
@@ -10575,8 +10596,9 @@ UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(106) @ 2434938750: 
 TIME=2434939000
 ATVALID=1
 ATDATA = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(925) @ 2434938750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434939000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(958) @ 2434938750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2434938750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434939000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(990) @ 2434938750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=11
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1002) @ 2434938750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(130) @ 2434938750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=07bc del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2434938750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07bc itype=0000 context=00 cause=00 tval=00000000 atb_mode=1
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(348) @ 2434938750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=07bc
@@ -10586,8 +10608,9 @@ UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(106) @ 2434943750: 
 TIME=2434944000
 ATVALID=1
 ATDATA = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(925) @ 2434943750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434944000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(958) @ 2434943750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2434943750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434944000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(990) @ 2434943750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=11
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1002) @ 2434943750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(130) @ 2434943750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=07c0 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2434943750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07c0 itype=0000 context=00 cause=00 tval=00000000 atb_mode=1
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(348) @ 2434943750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=07c0
@@ -10596,10 +10619,11 @@ UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2434948750: uvm_
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(348) @ 2434948750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=07c4
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(130) @ 2434953750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0006 iaddr=07c8 del_valid=1 delta=007d8 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2434953750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07c8 itype=0006 context=00 cause=00 tval=00000000 atb_mode=1
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(684) @ 2434953750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word0 = fb11
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(689) @ 2434953750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word1 = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(694) @ 2434953750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word2 = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(699) @ 2434953750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word3 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(695) @ 2434953750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word0 = fb11
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(700) @ 2434953750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word1 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(705) @ 2434953750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word2 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(710) @ 2434953750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word3 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(727) @ 2434953750: uvm_test_top.env_h.sb [FORMAT2_QUEUE] FORMAT2 PUSH: itype=0006 iaddr=07c8 delta=007d8 word0=fb11 byte_word0=1100 queue_size_before=11
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(130) @ 2434958750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=07c8 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2434958750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07c8 itype=0000 context=00 cause=00 tval=00000000 atb_mode=1
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(348) @ 2434958750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=07c8
@@ -10609,16 +10633,18 @@ UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(106) @ 2434968750: 
 TIME=2434969000
 ATVALID=1
 ATDATA = f491
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(925) @ 2434968750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434969000 ATVALID=1 ATDATA=f491
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(958) @ 2434968750: uvm_test_top.env_h.sb [SB] Waiting... DUT=f491 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2434968750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434969000 ATVALID=1 ATDATA=f491
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(990) @ 2434968750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=12
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1002) @ 2434968750: uvm_test_top.env_h.sb [SB] Waiting... DUT=f491 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(65) @ 2434973750: uvm_test_top.env_h.agt.out_mon [MON_CLK] CLK : atvalid=1 atready=1 atdata=0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(106) @ 2434973750: uvm_test_top.env_h.agt.out_mon [MONITOR] Captured : atvalid=1 atdata=0000
 --------------------------------
 TIME=2434974000
 ATVALID=1
 ATDATA = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(925) @ 2434973750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434974000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(958) @ 2434973750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2434973750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434974000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(990) @ 2434973750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=12
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1002) @ 2434973750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(130) @ 2434973750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=07d8 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2434973750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07d8 itype=0000 context=00 cause=00 tval=00000000 atb_mode=1
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(348) @ 2434973750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=07d8
@@ -10628,8 +10654,9 @@ UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(106) @ 2434978750: 
 TIME=2434979000
 ATVALID=1
 ATDATA = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(925) @ 2434978750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434979000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(958) @ 2434978750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2434978750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434979000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(990) @ 2434978750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=12
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1002) @ 2434978750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(130) @ 2434978750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=07dc del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2434978750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07dc itype=0000 context=00 cause=00 tval=00000000 atb_mode=1
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(348) @ 2434978750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=07dc
@@ -10639,8 +10666,9 @@ UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(106) @ 2434983750: 
 TIME=2434984000
 ATVALID=1
 ATDATA = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(925) @ 2434983750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434984000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(958) @ 2434983750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2434983750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434984000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(990) @ 2434983750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=12
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1002) @ 2434983750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(130) @ 2434983750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=07e0 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2434983750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07e0 itype=0000 context=00 cause=00 tval=00000000 atb_mode=1
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(348) @ 2434983750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=07e0
@@ -10692,10 +10720,11 @@ UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2435113750: uvm_
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(348) @ 2435113750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=00a0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(130) @ 2435138750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0006 iaddr=00a4 del_valid=1 delta=007f4 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2435138750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=00a4 itype=0006 context=00 cause=00 tval=00000000 atb_mode=1
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(684) @ 2435138750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word0 = fe91
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(689) @ 2435138750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word1 = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(694) @ 2435138750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word2 = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(699) @ 2435138750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word3 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(695) @ 2435138750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word0 = fe91
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(700) @ 2435138750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word1 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(705) @ 2435138750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word2 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(710) @ 2435138750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word3 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(727) @ 2435138750: uvm_test_top.env_h.sb [FORMAT2_QUEUE] FORMAT2 PUSH: itype=0006 iaddr=00a4 delta=007f4 word0=fe91 byte_word0=9100 queue_size_before=12
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(130) @ 2435143750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=00a4 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2435143750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=00a4 itype=0000 context=00 cause=00 tval=00000000 atb_mode=1
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(348) @ 2435143750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=00a4
@@ -10717,32 +10746,36 @@ UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(106) @ 2435183750: 
 TIME=2435184000
 ATVALID=1
 ATDATA = fb11
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(925) @ 2435183750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435184000 ATVALID=1 ATDATA=fb11
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(958) @ 2435183750: uvm_test_top.env_h.sb [SB] Waiting... DUT=fb11 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2435183750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435184000 ATVALID=1 ATDATA=fb11
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(990) @ 2435183750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=13
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1002) @ 2435183750: uvm_test_top.env_h.sb [SB] Waiting... DUT=fb11 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(65) @ 2435188750: uvm_test_top.env_h.agt.out_mon [MON_CLK] CLK : atvalid=1 atready=1 atdata=0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(106) @ 2435188750: uvm_test_top.env_h.agt.out_mon [MONITOR] Captured : atvalid=1 atdata=0000
 --------------------------------
 TIME=2435189000
 ATVALID=1
 ATDATA = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(925) @ 2435188750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435189000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(958) @ 2435188750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2435188750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435189000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(990) @ 2435188750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=13
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1002) @ 2435188750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(65) @ 2435193750: uvm_test_top.env_h.agt.out_mon [MON_CLK] CLK : atvalid=1 atready=1 atdata=0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(106) @ 2435193750: uvm_test_top.env_h.agt.out_mon [MONITOR] Captured : atvalid=1 atdata=0000
 --------------------------------
 TIME=2435194000
 ATVALID=1
 ATDATA = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(925) @ 2435193750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435194000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(958) @ 2435193750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2435193750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435194000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(990) @ 2435193750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=13
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1002) @ 2435193750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(65) @ 2435198750: uvm_test_top.env_h.agt.out_mon [MON_CLK] CLK : atvalid=1 atready=1 atdata=0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(106) @ 2435198750: uvm_test_top.env_h.agt.out_mon [MONITOR] Captured : atvalid=1 atdata=0000
 --------------------------------
 TIME=2435199000
 ATVALID=1
 ATDATA = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(925) @ 2435198750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435199000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(958) @ 2435198750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2435198750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435199000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(990) @ 2435198750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=13
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1002) @ 2435198750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(130) @ 2435198750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0804 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2435198750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0804 itype=0000 context=00 cause=00 tval=00000000 atb_mode=1
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(348) @ 2435198750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0804
@@ -10752,22 +10785,25 @@ UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(106) @ 2435223750: 
 TIME=2435224000
 ATVALID=1
 ATDATA = fe91
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(925) @ 2435223750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435224000 ATVALID=1 ATDATA=fe91
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(958) @ 2435223750: uvm_test_top.env_h.sb [SB] Waiting... DUT=fe91 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2435223750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435224000 ATVALID=1 ATDATA=fe91
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(990) @ 2435223750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=13
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1002) @ 2435223750: uvm_test_top.env_h.sb [SB] Waiting... DUT=fe91 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(130) @ 2435223750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0006 iaddr=0808 del_valid=1 delta=0001c first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2435223750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0808 itype=0006 context=00 cause=00 tval=00000000 atb_mode=1
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(684) @ 2435223750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word0 = 0391
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(689) @ 2435223750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word1 = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(694) @ 2435223750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word2 = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(699) @ 2435223750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word3 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(695) @ 2435223750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word0 = 0391
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(700) @ 2435223750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word1 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(705) @ 2435223750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word2 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(710) @ 2435223750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word3 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(727) @ 2435223750: uvm_test_top.env_h.sb [FORMAT2_QUEUE] FORMAT2 PUSH: itype=0006 iaddr=0808 delta=0001c word0=0391 byte_word0=9100 queue_size_before=13
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(65) @ 2435228750: uvm_test_top.env_h.agt.out_mon [MON_CLK] CLK : atvalid=1 atready=1 atdata=0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(106) @ 2435228750: uvm_test_top.env_h.agt.out_mon [MONITOR] Captured : atvalid=1 atdata=0000
 --------------------------------
 TIME=2435229000
 ATVALID=1
 ATDATA = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(925) @ 2435228750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435229000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(958) @ 2435228750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2435228750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435229000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(990) @ 2435228750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=14
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1002) @ 2435228750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(130) @ 2435228750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0808 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2435228750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0808 itype=0000 context=00 cause=00 tval=00000000 atb_mode=1
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(348) @ 2435228750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0808
@@ -10777,16 +10813,18 @@ UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(106) @ 2435233750: 
 TIME=2435234000
 ATVALID=1
 ATDATA = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(925) @ 2435233750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435234000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(958) @ 2435233750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2435233750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435234000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(990) @ 2435233750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=14
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1002) @ 2435233750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(65) @ 2435238750: uvm_test_top.env_h.agt.out_mon [MON_CLK] CLK : atvalid=1 atready=1 atdata=0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_output_monitor.sv(106) @ 2435238750: uvm_test_top.env_h.agt.out_mon [MONITOR] Captured : atvalid=1 atdata=0000
 --------------------------------
 TIME=2435239000
 ATVALID=1
 ATDATA = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(925) @ 2435238750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435239000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(958) @ 2435238750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(959) @ 2435238750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435239000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(990) @ 2435238750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=e311 byte_word0=1100 atb_mode=0 queue_size=14
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1002) @ 2435238750: uvm_test_top.env_h.sb [SB] Waiting... DUT=0000 Expected First=1100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(130) @ 2435243750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=001c del_valid=1 delta=0001c first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(259) @ 2435243750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=001c itype=0000 context=00 cause=00 tval=00000000 atb_mode=1
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(348) @ 2435243750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=001c
@@ -10821,7 +10859,7 @@ Number of caught UVM_WARNING reports :    0
 --- UVM Report Summary ---
 
 ** Report counts by severity
-UVM_INFO : 1853
+UVM_INFO : 1891
 UVM_WARNING :    0
 UVM_ERROR :    0
 UVM_FATAL :    0
@@ -10831,6 +10869,7 @@ UVM_FATAL :    0
 [BOOT_CHECKER]     4
 [BOOT_SEQ]  1087
 [FORMAT2_PREDICTOR]    56
+[FORMAT2_QUEUE]    14
 [GPIO_PINMUX]     1
 [INPUT_DEBUG]   204
 [IN_MON_DEBUG]   204
@@ -10839,6 +10878,7 @@ UVM_FATAL :    0
 [MON_CLK]    24
 [OUTPUT_SB]    24
 [PERIOD_USED1]     1
+[QUEUE_HEAD]    24
 [RNTST]     1
 [SB]    24
 [SB_REPORT]     2
@@ -10850,4 +10890,4 @@ UVM_FATAL :    0
 Simulation complete via $finish(1) at time 4431805 NS + 55
 /tools/eda/cadence/XCELIUM2009/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_root.svh:457     $finish;
 xcelium> exit
-TOOL:	xrun(64)	20.09-s009: Exiting on Mar 24, 2023 at 05:59:34 IST  (total: 00:05:53)
+TOOL:	xrun(64)	20.09-s009: Exiting on Mar 24, 2023 at 17:21:25 IST  (total: 00:09:21)
