@@ -1,5 +1,5 @@
 xrun(64): 20.09-s009: (c) Copyright 1995-2021 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	20.09-s009: Started on Mar 25, 2023 at 03:31:11 IST
+TOOL:	xrun(64)	20.09-s009: Started on Mar 25, 2023 at 03:44:49 IST
 xrun
 	-uvm
 	-sv
@@ -253,9 +253,9 @@ xrun
 	+PTE_HEX_FILE=/home/train70/Desktop/print_checker/dc_jal/c_tests/bin/pte.hex
 	+UVM_TESTNAME=trace_test
 	+C_TEST=dc_jalr
-	+ntb_random_seed=1680
-	+log_dir=/home/train70/Desktop/print_checker/dc_jal/sim/results/logs/pinaka_1680
-	-l /home/train70/Desktop/print_checker/dc_jal/sim/results/logs/pinaka_1680/rtl_run.log
+	+ntb_random_seed=45746
+	+log_dir=/home/train70/Desktop/print_checker/dc_jal/sim/results/logs/pinaka_45746
+	-l /home/train70/Desktop/print_checker/dc_jal/sim/results/logs/pinaka_45746/rtl_run.log
 
    User defined plus("+") options:
 	+pte_resp_delay=0
@@ -263,8 +263,8 @@ xrun
 	+DATA_FILE=/home/train70/Desktop/print_checker/dc_jal/c_tests/bin/dc_jalr_data.hex
 	+PTE_HEX_FILE=/home/train70/Desktop/print_checker/dc_jal/c_tests/bin/pte.hex
 	+C_TEST=dc_jalr
-	+ntb_random_seed=1680
-	+log_dir=/home/train70/Desktop/print_checker/dc_jal/sim/results/logs/pinaka_1680
+	+ntb_random_seed=45746
+	+log_dir=/home/train70/Desktop/print_checker/dc_jal/sim/results/logs/pinaka_45746
 
 Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /tools/eda/cadence/XCELIUM2009/tools/methodology/UVM/CDNS-1.1d
 file: ../rtl/ip/axi2apb_bridge/axi_typedef_pkg.sv
@@ -1511,461 +1511,461 @@ xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-
 			streams:  22, words: 19375
 		worklib.uvm_pkg:sv <0x52ada0f6>
 			streams:  23, words: 29436
-		worklib.uvm_pkg:sv <0x0a0ca245>
+		worklib.uvm_pkg:sv <0x6e9e3f64>
 			streams:  26, words: 50090
-		worklib.uvm_pkg:sv <0x286bafd4>
+		worklib.uvm_pkg:sv <0x69be0e67>
 			streams:  22, words: 22495
-		worklib.uvm_pkg:sv <0x0fe03b7b>
+		worklib.uvm_pkg:sv <0x3861463e>
 			streams:  22, words: 17750
-		worklib.uvm_pkg:sv <0x149ca114>
+		worklib.uvm_pkg:sv <0x035331db>
 			streams:  22, words: 30050
-		worklib.uvm_pkg:sv <0x54801b92>
+		worklib.uvm_pkg:sv <0x16d91aa5>
 			streams:  22, words: 22122
-		worklib.uvm_pkg:sv <0x5a75ced3>
+		worklib.uvm_pkg:sv <0x1fe5280c>
 			streams:  22, words: 36908
-		worklib.uvm_pkg:sv <0x0ce69f79>
+		worklib.uvm_pkg:sv <0x01b18851>
 			streams:  21, words: 19072
-		worklib.uvm_pkg:sv <0x467049ae>
+		worklib.uvm_pkg:sv <0x2f786e11>
 			streams:  21, words: 17492
-		worklib.uvm_pkg:sv <0x337520a5>
+		worklib.uvm_pkg:sv <0x081c2c87>
 			streams:  21, words: 21458
-		worklib.uvm_pkg:sv <0x0cd90ce8>
+		worklib.uvm_pkg:sv <0x444ca2ad>
 			streams:  21, words: 27409
-		worklib.uvm_pkg:sv <0x0307bc0c>
+		worklib.uvm_pkg:sv <0x7545637f>
 			streams:  23, words: 47210
-		worklib.uvm_pkg:sv <0x049d2481>
+		worklib.uvm_pkg:sv <0x5be72b6a>
 			streams:  23, words: 35028
-		worklib.uvm_pkg:sv <0x6dd96ecf>
+		worklib.uvm_pkg:sv <0x7c844daa>
 			streams:  20, words: 58127
-		worklib.uvm_pkg:sv <0x2b4449d6>
+		worklib.uvm_pkg:sv <0x2488408e>
 			streams:  30, words: 164778
-		worklib.uvm_pkg:sv <0x56584cd8>
+		worklib.uvm_pkg:sv <0x3a85dc93>
 			streams:  21, words: 24120
-		worklib.uvm_pkg:sv <0x63770c09>
+		worklib.uvm_pkg:sv <0x592e4f7f>
 			streams:  20, words: 17585
-		worklib.uvm_pkg:sv <0x3c2b28eb>
+		worklib.uvm_pkg:sv <0x75a6f00c>
 			streams:  20, words: 22661
-		worklib.uvm_pkg:sv <0x1220190b>
+		worklib.uvm_pkg:sv <0x61ff115b>
 			streams:  20, words: 19115
-		worklib.uvm_pkg:sv <0x1b1ef84b>
+		worklib.uvm_pkg:sv <0x654d1ee2>
 			streams:  21, words: 25799
-		worklib.uvm_pkg:sv <0x3f42d166>
+		worklib.uvm_pkg:sv <0x2313d15f>
 			streams:  21, words: 30398
-		worklib.uvm_pkg:sv <0x49055eb4>
+		worklib.uvm_pkg:sv <0x342477fc>
 			streams:  20, words: 28121
-		worklib.uvm_pkg:sv <0x71f2e989>
+		worklib.uvm_pkg:sv <0x1054beec>
 			streams:  20, words: 34516
-		worklib.uvm_pkg:sv <0x256cd4b7>
+		worklib.uvm_pkg:sv <0x42d6006b>
 			streams:  20, words: 29783
-		worklib.uvm_pkg:sv <0x109866ac>
+		worklib.uvm_pkg:sv <0x477d5bf1>
 			streams:  21, words: 18204
-		worklib.uvm_pkg:sv <0x1e03f5d1>
+		worklib.uvm_pkg:sv <0x162614dc>
 			streams:  20, words: 16622
-		worklib.uvm_pkg:sv <0x3ab608d4>
+		worklib.uvm_pkg:sv <0x3e187d2e>
 			streams:  24, words: 49855
-		worklib.uvm_pkg:sv <0x13374b4f>
+		worklib.uvm_pkg:sv <0x5c0468ed>
 			streams:  20, words: 16622
-		worklib.uvm_pkg:sv <0x76feb247>
+		worklib.uvm_pkg:sv <0x259cb468>
 			streams:  24, words: 52616
-		worklib.uvm_pkg:sv <0x36b70e92>
+		worklib.uvm_pkg:sv <0x3f34e163>
 			streams:  20, words: 15351
-		worklib.uvm_pkg:sv <0x64cc10de>
+		worklib.uvm_pkg:sv <0x01f88d88>
 			streams:  21, words: 17519
-		worklib.uvm_pkg:sv <0x6abc694b>
+		worklib.uvm_pkg:sv <0x64dc3ce0>
 			streams:  24, words: 49875
-		worklib.uvm_pkg:sv <0x561cc079>
+		worklib.uvm_pkg:sv <0x7eff9c58>
 			streams:  20, words: 16622
-		worklib.uvm_pkg:sv <0x27ea5fef>
+		worklib.uvm_pkg:sv <0x12a9d68d>
 			streams:  24, words: 44615
-		worklib.uvm_pkg:sv <0x0b98629a>
+		worklib.uvm_pkg:sv <0x598b4561>
 			streams:  20, words: 16622
-		worklib.uvm_pkg:sv <0x688cd0fc>
+		worklib.uvm_pkg:sv <0x7b2faac2>
 			streams:  24, words: 44621
-		worklib.uvm_pkg:sv <0x3307652f>
+		worklib.uvm_pkg:sv <0x74cdfe9e>
 			streams:  20, words: 16622
-		worklib.uvm_pkg:sv <0x3f498ef3>
+		worklib.uvm_pkg:sv <0x01606439>
 			streams:  24, words: 49875
-		worklib.uvm_pkg:sv <0x75fb80fb>
+		worklib.uvm_pkg:sv <0x734ebc0d>
 			streams:  20, words: 16622
-		worklib.uvm_pkg:sv <0x06c84fb0>
+		worklib.uvm_pkg:sv <0x7d780ea0>
 			streams:  24, words: 49067
-		worklib.uvm_pkg:sv <0x597374b3>
+		worklib.uvm_pkg:sv <0x30307a2b>
 			streams:  20, words: 16622
-		worklib.uvm_pkg:sv <0x666f8a49>
+		worklib.uvm_pkg:sv <0x654dd262>
 			streams:  24, words: 50579
-		worklib.uvm_pkg:sv <0x231381bb>
+		worklib.uvm_pkg:sv <0x3da6f263>
 			streams:  20, words: 16622
-		worklib.uvm_pkg:sv <0x375e9b57>
+		worklib.uvm_pkg:sv <0x74967b60>
 			streams:  24, words: 49869
-		worklib.uvm_pkg:sv <0x1ed061eb>
+		worklib.uvm_pkg:sv <0x4f8cfc8b>
 			streams:  20, words: 16622
-		worklib.uvm_pkg:sv <0x259f0937>
+		worklib.uvm_pkg:sv <0x1c49764b>
 			streams:  24, words: 49047
-		worklib.uvm_pkg:sv <0x0d6a8c42>
+		worklib.uvm_pkg:sv <0x11a641e9>
 			streams:  20, words: 16622
-		worklib.uvm_pkg:sv <0x6633f57d>
+		worklib.uvm_pkg:sv <0x1ac4e65c>
 			streams:  24, words: 49865
-		worklib.uvm_pkg:sv <0x71aef7d9>
+		worklib.uvm_pkg:sv <0x6d96ce83>
 			streams:  20, words: 16622
-		worklib.uvm_pkg:sv <0x37df24f1>
+		worklib.uvm_pkg:sv <0x460a4e77>
 			streams:  24, words: 49875
-		worklib.uvm_pkg:sv <0x703555a3>
+		worklib.uvm_pkg:sv <0x2f0218d5>
 			streams:  20, words: 16622
-		worklib.uvm_pkg:sv <0x0a549078>
+		worklib.uvm_pkg:sv <0x37b9615a>
 			streams:  24, words: 49067
-		worklib.uvm_pkg:sv <0x04edfb5e>
+		worklib.uvm_pkg:sv <0x5fcd3189>
 			streams:  20, words: 16622
-		worklib.uvm_pkg:sv <0x7a93877b>
+		worklib.uvm_pkg:sv <0x07d31be3>
 			streams:  24, words: 49865
-		worklib.uvm_pkg:sv <0x66972e9f>
+		worklib.uvm_pkg:sv <0x798e968f>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x513dff92>
+		worklib.uvm_pkg:sv <0x1490b16b>
 			streams:  23, words: 25557
-		worklib.uvm_pkg:sv <0x7035910e>
+		worklib.uvm_pkg:sv <0x24dd87ea>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x7d96b683>
+		worklib.uvm_pkg:sv <0x4f837ba4>
 			streams:  23, words: 27747
-		worklib.uvm_pkg:sv <0x5c1422c6>
+		worklib.uvm_pkg:sv <0x34dcc933>
 			streams:  23, words: 139900
-		worklib.uvm_pkg:sv <0x4c1b40c0>
+		worklib.uvm_pkg:sv <0x0dea8b0e>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x62f358a4>
+		worklib.uvm_pkg:sv <0x14908b6a>
 			streams:  23, words: 25557
-		worklib.uvm_pkg:sv <0x31e66c7e>
+		worklib.uvm_pkg:sv <0x0fddd17e>
 			streams:  23, words: 71543
-		worklib.uvm_pkg:sv <0x5a18b9f7>
+		worklib.uvm_pkg:sv <0x29633e76>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x2cc6c1a9>
+		worklib.uvm_pkg:sv <0x6e2e5917>
 			streams:  23, words: 25557
-		worklib.uvm_pkg:sv <0x2bd9cbd0>
+		worklib.uvm_pkg:sv <0x12cbb09c>
 			streams:  23, words: 99475
-		worklib.uvm_pkg:sv <0x5c1a5b73>
+		worklib.uvm_pkg:sv <0x75b04730>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x57908d3c>
+		worklib.uvm_pkg:sv <0x77258e9a>
 			streams:  23, words: 25557
-		worklib.uvm_pkg:sv <0x3ae31546>
+		worklib.uvm_pkg:sv <0x3a26acfa>
 			streams:  23, words: 71549
-		worklib.uvm_pkg:sv <0x10b3deda>
+		worklib.uvm_pkg:sv <0x51753b45>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x7033cdef>
+		worklib.uvm_pkg:sv <0x64f1200f>
 			streams:  23, words: 25557
-		worklib.uvm_pkg:sv <0x529156d3>
+		worklib.uvm_pkg:sv <0x77845189>
 			streams:  23, words: 98195
-		worklib.uvm_pkg:sv <0x0560ec8e>
+		worklib.uvm_pkg:sv <0x19fbc4e5>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x6d3f6ae5>
+		worklib.uvm_pkg:sv <0x45d08833>
 			streams:  23, words: 25557
-		worklib.uvm_pkg:sv <0x29be4085>
+		worklib.uvm_pkg:sv <0x091f44b3>
 			streams:  23, words: 71549
-		worklib.uvm_pkg:sv <0x7b32b8a8>
+		worklib.uvm_pkg:sv <0x2565aa61>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x32866302>
+		worklib.uvm_pkg:sv <0x760438f3>
 			streams:  23, words: 25557
-		worklib.uvm_pkg:sv <0x4448363b>
+		worklib.uvm_pkg:sv <0x58570292>
 			streams:  23, words: 99487
-		worklib.uvm_pkg:sv <0x2f35afe5>
+		worklib.uvm_pkg:sv <0x21af917c>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x43337d9f>
+		worklib.uvm_pkg:sv <0x3d197c3d>
 			streams:  23, words: 25557
-		worklib.uvm_pkg:sv <0x15c12cdb>
+		worklib.uvm_pkg:sv <0x21a556f9>
 			streams:  23, words: 71543
-		worklib.uvm_pkg:sv <0x72066c08>
+		worklib.uvm_pkg:sv <0x5fc12687>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x283f5f87>
+		worklib.uvm_pkg:sv <0x7475b7d6>
 			streams:  23, words: 25557
-		worklib.uvm_pkg:sv <0x5a7bbf0a>
+		worklib.uvm_pkg:sv <0x4339605e>
 			streams:  23, words: 99475
-		worklib.uvm_pkg:sv <0x5fb35fb4>
+		worklib.uvm_pkg:sv <0x582ec08b>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x08c3be21>
+		worklib.uvm_pkg:sv <0x3907c455>
 			streams:  23, words: 25557
-		worklib.uvm_pkg:sv <0x30fd086b>
+		worklib.uvm_pkg:sv <0x359b83d2>
 			streams:  23, words: 29802
-		worklib.uvm_pkg:sv <0x2b4d9959>
+		worklib.uvm_pkg:sv <0x59b4f974>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x359aa159>
+		worklib.uvm_pkg:sv <0x6782287f>
 			streams:  23, words: 56036
-		worklib.uvm_pkg:sv <0x0b593fae>
+		worklib.uvm_pkg:sv <0x348ad5eb>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x1e045ee2>
+		worklib.uvm_pkg:sv <0x722b482a>
 			streams:  23, words: 44318
-		worklib.uvm_pkg:sv <0x6b82879f>
+		worklib.uvm_pkg:sv <0x3132da60>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x5f7c58cf>
+		worklib.uvm_pkg:sv <0x3ffee3d9>
 			streams:  23, words: 54137
-		worklib.uvm_pkg:sv <0x74b0e426>
+		worklib.uvm_pkg:sv <0x554f1612>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x1a97a345>
+		worklib.uvm_pkg:sv <0x482605db>
 			streams:  23, words: 62438
-		worklib.uvm_pkg:sv <0x63e3d231>
+		worklib.uvm_pkg:sv <0x395ed3b5>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x2621308e>
+		worklib.uvm_pkg:sv <0x0de8ab41>
 			streams:  23, words: 47130
-		worklib.uvm_pkg:sv <0x28e8b0f2>
+		worklib.uvm_pkg:sv <0x28f42a16>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x6bd7844d>
+		worklib.uvm_pkg:sv <0x7f377ee0>
 			streams:  23, words: 62042
-		worklib.uvm_pkg:sv <0x3d9833e6>
+		worklib.uvm_pkg:sv <0x2d70690b>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x49a590c3>
+		worklib.uvm_pkg:sv <0x4801364c>
 			streams:  23, words: 51983
-		worklib.uvm_pkg:sv <0x197d90b8>
+		worklib.uvm_pkg:sv <0x188a272b>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x756b257f>
+		worklib.uvm_pkg:sv <0x222f62cb>
 			streams:  23, words: 46473
-		worklib.uvm_pkg:sv <0x6593f7fc>
+		worklib.uvm_pkg:sv <0x0bb272c8>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x695cbeaf>
+		worklib.uvm_pkg:sv <0x1605a8e5>
 			streams:  23, words: 41385
-		worklib.uvm_pkg:sv <0x2a0f810b>
+		worklib.uvm_pkg:sv <0x2b575c21>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x7da7a1a2>
+		worklib.uvm_pkg:sv <0x10177076>
 			streams:  23, words: 47206
-		worklib.uvm_pkg:sv <0x155d36e0>
+		worklib.uvm_pkg:sv <0x02f263cc>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x567051d2>
+		worklib.uvm_pkg:sv <0x1948dcb3>
 			streams:  23, words: 29810
-		worklib.uvm_pkg:sv <0x6a4d35ac>
+		worklib.uvm_pkg:sv <0x59a1d055>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x342128ce>
+		worklib.uvm_pkg:sv <0x168f2fa6>
 			streams:  23, words: 24349
-		worklib.uvm_pkg:sv <0x7be2af00>
+		worklib.uvm_pkg:sv <0x21fbcc01>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x00b7d011>
+		worklib.uvm_pkg:sv <0x2848e97b>
 			streams:  23, words: 35112
-		worklib.uvm_pkg:sv <0x01790737>
+		worklib.uvm_pkg:sv <0x00f84b6c>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x7e85598a>
+		worklib.uvm_pkg:sv <0x1af2813f>
 			streams:  23, words: 35106
-		worklib.uvm_pkg:sv <0x5274b118>
+		worklib.uvm_pkg:sv <0x78f05d2f>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x5dcbfa2e>
+		worklib.uvm_pkg:sv <0x4f82f785>
 			streams:  23, words: 35565
-		worklib.uvm_pkg:sv <0x1ca66fe3>
+		worklib.uvm_pkg:sv <0x045f9968>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x413e6ae3>
+		worklib.uvm_pkg:sv <0x1c00b971>
 			streams:  23, words: 34257
-		worklib.uvm_pkg:sv <0x689f7290>
+		worklib.uvm_pkg:sv <0x7184ac43>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x082727cd>
+		worklib.uvm_pkg:sv <0x6864144f>
 			streams:  23, words: 45467
-		worklib.uvm_pkg:sv <0x2b348e1c>
+		worklib.uvm_pkg:sv <0x15cedd83>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x4f9104d5>
+		worklib.uvm_pkg:sv <0x6a1cf800>
 			streams:  23, words: 32818
-		worklib.uvm_pkg:sv <0x46fb1700>
+		worklib.uvm_pkg:sv <0x59a625fa>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x05865dd1>
+		worklib.uvm_pkg:sv <0x12563896>
 			streams:  23, words: 34502
-		worklib.uvm_pkg:sv <0x20cedff2>
+		worklib.uvm_pkg:sv <0x2833b020>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x1d886458>
+		worklib.uvm_pkg:sv <0x512de0d3>
 			streams:  23, words: 34790
-		worklib.uvm_pkg:sv <0x5957c9e9>
+		worklib.uvm_pkg:sv <0x583ad2bc>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x2beddfc6>
+		worklib.uvm_pkg:sv <0x4e7a81e0>
 			streams:  23, words: 37184
-		worklib.uvm_pkg:sv <0x09d863d8>
+		worklib.uvm_pkg:sv <0x396e3b64>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x68783dac>
+		worklib.uvm_pkg:sv <0x408dce61>
 			streams:  23, words: 37184
-		worklib.uvm_pkg:sv <0x23821af2>
+		worklib.uvm_pkg:sv <0x66a0ff89>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x04433341>
+		worklib.uvm_pkg:sv <0x260342c2>
 			streams:  23, words: 53575
-		worklib.uvm_pkg:sv <0x031c51db>
+		worklib.uvm_pkg:sv <0x3057f918>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x0c6d7e98>
+		worklib.uvm_pkg:sv <0x1c7abb04>
 			streams:  23, words: 29763
-		worklib.uvm_pkg:sv <0x051db780>
+		worklib.uvm_pkg:sv <0x628ae37b>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x0fccff61>
+		worklib.uvm_pkg:sv <0x1284ee7c>
 			streams:  24, words: 37974
-		worklib.uvm_pkg:sv <0x2fa6134c>
+		worklib.uvm_pkg:sv <0x5ab6fefa>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x4d9c7f57>
+		worklib.uvm_pkg:sv <0x7a651480>
 			streams:  24, words: 37128
-		worklib.uvm_pkg:sv <0x13e26196>
+		worklib.uvm_pkg:sv <0x0bf1e4f2>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x3d99b775>
+		worklib.uvm_pkg:sv <0x5e28a201>
 			streams:  23, words: 37097
-		worklib.uvm_pkg:sv <0x4941f9e5>
+		worklib.uvm_pkg:sv <0x0de41876>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x2f520291>
+		worklib.uvm_pkg:sv <0x519d5c5c>
 			streams:  23, words: 87343
-		worklib.uvm_pkg:sv <0x429add08>
+		worklib.uvm_pkg:sv <0x28a98e53>
 			streams:  21, words: 15646
-		worklib.uvm_pkg:sv <0x58fc6319>
+		worklib.uvm_pkg:sv <0x4868ce4d>
 			streams:  23, words: 24250
-		worklib.uvm_pkg:sv <0x7f551064>
+		worklib.uvm_pkg:sv <0x3265117c>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x2f3a1291>
+		worklib.uvm_pkg:sv <0x02d20376>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x741bfa6e>
+		worklib.uvm_pkg:sv <0x23a1007a>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x285c201a>
+		worklib.uvm_pkg:sv <0x037f6d28>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x20cf5b97>
+		worklib.uvm_pkg:sv <0x38db600e>
 			streams:  23, words: 47044
-		worklib.uvm_pkg:sv <0x4083a5a1>
+		worklib.uvm_pkg:sv <0x54e9a89e>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x60357f78>
+		worklib.uvm_pkg:sv <0x23c1ac32>
 			streams:  23, words: 29268
-		worklib.uvm_pkg:sv <0x7eec0759>
+		worklib.uvm_pkg:sv <0x27dacad3>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x53395699>
+		worklib.uvm_pkg:sv <0x7efb85a7>
 			streams:  23, words: 29036
-		worklib.uvm_pkg:sv <0x40e9f302>
+		worklib.uvm_pkg:sv <0x55bc969e>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x7427b757>
+		worklib.uvm_pkg:sv <0x5a0d393b>
 			streams:  23, words: 142991
-		worklib.uvm_pkg:sv <0x4a36c9ee>
+		worklib.uvm_pkg:sv <0x5b8c935d>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x7136a3f0>
+		worklib.uvm_pkg:sv <0x56d33e94>
 			streams:  23, words: 44099
-		worklib.uvm_pkg:sv <0x6944dd20>
+		worklib.uvm_pkg:sv <0x61362941>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x589dddaf>
+		worklib.uvm_pkg:sv <0x1a59855d>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x4180c8de>
+		worklib.uvm_pkg:sv <0x3166d4e7>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x1195a487>
+		worklib.uvm_pkg:sv <0x05840e1a>
 			streams:  23, words: 41584
-		worklib.uvm_pkg:sv <0x5039b0a0>
+		worklib.uvm_pkg:sv <0x35e7daad>
 			streams:  23, words: 70287
-		worklib.uvm_pkg:sv <0x62275314>
+		worklib.uvm_pkg:sv <0x38b8ea6a>
 			streams:  23, words: 28882
-		worklib.uvm_pkg:sv <0x51236630>
+		worklib.uvm_pkg:sv <0x1e496102>
 			streams:  23, words: 29380
-		worklib.uvm_pkg:sv <0x40f3333b>
+		worklib.uvm_pkg:sv <0x17231f5d>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x4ab7e98a>
+		worklib.uvm_pkg:sv <0x053923fd>
 			streams:  23, words: 50877
-		worklib.uvm_pkg:sv <0x5d01944d>
+		worklib.uvm_pkg:sv <0x7f6c2b82>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x107099f5>
+		worklib.uvm_pkg:sv <0x2bfabd63>
 			streams:  23, words: 52357
-		worklib.uvm_pkg:sv <0x0f54a19f>
+		worklib.uvm_pkg:sv <0x7de7aef4>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x0d6ef443>
+		worklib.uvm_pkg:sv <0x43e5a09c>
 			streams:  23, words: 29179
-		worklib.uvm_pkg:sv <0x50c90289>
+		worklib.uvm_pkg:sv <0x5df5e12f>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x2ffb0349>
+		worklib.uvm_pkg:sv <0x7da27828>
 			streams:  23, words: 38883
-		worklib.uvm_pkg:sv <0x305ab720>
+		worklib.uvm_pkg:sv <0x054d9c5a>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x45f663a2>
+		worklib.uvm_pkg:sv <0x44a82f07>
 			streams:  23, words: 42056
-		worklib.uvm_pkg:sv <0x2a6e207a>
+		worklib.uvm_pkg:sv <0x207dfdfa>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x169d5071>
+		worklib.uvm_pkg:sv <0x77238f8b>
 			streams:  23, words: 41272
-		worklib.uvm_pkg:sv <0x6107de08>
+		worklib.uvm_pkg:sv <0x1526d940>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x72d3e228>
+		worklib.uvm_pkg:sv <0x7a2ff048>
 			streams:  23, words: 51162
-		worklib.uvm_pkg:sv <0x4311be56>
+		worklib.uvm_pkg:sv <0x3861c8e0>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x32f8fb93>
+		worklib.uvm_pkg:sv <0x0fd22bb9>
 			streams:  23, words: 50877
-		worklib.uvm_pkg:sv <0x3932c0f5>
+		worklib.uvm_pkg:sv <0x159744e7>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x6baba73b>
+		worklib.uvm_pkg:sv <0x4b0e00fc>
 			streams:  23, words: 29663
-		worklib.uvm_pkg:sv <0x19cd449a>
+		worklib.uvm_pkg:sv <0x2afedbe9>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x1b99ff9b>
+		worklib.uvm_pkg:sv <0x6a6f001d>
 			streams:  23, words: 72268
-		worklib.uvm_pkg:sv <0x62dd1b31>
+		worklib.uvm_pkg:sv <0x10d72ff9>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x056b3221>
+		worklib.uvm_pkg:sv <0x2e253fa6>
 			streams:  23, words: 29663
-		worklib.uvm_pkg:sv <0x7776add2>
+		worklib.uvm_pkg:sv <0x4428129b>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x248f0908>
+		worklib.uvm_pkg:sv <0x70fe391d>
 			streams:  23, words: 57143
-		worklib.uvm_pkg:sv <0x1ddadb7b>
+		worklib.uvm_pkg:sv <0x7124b0d3>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x68bdb293>
+		worklib.uvm_pkg:sv <0x457ccf14>
 			streams:  23, words: 58576
-		worklib.uvm_pkg:sv <0x2eccf189>
+		worklib.uvm_pkg:sv <0x5b42ed7f>
 			streams:  20, words: 17550
-		worklib.uvm_pkg:sv <0x568771dd>
+		worklib.uvm_pkg:sv <0x6849eaec>
 			streams:  20, words: 16301
-		worklib.uvm_pkg:sv <0x7313ec50>
+		worklib.uvm_pkg:sv <0x1186004d>
 			streams:  20, words: 17550
-		worklib.uvm_pkg:sv <0x1e3c0982>
+		worklib.uvm_pkg:sv <0x5706d309>
 			streams:  20, words: 15392
-		worklib.uvm_pkg:sv <0x0129c7d0>
+		worklib.uvm_pkg:sv <0x72c12aa4>
 			streams:  20, words: 18620
-		worklib.uvm_pkg:sv <0x57e77c8a>
+		worklib.uvm_pkg:sv <0x3382187f>
 			streams:  20, words: 15670
-		worklib.uvm_pkg:sv <0x2e38f3d4>
+		worklib.uvm_pkg:sv <0x04868b4c>
 			streams:  20, words: 53010
-		worklib.uvm_pkg:sv <0x37e6cb7e>
+		worklib.uvm_pkg:sv <0x0b730221>
 			streams:  21, words: 22326
-		worklib.uvm_pkg:sv <0x0a8dd71b>
+		worklib.uvm_pkg:sv <0x36732916>
 			streams:  20, words: 15392
-		worklib.uvm_pkg:sv <0x20d624a7>
+		worklib.uvm_pkg:sv <0x0aaea552>
 			streams:  20, words: 22650
-		worklib.uvm_pkg:sv <0x28e906a5>
+		worklib.uvm_pkg:sv <0x13f97984>
 			streams:  21, words: 23826
-		worklib.uvm_pkg:sv <0x64d4bdd8>
+		worklib.uvm_pkg:sv <0x71f11565>
 			streams:  28, words: 29353
-		worklib.uvm_pkg:sv <0x6cb9a182>
+		worklib.uvm_pkg:sv <0x1c20eaeb>
 			streams:  21, words: 15706
-		worklib.uvm_pkg:sv <0x25afa372>
+		worklib.uvm_pkg:sv <0x195cf53e>
 			streams:  23, words: 51945
-		worklib.uvm_pkg:sv <0x22db6d48>
+		worklib.uvm_pkg:sv <0x37d924fd>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x0f77142b>
+		worklib.uvm_pkg:sv <0x6264b8e4>
 			streams:  23, words: 25664
-		worklib.uvm_pkg:sv <0x2ce71de1>
+		worklib.uvm_pkg:sv <0x6c7325a7>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x28734b70>
+		worklib.uvm_pkg:sv <0x4ce14e55>
 			streams:  23, words: 60539
-		worklib.uvm_pkg:sv <0x68190164>
+		worklib.uvm_pkg:sv <0x2b4d5b70>
 			streams:  21, words: 15984
-		worklib.uvm_pkg:sv <0x4fcf0367>
+		worklib.uvm_pkg:sv <0x4bd9c740>
 			streams:  23, words: 67203
-		worklib.uvm_pkg:sv <0x3ff81bfd>
+		worklib.uvm_pkg:sv <0x2d767748>
 			streams:  23, words: 29811
-		worklib.uvm_pkg:sv <0x57224a88>
+		worklib.uvm_pkg:sv <0x5123b5d4>
 			streams:  23, words: 29811
-		worklib.uvm_pkg:sv <0x7efb7b91>
+		worklib.uvm_pkg:sv <0x6786f918>
 			streams:  21, words: 30862
-		worklib.tb_pkg:sv <0x06555ba3>
+		worklib.tb_pkg:sv <0x2047e612>
 			streams:  22, words: 19823
-		worklib.tb_pkg:sv <0x7ce414ca>
+		worklib.tb_pkg:sv <0x735d9454>
 			streams:  22, words: 37517
 		worklib.uvm_pkg:sv <0x444fa360>
 			streams:   7, words:  3099
-		worklib.uvm_pkg:sv <0x2ee02543>
+		worklib.uvm_pkg:sv <0x72c76996>
 			streams:  22, words: 19679
-		worklib.uvm_pkg:sv <0x3a31d952>
+		worklib.uvm_pkg:sv <0x0a473588>
 			streams:  22, words: 19536
-		worklib.uvm_pkg:sv <0x3192e3f9>
+		worklib.uvm_pkg:sv <0x6de50359>
 			streams:  46, words: 62353
-		worklib.uvm_pkg:sv <0x785a7481>
+		worklib.uvm_pkg:sv <0x09fc03cf>
 			streams: 111, words: 138975
-		worklib.tb_pkg:sv <0x45d254df>
+		worklib.tb_pkg:sv <0x73777aa5>
 			streams:  24, words: 77129
-		worklib.uvm_pkg:sv <0x3f3886bc>
+		worklib.uvm_pkg:sv <0x45f422ab>
 			streams:  22, words: 24622
-		worklib.uvm_pkg:sv <0x3178ef1f>
+		worklib.uvm_pkg:sv <0x3493fda6>
 			streams:  28, words: 21466
-		worklib.uvm_pkg:sv <0x5c97f1af>
+		worklib.uvm_pkg:sv <0x425f0aab>
 			streams:  25, words: 62567
-		worklib.uvm_pkg:sv <0x5ade717c>
+		worklib.uvm_pkg:sv <0x31b4e7e1>
 			streams:  22, words: 27046
-		worklib.uvm_pkg:sv <0x58eda698>
+		worklib.uvm_pkg:sv <0x14da8a1e>
 			streams:  21, words: 18395
 		worklib.uvm_pkg:sv <0x1af31d6d>
 			streams:  79, words: 119607
 		worklib.uvm_pkg:sv <0x229948ba>
 			streams:  22, words: 22212
-		worklib.uvm_pkg:sv <0x351b1f4b>
+		worklib.uvm_pkg:sv <0x4248e667>
 			streams:  81, words: 108828
 		worklib.uvm_pkg:sv <0x51a2cb51>
 			streams:  22, words: 42438
@@ -1983,71 +1983,71 @@ xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-
 			streams: 257, words: 310462
 		worklib.uvm_pkg:sv <0x352b09d1>
 			streams:  21, words: 41549
-		worklib.uvm_pkg:sv <0x6a5f1ba5>
+		worklib.uvm_pkg:sv <0x65e31553>
 			streams:  22, words: 20509
 		worklib.uvm_pkg:sv <0x1e5a94d3>
 			streams:  72, words: 87928
 		worklib.uvm_pkg:sv <0x0d1aa675>
 			streams: 111, words: 139266
-		worklib.uvm_pkg:sv <0x2b462d46>
-			streams:  24, words: 54014
-		worklib.uvm_pkg:sv <0x14767ddc>
+		worklib.uvm_pkg:sv <0x24f8e6a4>
+			streams:  24, words: 57530
+		worklib.uvm_pkg:sv <0x4a449dd1>
 			streams:  22, words: 30294
-		worklib.tb_pkg:sv <0x091dfe46>
+		worklib.tb_pkg:sv <0x49cd2d0a>
 			streams:  45, words: 127968
 		worklib.uvm_pkg:sv <0x7c8f7a25>
 			streams: 176, words: 200591
 		worklib.uvm_pkg:sv <0x22d714d2>
 			streams:  22, words: 21500
-		worklib.uvm_pkg:sv <0x1b0ab823>
+		worklib.uvm_pkg:sv <0x573f12b9>
 			streams:  22, words: 22458
-		worklib.uvm_pkg:sv <0x50639dc2>
+		worklib.uvm_pkg:sv <0x5bc59d28>
 			streams:  21, words: 19610
-		worklib.uvm_pkg:sv <0x071ab010>
+		worklib.uvm_pkg:sv <0x7c4b3250>
 			streams: 101, words: 119753
-		worklib.uvm_pkg:sv <0x4f77233c>
+		worklib.uvm_pkg:sv <0x1b5fac0f>
 			streams:  22, words: 20450
-		worklib.uvm_pkg:sv <0x5a39d62d>
+		worklib.uvm_pkg:sv <0x052509d1>
 			streams: 258, words: 311193
-		worklib.uvm_pkg:sv <0x39ad36ce>
+		worklib.uvm_pkg:sv <0x3691021a>
 			streams:  22, words: 27254
-		worklib.uvm_pkg:sv <0x4b0772b3>
+		worklib.uvm_pkg:sv <0x45c0086b>
 			streams: 111, words: 129515
-		worklib.uvm_pkg:sv <0x5c9470f4>
+		worklib.uvm_pkg:sv <0x313190ca>
 			streams:  81, words: 114428
-		worklib.uvm_pkg:sv <0x1cb5e4fd>
+		worklib.uvm_pkg:sv <0x65b4dadd>
 			streams: 321, words: 384180
-		worklib.uvm_pkg:sv <0x2a0c6be6>
+		worklib.uvm_pkg:sv <0x4b93205c>
 			streams:  22, words: 34495
-		worklib.uvm_pkg:sv <0x39be1f5b>
+		worklib.uvm_pkg:sv <0x2c9470ad>
 			streams:  20, words: 23219
-		worklib.uvm_pkg:sv <0x0ad7c296>
+		worklib.uvm_pkg:sv <0x30fe3d08>
 			streams:  76, words: 98930
 		worklib.uvm_pkg:sv <0x2277f042>
 			streams:   8, words:  4212
-		worklib.uvm_pkg:sv <0x3c1e83cf>
+		worklib.uvm_pkg:sv <0x427ad69f>
 			streams:  23, words: 22148
-		worklib.uvm_pkg:sv <0x7f00052d>
+		worklib.uvm_pkg:sv <0x6caa757e>
 			streams:  23, words: 37279
-		worklib.uvm_pkg:sv <0x7af8effd>
+		worklib.uvm_pkg:sv <0x1a42ae8d>
 			streams: 175, words: 192363
-		worklib.uvm_pkg:sv <0x77cb7111>
+		worklib.uvm_pkg:sv <0x6a598da8>
 			streams:  22, words: 59290
-		worklib.uvm_pkg:sv <0x751d1432>
+		worklib.uvm_pkg:sv <0x5d541e17>
 			streams: 186, words: 235259
 		worklib.uvm_pkg:sv <0x15e46590>
 			streams:   7, words:  3099
-		worklib.uvm_pkg:sv <0x0924750e>
+		worklib.uvm_pkg:sv <0x17370ade>
 			streams:  81, words: 114449
 		worklib.uvm_pkg:sv <0x0665fe5d>
 			streams:   7, words:  3099
-		worklib.uvm_pkg:sv <0x17bc06ea>
+		worklib.uvm_pkg:sv <0x2cf177e2>
 			streams:  94, words: 191199
-		worklib.uvm_pkg:sv <0x3c7df5ec>
+		worklib.uvm_pkg:sv <0x122d63ce>
 			streams:  22, words: 20548
-		worklib.uvm_pkg:sv <0x24fb6a1d>
+		worklib.uvm_pkg:sv <0x456421a7>
 			streams:  22, words: 38379
-		worklib.uvm_pkg:sv <0x3d9b3d48>
+		worklib.uvm_pkg:sv <0x62163a4d>
 			streams:  23, words: 72461
 		worklib.chip_top_tb:v <0x3f24f009>
 			streams: 651, words: 791747
@@ -10034,8 +10034,10 @@ UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2432748750: u
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(144) @ 2432748750: uvm_test_top.env_h.agt.in_mon [TRACE_LIMIT] Trace transaction 49 sent to scoreboard
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2432753750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=00f4 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(144) @ 2432753750: uvm_test_top.env_h.agt.in_mon [TRACE_LIMIT] Trace transaction 50 sent to scoreboard
-UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(150) @ 2432753750: uvm_test_top.env_h.agt.in_mon [TRACE_LIMIT] 50 trace transactions completed - stopping simulation
-Simulation complete via $finish(1) at time 2432753750 PS + 14
-../dv/tb/agents/trace_agent/trace_input_monitor.sv:151         $finish;
+UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(150) @ 2432753750: uvm_test_top.env_h.agt.in_mon [TRACE_LIMIT] 50 trace transactions captured - allowing ATB output to drain
+[C_PRINT][INFO]:80000004
+UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(156) @ 2433253750: uvm_test_top.env_h.agt.in_mon [TRACE_LIMIT] ATB output drain completed - stopping simulation
+Simulation complete via $finish(1) at time 2433253750 PS + 14
+../dv/tb/agents/trace_agent/trace_input_monitor.sv:158     $finish;
 xcelium> exit
-TOOL:	xrun(64)	20.09-s009: Exiting on Mar 25, 2023 at 03:33:10 IST  (total: 00:01:59)
+TOOL:	xrun(64)	20.09-s009: Exiting on Mar 25, 2023 at 03:47:58 IST  (total: 00:03:09)
