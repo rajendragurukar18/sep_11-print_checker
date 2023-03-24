@@ -1,5 +1,5 @@
 xrun(64): 20.09-s009: (c) Copyright 1995-2021 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	20.09-s009: Started on Mar 25, 2023 at 00:16:47 IST
+TOOL:	xrun(64)	20.09-s009: Started on Mar 25, 2023 at 03:31:11 IST
 xrun
 	-uvm
 	-sv
@@ -253,9 +253,9 @@ xrun
 	+PTE_HEX_FILE=/home/train70/Desktop/print_checker/dc_jal/c_tests/bin/pte.hex
 	+UVM_TESTNAME=trace_test
 	+C_TEST=dc_jalr
-	+ntb_random_seed=57917
-	+log_dir=/home/train70/Desktop/print_checker/dc_jal/sim/results/logs/pinaka_57917
-	-l /home/train70/Desktop/print_checker/dc_jal/sim/results/logs/pinaka_57917/rtl_run.log
+	+ntb_random_seed=1680
+	+log_dir=/home/train70/Desktop/print_checker/dc_jal/sim/results/logs/pinaka_1680
+	-l /home/train70/Desktop/print_checker/dc_jal/sim/results/logs/pinaka_1680/rtl_run.log
 
    User defined plus("+") options:
 	+pte_resp_delay=0
@@ -263,8 +263,8 @@ xrun
 	+DATA_FILE=/home/train70/Desktop/print_checker/dc_jal/c_tests/bin/dc_jalr_data.hex
 	+PTE_HEX_FILE=/home/train70/Desktop/print_checker/dc_jal/c_tests/bin/pte.hex
 	+C_TEST=dc_jalr
-	+ntb_random_seed=57917
-	+log_dir=/home/train70/Desktop/print_checker/dc_jal/sim/results/logs/pinaka_57917
+	+ntb_random_seed=1680
+	+log_dir=/home/train70/Desktop/print_checker/dc_jal/sim/results/logs/pinaka_1680
 
 Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /tools/eda/cadence/XCELIUM2009/tools/methodology/UVM/CDNS-1.1d
 file: ../rtl/ip/axi2apb_bridge/axi_typedef_pkg.sv
@@ -10038,4 +10038,4 @@ UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(150) @ 2432753750: u
 Simulation complete via $finish(1) at time 2432753750 PS + 14
 ../dv/tb/agents/trace_agent/trace_input_monitor.sv:151         $finish;
 xcelium> exit
-TOOL:	xrun(64)	20.09-s009: Exiting on Mar 25, 2023 at 00:25:02 IST  (total: 00:08:15)
+TOOL:	xrun(64)	20.09-s009: Exiting on Mar 25, 2023 at 03:33:10 IST  (total: 00:01:59)
