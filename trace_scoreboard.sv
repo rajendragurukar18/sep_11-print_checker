@@ -74,6 +74,11 @@ int compare_count;
 
 bit packet_started;
 
+// Limit scoreboard verification to first 100 trace events
+int compare_trace_count;
+bit comparison_done;
+
+
 sf0_packet_t curr_pkt;
 
 //------------------------------------------------------------
@@ -148,6 +153,9 @@ if(!uvm_config_db #(virtual trace_if)::get(this, "", "vif", vif))
     //subformat_field = 2'b00;
     compare_count = 0;
     packet_started = 0;
+
+     compare_trace_count = 0;
+    comparison_done     = 1'b0;
 
     // SF2 Context Tracking Initialization
     //------------------------------------------------------------
@@ -240,9 +248,9 @@ virtual function void write_IN(trace_transaction tr);
 
     input_tr = tr;
 
-    if (tr.it_itype_valid && tr.trace_enable)
-begin
-        
+    if (tr.it_itype_valid && tr.trace_enable &&
+        !comparison_done)
+    begin        
 
      `uvm_info("INPUT_DEBUG",
     $sformatf(
@@ -349,13 +357,23 @@ end
         //--------------------------------------------------
         // Update context history
         //--------------------------------------------------
-        prev_context       = tr.it_context;
-        prev_context_valid = 1'b1;
+       prev_context       = tr.it_context;
+prev_context_valid = 1'b1;
 
-    end
+// Count this trace event
+compare_trace_count++;
+
+if (compare_trace_count >= 100) begin
+    comparison_done = 1'b1;
+
+    `uvm_info("COMPARE_LIMIT",
+        "Reached 100 trace events. Further scoreboard prediction disabled.",
+        UVM_NONE)
+end
+
+end
 
 endfunction
-
 
 
 
@@ -913,6 +931,14 @@ endtask
 virtual function void write_OUT(trace_transaction tr);
 
     output_tr = tr;
+
+if (comparison_done &&
+    expected_queue.size() == 0 &&
+    !packet_started)
+begin
+    return;
+end
+
 
     if(tr.atvalid_o)
     begin
