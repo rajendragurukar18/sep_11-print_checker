@@ -11,6 +11,9 @@ class trace_input_monitor extends uvm_monitor;
 
     bit current_atb_mode;
 
+
+   bit current_trace_enable;
+
     bit        prev_itype_valid;
     bit [3:0]  prev_itype;
     bit [15:0] prev_iaddr;
@@ -41,7 +44,7 @@ class trace_input_monitor extends uvm_monitor;
           `uvm_fatal("IN_MON","Unable to get interface")
         //atb_mode = 1'b0;
         current_atb_mode = 1'b0;
-
+	current_trace_enable = 1'b0;
   endfunction
 
 task run_phase(uvm_phase phase);
@@ -56,16 +59,16 @@ task run_phase(uvm_phase phase);
 
         @(posedge vif.pclk_i);
 
-        if (vif.psel_i &&
+  if (vif.psel_i &&
     vif.penable_i &&
     vif.pwrite_i &&
     vif.pready_o &&
     vif.paddr_i == 8'h00) begin
 
-    current_atb_mode = vif.pwdata_i[1];
+    current_trace_enable = vif.pwdata_i[0];
+    current_atb_mode      = vif.pwdata_i[1];
 
-end              
-            
+end            
       end
     end
 
@@ -94,6 +97,8 @@ end
           tr = trace_transaction::type_id::create("tr");
 
           tr.atb_mode = current_atb_mode;
+	tr.trace_enable = current_trace_enable;
+
 
           tr.it_itype                 = vif.it_itype;
           tr.it_iaddr                 = vif.it_iaddr;

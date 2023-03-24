@@ -243,21 +243,22 @@ virtual function void write_IN(trace_transaction tr);
     if (tr.it_itype_valid)
     begin
 
+        
 
      `uvm_info("INPUT_DEBUG",
-        $sformatf(
-          "INPUT: itype_valid=%0b first_instr=%0b iaddr=%04h itype=%04h context=%02h cause=%02h tval=%08h atb_mode=%0b",
-          tr.it_itype_valid,
-          tr.it_first_instrn_valid_in,
-          tr.it_iaddr,
-          tr.it_itype,
-          tr.it_context,
-          tr.it_cause,
-          tr.it_tval,
-          tr.atb_mode
-        ),
-        UVM_NONE)
-
+    $sformatf(
+      "INPUT: itype_valid=%0b first_instr=%0b iaddr=%04h itype=%04h context=%02h cause=%02h tval=%08h trace_enable=%0b atb_mode=%0b",
+      tr.it_itype_valid,
+      tr.it_first_instrn_valid_in,
+      tr.it_iaddr,
+      tr.it_itype,
+      tr.it_context,
+      tr.it_cause,
+      tr.it_tval,
+      tr.trace_enable,
+      tr.atb_mode
+    ),
+    UVM_NONE)
      
 
         //--------------------------------------------------
@@ -355,6 +356,9 @@ end
     end
 
 endfunction
+
+
+
 
 
 

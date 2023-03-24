@@ -44,6 +44,7 @@ class trace_transaction extends uvm_sequence_item;
     rand bit        pwrite_i;
     rand bit [31:0] pwdata_i;
     bit atb_mode = 1'b0;
+    bit trace_enable = 1'b0;
 
     //rand bit        atb_mode;
     //------------------------------------------------------------
