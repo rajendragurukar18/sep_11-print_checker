@@ -134,13 +134,22 @@ end
     vif.it_first_instrn_valid_in),
   UVM_NONE)
 
-  if (trace_count < 50) begin
+
+ if (trace_count < 50) begin
     mon_ap.write(tr);
     trace_count++;
 
-    `uvm_info("TRACE_LIMIT",
+`uvm_info("TRACE_LIMIT",
       $sformatf("Trace transaction %0d sent to scoreboard", trace_count),
       UVM_NONE)
+
+
+    if (trace_count == 50) begin
+        `uvm_info("TRACE_LIMIT",
+          "50 trace transactions completed - stopping simulation",
+          UVM_NONE)
+        $finish;
+    end
 end
 
     end
