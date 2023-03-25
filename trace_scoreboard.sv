@@ -277,7 +277,7 @@ begin
         begin
             `uvm_info("FORMAT1",
                       "Format1 generation detected - predicting Format1 packet",
-                      UVM_LOW)
+                      UVM_NONE)
 
             predict_format1();
 
@@ -318,7 +318,7 @@ begin
 
                 `uvm_info("FORMAT1",
                           "Branch map full - waiting for Format1 generation",
-                          UVM_LOW)
+                          UVM_NONE)
             end
         end
 
@@ -342,7 +342,7 @@ begin
             tr.it_itype,
             tr.it_iaddr
         ),
-        UVM_LOW)
+        UVM_NONE)
 end
 
 
@@ -844,22 +844,22 @@ function void predict_sf3();
     `uvm_info("SF3_PREDICTOR",
         $sformatf("Expected Word0 = %04h",
                   exp_pkt.word0),
-        UVM_LOW)
+        UVM_NONE)
 
     `uvm_info("SF3_PREDICTOR",
         $sformatf("Expected Word1 = %04h",
                   exp_pkt.word1),
-        UVM_LOW)
+        UVM_NONE)
 
     `uvm_info("SF3_PREDICTOR",
         $sformatf("Expected Word2 = %04h",
                   exp_pkt.word2),
-        UVM_LOW)
+        UVM_NONE)
 
     `uvm_info("SF3_PREDICTOR",
         $sformatf("Expected Word3 = %04h",
                   exp_pkt.word3),
-        UVM_LOW)
+        UVM_NONE)
 
     //----------------------------------------------------------
     // Add SF3 expected packet to queue
@@ -903,7 +903,7 @@ virtual task run_phase(uvm_phase phase);
         begin
             `uvm_info("SF3",
                       "SF3 valid detected - predicting SF3 packet",
-                      UVM_LOW)
+                      UVM_NONE)
 
             branch_tmp  = (vif.it_itype == 4'b0101);
             ienable_tmp = vif.it_ienable_in;
@@ -984,7 +984,7 @@ virtual function void write_OUT(trace_transaction tr);
                       "Waiting... DUT=%04h Expected First=%04h",
                       tr.atdata_o,
                       get_expected_atdata(0)),
-                    UVM_LOW)
+                    UVM_NONE)
 
                 return;
             end
@@ -1002,7 +1002,7 @@ virtual function void write_OUT(trace_transaction tr);
 
             `uvm_info("SB",
                 "First packet word detected. Starting comparison.",
-                UVM_LOW)
+                UVM_NONE)
 
         end
 
@@ -1020,7 +1020,7 @@ virtual function void write_OUT(trace_transaction tr);
                           "WORD0 MATCH Exp=%04h Act=%04h",
                           get_expected_atdata(0),
                           tr.atdata_o),
-                        UVM_LOW)
+                        UVM_NONE)
                 else
                     `uvm_error("COMPARE",
                         $sformatf(
@@ -1038,7 +1038,7 @@ virtual function void write_OUT(trace_transaction tr);
                           "WORD1 MATCH Exp=%04h Act=%04h",
                           get_expected_atdata(1),
                           tr.atdata_o),
-                        UVM_LOW)
+                        UVM_NONE)
                 else
                     `uvm_error("COMPARE",
                         $sformatf(
@@ -1056,7 +1056,7 @@ virtual function void write_OUT(trace_transaction tr);
                           "WORD2 MATCH Exp=%04h Act=%04h",
                           get_expected_atdata(2),
                           tr.atdata_o),
-                        UVM_LOW)
+                        UVM_NONE)
                 else
                     `uvm_error("COMPARE",
                         $sformatf(
@@ -1074,7 +1074,7 @@ virtual function void write_OUT(trace_transaction tr);
                           "WORD3 MATCH Exp=%04h Act=%04h",
                           get_expected_atdata(3),
                           tr.atdata_o),
-                        UVM_LOW)
+                        UVM_NONE)
                 else
                     `uvm_error("COMPARE",
                         $sformatf(
@@ -1094,7 +1094,7 @@ begin
               "WORD4 MATCH Exp=%04h Act=%04h",
               get_expected_atdata(4),
               tr.atdata_o),
-            UVM_LOW)
+            UVM_NONE)
     else
         `uvm_error("COMPARE",
             $sformatf(
@@ -1111,7 +1111,7 @@ begin
               "WORD5 MATCH Exp=%04h Act=%04h",
               get_expected_atdata(5),
               tr.atdata_o),
-            UVM_LOW)
+            UVM_NONE)
     else
         `uvm_error("COMPARE",
             $sformatf(
@@ -1128,7 +1128,7 @@ begin
               "WORD6 MATCH Exp=%04h Act=%04h",
               get_expected_atdata(6),
               tr.atdata_o),
-            UVM_LOW)
+            UVM_NONE)
     else
         `uvm_error("COMPARE",
             $sformatf(
@@ -1145,7 +1145,7 @@ begin
               "WORD7 MATCH Exp=%04h Act=%04h",
               get_expected_atdata(7),
               tr.atdata_o),
-            UVM_LOW)
+            UVM_NONE)
     else
         `uvm_error("COMPARE",
             $sformatf(
@@ -1173,7 +1173,7 @@ end
 
         `uvm_info("SB",
          "Packet comparison completed",
-            UVM_LOW)
+            UVM_NONE)
     end
 
     end
