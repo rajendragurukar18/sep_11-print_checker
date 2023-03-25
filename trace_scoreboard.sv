@@ -244,21 +244,7 @@ virtual function void write_IN(trace_transaction tr);
 begin
         
 
-     `uvm_info("INPUT_DEBUG",
-    $sformatf(
-      "INPUT: itype_valid=%0b first_instr=%0b iaddr=%04h itype=%04h context=%02h cause=%02h tval=%08h trace_enable=%0b atb_mode=%0b",
-      tr.it_itype_valid,
-      tr.it_first_instrn_valid_in,
-      tr.it_iaddr,
-      tr.it_itype,
-      tr.it_context,
-      tr.it_cause,
-      tr.it_tval,
-      tr.trace_enable,
-      tr.atb_mode
-    ),
-    UVM_NONE)
-     
+         
 
         //--------------------------------------------------
         // SF0
@@ -275,10 +261,8 @@ begin
                  tr.it_del_adr_valid &&
                  !format1_predicted)
         begin
-            `uvm_info("FORMAT1",
-                      "Format1 generation detected - predicting Format1 packet",
-                      UVM_LOW)
 
+           
             predict_format1();
 
             format1_predicted = 1'b1;
@@ -316,9 +300,8 @@ begin
             begin
                 format1_pending = 1'b1;
 
-                `uvm_info("FORMAT1",
-                          "Branch map full - waiting for Format1 generation",
-                          UVM_LOW)
+
+                
             end
         end
 
@@ -336,13 +319,9 @@ begin
         //--------------------------------------------------
       else
 begin
-    `uvm_info("SF1_SKIP",
-        $sformatf(
-            "Skipping SF1 fallback: itype=%04h iaddr=%04h",
-            tr.it_itype,
-            tr.it_iaddr
-        ),
-        UVM_LOW)
+
+    
+
 end
 
 
@@ -400,26 +379,7 @@ function void predict_sf0();
     //----------------------------------------------------------
     // Print Expected Words
     //----------------------------------------------------------
-    `uvm_info("SF0_PREDICTOR",
-        $sformatf("Expected Word0 = %04h",
-                  exp_pkt.word0),
-        UVM_NONE);
-
-    `uvm_info("SF0_PREDICTOR",
-        $sformatf("Expected Word1 = %04h",
-                  exp_pkt.word1),
-        UVM_NONE);
-
-    `uvm_info("SF0_PREDICTOR",
-        $sformatf("Expected Word2 = %04h",
-                  exp_pkt.word2),
-        UVM_NONE);
-
-    `uvm_info("SF0_PREDICTOR",
-        $sformatf("Expected Word3 = %04h",
-                  exp_pkt.word3),
-        UVM_NONE);
-
+    
     //----------------------------------------------------------
     // Store expected packet
     //----------------------------------------------------------
@@ -440,20 +400,7 @@ endfunction
 //------------------------------------------------------------
 function void predict_sf1();
 
-    `uvm_info("SF1_DEBUG",
-    $sformatf(
-        "SF1 CALLED: itype=%04h iaddr=%04h tval=%08h cause=%02h context=%02h atb_mode=%0b del_addr_valid=%0b first_instr=%0b",
-        input_tr.it_itype,
-        input_tr.it_iaddr,
-        input_tr.it_tval,
-        input_tr.it_cause,
-        input_tr.it_context,
-        input_tr.atb_mode,
-        input_tr.it_del_adr_valid,
-        input_tr.it_first_instrn_valid_in
-    ),
-    UVM_NONE)
-    //----------------------------------------------------------
+        //----------------------------------------------------------
     // Temporary Fields
     //----------------------------------------------------------
     branch_tmp    = (input_tr.it_itype == 4'b0101);
@@ -497,15 +444,7 @@ function void predict_sf1();
     */
     prepare_atb_packet();
     
-    `uvm_info("SF1_DEBUG",
-    $sformatf(
-        "SF1 PACKET: expected_packet=%016h word0=%04h byte_word0=%04h",
-        expected_packet,
-        exp_pkt.word0,
-        exp_pkt.byte_word0
-    ),
-    UVM_NONE)
-
+    
 
 /*
     //----------------------------------------------------------
@@ -537,13 +476,6 @@ function void predict_sf1();
     expected_queue.push_back(exp_pkt);
 
 
-`uvm_info("QUEUE_DEBUG",
-    $sformatf(
-        "SF1 PUSHED: queue_size=%0d first_byte_word=%04h",
-        expected_queue.size(),
-        expected_queue[0].byte_word0
-    ),
-    UVM_NONE)
 
 endfunction
 
@@ -590,26 +522,7 @@ function void predict_sf2();
     //----------------------------------------------------------
     // Print Expected Words
     //----------------------------------------------------------
-    `uvm_info("SF2_PREDICTOR",
-        $sformatf("Expected Word0 = %04h",
-                  exp_pkt.word0),
-        UVM_NONE);
-
-    `uvm_info("SF2_PREDICTOR",
-        $sformatf("Expected Word1 = %04h",
-                  exp_pkt.word1),
-        UVM_NONE);
-
-    `uvm_info("SF2_PREDICTOR",
-        $sformatf("Expected Word2 = %04h",
-                  exp_pkt.word2),
-        UVM_NONE);
-
-    `uvm_info("SF2_PREDICTOR",
-        $sformatf("Expected Word3 = %04h",
-                  exp_pkt.word3),
-        UVM_NONE);
-
+    
     //----------------------------------------------------------
     // Store expected packet
     //----------------------------------------------------------
@@ -675,29 +588,7 @@ function void predict_format2();
 
 
 
-    //----------------------------------------------------------
-    // Print expected words
-    //----------------------------------------------------------
-    `uvm_info("FORMAT2_PREDICTOR",
-        $sformatf("Expected Word0 = %04h",
-                  exp_pkt.word0),
-        UVM_NONE)
-
-    `uvm_info("FORMAT2_PREDICTOR",
-        $sformatf("Expected Word1 = %04h",
-                  exp_pkt.word1),
-        UVM_NONE)
-
-    `uvm_info("FORMAT2_PREDICTOR",
-        $sformatf("Expected Word2 = %04h",
-                  exp_pkt.word2),
-        UVM_NONE)
-
-    `uvm_info("FORMAT2_PREDICTOR",
-        $sformatf("Expected Word3 = %04h",
-                  exp_pkt.word3),
-        UVM_NONE)
-
+    
     //----------------------------------------------------------
     // Store expected packet
     //----------------------------------------------------------
@@ -757,26 +648,7 @@ function void predict_format1();
     //----------------------------------------------------------
     // Print expected words
     //----------------------------------------------------------
-    `uvm_info("FORMAT1_PREDICTOR",
-        $sformatf("Expected Word0 = %04h",
-                  exp_pkt.word0),
-        UVM_NONE)
-
-    `uvm_info("FORMAT1_PREDICTOR",
-        $sformatf("Expected Word1 = %04h",
-                  exp_pkt.word1),
-        UVM_NONE)
-
-    `uvm_info("FORMAT1_PREDICTOR",
-        $sformatf("Expected Word2 = %04h",
-                  exp_pkt.word2),
-        UVM_NONE)
-
-    `uvm_info("FORMAT1_PREDICTOR",
-        $sformatf("Expected Word3 = %04h",
-                  exp_pkt.word3),
-        UVM_NONE)
-
+   
     //----------------------------------------------------------
     // Store expected packet
     //----------------------------------------------------------
@@ -831,26 +703,7 @@ function void predict_sf3();
     //----------------------------------------------------------
     // Print Expected Words
     //----------------------------------------------------------
-    `uvm_info("SF3_PREDICTOR",
-        $sformatf("Expected Word0 = %04h",
-                  exp_pkt.word0),
-        UVM_LOW)
-
-    `uvm_info("SF3_PREDICTOR",
-        $sformatf("Expected Word1 = %04h",
-                  exp_pkt.word1),
-        UVM_LOW)
-
-    `uvm_info("SF3_PREDICTOR",
-        $sformatf("Expected Word2 = %04h",
-                  exp_pkt.word2),
-        UVM_LOW)
-
-    `uvm_info("SF3_PREDICTOR",
-        $sformatf("Expected Word3 = %04h",
-                  exp_pkt.word3),
-        UVM_LOW)
-
+    
     //----------------------------------------------------------
     // Add SF3 expected packet to queue
     //----------------------------------------------------------
@@ -891,10 +744,7 @@ virtual task run_phase(uvm_phase phase);
         //----------------------------------------------------
         if (vif.sf3_valid && !sf3_predicted)
         begin
-            `uvm_info("SF3",
-                      "SF3 valid detected - predicting SF3 packet",
-                      UVM_LOW)
-
+            
             branch_tmp  = (vif.it_itype == 4'b0101);
             ienable_tmp = vif.it_ienable_in;
 
@@ -917,13 +767,7 @@ virtual function void write_OUT(trace_transaction tr);
     if(tr.atvalid_o)
     begin
 
-        `uvm_info("OUTPUT_SB",
-          $sformatf("TIME=%0t ATVALID=%0b ATDATA=%04h",
-                    $time,
-                    tr.atvalid_o,
-                    tr.atdata_o),
-          UVM_NONE);
-
+        
 
         //----------------------------------------------------
         // Start of a new packet
@@ -944,28 +788,15 @@ virtual function void write_OUT(trace_transaction tr);
             //------------------------------------------------
             curr_pkt = expected_queue[0];
 
-`uvm_info("QUEUE_HEAD",
-    $sformatf(
-        "QUEUE HEAD: word0=%04h byte_word0=%04h atb_mode=%0b queue_size=%0d",
-        curr_pkt.word0,
-        curr_pkt.byte_word0,
-        curr_pkt.atb_mode,
-        expected_queue.size()
-    ),
-    UVM_NONE)
 
             //------------------------------------------------
             // Wait until DUT gives expected first word
             //------------------------------------------------
           if(tr.atdata_o != get_expected_atdata(0))
             begin
-                `uvm_info("SB",
-                    $sformatf(
-                      "Waiting... DUT=%04h Expected First=%04h",
-                      tr.atdata_o,
-                      get_expected_atdata(0)),
-                    UVM_LOW)
 
+
+                
                 return;
             end
 
@@ -980,10 +811,7 @@ virtual function void write_OUT(trace_transaction tr);
             compare_count = 0;
 
 
-            `uvm_info("SB",
-                "First packet word detected. Starting comparison.",
-                UVM_LOW)
-
+            
         end
 
 
@@ -1151,10 +979,9 @@ end
         compare_count = 0;
         packet_started = 0;
 
-        `uvm_info("SB",
-         "Packet comparison completed",
-            UVM_LOW)
+       
     end
+
 
     end
 

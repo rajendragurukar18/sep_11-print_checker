@@ -124,15 +124,6 @@ end
           tr.pwdata_i  = vif.pwdata_i;
 
 
-`uvm_info("IN_MON_DEBUG",
-  $sformatf("SENT: valid=%0b itype=%04h iaddr=%04h del_valid=%0b delta=%05h first=%0b",
-    vif.it_itype_valid,
-    vif.it_itype,
-    vif.it_iaddr,
-    vif.it_del_adr_valid,
-    vif.it_delta_addr,
-    vif.it_first_instrn_valid_in),
-  UVM_NONE)
 
            mon_ap.write(tr);
 

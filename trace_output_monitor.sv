@@ -55,16 +55,7 @@ class trace_output_monitor extends uvm_monitor;
          // Wait for DUT Output
          //-------------------------------------------------------
          @(posedge vif.it_clk);
-   if(vif.atvalid_o && vif.atready_i)
-begin
-    `uvm_info("MON_CLK",
-         $sformatf("CLK : atvalid=%0d atready=%0d atdata=%h",
-                 vif.atvalid_o,
-                 vif.atready_i,
-                 vif.atdata_o),
-        UVM_LOW)
-end    
-
+   
          //-------------------------------------------------------
          // Capture only valid packet
          //-------------------------------------------------------
@@ -99,18 +90,9 @@ begin
             // Print Captured Packet
             //----------------------------------------------------
             
-            `uvm_info("MONITOR",
-            $sformatf("Captured : atvalid=%0d atdata=%h",
-                    tr.atvalid_o,
-                     tr.atdata_o),
-            UVM_LOW)
+            
 
 
-
-$display("--------------------------------");
-$display("TIME=%0t", $time);
-$display("ATVALID=%0b", vif.atvalid_o);
-$display("ATDATA = %04h", vif.atdata_o);
 
 
             //----------------------------------------------------
