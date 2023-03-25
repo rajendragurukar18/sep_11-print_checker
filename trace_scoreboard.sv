@@ -678,10 +678,20 @@ function void predict_format2();
     //----------------------------------------------------------
     // Print expected words
     //----------------------------------------------------------
+
+
     `uvm_info("FORMAT2_PREDICTOR",
-        $sformatf("Expected Word0 = %04h",
-                  exp_pkt.word0),
-        UVM_NONE)
+    $sformatf(
+      "FORMAT2: itype=%04h iaddr=%04h del_valid=%0b delta=%05h -> Word0=%04h queue_before=%0d",
+      input_tr.it_itype,
+      input_tr.it_iaddr,
+      input_tr.it_del_adr_valid,
+      input_tr.it_delta_addr,
+      exp_pkt.word0,
+      expected_queue.size()
+    ),
+    UVM_NONE)
+
 
     `uvm_info("FORMAT2_PREDICTOR",
         $sformatf("Expected Word1 = %04h",
@@ -943,6 +953,16 @@ virtual function void write_OUT(trace_transaction tr);
             // Just look at the first expected packet
             //------------------------------------------------
             curr_pkt = expected_queue[0];
+
+		`uvm_info("QUEUE_HEAD",
+  $sformatf(
+    "QUEUE HEAD: word0=%04h atb_mode=%0b queue_size=%0d",
+    expected_queue[0].word0,
+    expected_queue[0].atb_mode,
+    expected_queue.size()
+  ),
+  UVM_NONE)
+
 
 `uvm_info("QUEUE_HEAD",
     $sformatf(
