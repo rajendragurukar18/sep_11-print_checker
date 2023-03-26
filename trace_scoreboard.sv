@@ -276,8 +276,9 @@ begin
         else if (format1_pending &&
                  tr.it_del_adr_valid &&
                  !format1_predicted)
-/*
+
         begin
+/*
             `uvm_info("FORMAT1",
                       "Format1 generation detected - predicting Format1 packet",
                       UVM_NONE)
@@ -1217,9 +1218,12 @@ end
         compare_count = 0;
         packet_started = 0;
 
+/*
         `uvm_info("SB",
          "Packet comparison completed",
             UVM_NONE)
+*/
+
     end
 
     end
