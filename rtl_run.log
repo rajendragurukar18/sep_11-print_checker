@@ -1,253 +1,3 @@
-dr_in = 0e40003e1c2
-[JTAG_BFM] DMI_WRITE ADDR=39 DATA=0000f870
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0f00e04940e
-[JTAG_BFM] DMI_WRITE ADDR=3c DATA=03812503
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0e40003e1d2
-[JTAG_BFM] DMI_WRITE ADDR=39 DATA=0000f874
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0f00d04960e
-[JTAG_BFM] DMI_WRITE ADDR=3c DATA=03412583
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0e40003e1e2
-[JTAG_BFM] DMI_WRITE ADDR=39 DATA=0000f878
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0f00c04980e
-[JTAG_BFM] DMI_WRITE ADDR=3c DATA=03012603
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0e40003e1f2
-[JTAG_BFM] DMI_WRITE ADDR=39 DATA=0000f87c
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0f00b049a0e
-[JTAG_BFM] DMI_WRITE ADDR=3c DATA=02c12683
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0e40003e202
-[JTAG_BFM] DMI_WRITE ADDR=39 DATA=0000f880
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0f00a049c0e
-[JTAG_BFM] DMI_WRITE ADDR=3c DATA=02812703
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0e40003e212
-[JTAG_BFM] DMI_WRITE ADDR=39 DATA=0000f884
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0f009049e0e
-[JTAG_BFM] DMI_WRITE ADDR=3c DATA=02412783
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0e40003e222
-[JTAG_BFM] DMI_WRITE ADDR=39 DATA=0000f888
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0f00804a00e
-[JTAG_BFM] DMI_WRITE ADDR=3c DATA=02012803
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0e40003e232
-[JTAG_BFM] DMI_WRITE ADDR=39 DATA=0000f88c
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0f00704a20e
-[JTAG_BFM] DMI_WRITE ADDR=3c DATA=01c12883
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0e40003e242
-[JTAG_BFM] DMI_WRITE ADDR=39 DATA=0000f890
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0f00604b80e
-[JTAG_BFM] DMI_WRITE ADDR=3c DATA=01812e03
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0e40003e252
-[JTAG_BFM] DMI_WRITE ADDR=39 DATA=0000f894
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0f00504ba0e
-[JTAG_BFM] DMI_WRITE ADDR=3c DATA=01412e83
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0e40003e262
-[JTAG_BFM] DMI_WRITE ADDR=39 DATA=0000f898
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0f00404bc0e
-[JTAG_BFM] DMI_WRITE ADDR=3c DATA=01012f03
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0e40003e272
-[JTAG_BFM] DMI_WRITE ADDR=39 DATA=0000f89c
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0f00304be0e
-[JTAG_BFM] DMI_WRITE ADDR=3c DATA=00c12f83
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0e40003e282
-[JTAG_BFM] DMI_WRITE ADDR=39 DATA=0000f8a0
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0f01404044e
-[JTAG_BFM] DMI_WRITE ADDR=3c DATA=05010113
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0e40003e292
-[JTAG_BFM] DMI_WRITE ADDR=39 DATA=0000f8a4
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0f0c08001ce
-[JTAG_BFM] DMI_WRITE ADDR=3c DATA=30200073
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0e40003f002
-[JTAG_BFM] DMI_WRITE ADDR=39 DATA=0000fc00
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0f3ec04044e
-[JTAG_BFM] DMI_WRITE ADDR=3c DATA=fb010113
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0e40003f012
-[JTAG_BFM] DMI_WRITE ADDR=39 DATA=0000fc04
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0f01044988e
-[JTAG_BFM] DMI_WRITE ADDR=3c DATA=04112623
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0e40003f022
-[JTAG_BFM] DMI_WRITE ADDR=39 DATA=0000fc08
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0f01144908e
-[JTAG_BFM] DMI_WRITE ADDR=3c DATA=04512423
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0e40003f032
-[JTAG_BFM] DMI_WRITE ADDR=39 DATA=0000fc0c
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0f01184888e
-[JTAG_BFM] DMI_WRITE ADDR=3c DATA=04612223
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0e40003f042
-[JTAG_BFM] DMI_WRITE ADDR=39 DATA=0000fc10
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0f011c4808e
-[JTAG_BFM] DMI_WRITE ADDR=3c DATA=04712023
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0e40003f052
-[JTAG_BFM] DMI_WRITE ADDR=39 DATA=0000fc14
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0f00a04b88e
-[JTAG_BFM] DMI_WRITE ADDR=3c DATA=02812e23
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0e40003f062
-[JTAG_BFM] DMI_WRITE ADDR=39 DATA=0000fc18
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0f00a84b08e
-[JTAG_BFM] DMI_WRITE ADDR=3c DATA=02a12c23
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0e40003f072
-[JTAG_BFM] DMI_WRITE ADDR=39 DATA=0000fc1c
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0f00ac4a88e
-[JTAG_BFM] DMI_WRITE ADDR=3c DATA=02b12a23
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0e40003f082
-[JTAG_BFM] DMI_WRITE ADDR=39 DATA=0000fc20
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0f00b04a08e
-[JTAG_BFM] DMI_WRITE ADDR=3c DATA=02c12823
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0e40003f092
-[JTAG_BFM] DMI_WRITE ADDR=39 DATA=0000fc24
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0f00b44988e
-[JTAG_BFM] DMI_WRITE ADDR=3c DATA=02d12623
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0e40003f0a2
-[JTAG_BFM] DMI_WRITE ADDR=39 DATA=0000fc28
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0f00b84908e
-[JTAG_BFM] DMI_WRITE ADDR=3c DATA=02e12423
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0e40003f0b2
-[JTAG_BFM] DMI_WRITE ADDR=39 DATA=0000fc2c
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0f00bc4888e
-[JTAG_BFM] DMI_WRITE ADDR=3c DATA=02f12223
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0e40003f0c2
-[JTAG_BFM] DMI_WRITE ADDR=39 DATA=0000fc30
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0f00c04808e
-[JTAG_BFM] DMI_WRITE ADDR=3c DATA=03012023
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0e40003f0d2
-[JTAG_BFM] DMI_WRITE ADDR=39 DATA=0000fc34
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0f00444b88e
-[JTAG_BFM] DMI_WRITE ADDR=3c DATA=01112e23
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0e40003f0e2
-[JTAG_BFM] DMI_WRITE ADDR=39 DATA=0000fc38
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0f00704b08e
-[JTAG_BFM] DMI_WRITE ADDR=3c DATA=01c12c23
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0e40003f0f2
-[JTAG_BFM] DMI_WRITE ADDR=39 DATA=0000fc3c
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0f00744a88e
-[JTAG_BFM] DMI_WRITE ADDR=3c DATA=01d12a23
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0e40003f102
-[JTAG_BFM] DMI_WRITE ADDR=39 DATA=0000fc40
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0f00784a08e
-[JTAG_BFM] DMI_WRITE ADDR=3c DATA=01e12823
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0e40003f112
-[JTAG_BFM] DMI_WRITE ADDR=39 DATA=0000fc44
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0f007c4988e
-[JTAG_BFM] DMI_WRITE ADDR=3c DATA=01f12623
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0e40003f122
-[JTAG_BFM] DMI_WRITE ADDR=39 DATA=0000fc48
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0f01404104e
-[JTAG_BFM] DMI_WRITE ADDR=3c DATA=05010413
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0e40003f132
-[JTAG_BFM] DMI_WRITE ADDR=39 DATA=0000fc4c
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0f000029ede
-[JTAG_BFM] DMI_WRITE ADDR=3c DATA=0000a7b7
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0e40003f142
-[JTAG_BFM] DMI_WRITE ADDR=39 DATA=0000fc50
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0f0055e144e
-[JTAG_BFM] DMI_WRITE ADDR=3c DATA=01578513
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0e40003f152
-[JTAG_BFM] DMI_WRITE ADDR=39 DATA=0000fc54
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0f3283c03be
-[JTAG_BFM] DMI_WRITE ADDR=3c DATA=ca0f00ef
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0e40003f162
-[JTAG_BFM] DMI_WRITE ADDR=39 DATA=0000fc58
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0f00000004e
-[JTAG_BFM] DMI_WRITE ADDR=3c DATA=00000013
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0e40003f172
-[JTAG_BFM] DMI_WRITE ADDR=39 DATA=0000fc5c
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0f01304820e
-[JTAG_BFM] DMI_WRITE ADDR=3c DATA=04c12083
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0e40003f182
-[JTAG_BFM] DMI_WRITE ADDR=39 DATA=0000fc60
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0f012048a0e
-[JTAG_BFM] DMI_WRITE ADDR=3c DATA=04812283
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0e40003f192
-[JTAG_BFM] DMI_WRITE ADDR=39 DATA=0000fc64
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0f011048c0e
-[JTAG_BFM] DMI_WRITE ADDR=3c DATA=04412303
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0e40003f1a2
-[JTAG_BFM] DMI_WRITE ADDR=39 DATA=0000fc68
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0f010048e0e
-[JTAG_BFM] DMI_WRITE ADDR=3c DATA=04012383
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0e40003f1b2
-[JTAG_BFM] DMI_WRITE ADDR=39 DATA=0000fc6c
-[JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
-dr_in = 0f00f04900e
 [JTAG_BFM] DMI_WRITE ADDR=3c DATA=03c12403
 [JTAG_BFM] SHIFT_IR instr=00011 ir_resp=00001
 dr_in = 0e40003f1c2
@@ -338,13 +88,15 @@ started driving through slave model
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2432213750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0000 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2432218750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0008 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2432223750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0010 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2432228750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0018 del_valid=1 delta=006fc first=0
+UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2432228750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0006 iaddr=0018 del_valid=1 delta=006fc first=0
+UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2432243750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0018 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2432248750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=06fc del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2432253750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0704 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2432268750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0708 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2432278750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=070c del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2432283750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0710 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2432293750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0714 del_valid=1 delta=000f4 first=0
+UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2432293750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0006 iaddr=0714 del_valid=1 delta=000f4 first=0
+UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2432298750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0714 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2432303750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=00f4 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2432308750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=00fc del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2432323750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0104 del_valid=0 delta=00000 first=0
@@ -368,7 +120,8 @@ UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2432458750: u
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2432483750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0040 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2432623750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0048 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2432638750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=004c del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2432648750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=072c del_valid=1 delta=000f4 first=0
+UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2432648750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0006 iaddr=072c del_valid=1 delta=000f4 first=0
+UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2432653750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=072c del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2432658750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=00f4 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2432663750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=00fc del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2432678750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0104 del_valid=0 delta=00000 first=0
@@ -381,7 +134,8 @@ UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2432728750: u
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2432738750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0006 iaddr=0120 del_valid=1 delta=00730 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2432743750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0120 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2432748750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0730 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2432753750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0738 del_valid=1 delta=000f4 first=0
+UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2432753750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0006 iaddr=0738 del_valid=1 delta=000f4 first=0
+UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2432758750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0738 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2432763750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=00f4 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2432768750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=00fc del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2432783750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0104 del_valid=0 delta=00000 first=0
@@ -408,7 +162,8 @@ UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2433128750: u
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2433153750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0006 iaddr=004c del_valid=1 delta=0074c first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2433158750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=004c del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2433173750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=074c del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2433178750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0750 del_valid=1 delta=000f4 first=0
+UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2433178750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0006 iaddr=0750 del_valid=1 delta=000f4 first=0
+UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2433183750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0750 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2433198750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=00f4 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2433203750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=00f8 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2433208750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=00fc del_valid=0 delta=00000 first=0
@@ -424,7 +179,8 @@ UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2433333750: u
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2433358750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0006 iaddr=0120 del_valid=1 delta=00754 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2433363750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0120 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2433378750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0754 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2433383750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0758 del_valid=1 delta=000f4 first=0
+UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2433383750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0006 iaddr=0758 del_valid=1 delta=000f4 first=0
+UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2433388750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0758 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2433403750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=00f4 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2433408750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=00f8 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2433413750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=00fc del_valid=0 delta=00000 first=0
@@ -443,7 +199,8 @@ UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2433583750: u
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2433588750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0760 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2433593750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0764 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2433598750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0768 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2433603750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=076c del_valid=1 delta=00020 first=0
+UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2433603750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0006 iaddr=076c del_valid=1 delta=00020 first=0
+UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2433608750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=076c del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2433623750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0020 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2433628750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0024 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2433633750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0028 del_valid=0 delta=00000 first=0
@@ -462,7 +219,8 @@ UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2433933750: u
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2433938750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0774 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2433943750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0778 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2433968750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=077c del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2433993750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0780 del_valid=1 delta=00020 first=0
+UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2433993750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0006 iaddr=0780 del_valid=1 delta=00020 first=0
+UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2433998750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0780 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434013750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0020 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434018750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0024 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434023750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0028 del_valid=0 delta=00000 first=0
@@ -473,208 +231,378 @@ UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434103750: u
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434153750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=003c del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434158750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0040 del_valid=0 delta=00000 first=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434283750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0044 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434283750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0044 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434283750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0044 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2434283750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0044
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434288750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0048 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434288750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0048 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434288750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0048 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2434288750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0048
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434313750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0006 iaddr=004c del_valid=1 delta=00784 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434313750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=004c itype=0006 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434313750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=004c itype=0006 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(693) @ 2434313750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] FORMAT2: itype=0006 iaddr=004c del_valid=1 delta=00784 -> Word0=f091 queue_before=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(699) @ 2434313750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word1 = 0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(704) @ 2434313750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word2 = 0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(709) @ 2434313750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word3 = 0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434318750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=004c del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434318750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=004c itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434318750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=004c itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2434318750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=004c
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434333750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0784 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434333750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0784 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434333750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0784 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2434333750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0784
-UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434338750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0788 del_valid=1 delta=00050 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434338750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0788 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2434338750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0788
+UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434338750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0006 iaddr=0788 del_valid=1 delta=00050 first=0
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434338750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0788 itype=0006 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(693) @ 2434338750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] FORMAT2: itype=0006 iaddr=0788 del_valid=1 delta=00050 -> Word0=0a11 queue_before=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(699) @ 2434338750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word1 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(704) @ 2434338750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word2 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(709) @ 2434338750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word3 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434343750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0788 del_valid=0 delta=00000 first=0
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434343750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0788 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2434343750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0788
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434358750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0050 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434358750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0050 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434358750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0050 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2434358750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0050
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434363750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0054 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434363750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0054 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434363750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0054 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2434363750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0054
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434368750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0058 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434368750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0058 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434368750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0058 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2434368750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0058
+--------------------------------
+TIME=2434384000
+ATVALID=1
+ATDATA = 9100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434383750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434384000 ATVALID=1 ATDATA=9100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(964) @ 2434383750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=f091 atb_mode=0 queue_size=2
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(975) @ 2434383750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=f091 byte_word0=9100 atb_mode=0 queue_size=2
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1005) @ 2434383750: uvm_test_top.env_h.sb [SB] First packet word detected. Starting comparison.
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1023) @ 2434383750: uvm_test_top.env_h.sb [COMPARE] WORD0 MATCH Exp=9100 Act=9100
+--------------------------------
+TIME=2434389000
+ATVALID=1
+ATDATA = f000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434388750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434389000 ATVALID=1 ATDATA=f000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1041) @ 2434388750: uvm_test_top.env_h.sb [COMPARE] WORD1 MATCH Exp=f000 Act=f000
+--------------------------------
+TIME=2434394000
+ATVALID=1
+ATDATA = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434393750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434394000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1059) @ 2434393750: uvm_test_top.env_h.sb [COMPARE] WORD2 MATCH Exp=0000 Act=0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434393750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=005c del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434393750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=005c itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434393750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=005c itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2434393750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=005c
+--------------------------------
+TIME=2434399000
+ATVALID=1
+ATDATA = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434398750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434399000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1077) @ 2434398750: uvm_test_top.env_h.sb [COMPARE] WORD3 MATCH Exp=0000 Act=0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434398750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0060 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434398750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0060 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434398750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0060 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2434398750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0060
+--------------------------------
+TIME=2434404000
+ATVALID=1
+ATDATA = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434403750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434404000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1097) @ 2434403750: uvm_test_top.env_h.sb [COMPARE] WORD4 MATCH Exp=0000 Act=0000
+--------------------------------
+TIME=2434409000
+ATVALID=1
+ATDATA = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434408750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434409000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1114) @ 2434408750: uvm_test_top.env_h.sb [COMPARE] WORD5 MATCH Exp=0000 Act=0000
+--------------------------------
+TIME=2434414000
+ATVALID=1
+ATDATA = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434413750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434414000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1131) @ 2434413750: uvm_test_top.env_h.sb [COMPARE] WORD6 MATCH Exp=0000 Act=0000
+--------------------------------
+TIME=2434419000
+ATVALID=1
+ATDATA = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434418750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434419000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1148) @ 2434418750: uvm_test_top.env_h.sb [COMPARE] WORD7 MATCH Exp=0000 Act=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1176) @ 2434418750: uvm_test_top.env_h.sb [SB] Packet comparison completed
+--------------------------------
+TIME=2434444000
+ATVALID=1
+ATDATA = 1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434443750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434444000 ATVALID=1 ATDATA=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(964) @ 2434443750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=0a11 atb_mode=0 queue_size=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(975) @ 2434443750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=0a11 byte_word0=1100 atb_mode=0 queue_size=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1005) @ 2434443750: uvm_test_top.env_h.sb [SB] First packet word detected. Starting comparison.
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1023) @ 2434443750: uvm_test_top.env_h.sb [COMPARE] WORD0 MATCH Exp=1100 Act=1100
+--------------------------------
+TIME=2434449000
+ATVALID=1
+ATDATA = 0a00
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434448750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434449000 ATVALID=1 ATDATA=0a00
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1041) @ 2434448750: uvm_test_top.env_h.sb [COMPARE] WORD1 MATCH Exp=0a00 Act=0a00
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434448750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0064 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434448750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0064 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434448750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0064 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2434448750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0064
+--------------------------------
+TIME=2434454000
+ATVALID=1
+ATDATA = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434453750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434454000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1059) @ 2434453750: uvm_test_top.env_h.sb [COMPARE] WORD2 MATCH Exp=0000 Act=0000
+--------------------------------
+TIME=2434459000
+ATVALID=1
+ATDATA = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434458750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434459000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1077) @ 2434458750: uvm_test_top.env_h.sb [COMPARE] WORD3 MATCH Exp=0000 Act=0000
+--------------------------------
+TIME=2434464000
+ATVALID=1
+ATDATA = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434463750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434464000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1097) @ 2434463750: uvm_test_top.env_h.sb [COMPARE] WORD4 MATCH Exp=0000 Act=0000
+--------------------------------
+TIME=2434469000
+ATVALID=1
+ATDATA = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434468750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434469000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1114) @ 2434468750: uvm_test_top.env_h.sb [COMPARE] WORD5 MATCH Exp=0000 Act=0000
+--------------------------------
+TIME=2434474000
+ATVALID=1
+ATDATA = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434473750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434474000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1131) @ 2434473750: uvm_test_top.env_h.sb [COMPARE] WORD6 MATCH Exp=0000 Act=0000
+--------------------------------
+TIME=2434479000
+ATVALID=1
+ATDATA = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434478750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434479000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1148) @ 2434478750: uvm_test_top.env_h.sb [COMPARE] WORD7 MATCH Exp=0000 Act=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1176) @ 2434478750: uvm_test_top.env_h.sb [SB] Packet comparison completed
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434583750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0068 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434583750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0068 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434583750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0068 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2434583750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0068
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434588750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=006c del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434588750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=006c itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434588750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=006c itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2434588750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=006c
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434593750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0070 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434593750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0070 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434593750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0070 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2434593750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0070
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434618750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0006 iaddr=0074 del_valid=1 delta=0078c first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434618750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0074 itype=0006 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(693) @ 2434618750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] FORMAT2: itype=0006 iaddr=0074 del_valid=1 delta=0078c -> Word0=f191 queue_before=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434618750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0074 itype=0006 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(693) @ 2434618750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] FORMAT2: itype=0006 iaddr=0074 del_valid=1 delta=0078c -> Word0=f191 queue_before=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(699) @ 2434618750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word1 = 0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(704) @ 2434618750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word2 = 0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(709) @ 2434618750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word3 = 0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434623750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0074 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434623750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0074 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434623750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0074 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2434623750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0074
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434638750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=078c del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434638750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=078c itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434638750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=078c itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2434638750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=078c
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434643750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0790 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434643750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0790 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434643750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0790 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2434643750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0790
---------------------------------
-TIME=2434664000
-ATVALID=1
-ATDATA = f091
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434663750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434664000 ATVALID=1 ATDATA=f091
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(964) @ 2434663750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=f091 atb_mode=1 queue_size=2
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(975) @ 2434663750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=f091 byte_word0=9100 atb_mode=1 queue_size=2
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1005) @ 2434663750: uvm_test_top.env_h.sb [SB] First packet word detected. Starting comparison.
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1023) @ 2434663750: uvm_test_top.env_h.sb [COMPARE] WORD0 MATCH Exp=f091 Act=f091
---------------------------------
-TIME=2434669000
-ATVALID=1
-ATDATA = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434668750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434669000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1041) @ 2434668750: uvm_test_top.env_h.sb [COMPARE] WORD1 MATCH Exp=0000 Act=0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434668750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0794 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434668750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0794 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434668750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0794 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2434668750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0794
---------------------------------
-TIME=2434674000
-ATVALID=1
-ATDATA = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434673750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434674000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1059) @ 2434673750: uvm_test_top.env_h.sb [COMPARE] WORD2 MATCH Exp=0000 Act=0000
---------------------------------
-TIME=2434679000
-ATVALID=1
-ATDATA = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434678750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434679000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1077) @ 2434678750: uvm_test_top.env_h.sb [COMPARE] WORD3 MATCH Exp=0000 Act=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1176) @ 2434678750: uvm_test_top.env_h.sb [SB] Packet comparison completed
---------------------------------
-TIME=2434704000
-ATVALID=1
-ATDATA = f191
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434703750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434704000 ATVALID=1 ATDATA=f191
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(964) @ 2434703750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=f191 atb_mode=1 queue_size=1
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(975) @ 2434703750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=f191 byte_word0=9100 atb_mode=1 queue_size=1
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1005) @ 2434703750: uvm_test_top.env_h.sb [SB] First packet word detected. Starting comparison.
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1023) @ 2434703750: uvm_test_top.env_h.sb [COMPARE] WORD0 MATCH Exp=f191 Act=f191
---------------------------------
-TIME=2434709000
-ATVALID=1
-ATDATA = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434708750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434709000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1041) @ 2434708750: uvm_test_top.env_h.sb [COMPARE] WORD1 MATCH Exp=0000 Act=0000
---------------------------------
-TIME=2434714000
-ATVALID=1
-ATDATA = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434713750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434714000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1059) @ 2434713750: uvm_test_top.env_h.sb [COMPARE] WORD2 MATCH Exp=0000 Act=0000
---------------------------------
-TIME=2434719000
-ATVALID=1
-ATDATA = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434718750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434719000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1077) @ 2434718750: uvm_test_top.env_h.sb [COMPARE] WORD3 MATCH Exp=0000 Act=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1176) @ 2434718750: uvm_test_top.env_h.sb [SB] Packet comparison completed
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434718750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0004 iaddr=0798 del_valid=1 delta=0079c first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434718750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0798 itype=0004 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(693) @ 2434718750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] FORMAT2: itype=0004 iaddr=0798 del_valid=1 delta=0079c -> Word0=f391 queue_before=0
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434718750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0798 itype=0004 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(693) @ 2434718750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] FORMAT2: itype=0004 iaddr=0798 del_valid=1 delta=0079c -> Word0=f391 queue_before=1
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(699) @ 2434718750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word1 = 0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(704) @ 2434718750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word2 = 0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(709) @ 2434718750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word3 = 0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434723750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=079c del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434723750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=079c itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434723750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=079c itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2434723750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=079c
-UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434728750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=07a0 del_valid=1 delta=000f4 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434728750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07a0 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2434728750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=07a0
+UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434728750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0006 iaddr=07a0 del_valid=1 delta=000f4 first=0
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434728750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07a0 itype=0006 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(693) @ 2434728750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] FORMAT2: itype=0006 iaddr=07a0 del_valid=1 delta=000f4 -> Word0=1e91 queue_before=2
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(699) @ 2434728750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word1 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(704) @ 2434728750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word2 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(709) @ 2434728750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word3 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434733750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=07a0 del_valid=0 delta=00000 first=0
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434733750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07a0 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2434733750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=07a0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434748750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=00f4 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434748750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=00f4 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434748750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=00f4 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2434748750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=00f4
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434753750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=00f8 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434753750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=00f8 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434753750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=00f8 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2434753750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=00f8
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434758750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=00fc del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434758750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=00fc itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434758750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=00fc itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2434758750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=00fc
+--------------------------------
+TIME=2434764000
+ATVALID=1
+ATDATA = 9100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434763750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434764000 ATVALID=1 ATDATA=9100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(964) @ 2434763750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=f191 atb_mode=0 queue_size=3
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(975) @ 2434763750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=f191 byte_word0=9100 atb_mode=0 queue_size=3
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1005) @ 2434763750: uvm_test_top.env_h.sb [SB] First packet word detected. Starting comparison.
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1023) @ 2434763750: uvm_test_top.env_h.sb [COMPARE] WORD0 MATCH Exp=9100 Act=9100
+--------------------------------
+TIME=2434769000
+ATVALID=1
+ATDATA = f100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434768750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434769000 ATVALID=1 ATDATA=f100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1041) @ 2434768750: uvm_test_top.env_h.sb [COMPARE] WORD1 MATCH Exp=f100 Act=f100
+--------------------------------
+TIME=2434774000
+ATVALID=1
+ATDATA = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434773750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434774000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1059) @ 2434773750: uvm_test_top.env_h.sb [COMPARE] WORD2 MATCH Exp=0000 Act=0000
+--------------------------------
+TIME=2434779000
+ATVALID=1
+ATDATA = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434778750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434779000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1077) @ 2434778750: uvm_test_top.env_h.sb [COMPARE] WORD3 MATCH Exp=0000 Act=0000
+--------------------------------
+TIME=2434784000
+ATVALID=1
+ATDATA = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434783750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434784000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1097) @ 2434783750: uvm_test_top.env_h.sb [COMPARE] WORD4 MATCH Exp=0000 Act=0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434783750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0100 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434783750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0100 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434783750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0100 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2434783750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0100
+--------------------------------
+TIME=2434789000
+ATVALID=1
+ATDATA = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434788750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434789000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1114) @ 2434788750: uvm_test_top.env_h.sb [COMPARE] WORD5 MATCH Exp=0000 Act=0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434788750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0104 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434788750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0104 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434788750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0104 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2434788750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0104
+--------------------------------
+TIME=2434794000
+ATVALID=1
+ATDATA = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434793750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434794000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1131) @ 2434793750: uvm_test_top.env_h.sb [COMPARE] WORD6 MATCH Exp=0000 Act=0000
+--------------------------------
+TIME=2434799000
+ATVALID=1
+ATDATA = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434798750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434799000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1148) @ 2434798750: uvm_test_top.env_h.sb [COMPARE] WORD7 MATCH Exp=0000 Act=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1176) @ 2434798750: uvm_test_top.env_h.sb [SB] Packet comparison completed
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434813750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0108 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434813750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0108 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434813750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0108 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2434813750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0108
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434818750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=010c del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434818750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=010c itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434818750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=010c itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2434818750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=010c
+--------------------------------
+TIME=2434824000
+ATVALID=1
+ATDATA = 9100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434823750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434824000 ATVALID=1 ATDATA=9100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(964) @ 2434823750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=f391 atb_mode=0 queue_size=2
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(975) @ 2434823750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=f391 byte_word0=9100 atb_mode=0 queue_size=2
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1005) @ 2434823750: uvm_test_top.env_h.sb [SB] First packet word detected. Starting comparison.
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1023) @ 2434823750: uvm_test_top.env_h.sb [COMPARE] WORD0 MATCH Exp=9100 Act=9100
+--------------------------------
+TIME=2434829000
+ATVALID=1
+ATDATA = f300
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434828750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434829000 ATVALID=1 ATDATA=f300
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1041) @ 2434828750: uvm_test_top.env_h.sb [COMPARE] WORD1 MATCH Exp=f300 Act=f300
+--------------------------------
+TIME=2434834000
+ATVALID=1
+ATDATA = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434833750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434834000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1059) @ 2434833750: uvm_test_top.env_h.sb [COMPARE] WORD2 MATCH Exp=0000 Act=0000
+--------------------------------
+TIME=2434839000
+ATVALID=1
+ATDATA = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434838750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434839000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1077) @ 2434838750: uvm_test_top.env_h.sb [COMPARE] WORD3 MATCH Exp=0000 Act=0000
+--------------------------------
+TIME=2434844000
+ATVALID=1
+ATDATA = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434843750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434844000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1097) @ 2434843750: uvm_test_top.env_h.sb [COMPARE] WORD4 MATCH Exp=0000 Act=0000
+--------------------------------
+TIME=2434849000
+ATVALID=1
+ATDATA = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434848750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434849000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1114) @ 2434848750: uvm_test_top.env_h.sb [COMPARE] WORD5 MATCH Exp=0000 Act=0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434848750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0110 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434848750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0110 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434848750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0110 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2434848750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0110
+--------------------------------
+TIME=2434854000
+ATVALID=1
+ATDATA = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434853750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434854000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1131) @ 2434853750: uvm_test_top.env_h.sb [COMPARE] WORD6 MATCH Exp=0000 Act=0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434853750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0114 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434853750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0114 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434853750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0114 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2434853750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0114
+--------------------------------
+TIME=2434859000
+ATVALID=1
+ATDATA = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434858750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434859000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1148) @ 2434858750: uvm_test_top.env_h.sb [COMPARE] WORD7 MATCH Exp=0000 Act=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1176) @ 2434858750: uvm_test_top.env_h.sb [SB] Packet comparison completed
 [C_PRINT][INFO]:00000001
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434878750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0118 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434878750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0118 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434878750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0118 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2434878750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0118
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434883750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=011c del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434883750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=011c itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434883750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=011c itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2434883750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=011c
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434908750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0006 iaddr=0120 del_valid=1 delta=007a4 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434908750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0120 itype=0006 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434908750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0120 itype=0006 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(693) @ 2434908750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] FORMAT2: itype=0006 iaddr=0120 del_valid=1 delta=007a4 -> Word0=f491 queue_before=1
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(699) @ 2434908750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word1 = 0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(704) @ 2434908750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word2 = 0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(709) @ 2434908750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word3 = 0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434913750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0120 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434913750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0120 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434913750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0120 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2434913750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0120
-UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434928750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=07a4 del_valid=1 delta=007b0 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434928750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07a4 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2434928750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=07a4
+UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434928750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0006 iaddr=07a4 del_valid=1 delta=007b0 first=0
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434928750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07a4 itype=0006 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(693) @ 2434928750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] FORMAT2: itype=0006 iaddr=07a4 del_valid=1 delta=007b0 -> Word0=f611 queue_before=2
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(699) @ 2434928750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word1 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(704) @ 2434928750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word2 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(709) @ 2434928750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word3 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434933750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=07a4 del_valid=0 delta=00000 first=0
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434933750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07a4 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2434933750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=07a4
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434948750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=07b0 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434948750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07b0 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434948750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07b0 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2434948750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=07b0
 --------------------------------
 TIME=2434954000
 ATVALID=1
-ATDATA = f391
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434953750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434954000 ATVALID=1 ATDATA=f391
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(964) @ 2434953750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=f391 atb_mode=1 queue_size=2
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(975) @ 2434953750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=f391 byte_word0=9100 atb_mode=1 queue_size=2
+ATDATA = 9100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434953750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434954000 ATVALID=1 ATDATA=9100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(964) @ 2434953750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=1e91 atb_mode=0 queue_size=3
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(975) @ 2434953750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=1e91 byte_word0=9100 atb_mode=0 queue_size=3
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1005) @ 2434953750: uvm_test_top.env_h.sb [SB] First packet word detected. Starting comparison.
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1023) @ 2434953750: uvm_test_top.env_h.sb [COMPARE] WORD0 MATCH Exp=f391 Act=f391
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1023) @ 2434953750: uvm_test_top.env_h.sb [COMPARE] WORD0 MATCH Exp=9100 Act=9100
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434953750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=07b4 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434953750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07b4 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434953750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07b4 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2434953750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=07b4
 --------------------------------
 TIME=2434959000
 ATVALID=1
-ATDATA = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434958750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434959000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1041) @ 2434958750: uvm_test_top.env_h.sb [COMPARE] WORD1 MATCH Exp=0000 Act=0000
+ATDATA = 1e00
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434958750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434959000 ATVALID=1 ATDATA=1e00
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1041) @ 2434958750: uvm_test_top.env_h.sb [COMPARE] WORD1 MATCH Exp=1e00 Act=1e00
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434958750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=07b8 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434958750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07b8 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434958750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07b8 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2434958750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=07b8
 --------------------------------
 TIME=2434964000
@@ -683,7 +611,7 @@ ATDATA = 0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434963750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434964000 ATVALID=1 ATDATA=0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1059) @ 2434963750: uvm_test_top.env_h.sb [COMPARE] WORD2 MATCH Exp=0000 Act=0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434963750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=07bc del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434963750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07bc itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434963750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07bc itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2434963750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=07bc
 --------------------------------
 TIME=2434969000
@@ -691,207 +619,212 @@ ATVALID=1
 ATDATA = 0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434968750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434969000 ATVALID=1 ATDATA=0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1077) @ 2434968750: uvm_test_top.env_h.sb [COMPARE] WORD3 MATCH Exp=0000 Act=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1176) @ 2434968750: uvm_test_top.env_h.sb [SB] Packet comparison completed
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434968750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=07c0 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434968750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07c0 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434968750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07c0 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2434968750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=07c0
+--------------------------------
+TIME=2434974000
+ATVALID=1
+ATDATA = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434973750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434974000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1097) @ 2434973750: uvm_test_top.env_h.sb [COMPARE] WORD4 MATCH Exp=0000 Act=0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434973750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=07c4 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434973750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07c4 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434973750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07c4 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2434973750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=07c4
+--------------------------------
+TIME=2434979000
+ATVALID=1
+ATDATA = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434978750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434979000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1114) @ 2434978750: uvm_test_top.env_h.sb [COMPARE] WORD5 MATCH Exp=0000 Act=0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434978750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0006 iaddr=07c8 del_valid=1 delta=007d8 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434978750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07c8 itype=0006 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(693) @ 2434978750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] FORMAT2: itype=0006 iaddr=07c8 del_valid=1 delta=007d8 -> Word0=fb11 queue_before=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434978750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07c8 itype=0006 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(693) @ 2434978750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] FORMAT2: itype=0006 iaddr=07c8 del_valid=1 delta=007d8 -> Word0=fb11 queue_before=2
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(699) @ 2434978750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word1 = 0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(704) @ 2434978750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word2 = 0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(709) @ 2434978750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word3 = 0000
+--------------------------------
+TIME=2434984000
+ATVALID=1
+ATDATA = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434983750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434984000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1131) @ 2434983750: uvm_test_top.env_h.sb [COMPARE] WORD6 MATCH Exp=0000 Act=0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434983750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=07c8 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434983750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07c8 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434983750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07c8 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2434983750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=07c8
 --------------------------------
-TIME=2434994000
-ATVALID=1
-ATDATA = f491
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434993750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434994000 ATVALID=1 ATDATA=f491
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(964) @ 2434993750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=f491 atb_mode=1 queue_size=2
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(975) @ 2434993750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=f491 byte_word0=9100 atb_mode=1 queue_size=2
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1005) @ 2434993750: uvm_test_top.env_h.sb [SB] First packet word detected. Starting comparison.
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1023) @ 2434993750: uvm_test_top.env_h.sb [COMPARE] WORD0 MATCH Exp=f491 Act=f491
---------------------------------
-TIME=2434999000
+TIME=2434989000
 ATVALID=1
 ATDATA = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434998750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434999000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1041) @ 2434998750: uvm_test_top.env_h.sb [COMPARE] WORD1 MATCH Exp=0000 Act=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2434988750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2434989000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1148) @ 2434988750: uvm_test_top.env_h.sb [COMPARE] WORD7 MATCH Exp=0000 Act=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1176) @ 2434988750: uvm_test_top.env_h.sb [SB] Packet comparison completed
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2434998750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=07d8 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434998750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07d8 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2434998750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07d8 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2434998750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=07d8
---------------------------------
-TIME=2435004000
-ATVALID=1
-ATDATA = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2435003750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435004000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1059) @ 2435003750: uvm_test_top.env_h.sb [COMPARE] WORD2 MATCH Exp=0000 Act=0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2435003750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=07dc del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2435003750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07dc itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2435003750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07dc itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2435003750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=07dc
+UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2435008750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=07e0 del_valid=0 delta=00000 first=0
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2435008750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07e0 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2435008750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=07e0
 --------------------------------
-TIME=2435009000
+TIME=2435014000
+ATVALID=1
+ATDATA = 9100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2435013750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435014000 ATVALID=1 ATDATA=9100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(964) @ 2435013750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=f491 atb_mode=0 queue_size=3
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(975) @ 2435013750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=f491 byte_word0=9100 atb_mode=0 queue_size=3
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1005) @ 2435013750: uvm_test_top.env_h.sb [SB] First packet word detected. Starting comparison.
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1023) @ 2435013750: uvm_test_top.env_h.sb [COMPARE] WORD0 MATCH Exp=9100 Act=9100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2435013750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=07e4 del_valid=0 delta=00000 first=0
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2435013750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07e4 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2435013750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=07e4
+--------------------------------
+TIME=2435019000
+ATVALID=1
+ATDATA = f400
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2435018750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435019000 ATVALID=1 ATDATA=f400
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1041) @ 2435018750: uvm_test_top.env_h.sb [COMPARE] WORD1 MATCH Exp=f400 Act=f400
+UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2435018750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=07e8 del_valid=0 delta=00000 first=0
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2435018750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07e8 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2435018750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=07e8
+--------------------------------
+TIME=2435024000
 ATVALID=1
 ATDATA = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2435008750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435009000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1077) @ 2435008750: uvm_test_top.env_h.sb [COMPARE] WORD3 MATCH Exp=0000 Act=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1176) @ 2435008750: uvm_test_top.env_h.sb [SB] Packet comparison completed
-UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2435008750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=07e0 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2435008750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07e0 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2435008750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=07e0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2435013750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=07e4 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2435013750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07e4 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2435013750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=07e4
-UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2435018750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=07e8 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2435018750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07e8 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2435018750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=07e8
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2435023750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435024000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1059) @ 2435023750: uvm_test_top.env_h.sb [COMPARE] WORD2 MATCH Exp=0000 Act=0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2435023750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=07ec del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2435023750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07ec itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2435023750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07ec itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2435023750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=07ec
-UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2435028750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=07f0 del_valid=1 delta=00078 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2435028750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07f0 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2435028750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=07f0
+--------------------------------
+TIME=2435029000
+ATVALID=1
+ATDATA = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2435028750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435029000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1077) @ 2435028750: uvm_test_top.env_h.sb [COMPARE] WORD3 MATCH Exp=0000 Act=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2435028750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0006 iaddr=07f0 del_valid=1 delta=00078 first=0
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2435028750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07f0 itype=0006 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(693) @ 2435028750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] FORMAT2: itype=0006 iaddr=07f0 del_valid=1 delta=00078 -> Word0=0f11 queue_before=2
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(699) @ 2435028750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word1 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(704) @ 2435028750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word2 = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(709) @ 2435028750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word3 = 0000
+--------------------------------
+TIME=2435034000
+ATVALID=1
+ATDATA = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2435033750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435034000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1097) @ 2435033750: uvm_test_top.env_h.sb [COMPARE] WORD4 MATCH Exp=0000 Act=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2435033750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=07f0 del_valid=0 delta=00000 first=0
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2435033750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07f0 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2435033750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=07f0
+--------------------------------
+TIME=2435039000
+ATVALID=1
+ATDATA = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2435038750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435039000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1114) @ 2435038750: uvm_test_top.env_h.sb [COMPARE] WORD5 MATCH Exp=0000 Act=0000
+--------------------------------
+TIME=2435044000
+ATVALID=1
+ATDATA = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2435043750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435044000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1131) @ 2435043750: uvm_test_top.env_h.sb [COMPARE] WORD6 MATCH Exp=0000 Act=0000
+--------------------------------
+TIME=2435049000
+ATVALID=1
+ATDATA = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2435048750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435049000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1148) @ 2435048750: uvm_test_top.env_h.sb [COMPARE] WORD7 MATCH Exp=0000 Act=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1176) @ 2435048750: uvm_test_top.env_h.sb [SB] Packet comparison completed
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2435048750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0078 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2435048750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0078 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2435048750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0078 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2435048750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0078
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2435053750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=007c del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2435053750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=007c itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2435053750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=007c itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2435053750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=007c
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2435058750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0080 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2435058750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0080 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2435058750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0080 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2435058750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0080
+--------------------------------
+TIME=2435074000
+ATVALID=1
+ATDATA = 1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2435073750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435074000 ATVALID=1 ATDATA=1100
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(964) @ 2435073750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=f611 atb_mode=0 queue_size=3
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(975) @ 2435073750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=f611 byte_word0=1100 atb_mode=0 queue_size=3
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1005) @ 2435073750: uvm_test_top.env_h.sb [SB] First packet word detected. Starting comparison.
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1023) @ 2435073750: uvm_test_top.env_h.sb [COMPARE] WORD0 MATCH Exp=1100 Act=1100
+--------------------------------
+TIME=2435079000
+ATVALID=1
+ATDATA = f600
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2435078750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435079000 ATVALID=1 ATDATA=f600
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1041) @ 2435078750: uvm_test_top.env_h.sb [COMPARE] WORD1 MATCH Exp=f600 Act=f600
+--------------------------------
+TIME=2435084000
+ATVALID=1
+ATDATA = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2435083750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435084000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1059) @ 2435083750: uvm_test_top.env_h.sb [COMPARE] WORD2 MATCH Exp=0000 Act=0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2435083750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0084 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2435083750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0084 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2435083750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0084 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2435083750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0084
+--------------------------------
+TIME=2435089000
+ATVALID=1
+ATDATA = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2435088750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435089000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1077) @ 2435088750: uvm_test_top.env_h.sb [COMPARE] WORD3 MATCH Exp=0000 Act=0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2435088750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0088 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2435088750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0088 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2435088750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0088 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2435088750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0088
+--------------------------------
+TIME=2435094000
+ATVALID=1
+ATDATA = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2435093750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435094000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1097) @ 2435093750: uvm_test_top.env_h.sb [COMPARE] WORD4 MATCH Exp=0000 Act=0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2435093750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=008c del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2435093750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=008c itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2435093750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=008c itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2435093750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=008c
+--------------------------------
+TIME=2435099000
+ATVALID=1
+ATDATA = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2435098750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435099000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1114) @ 2435098750: uvm_test_top.env_h.sb [COMPARE] WORD5 MATCH Exp=0000 Act=0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2435098750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0090 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2435098750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0090 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2435098750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0090 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2435098750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0090
+--------------------------------
+TIME=2435104000
+ATVALID=1
+ATDATA = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2435103750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435104000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1131) @ 2435103750: uvm_test_top.env_h.sb [COMPARE] WORD6 MATCH Exp=0000 Act=0000
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2435103750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0094 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2435103750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0094 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2435103750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0094 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2435103750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0094
+--------------------------------
+TIME=2435109000
+ATVALID=1
+ATDATA = 0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2435108750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435109000 ATVALID=1 ATDATA=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1148) @ 2435108750: uvm_test_top.env_h.sb [COMPARE] WORD7 MATCH Exp=0000 Act=0000
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1176) @ 2435108750: uvm_test_top.env_h.sb [SB] Packet comparison completed
 UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2435108750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0098 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2435108750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0098 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
+UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2435108750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0098 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=0
 UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2435108750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0098
 HANDSHAKE : Requets Received from C
-UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2435133750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=009c del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2435133750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=009c itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2435133750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=009c
-UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2435138750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=00a0 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2435138750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=00a0 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2435138750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=00a0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2435163750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0006 iaddr=00a4 del_valid=1 delta=007f4 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2435163750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=00a4 itype=0006 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(693) @ 2435163750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] FORMAT2: itype=0006 iaddr=00a4 del_valid=1 delta=007f4 -> Word0=fe91 queue_before=1
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(699) @ 2435163750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word1 = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(704) @ 2435163750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word2 = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(709) @ 2435163750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word3 = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2435168750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=00a4 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2435168750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=00a4 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2435168750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=00a4
-UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2435183750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=07f4 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2435183750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07f4 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2435183750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=07f4
-UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2435188750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=07f8 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2435188750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07f8 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2435188750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=07f8
-UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2435193750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=07fc del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2435193750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=07fc itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2435193750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=07fc
-UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2435198750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0800 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2435198750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0800 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2435198750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0800
---------------------------------
-TIME=2435209000
-ATVALID=1
-ATDATA = fb11
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2435208750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435209000 ATVALID=1 ATDATA=fb11
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(964) @ 2435208750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=fb11 atb_mode=1 queue_size=2
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(975) @ 2435208750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=fb11 byte_word0=1100 atb_mode=1 queue_size=2
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1005) @ 2435208750: uvm_test_top.env_h.sb [SB] First packet word detected. Starting comparison.
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1023) @ 2435208750: uvm_test_top.env_h.sb [COMPARE] WORD0 MATCH Exp=fb11 Act=fb11
---------------------------------
-TIME=2435214000
-ATVALID=1
-ATDATA = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2435213750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435214000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1041) @ 2435213750: uvm_test_top.env_h.sb [COMPARE] WORD1 MATCH Exp=0000 Act=0000
---------------------------------
-TIME=2435219000
-ATVALID=1
-ATDATA = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2435218750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435219000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1059) @ 2435218750: uvm_test_top.env_h.sb [COMPARE] WORD2 MATCH Exp=0000 Act=0000
---------------------------------
-TIME=2435224000
-ATVALID=1
-ATDATA = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2435223750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435224000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1077) @ 2435223750: uvm_test_top.env_h.sb [COMPARE] WORD3 MATCH Exp=0000 Act=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1176) @ 2435223750: uvm_test_top.env_h.sb [SB] Packet comparison completed
-UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2435223750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0804 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2435223750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0804 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2435223750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0804
---------------------------------
-TIME=2435249000
-ATVALID=1
-ATDATA = fe91
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2435248750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435249000 ATVALID=1 ATDATA=fe91
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(964) @ 2435248750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=fe91 atb_mode=1 queue_size=1
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(975) @ 2435248750: uvm_test_top.env_h.sb [QUEUE_HEAD] QUEUE HEAD: word0=fe91 byte_word0=9100 atb_mode=1 queue_size=1
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1005) @ 2435248750: uvm_test_top.env_h.sb [SB] First packet word detected. Starting comparison.
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1023) @ 2435248750: uvm_test_top.env_h.sb [COMPARE] WORD0 MATCH Exp=fe91 Act=fe91
-UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2435248750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0006 iaddr=0808 del_valid=1 delta=0001c first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2435248750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0808 itype=0006 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(693) @ 2435248750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] FORMAT2: itype=0006 iaddr=0808 del_valid=1 delta=0001c -> Word0=0391 queue_before=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(699) @ 2435248750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word1 = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(704) @ 2435248750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word2 = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(709) @ 2435248750: uvm_test_top.env_h.sb [FORMAT2_PREDICTOR] Expected Word3 = 0000
---------------------------------
-TIME=2435254000
-ATVALID=1
-ATDATA = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2435253750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435254000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1041) @ 2435253750: uvm_test_top.env_h.sb [COMPARE] WORD1 MATCH Exp=0000 Act=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2435253750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=0808 del_valid=0 delta=00000 first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2435253750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=0808 itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2435253750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=0808
---------------------------------
-TIME=2435259000
-ATVALID=1
-ATDATA = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2435258750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435259000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1059) @ 2435258750: uvm_test_top.env_h.sb [COMPARE] WORD2 MATCH Exp=0000 Act=0000
---------------------------------
-TIME=2435264000
-ATVALID=1
-ATDATA = 0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(935) @ 2435263750: uvm_test_top.env_h.sb [OUTPUT_SB] TIME=2435264000 ATVALID=1 ATDATA=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1077) @ 2435263750: uvm_test_top.env_h.sb [COMPARE] WORD3 MATCH Exp=0000 Act=0000
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(1176) @ 2435263750: uvm_test_top.env_h.sb [SB] Packet comparison completed
-UVM_INFO ../dv/tb/agents/trace_agent/trace_input_monitor.sv(135) @ 2435268750: uvm_test_top.env_h.agt.in_mon [IN_MON_DEBUG] SENT: valid=1 itype=0000 iaddr=001c del_valid=1 delta=0001c first=0
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(260) @ 2435268750: uvm_test_top.env_h.sb [INPUT_DEBUG] INPUT: itype_valid=1 first_instr=0 iaddr=001c itype=0000 context=00 cause=00 tval=00000000 trace_enable=1 atb_mode=1
-UVM_INFO ../dv/tb/agents/trace_agent/trace_scoreboard.sv(345) @ 2435268750: uvm_test_top.env_h.sb [SF1_SKIP] Skipping SF1 fallback: itype=0000 iaddr=001c
-             2436305sent handshake from sv to c
-2--Handshake Reeived from C to SV
-
-UVM_INFO ../dv/tb/agents/gpio_agent/gpio_scoreboard.sv(478) @ 2436305000: uvm_test_top.env_h.scoreboard_h [SB_REPORT] 
+UVM_INFO ../dv/tb/agents/gpio_agent/gpio_scoreboard.sv(478) @ 2435118750: uvm_test_top.env_h.scoreboard_h [SB_REPORT] 
 ========== GPIO SCOREBOARD ==========
   OUTPUT match=0  mismatch=0
   INPUT  match=0  mismatch=0
   Result : PASSED
 ======================================
-UVM_INFO ../dv/tb/agents/uart_serial_agent/uart_sb.sv(316) @ 2436305000: uvm_test_top.env_h.u_sb [SB_REPORT] 
+UVM_INFO ../dv/tb/agents/uart_serial_agent/uart_sb.sv(316) @ 2435118750: uvm_test_top.env_h.u_sb [SB_REPORT] 
 ========== UART1 SCOREBOARD ==========
   TX match=0  mismatch=0
   RX match=0  mismatch=0
@@ -911,25 +844,25 @@ Number of caught UVM_WARNING reports :    0
 --- UVM Report Summary ---
 
 ** Report counts by severity
-UVM_INFO :  449
+UVM_INFO :  507
 UVM_WARNING :    0
 UVM_ERROR :    0
 UVM_FATAL :    0
 ** Report counts by id
 [BOOT]     1
 [BOOT_CHECKER]     1
-[COMPARE]    24
-[FORMAT2_PREDICTOR]    28
-[INPUT_DEBUG]    73
+[COMPARE]    56
+[FORMAT2_PREDICTOR]    36
+[INPUT_DEBUG]    65
 [IN_MON_DEBUG]   204
-[OUTPUT_SB]    24
-[QUEUE_HEAD]    12
+[OUTPUT_SB]    56
+[QUEUE_HEAD]    14
 [RNTST]     1
-[SB]    12
+[SB]    14
 [SB_REPORT]     2
-[SF1_SKIP]    66
+[SF1_SKIP]    56
 [i2c_monitor]     1
-Simulation complete via $finish(1) at time 2436305 NS + 55
+Simulation complete via $finish(1) at time 2435118750 PS + 80
 /tools/eda/cadence/XCELIUM2009/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_root.svh:457     $finish;
 xcelium> exit
-TOOL:	xrun(64)	20.09-s009: Exiting on Mar 26, 2023 at 04:52:41 IST  (total: 00:04:45)
+TOOL:	xrun(64)	20.09-s009: Exiting on Mar 26, 2023 at 16:13:03 IST  (total: 00:02:00)
