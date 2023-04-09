@@ -142,32 +142,221 @@ $(INCLUDE_DIR)/startup.S \
 $(INCLUDE_DIR)/exception_handlers.c \
 $(TEST_DIR)/$(C_TEST).c
 
-#Enable required chekcers
+
+
+
+# ============================================================
+# DUAL CORE C TEST OUTPUTS
+# ============================================================
+
+CORE0_C_TEST ?= basic_mmio_test
+CORE1_C_TEST ?= basic_mmio_test
+
+CORE0_ELF = $(PINAKA_BIN_DIR)/$(CORE0_C_TEST)_core0.elf
+CORE0_BIN = $(PINAKA_BIN_DIR)/$(CORE0_C_TEST)_core0.bin
+CORE0_HEX = $(PINAKA_BIN_DIR)/$(CORE0_C_TEST)_core0.hex
+CORE0_DISASM = $(PINAKA_BIN_DIR)/$(CORE0_C_TEST)_core0.disasm
+CORE1_ELF = $(PINAKA_BIN_DIR)/$(CORE1_C_TEST)_core1.elf
+CORE1_BIN = $(PINAKA_BIN_DIR)/$(CORE1_C_TEST)_core1.bin
+CORE1_HEX = $(PINAKA_BIN_DIR)/$(CORE1_C_TEST)_core1.hex
+CORE1_DISASM = $(PINAKA_BIN_DIR)/$(CORE1_C_TEST)_core1.disasm
+
+DUAL_CORE0_LINKER = $(SCRIPT_DIR)/soc_linker_core0.ld
+DUAL_CORE1_LINKER = $(SCRIPT_DIR)/soc_linker_core1.ld
+
+
+PINAKA_PTE1_HEX = $(PINAKA_BIN_DIR)/pte_1.hex
+
+
+
+
+
+
+
+
+#======================================================================
+# CHECKER CONFIGURATION
+#======================================================================
+
+CHECKER_CORE0 ?=
+CHECKER_CORE1 ?=
+CHECKER_SHARED ?=
+
 CHECKER_FILES =
-ifeq ($(CHECKER),memap)
-    CHECKER_FILES += ../dv/tb/mem_checker/memory_map_monitor_checker.sv
-    CHECKER_FILES += ../dv/tb/mem_checker/memory_map_binds.sv
-endif
+CHECKER_DEFINES =
 
-ifeq ($(CHECKER),clk_rst)
-    CHECKER_FILES += ../dv/tb/mem_checker/clk_rst_monitor_checker.sv
-    CHECKER_FILES += ../dv/tb/mem_checker/clk_rst_binds.sv
-endif
+empty :=
+space := $(empty) $(empty)
 
-ifeq ($(CHECKER),mmu)
+
+CORE0_TAG := $(subst $(space),_,$(strip $(CHECKER_CORE0)))
+CORE1_TAG := $(subst $(space),_,$(strip $(CHECKER_CORE1)))
+SHARED_TAG := $(subst $(space),_,$(strip $(CHECKER_SHARED)))
+CHECKER_TAG = core0_$(CORE0_TAG)_core1_$(CORE1_TAG)_shared_$(SHARED_TAG)
+##======================================================================
+# CORE0 MMU
+#======================================================================
+
+ifneq ($(filter mmu,$(CHECKER_CORE0)),)
+
     CHECKER_FILES += ../dv/tb/mmu_checker/mmu_checker.sv
     CHECKER_FILES += ../dv/tb/mmu_checker/mmu_binds.sv
+
+    CHECKER_DEFINES += +define+MMU_CHECKER_CORE0
+
 endif
 
-ifeq ($(CHECKER),spi)
-    CHECKER_FILES += ../dv/tb/spi_checker/spi_monitor_checker.sv
-    CHECKER_FILES += ../dv/tb/spi_checker/spi_bind.sv
+
+#======================================================================
+# CORE1 MMU
+#======================================================================
+
+ifneq ($(filter mmu,$(CHECKER_CORE1)),)
+
+    ifeq ($(filter ../dv/tb/mmu_checker/mmu_checker.sv,$(CHECKER_FILES)),)
+        CHECKER_FILES += ../dv/tb/mmu_checker/mmu_checker.sv
+    endif
+
+    ifeq ($(filter ../dv/tb/mmu_checker/mmu_binds.sv,$(CHECKER_FILES)),)
+        CHECKER_FILES += ../dv/tb/mmu_checker/mmu_binds.sv
+    endif
+
+    CHECKER_DEFINES += +define+MMU_CHECKER_CORE1
+
 endif
 
-ifeq ($(CHECKER),traceIP)
+
+#======================================================================
+# CORE0 TRACE IP
+#======================================================================
+
+ifneq ($(filter traceip,$(CHECKER_CORE0)),)
+
     CHECKER_FILES += ../dv/tb/traceIP_checker/traceIP_checker.sv
     CHECKER_FILES += ../dv/tb/traceIP_checker/traceIP_binds.sv
+
+    CHECKER_DEFINES += +define+TRACEIP_CHECKER_CORE0
+
 endif
+
+
+#======================================================================
+# CORE1 TRACE IP
+#======================================================================
+
+ifneq ($(filter traceip,$(CHECKER_CORE1)),)
+
+    ifeq ($(filter ../dv/tb/traceIP_checker/traceIP_checker.sv,$(CHECKER_FILES)),)
+        CHECKER_FILES += ../dv/tb/traceIP_checker/traceIP_checker.sv
+    endif
+
+    ifeq ($(filter ../dv/tb/traceIP_checker/traceIP_binds.sv,$(CHECKER_FILES)),)
+        CHECKER_FILES += ../dv/tb/traceIP_checker/traceIP_binds.sv
+    endif
+
+    CHECKER_DEFINES += +define+TRACEIP_CHECKER_CORE1
+
+endif
+
+
+#======================================================================
+# CORE0 SPI
+#======================================================================
+
+ifneq ($(filter spi,$(CHECKER_CORE0)),)
+
+    CHECKER_FILES += ../dv/tb/spi_checker/spi_monitor_checker.sv
+    CHECKER_FILES += ../dv/tb/spi_checker/spi_bind.sv
+
+    CHECKER_DEFINES += +define+SPI_CHECKER_CORE0
+
+endif
+
+
+#======================================================================
+# CORE1 SPI
+#======================================================================
+
+ifneq ($(filter spi,$(CHECKER_CORE1)),)
+
+    ifeq ($(filter ../dv/tb/spi_checker/spi_monitor_checker.sv,$(CHECKER_FILES)),)
+        CHECKER_FILES += ../dv/tb/spi_checker/spi_monitor_checker.sv
+    endif
+
+    ifeq ($(filter ../dv/tb/spi_checker/spi_bind.sv,$(CHECKER_FILES)),)
+        CHECKER_FILES += ../dv/tb/spi_checker/spi_bind.sv
+    endif
+
+    CHECKER_DEFINES += +define+SPI_CHECKER_CORE1
+
+endif
+
+
+#======================================================================
+# CORE0 MEMORY MAP
+#======================================================================
+
+ifneq ($(filter memap,$(CHECKER_CORE0)),)
+
+    CHECKER_FILES += ../dv/tb/mem_checker/memory_map_monitor_checker.sv
+    CHECKER_FILES += ../dv/tb/mem_checker/memory_map_binds.sv
+
+    CHECKER_DEFINES += +define+MEMAP_CHECKER_CORE0
+
+endif
+
+
+#======================================================================
+# CORE1 MEMORY MAP
+#======================================================================
+
+ifneq ($(filter memap,$(CHECKER_CORE1)),)
+
+    ifeq ($(filter ../dv/tb/mem_checker/memory_map_monitor_checker.sv,$(CHECKER_FILES)),)
+        CHECKER_FILES += ../dv/tb/mem_checker/memory_map_monitor_checker.sv
+    endif
+
+    ifeq ($(filter ../dv/tb/mem_checker/memory_map_binds.sv,$(CHECKER_FILES)),)
+        CHECKER_FILES += ../dv/tb/mem_checker/memory_map_binds.sv
+    endif
+
+    CHECKER_DEFINES += +define+MEMAP_CHECKER_CORE1
+
+endif
+
+
+#======================================================================
+# CORE0 CLK_RST
+#======================================================================
+
+ifneq ($(filter clk_rst,$(CHECKER_CORE0)),)
+
+    CHECKER_FILES += ../dv/tb/mem_checker/clk_rst_monitor_checker.sv
+    CHECKER_FILES += ../dv/tb/mem_checker/clk_rst_binds.sv
+
+    CHECKER_DEFINES += +define+CLK_RST_CHECKER_CORE0
+
+endif
+
+
+#======================================================================
+# CORE1 CLK_RST
+#======================================================================
+
+ifneq ($(filter clk_rst,$(CHECKER_CORE1)),)
+
+    ifeq ($(filter ../dv/tb/mem_checker/clk_rst_monitor_checker.sv,$(CHECKER_FILES)),)
+        CHECKER_FILES += ../dv/tb/mem_checker/clk_rst_monitor_checker.sv
+    endif
+
+    ifeq ($(filter ../dv/tb/mem_checker/clk_rst_binds.sv,$(CHECKER_FILES)),)
+        CHECKER_FILES += ../dv/tb/mem_checker/clk_rst_binds.sv
+    endif
+
+    CHECKER_DEFINES += +define+CLK_RST_CHECKER_CORE1
+
+endif
+
 #Enable required GPIO PIN
 
 GPIO_INC_DIR = ../dv/tb/GPIO_INSTANCE
@@ -325,6 +514,9 @@ INSTR_B3 = $(SEED_DIR)/instruction_mem_B3.hex
 
 ifeq ($(MODE),pinaka)
 all: pinaka_run
+
+else ifeq ($(MODE),dual_core)
+all: dual_core_run
 
 else ifeq ($(MODE),jtag)
 all: jtag_run
@@ -553,7 +745,7 @@ compare:
 
 SNAPSHOT_ROOT = $(SIM_DIR)/results/xcelium_snapshot
 
-SNAPSHOT_NAME = pinaka_$(MODE)_$(CHECKER)_cov$(COV)
+SNAPSHOT_NAME = pinaka_$(MODE)_$(CHECKER_CORE0)_$(CHECKER_CORE1)_$(CHECKER_SHARED)_cov$(COV)
 
 SNAPSHOT_DIR  = $(SNAPSHOT_ROOT)/$(SNAPSHOT_NAME)
 
@@ -561,7 +753,9 @@ SNAPSHOT_LIB  = $(SNAPSHOT_DIR)/xcelium.d
 
 XRUN = /tools/eda/cadence//XCELIUM2009/tools/bin/xrun
 
-
+DUAL_SNAPSHOT_NAME = pinaka_dual_$(CHECKER_CORE0)_$(CHECKER_CORE1)_$(CHECKER_SHARED)_cov$(COV)
+DUAL_SNAPSHOT_DIR  = $(SNAPSHOT_ROOT)/$(DUAL_SNAPSHOT_NAME)
+DUAL_SNAPSHOT_LIB  = $(DUAL_SNAPSHOT_DIR)/xcelium.d
 
 # =========================================================
 # PINAKA CORE FLOW
@@ -580,52 +774,6 @@ pinaka_run:
 	mkdir -p $(SNAPSHOT_ROOT)
 	mkdir -p $(SNAPSHOT_DIR)
 
-
-#	@echo "Compiling sanity_test.S..."
-#
-#	$(RISCV_GCC) \
-#	$(ARCH) \
-#	$(ABI) \
-#	-static -nostdlib \
-#	$(PINAKA_ASM) \
-#	-o $(PINAKA_ELF)
-#
-#	@echo "Generating BIN..."
-#
-#	$(RISCV_OBJCOPY) -O binary \
-#	$(PINAKA_ELF) \
-#	$(PINAKA_BIN)
-#
-#	@echo "Generating program_data.mem..."
-#	
-#
-#	$(RISCV_OBJCOPY) -O verilog $(PINAKA_ELF) $(PINAKA_MEM)
-#	
-#	@echo "Generating program_data.hex..."
-#
-#	
-#	python $(SCRIPT_DIR)/pinaka_mem_to_word_hex.py \
-#	$(PINAKA_MEM) \
-#	$(PINAKA_DATA_HEX)
-#
-#	@echo "Generating instruction.hex..."
-#
-#	xxd -p -c 4 $(PINAKA_BIN) | \
-#	sed 's/\(..\)\(..\)\(..\)\(..\)/\4\3\2\1/' \
-#	> $(PINAKA_HEX)
-#
-#	@echo "Running RTL..."
-#
-#	cd $(PINAKA_SIM) && \
-#	irun -access +rwc \
-#	-f $(SIM_DIR)/cfg/$(MODE)_rtl.f \
-#	-f $(SIM_DIR)/cfg/$(MODE)_tb.f \
-#	+instr_file=$(PINAKA_HEX) \
-#	+data_file=$(PINAKA_DATA_HEX)\
-#	+pte_file=$(PINAKA_PTE_HEX) \
-#	-l $(LOG_DIR)/rtl_run.log	
-#
-#----------added by ganeshks------------------------------------------
 	@echo "Compiling $(C_TEST).c"
 	$(RISCV_GCC) \
 	$(ARCH) \
@@ -745,6 +893,212 @@ pinaka_run:
 	@echo " SEED         = $(SEED)"
 	@echo " SNAPSHOT     = $(SNAPSHOT_NAME)"
 	@echo "======================================"
+
+
+
+
+
+# =========================================================
+# DUAL CORE FLOW
+# =========================================================
+
+dual_core_run:
+	@echo "======================================"
+	@echo " Running PINAKA DUAL CORE"
+	@echo "======================================"
+	@echo "CORE0 C_TEST = $(CORE0_C_TEST)"
+	@echo "CORE1 C_TEST = $(CORE1_C_TEST)"
+	@echo "UVM TEST     = $(SOC_TEST)"
+	@echo "SEED         = $(SEED)"
+	@echo "SNAPSHOT     = $(DUAL_SNAPSHOT_NAME)"
+	@echo "======================================"
+
+	mkdir -p $(PINAKA_BIN_DIR)
+	mkdir -p $(RESULT_DIR)
+	mkdir -p $(LOG_DIR)
+	mkdir -p $(SNAPSHOT_ROOT)
+	mkdir -p $(DUAL_SNAPSHOT_DIR)
+
+
+	@echo "======================================"
+	@echo " BUILD CORE 0"
+	@echo "======================================"
+
+ifeq ($(CORE0_C_TEST),dummy)
+
+	$(RISCV_GCC) \
+		$(ARCH) \
+		$(ABI) \
+		-T $(DUAL_CORE0_LINKER) \
+		-nostdlib -nostartfiles \
+		$(INCLUDE_DIR)/dummy.S \
+		-o $(CORE0_ELF)
+
+else
+
+	$(RISCV_GCC) \
+		$(ARCH) \
+		$(ABI) \
+		-T $(DUAL_CORE0_LINKER) \
+		-I$(INCLUDE_DIR) \
+		-static -nostdlib \
+		$(INCLUDE_DIR)/peripheral.c \
+		$(INCLUDE_DIR)/startup.S \
+		$(INCLUDE_DIR)/exception_handlers.c \
+		$(TEST_DIR)/$(CORE0_C_TEST).c \
+		-o $(CORE0_ELF)
+
+endif
+
+	$(RISCV_OBJCOPY) -O binary \
+		$(CORE0_ELF) \
+		$(CORE0_BIN)
+
+	$(RISCV_OBJDUMP) -d \
+	$(CORE0_ELF) \
+	> $(PINAKA_BIN_DIR)/$(CORE0_C_TEST)_core0.disasm
+
+	xxd -p -c 4 \
+		$(CORE0_BIN) | \
+		sed 's/\(..\)\(..\)\(..\)\(..\)/\4\3\2\1/' \
+		> $(CORE0_HEX)
+
+
+	@echo "======================================"
+	@echo " BUILD CORE 1"
+	@echo "======================================"
+
+ifeq ($(CORE1_C_TEST),dummy)
+
+	$(RISCV_GCC) \
+		$(ARCH) \
+		$(ABI) \
+		-T $(DUAL_CORE1_LINKER) \
+		-nostdlib -nostartfiles \
+		$(INCLUDE_DIR)/dummy.S \
+		-o $(CORE1_ELF)
+
+else
+
+	$(RISCV_GCC) \
+		$(ARCH) \
+		$(ABI) \
+		-T $(DUAL_CORE1_LINKER) \
+		-I$(INCLUDE_DIR) \
+		-static -nostdlib \
+		$(INCLUDE_DIR)/peripheral_1.c \
+		$(INCLUDE_DIR)/startup1.S \
+		$(INCLUDE_DIR)/exception_handlers.c \
+		$(TEST_DIR)/$(CORE1_C_TEST).c \
+		-o $(CORE1_ELF)
+
+endif
+
+	$(RISCV_OBJCOPY) -O binary \
+		$(CORE1_ELF) \
+		$(CORE1_BIN)
+
+	$(RISCV_OBJDUMP) -d \
+	$(CORE1_ELF) \
+	> $(PINAKA_BIN_DIR)/$(CORE1_C_TEST)_core1.disasm
+
+	xxd -p -c 4 \
+		$(CORE1_BIN) | \
+		sed 's/\(..\)\(..\)\(..\)\(..\)/\4\3\2\1/' \
+		> $(CORE1_HEX)
+
+
+	@echo "======================================"
+	@echo " HEX FILES GENERATED"
+	@echo "======================================"
+	@echo "CORE0 = $(CORE0_HEX)"
+	@echo "CORE1 = $(CORE1_HEX)"
+	@echo "======================================"
+
+
+	@echo "======================================"
+	@echo " CHECKING DUAL-CORE SNAPSHOT"
+	@echo "======================================"
+
+	@if [ ! -d "$(DUAL_SNAPSHOT_LIB)" ]; then \
+		echo "No dual-core snapshot found."; \
+		echo "Creating snapshot: $(DUAL_SNAPSHOT_NAME)"; \
+		echo "======================================"; \
+		echo " FIRST RUN - BUILD + ELABORATE + RUN"; \
+		echo "======================================"; \
+		cd $(PINAKA_SIM) && \
+		$(XRUN) \
+			-uvm \
+			-sv \
+			-top chip_top_tb \
+			-access +rwc \
+			-timescale 1ns/1ps \
+			+UVM_VERBOSITY=UVM_NONE \
+			$(COV_COMPILE_OPTS) \
+			+define+TSMC_UNIT_DELAY \
+			$(CHECKER_DEFINES) \
+			-xmlibdirname "$(abspath $(DUAL_SNAPSHOT_LIB))" \
+			-snapshot "$(DUAL_SNAPSHOT_NAME)" \
+			$(COV_OPTS) \
+			-f "$(SIM_DIR)/cfg/pinaka_rtl.f" \
+			-f "$(SIM_DIR)/cfg/dual_core_tb.f" \
+			+notimingchecks \
+			+define+TSMC_NO_WARNING \
+			$(CHECKER_FILES) \
+			$(GPIO_OPTS) \
+			+pte_resp_delay=$(PTE_RESP_DELAY) \
+			+CORE0_HEX_FILE="$(abspath $(CORE0_HEX))" \
+			+CORE1_HEX_FILE="$(abspath $(CORE1_HEX))" \
+			+PTE_HEX_FILE="$(abspath $(PINAKA_PTE_HEX))" \
+			+PTE1_HEX_FILE="$(abspath $(PINAKA_PTE1_HEX))" \
+			+UVM_TESTNAME="dual_core_soc_test" \
+			+CORE0_SOC_TEST="$(CORE0_SOC_TEST)" \
+			+CORE1_SOC_TEST="$(CORE1_SOC_TEST)" \
+			+CORE0_C_TEST="$(CORE0_C_TEST)" \
+			+CORE1_C_TEST="$(CORE1_C_TEST)" \
+			+ntb_random_seed=$(SEED) \
+			+log_dir="$(abspath $(LOG_DIR))" \
+			-l "$(abspath $(LOG_DIR)/rtl_run.log)"; \
+		RET=$$?; \
+		if [ $$RET -ne 0 ]; then \
+			echo "ERROR: Dual-core Xcelium build/elaboration failed."; \
+			exit $$RET; \
+		fi; \
+	else \
+		echo "Dual-core snapshot found."; \
+		echo "Reusing snapshot: $(DUAL_SNAPSHOT_NAME)"; \
+		echo "======================================"; \
+		echo " FOLLOWING RUN - REUSE SNAPSHOT"; \
+		echo "======================================"; \
+		cd $(PINAKA_SIM) && \
+		$(XRUN) \
+			-R \
+			-xmlibdirname "$(abspath $(DUAL_SNAPSHOT_LIB))" \
+			-snapshot "$(DUAL_SNAPSHOT_NAME)" \
+			$(COV_COMPILE_OPTS) \
+			$(COV_OPTS) \
+			+pte_resp_delay=$(PTE_RESP_DELAY) \
+			+CORE0_HEX_FILE="$(abspath $(CORE0_HEX))" \
+			+CORE1_HEX_FILE="$(abspath $(CORE1_HEX))" \
+			+PTE_HEX_FILE="$(abspath $(PINAKA_PTE_HEX))" \
+			+PTE1_HEX_FILE="$(abspath $(PINAKA_PTE1_HEX))" \
+			+UVM_TESTNAME="dual_core_soc_test" \
+			+CORE0_SOC_TEST="$(CORE0_SOC_TEST)" \
+			+CORE1_SOC_TEST="$(CORE1_SOC_TEST)" \
+			+CORE0_C_TEST="$(CORE0_C_TEST)" \
+			+CORE1_C_TEST="$(CORE1_C_TEST)" \
+			+ntb_random_seed=$(SEED) \
+			+log_dir="$(abspath $(LOG_DIR))" \
+			-l "$(abspath $(LOG_DIR)/rtl_run.log)"; \
+		RET=$$?; \
+		if [ $$RET -ne 0 ]; then \
+			echo "ERROR: Dual-core snapshot run failed."; \
+			exit $$RET; \
+		fi; \
+	fi
+
+
+
 # =========================================================
 # UVM TEST
 # =========================================================
@@ -869,7 +1223,17 @@ help:
 	@echo " make run_sw PROG=hello TEST=core_test"
 	@echo " make run_hex PROG=hello"
 
+#make MODE=dual_core \
+#CORE0_C_TEST=uart_test \
+#CORE1_C_TEST=spi_test \
+#SOC_TEST=dual_core_boot_test \
 
+#make MODE=dual_core \
+#CORE0_C_TEST=boot_test \
+#CORE1_C_TEST=boot_test \
+#CORE0_SOC_TEST=boot_flow_test \
+#CORE1_SOC_TEST=boot_flow_test \
+#GPIO=gpio
 # ============================================================
 # Help for JTAG UVM RUN
 # ============================================================
@@ -896,4 +1260,5 @@ clean_snapshot:
 clean_all_snapshots:
 	@echo "Removing all Xcelium snapshots"
 	rm -rf "$(SNAPSHOT_ROOT)"
+
 
