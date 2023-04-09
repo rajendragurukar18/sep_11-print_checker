@@ -1,5 +1,5 @@
 xrun(64): 20.09-s009: (c) Copyright 1995-2021 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	20.09-s009: Started on Apr 09, 2023 at 19:32:58 IST
+TOOL:	xrun(64)	20.09-s009: Started on Apr 09, 2023 at 19:49:49 IST
 xrun
 	-uvm
 	-sv
@@ -243,6 +243,7 @@ xrun
 		+incdir+../dv/tb/env
 		+incdir+../dv/tb/scoreboards
 		+incdir+../dv/tb/pinmux_checker
+		+incdir+../dv/tb/agents/trace_agent
 		../dv/tb/pinmux_checker/pinmux_assert.sv
 		../dv/tb/pinmux_checker/pinmux_bind.sv
 		../dv/tb/agents/jtag_agent/interface.sv
@@ -264,9 +265,9 @@ xrun
 	+CORE1_SOC_TEST=soc_base_test
 	+CORE0_C_TEST=dc_beq
 	+CORE1_C_TEST=dummy
-	+ntb_random_seed=40308
-	+log_dir=/home/train70/Desktop/dual_checker/push1_core0_1/sim/results/logs/dual_core_40308
-	-l /home/train70/Desktop/dual_checker/push1_core0_1/sim/results/logs/dual_core_40308/rtl_run.log
+	+ntb_random_seed=48137
+	+log_dir=/home/train70/Desktop/dual_checker/push1_core0_1/sim/results/logs/dual_core_48137
+	-l /home/train70/Desktop/dual_checker/push1_core0_1/sim/results/logs/dual_core_48137/rtl_run.log
 
    User defined plus("+") options:
 	+UVM_VERBOSITY=UVM_NONE
@@ -279,8 +280,8 @@ xrun
 	+CORE1_SOC_TEST=soc_base_test
 	+CORE0_C_TEST=dc_beq
 	+CORE1_C_TEST=dummy
-	+ntb_random_seed=40308
-	+log_dir=/home/train70/Desktop/dual_checker/push1_core0_1/sim/results/logs/dual_core_40308
+	+ntb_random_seed=48137
+	+log_dir=/home/train70/Desktop/dual_checker/push1_core0_1/sim/results/logs/dual_core_48137
 
 Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /tools/eda/cadence/XCELIUM2009/tools/methodology/UVM/CDNS-1.1d
 file: ../rtl/ip/axi2apb_bridge/axi_typedef_pkg.sv
@@ -2672,32 +2673,8 @@ file: ../dv/tb/pkg/soc_tb_pkg.sv
 / core trace unit part
 |
 xmvlog: *E,EXPENP (../dv/tb/pkg/soc_tb_pkg.sv,132|0): Expecting the keyword 'endpackage' [SystemVerilog].
-    `include "trace_transaction.sv"
-                                  |
-xmvlog: *E,COFILX (../dv/tb/pkg/soc_tb_pkg.sv,134|34): cannot open include file 'trace_transaction.sv'.
-    `include "trace_sequence.sv"
-                               |
-xmvlog: *E,COFILX (../dv/tb/pkg/soc_tb_pkg.sv,135|31): cannot open include file 'trace_sequence.sv'.
-    `include "trace_sequencer.sv"
-                                |
-xmvlog: *E,COFILX (../dv/tb/pkg/soc_tb_pkg.sv,136|32): cannot open include file 'trace_sequencer.sv'.
-    `include "trace_driver.sv"
-                             |
-xmvlog: *E,COFILX (../dv/tb/pkg/soc_tb_pkg.sv,137|29): cannot open include file 'trace_driver.sv'.
-    `include "trace_input_monitor.sv"
-                                    |
-xmvlog: *E,COFILX (../dv/tb/pkg/soc_tb_pkg.sv,138|36): cannot open include file 'trace_input_monitor.sv'.
-    `include "trace_output_monitor.sv"      
-                                     |
-xmvlog: *E,COFILX (../dv/tb/pkg/soc_tb_pkg.sv,139|37): cannot open include file 'trace_output_monitor.sv'.
-    `include "trace_agent.sv"
-                            |
-xmvlog: *E,COFILX (../dv/tb/pkg/soc_tb_pkg.sv,140|28): cannot open include file 'trace_agent.sv'.
-    `include "trace_scoreboard.sv"     
-                                 |
-xmvlog: *E,COFILX (../dv/tb/pkg/soc_tb_pkg.sv,141|33): cannot open include file 'trace_scoreboard.sv'.
 	package worklib.tb_pkg:sv
-		errors: 9, warnings: 0
+		errors: 1, warnings: 0
 file: ../dv/tb/top/chip_top_tb.v
 import tb_pkg::*;
             |
@@ -2715,9 +2692,8 @@ xmvlog: *E,NOPBIND (../dv/tb/top/chip_top_tb.v,17|12): Package tb_pkg could not 
 		errors: 0, warnings: 0
 	interface worklib.gpio_if:sv
 		errors: 0, warnings: 0
-`include "trace_if.sv"
-                     |
-xmvlog: *E,COFILX (../dv/tb/top/chip_top_tb.v,25|21): cannot open include file 'trace_if.sv'.
+	interface worklib.trace_if:sv
+		errors: 0, warnings: 0
 gpio_if #(NUM_GPIO) gpio_vif (.clk(u_chip_top.pinaka_top_instance.axi2apb_instance.pclk));
                  |
 xmvlog: *E,UNDIDN (../dv/tb/top/chip_top_tb.v,137|17): 'NUM_GPIO': undeclared identifier [12.5(IEEE)].
@@ -2728,4 +2704,4 @@ xmvlog: *W,SPDUSD: Include directory ../dv/tb/pinmux_checker given but not used.
 	Total errors/warnings found outside modules and primitives:
 		errors: 1, warnings: 2
 xrun: *E,VLGERR: An error occurred during parsing.  Review the log file for errors with the code *E and fix those identified problems to proceed.  Exiting with code (status 1).
-TOOL:	xrun(64)	20.09-s009: Exiting on Apr 09, 2023 at 19:33:01 IST  (total: 00:00:03)
+TOOL:	xrun(64)	20.09-s009: Exiting on Apr 09, 2023 at 19:49:52 IST  (total: 00:00:03)
