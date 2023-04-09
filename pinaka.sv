@@ -5,24 +5,7 @@ import axi_typedef_pkg::*;
 module	 	    pinaka 		            (
 
 
-// DFT TEST MODE SIGNAL
-
-input                   Test_mode                       ,
-input                   scan_in_1                       ,
-input                   scan_in_2                       ,
-input                   scan_in_3                       ,
-input                   scan_in_4                       ,
-input                   scan_in_5                       ,
-input                   scan_in_6                       ,
-
-output                  scan_out_1                      ,
-output                  scan_out_2                      ,
-output                  scan_out_3                      ,
-output                  scan_out_4                      ,
-output                  scan_out_5                      ,
-output                  scan_out_6                      ,
-
-input                   scan_enable                     ,
+//input                   Test_mode                       ,
 
 //		DEBUG MODULE CLOCKS AND RESET SIGNAL 
 
@@ -112,11 +95,11 @@ input       [22:0]      gpio_pad_in                     ,
 
 output      [22:0]      gpio_pad_out                    ,
 output      [22:0]      gpio_pad_oe                     ,
-output      [22:0]      gpio_pull_en_out           
+output      [22:0]      gpio_pull_en_out          
 
 
 
-				) 	                                    ;
+				                        ) 	            ;
 
 
 
@@ -125,35 +108,11 @@ output      [22:0]      gpio_pull_en_out
 
 
 
-// 			                        MMU PARAMETER
-
-parameter 		MMU_VPN_WIDTH 			    = 	20 						        ;
-parameter 		MMU_PPN_WIDTH 			    = 	20 						        ;
-parameter 		MMU_ACCESS_WIDTH 	    	= 	3 						        ;
-parameter 		MMU_ASID_WIDTH 		    	= 	9 						        ;
-parameter 		MMU_L1_ENTRIES 		    	= 	16 						        ;
-parameter 		MMU_L2_ENTRIES 		    	= 	32 						        ;
-
-
-//			                        CSR TOP MODULE PARAETER
-
-parameter 		CSR_ADDR_WIDTH    		    = 	12 						        ;
-parameter 		CSR_DATA_WIDTH        		= 	32 						        ;
-parameter 		CSR_INSTRUCTION_WIDTH 		= 	32 						        ;
-parameter 		CSR_PC_WIDTH          		= 	32 						        ;
-
-
-//			                        AXI PARAMETER
-
-parameter 		AXI_DATA_WIDTH		    	= 	32						        ;
-parameter 		AXI_ADDR_WIDTH			    =	32						        ;
-parameter		STROBE_WIDTH			    =	4						        ;
-
 
 //			                        AXI-APB BRIDGE PARAMETER
 
 parameter 		BRIDGE_FIFO_DEPTH  		    = 	4 						        ;
-parameter 		BRIDGE_FIFO_WIDTH  		    = 	AXI_ADDR_WIDTH + AXI_DATA_WIDTH ;
+parameter 		BRIDGE_FIFO_WIDTH  		    = 	64                              ;
 
 
 //			                        APB TIME OUT IN BRIDGE
@@ -177,7 +136,6 @@ parameter 		SPI_DATA_WIDTH 		    	= 	32 						        ;
 
 //                                  CLK AND RST CTRL PARAMETER
 
-parameter       CLK_RST_CTRL_HARD_RST_COUNT =   5                               ;
 parameter       CLK_RST_CTRL_RATIO          =   4                               ;
 
 
@@ -189,6 +147,20 @@ parameter 		DATA_MEMORY_ADDR_WIDTH 		= 	16 						        ;
 //			                        INSTRUCTION MEMORY
 
 parameter 		INST_MEMORY_ADDR_WIDTH 		= 	16 						        ;
+
+//                              CORE 0 PARAMETERS
+
+parameter       CORE0_ID                    =   32'd0                           ;
+parameter       CORE0_GPR_DEBUG_ADDRESS     =   4'b0000                         ;
+parameter       CORE0_CSR_DEBUG_ADDRESS     =   4'b0001                         ;
+parameter       CORE0_MTVECT_BASE_ADDRESS   =   32'h0000_C000                   ;
+
+//                              CORE 1 PARAMETERS
+
+parameter       CORE1_ID                    =   32'd1                           ;
+parameter       CORE1_GPR_DEBUG_ADDRESS     =   4'b0000                         ;
+parameter       CORE1_CSR_DEBUG_ADDRESS     =   4'b0001                         ;
+parameter       CORE1_MTVECT_BASE_ADDRESS   =   32'h0001_C000                   ;
 
 
 //			                    MEMORY MAPPED ADDRESS RANGES
@@ -215,28 +187,62 @@ parameter       IP_TRACE_MIN_ADDRESS        =   32'h0008_8000                   
 parameter       IP_TRACE_MAX_ADDRESS        =   32'h0008_8FFF                   ;
 parameter       CORE_TRACE_MIN_ADDRESS      =   32'h0008_A000                   ;
 parameter       CORE_TRACE_MAX_ADDRESS      =   32'h0008_AFFF                   ;
+parameter       TOP_REG1_MIN_ADDRESS        =   32'h0008_B000                   ;
+parameter       TOP_REG1_MAX_ADDRESS        =   32'h0008_BFFF                   ;
+parameter       CORE1_TRACE_MIN_ADDRESS     =   32'h0008_E000                   ;
+parameter       CORE1_TRACE_MAX_ADDRESS     =   32'h0008_EFFF                   ;
+parameter       WATCHDOG1_MIN_ADDRESS       =   32'h0008_C000                   ;
+parameter       WATCHDOG1_MAX_ADDRESS       =   32'h0008_CFFF                   ;
+parameter       MMR1_REGISTER_MIN_ADDRESS   =   32'h0008_D000                   ;
+parameter       MMR1_REGISTER_MAX_ADDRESS   =   32'h0008_DFFF                   ;
+
 
 
 parameter 		PTE_MIN_ADDRESS			    = 	32'h0002_4000					;
 parameter 		PTE_MAX_ADDRESS			    = 	32'h0002_4FFF					;
 
+parameter 		PTE1_MIN_ADDRESS			= 	32'h0002_5000					;
+parameter 		PTE1_MAX_ADDRESS			= 	32'h0002_5FFF					;
 
-parameter       PREBOOT_REG_START_ADDRESS   =   32'h0002_5000                   ;
-parameter       PREBOOT_REG_END_ADDRESS     =   32'h0002_5FFF                   ;
+
+parameter       PREBOOT_REG_START_ADDRESS   =   32'h0002_6000                   ;
+parameter       PREBOOT_REG_END_ADDRESS     =   32'h0002_6FFF                   ;
 
 
-parameter 		DATA_MEMORY_MIN_ADDRESS		= 	32'h0001_0000					;
-parameter 		DATA_MEMORY_MAX_ADDRESS		= 	DATA_MEMORY_MIN_ADDRESS + (2 ** DATA_MEMORY_ADDR_WIDTH) - 1			;
+parameter 		DATA_MEMORY_MIN_ADDRESS		= 	32'h0003_0000					;
+parameter 		DATA_MEMORY_MAX_ADDRESS		=   32'h0003_FFFF			        ;
 
 
 parameter 		INST_MEMORY_MIN_ADDRESS		= 	32'h0000_0000					;
-parameter 		INST_MEMORY_MAX_ADDRESS		= 	INST_MEMORY_MIN_ADDRESS + (2 ** INST_MEMORY_ADDR_WIDTH) - 1			;
+parameter 		INST_MEMORY_MAX_ADDRESS		= 	32'h0000_FFFF                   ;
+
+parameter 		INST_MEMORY1_MIN_ADDRESS	= 	32'h0001_0000					;
+parameter 		INST_MEMORY1_MAX_ADDRESS	= 	32'h0001_FFFF                   ;
+
 
 
 
 
 //------------------------------------------------------------------------------------------------------------------
 
+//--------------------------------------------DFT SIGNALS CONNECTED DURING THE NETLIST -----------------------------
+
+logic                  Test_mode                       ;
+logic                  scan_in_1                       ;
+logic                  scan_in_2                       ;
+logic                  scan_in_3                       ;
+logic                  scan_in_4                       ;
+logic                  scan_in_5                       ;
+logic                  scan_in_6                       ;
+
+logic                  scan_out_1                      ;
+logic                  scan_out_2                      ;
+logic                  scan_out_3                      ;
+logic                  scan_out_4                      ;
+logic                  scan_out_5                      ;
+logic                  scan_out_6                      ;
+
+logic                  scan_enable                     ;
 
 
 //----------------------------------------------INTERNAL WIRES--------------------------------
@@ -244,46 +250,12 @@ parameter 		INST_MEMORY_MAX_ADDRESS		= 	INST_MEMORY_MIN_ADDRESS + (2 ** INST_MEM
 
 
 
-//			            VIRTUAL ADDRESSES OF INSTRUCTION AND DATA MEMORY BY CORE TO MMU
-
-wire 	[31:0] 				            core_mmu_inst_mem_virtual_address	;
-wire 	[31:0] 				            core_mmu_data_mem_virtual_address 	;
-
-//--------------------------------------------------------------
-
-
-//				                DATA MEMORY READ AND WRITE BY CORE
+//				                DATA MEMORY READ,WRITE AND ADDRESS BY CORE
 
 wire 					                core_mmu_axi_mem_read_en 			;
 wire 					                core_mmu_axi_mem_write_en 			;
-wire                                    core_mmu_inst_req                   ;
-wire                                    mmu_tlb_flush                       ;
 
-//--------------------------------------------------------
-
-
-// 				            PHYSICAL ADDRESSES HIT SIGNAL BY MMU
-
-wire 					                mmu_data_memory_hit 			    ;
-wire 				                	mmu_instruction_hit 			    ;
-
-//--------------------------------------------------------
-
-
-//		                20 BIT PHYSICAL PAGE NUMBER OF BOTH INSTRUCTION MEMORY AND DATA MEMORY BY MMU 
-
-wire 	[MMU_PPN_WIDTH -1 :0] 	    	mmu_ppn_inst_mem_address 			;
-wire 	[MMU_PPN_WIDTH -1 :0] 	    	mmu_ppn_data_mem_address 			;
-
-//--------------------------------------------------------
-
-
-//		                FINAL PHYSICAL ADDRESS OF BOTH INSTRUCTION MEMORY AND DATA MEMORY
-
-wire 	[31:0] 				            mmu_axi_physical_address_inst_mem 	;
 wire 	[31:0] 				            mmu_axi_physical_address_data_mem 	;
-
-//--------------------------------------------------------
 
 
 //--------------------------AXI MASTER AND BRIDGE INTERFACE SIGNALS---------------------
@@ -292,15 +264,15 @@ wire 	[31:0] 				            mmu_axi_physical_address_data_mem 	;
 // 				            WRITE ADDRESS CHANNEL 
 
 wire 					                axi_bridge_awvalid 				    ;
-wire 	[AXI_ADDR_WIDTH -1:0] 		    axi_bridge_awaddr 				    ;
+wire 	[31:0] 		                    axi_bridge_awaddr 				    ;
 wire 					                bridge_axi_awready 				    ;
 
 
 //			            	WRITE DATA CHANNEL 
 
 wire 					                axi_bridge_wvalid 				    ;
-wire 	[AXI_DATA_WIDTH-1:0] 		    axi_bridge_wdata 				    ;
-wire 	[STROBE_WIDTH-1:0] 		        axi_bridge_wstrb 				    ;
+wire 	[31:0] 		                    axi_bridge_wdata 				    ;
+wire 	[3:0] 		                    axi_bridge_wstrb 				    ;
 wire 					                bridge_axi_wready 				    ;
 
 
@@ -314,7 +286,7 @@ wire 					                bridge_axi_bvalid 				    ;
 //				            READ ADDRESS CHANNEL
 
 wire 					                axi_bridge_arvalid 				    ;
-wire 	[AXI_ADDR_WIDTH-1:0] 		    axi_bridge_araddr 				    ;
+wire 	[31:0] 		                    axi_bridge_araddr 				    ;
 wire 					                bridge_axi_arready 				    ;
 
 
@@ -322,7 +294,7 @@ wire 					                bridge_axi_arready 				    ;
 
 wire 					                axi_bridge_rready 				    ;
 wire 					                bridge_axi_rvalid 				    ;
-wire 	[AXI_DATA_WIDTH-1:0] 		    bridge_axi_rdata 				    ;
+wire 	[31:0] 		                    bridge_axi_rdata 				    ;
 wire 	[1:0]				            bridge_axi_rresp 				    ;
 wire                                    bridge_axi_rlast                    ;
 
@@ -333,15 +305,15 @@ wire                                    bridge_axi_rlast                    ;
 // 				            WRITE ADDRESS CHANNEL 
 
 wire 					                axi_data_mem_awvalid			    ;
-wire 	[AXI_ADDR_WIDTH -1:0] 		    axi_data_mem_awaddr 			    ;
+wire 	[31:0] 		                    axi_data_mem_awaddr 			    ;
 wire 					                data_mem_axi_awready			    ;
 wire	[2:0]				            common_awsize					    ;
 
 //				            WRITE DATA CHANNEL 
 
 wire 					                axi_data_mem_wvalid 			    ;
-wire 	[AXI_DATA_WIDTH-1:0] 		    axi_data_mem_wdata 			        ;
-wire 	[STROBE_WIDTH-1:0] 		        axi_data_mem_wstrb 			        ;
+wire 	[31:0] 		                    axi_data_mem_wdata 			        ;
+wire 	[3:0] 		                    axi_data_mem_wstrb 			        ;
 wire 					                data_mem_axi_wready 			    ;
 
 //				            WRITE RESPONSE CHANNEL
@@ -353,14 +325,14 @@ wire 					                data_mem_axi_bvalid 			    ;
 //				            READ ADDRESS CHANNEL
 
 wire 					                axi_data_mem_arvalid			    ;
-wire 	[AXI_ADDR_WIDTH-1:0] 		    axi_data_mem_araddr 			    ;
+wire 	[31:0] 		                    axi_data_mem_araddr 			    ;
 wire 					                data_mem_axi_arready 			    ;
 
 //				            READ DATA CHANNEL
 
 wire 					                axi_data_mem_rready 			    ;
 wire 					                data_mem_axi_rvalid 			    ;
-wire 	[AXI_DATA_WIDTH-1:0] 		    data_mem_axi_rdata			        ;
+wire 	[31:0] 		                    data_mem_axi_rdata			        ;
 wire 	[1:0]				            data_mem_axi_rrsep			        ;
 
 
@@ -368,12 +340,12 @@ wire 	[1:0]				            data_mem_axi_rrsep			        ;
 
 
 wire 					                bridge_peripheral_psel 				;
-wire 	[AXI_ADDR_WIDTH-1:0] 		    bridge_peripheral_paddr 			;
-wire 	[AXI_DATA_WIDTH-1:0] 		    bridge_peripheral_pwdata 			;
+wire 	[31:0] 		                    bridge_peripheral_paddr 			;
+wire 	[31:0] 		                    bridge_peripheral_pwdata 			;
 wire 					                bridge_peripheral_penable 			;
 wire 					                bridge_peripheral_pwrite 			;
 wire 					                peripheral_bridge_pready 			;
-wire 	[AXI_DATA_WIDTH-1:0] 		    peripheral_bridge_prdata 			;
+wire 	[31:0] 		                    peripheral_bridge_prdata 			;
 wire 					                peripheral_bridge_pslverr 			;
 
 //----------------------------------------------------------------------------
@@ -414,6 +386,13 @@ wire 				                	watchdog_pslverr 				    ;
 
 //			            APB BRIDGE TO WATCHDOG TIMER INTERFACE SIGNALS
 
+wire 					                watchdog1_psel 				        ;
+wire 	[31:0] 		                    watchdog1_prdata 				    ;
+wire 					                watchdog1_pready 				    ;
+wire 				                	watchdog1_pslverr 				    ;
+
+//			            APB BRIDGE TO WATCHDOG TIMER INTERFACE SIGNALS
+
 wire 					                clk_rst_ctrl_psel 				    ;
 wire 	[31:0] 		                    clk_rst_ctrl_prdata 				;
 wire 					                clk_rst_ctrl_pready 				;
@@ -425,6 +404,13 @@ wire 					                top_reg_psel 				        ;
 wire 	[31:0] 		                    top_reg_prdata 				        ;
 wire 					                top_reg_pready 				        ;
 wire 				                	top_reg_pslverr 				    ;
+
+//			            APB BRIDGE TO TOP1 REGISTER INTERFACE SIGNALS
+
+wire 					                top_reg1_psel 				        ;
+wire 	[31:0] 		                    top_reg1_prdata 				    ;
+wire 					                top_reg1_pready 				    ;
+wire 				                	top_reg1_pslverr 				    ;
 
 //			            APB BRIDGE TO GPIO REGISTER INTERFACE SIGNALS
 
@@ -440,6 +426,12 @@ wire 	[31:0] 		                    mmr_reg_prdata 				        ;
 wire 					                mmr_reg_pready 				        ;
 wire 				                	mmr_reg_pslverr 				    ;
 
+//                      APB SLAVE PSEL WRAPPER TO MMR1 REGISTER SIGNALS
+
+wire 					                mmr_reg1_psel 				        ;
+wire 	[31:0] 		                    mmr_reg1_prdata 				    ;
+wire 					                mmr_reg1_pready 				    ;
+wire 				                	mmr_reg1_pslverr 				    ;
 //                      APB SLAVE PSEL WRAPPER TO MMR REGISTER SIGNALS
 
 wire 					                analog_reg_psel 				    ;
@@ -461,36 +453,14 @@ wire 	[31:0] 		                    core_trace_prdata 				    ;
 wire 					                core_trace_pready 				    ;
 wire 				                	core_trace_pslverr 				    ;
 
-//-------------------------------------------------------------------------------------------------
 
+//                      APB SLAVE PSEL WRAPPER TO CORE1 TRACE SIGNALS
 
-//-------------------------------CORE AND CSR INTERFACE--------------------
+wire 					                core1_trace_psel 				    ;
+wire 	[31:0] 		                    core1_trace_prdata 				    ;
+wire 					                core1_trace_pready 				    ;
+wire 				                	core1_trace_pslverr 				;
 
-wire 	[CSR_DATA_WIDTH-1:0] 		    csr_core_read_data 			        ;
-wire 					                core_csr_read_en 			        ;
-wire 					                core_csr_write_en 			        ;
-wire 	[11:0]  		                core_csr_addr			            ;
-wire 	[CSR_DATA_WIDTH-1:0] 		    core_csr_write_data 		        ;
-wire 					                core_csr_set_bit 			        ;
-wire 					                core_csr_clear_bit 		            ;
-wire 					                core_csr_e_break_valid 		        ;
-wire 					                core_csr_mret_valid 			    ;
-wire    [31:0]                          csr_core_mepc                       ;                                 
-wire    [31:0]                          csr_core_dpc                        ;
-wire    [31:0]                          core_csr_mepc_in                    ;                               
-wire    [7:0]                           csr_core_mcause                     ;
-wire    [31:0]                          csr_core_mtvec                      ;
-wire                                    core_csr_mcause_write_en            ;
-wire                                    core_csr_mstatus_mie_clear           ;
-wire                                    core_csr_mstatus_mie_set            ;
-wire                                    core_csr_mepc_write_en              ;
-wire                                    core_csr_interrupt_valid            ;
-wire                                    core_csr_dpc_valid                  ;
-wire    [31:0]                          core_csr_dpc                        ;
-wire    [31:0]                          core_csr_exception_inst             ;
-wire                                    core_csr_exception_inst_valid       ;
-wire    [7:0]                           core_csr_active_level_priority      ;
-wire    [7:0]                           core_csr_trap_id                    ;
 
 //-------------------------------------------------------------------------------------------------
 
@@ -501,15 +471,15 @@ wire    [7:0]                           core_csr_trap_id                    ;
 // 	                            WRITE ADDRESS CHANNEL 
 
 wire 					                debug_axi_inst_mem_awvalid			;
-wire 	[AXI_ADDR_WIDTH -1:0] 		    debug_axi_inst_mem_awaddr 			;
-wire 					                debug_axi_inst_mem_awready			;
+wire 	[31:0] 		                    debug_axi_inst_mem_awaddr 			;
+wire 					                axi_inst_mem_debug_awready			;
 
 //				                WRITE DATA CHANNEL 
 
-wire 					                inst_mem_debug_axi_wvalid 			;
-wire 	[AXI_DATA_WIDTH-1:0] 		    inst_mem_debug_axi_wdata 			;
-wire 	[STROBE_WIDTH-1:0] 		        debug_axi_inst_mem_wstrb 			;
-wire 					                debug_axi_inst_mem_wready 			;
+wire 					                inst_mem_debug_axi_wready 			;
+wire 	[31:0] 		                    debug_axi_inst_mem_wdata 			;
+wire 	[3:0] 		                    debug_axi_inst_mem_wstrb 			;
+wire 					                debug_axi_inst_mem_wvalid 			;
 
 //				                WRITE RESPONSE CHANNEL
 
@@ -520,26 +490,52 @@ wire 					                inst_mem_debug_axi_bvalid 			;
 //				                READ ADDRESS CHANNEL
 
 wire 					                debug_axi_inst_mem_arvalid			;
-wire 	[AXI_ADDR_WIDTH-1:0] 		    debug_axi_inst_mem_araddr 			;
+wire 	[31:0] 		                    debug_axi_inst_mem_araddr 			;
 wire 					                inst_mem_debug_axi_arready 			;
 
 //				                READ DATA CHANNEL
 
 wire 					                debug_axi_inst_mem_rready 			;
 wire 					                inst_mem_debug_axi_rvalid 			;
-wire 	[AXI_DATA_WIDTH-1:0] 		    inst_mem_debug_axi_rdata 			;
+wire 	[31:0] 		                    inst_mem_debug_axi_rdata 			;
 wire 	[1:0]				            inst_mem_debug_axi_rresp 			;
 
 
-//------------------------------CORE AND INSTRUCTION MEMORY AXI INTERFACE SIGNALS-------------------------------
+//------------------------------DEBUG AXI AND INSTRUCTION MEMORY 1 AXI INTERFACE---------------------
 
-//				                        READ DATA CHANNEL
 
-wire 					                core_axi_inst_mem_rready 		    ;
-wire 					                inst_mem_core_axi_rvalid 			;
-wire 	[1:0]				            inst_mem_core_axi_rresp 			;
+// 	                            WRITE ADDRESS CHANNEL 
 
-//-------------------------------------------------------------------------------------------------
+wire 					                debug_axi_inst_mem1_awvalid			;
+wire 	[31:0] 		                    debug_axi_inst_mem1_awaddr 			;
+wire 					                axi_inst_mem1_debug_awready			;
+
+//				                WRITE DATA CHANNEL 
+
+wire 					                inst_mem1_debug_axi_wready 			;
+wire 	[31:0] 		                    debug_axi_inst_mem1_wdata 			;
+wire 	[3:0] 		                    debug_axi_inst_mem1_wstrb 			;
+wire 					                debug_axi_inst_mem1_wvalid 			;
+
+//				                WRITE RESPONSE CHANNEL
+
+wire 					                debug_axi_inst_mem1_bready 			;
+wire 	[1:0]				            inst_mem1_debug_axi_bresp 			;
+wire 					                inst_mem1_debug_axi_bvalid 			;
+
+//				                READ ADDRESS CHANNEL
+
+wire 					                debug_axi_inst_mem1_arvalid			;
+wire 	[31:0] 		                    debug_axi_inst_mem1_araddr 			;
+wire 					                inst_mem1_debug_axi_arready 		;
+
+//				                READ DATA CHANNEL
+
+wire 					                debug_axi_inst_mem1_rready 			;
+wire 					                inst_mem1_debug_axi_rvalid 			;
+wire 	[31:0] 		                    inst_mem1_debug_axi_rdata 			;
+wire 	[1:0]				            inst_mem1_debug_axi_rresp 			;
+
 
 //---------------------------JTAG AND AXI WRAPPER INTERFACE SIGNALS-----------------------------
 
@@ -561,8 +557,6 @@ wire                                    axi_debug_write_ready               ;
 
 wire                                    debug_csr_write_en                  ;
 wire    [31:0]                          debug_csr_write_data                ;
-wire    [31:0]                          csr_debug_read_data                 ;
-wire                                    csr_debug_read_valid                ;
 wire                                    debug_clk_ctrl_int_ctrl_ndm_reset   ;
 
 //-------------------------DEBUG TO CSR AND GPR COMMON SIGNAL----------------------
@@ -572,30 +566,10 @@ wire                                    debug_csr_gpr_read_en               ;
 
 //--------------------------------------------------------------------------------------------------
 
-wire                                    inst_mem_core_axi_arready           ;
 wire 	[3:0] 				            core_axi_wstrobe 				    ;	//	BYTE ENABLE SIGNAL FROM CORE NEED TO CHANGE ACCORDING TO THE AXI INTERFACE
-wire 	[31:0] 				            instruction_to_core 				;	//	FINAL INSTRUCTION TO THE CORE
-wire    [31:0]                          instruction_from_mem                ;   //  INSTRUCTION FROM THE INSTRUCTION MEMORY
-wire                                    inst_mem_req_valid                  ;   //  INSTRUCTION REQUEST VALID FOR INSTRUCTION MEMORY
 wire 	[31:0] 				            mem_write_data_core 			    ;	//	WRIRE DATA TO THE TARGETED MEMORY ADDRESS
 wire 	[31:0] 				            axi_core_mem_read_data 		        ;	//	DATA FROM THE REQUESTED MEMORY ADDRESS
 wire                                    exception_flush                     ;
-
-//-----------------------------------CSR AMD MMU CONNECTIONS----------------
-
-wire					                mmu_enable 				            ;	// 	MMU ENABLE BY CSR
-wire                                    mmu_busy                            ;
-wire 	[21:0]				            csr_mmu_base_ppn 				    ;	//	PAGE TABLE ENTRIES BASE PPN ADDRESS TO MMU BY CSR
-wire 	[8:0]				            csr_mmu_current_asid 				;	//	CURRENT ASID TO MMU FROM CSR
-
-//---------------------------STALL SIGNAL USED FOR GLUE LOGIC---------------------------
-
-wire 					                stall_by_axi_data_mem_read 		    ;	//	STALL SIGNAL BY DATA MEMORY READ
-wire					                stall_by_axi_data_mem_write		    ;	//	STALL SIGNAL BY DATA MEMORY WRITE
-wire					                stall_by_load_store			        ;	//	STALL SIGNAL BY BOTH READ AND WRITE BY DATA MEMORY
-wire 					                stall_the_core_pipeline				; 
-wire					                axi_master_select			        ;
-wire                                    data_mem_addr_slverr                ;
 
 //--------------------------CORE TO AXI MASTER WRAPPER REQUEST VALID SIGNALS
 
@@ -625,13 +599,6 @@ wire    [31:0]                          pte_debug_read_data                 ;
 wire    [1:0]                           pte_debug_read_resp                 ;
 wire                                    pte_debug_read_valid                ;
 
-//--------------------------------MMU TO PTE MEMORY CONNECTIONS------------------------------
-
-wire                                    mmu_pte_req_valid                   ;
-wire    [31:0]                          mmu_pte_req_address                 ;
-wire                                    pte_mmu_resp_valid                  ;
-wire    [23:0]                          pte_mmu_read_data                   ;
-
 
 //-------------------------------DEBUG AND INSTRUCTION MEMORY CONNECTION USED BY BOOT LOADER----------------------
 
@@ -656,8 +623,8 @@ wire                                    debug_preboot_analog_req_valid      ;
 //-------------------------------CLK RST BYPASS MODUELE SIGNALS--------------------
 
 wire                                    boot_load_enable                    ;
-wire                                    memory_clk                          ;
-wire                                    ctrl_bypass_debug_clk               ;
+//wire                                    memory_clk                          ;
+wire                                    mem_debug_clk                       ;
 wire                                    ctrl_bypass_debug_rstn              ;
 wire                                    rst_for_clk_ctrl                    ;
 wire                                    preboot_analog_rstn                 ;
@@ -666,7 +633,6 @@ wire                                    preboot_analog_rstn                 ;
 
 wire                                    core_clk                            ;
 wire                                    core_rstn                           ;
-wire                                    debug_clk                           ;
 wire                                    debug_rstn                          ;
 wire                                    pclk                                ;
 wire                                    presetn                             ;
@@ -695,19 +661,10 @@ wire                                    uart_rx                             ;
 
 wire                                    mmu_prefetch_enable                 ;
 wire                                    mmu_ptw_timeout_enable              ;
-wire                                    mmu_ptw_timeout                     ;
-wire  					                instruction_execute_permission_fault;
-wire 					                mem_read_permission_fault 		    ; 
-wire 					                mem_write_permission_fault 		    ;
-wire					                inst_page_fault				        ;
-wire					                mem_page_fault				        ;
 
 //-------------------------------EXCEPTIONS OF THE MEMORY TO TOP REGISTER-------------------------
 
 wire					                req_data_mem_address_decode_error	;	//	DATA MEMORY ADDRESS DECODE ERROR
-wire 					                data_mem_read_addr_slverr			;	//	DATA MEMORY SLAVE ERROR DUE TO READ OPERATION
-wire					                data_mem_write_addr_slverr			;	//	DATA MEMORY SLAVE ERROR DUE TO WRITE OPERATION
-wire                                    inst_mem_addr_decode_error          ;   //  INSTRUCTION MEMORY ADDRESS OUT OF RANGE INDICATION
 
 //----------------------------------GPIO & CLK RST BYPASS SIGNALS----------------------------
 
@@ -726,12 +683,9 @@ wire    [31:0]                          debug_core_pc_addr                  ;
 
 //------------------------------------CORE TO DEBUG SIGNALS--------------------------------
 
-wire    [31:0]                          core_debug_read_data                ;                      
-wire                                    core_debug_read_valid               ;          
 wire                                    core_debug_hart_halted              ;                    
 wire                                    core_debug_hart_reset               ;                     
-wire                                    debug_mode_en                       ;
-wire                                    core_inst_mem_csr_int_ctrl_debug_mode_en;
+wire                                    core_debug_mode_en                  ;
 
 //-----------------------------------READ DATA AND VALID SIGNALS FROM CSR OR GPR TO DEBUG MODULE-------------------
 
@@ -748,30 +702,13 @@ wire                                    core_watchdog_commit_valid          ;
 wire                                    axi_debug_read_valid_in             ;
 wire                                    axi_debug_write_valid_in            ;
 
-//----------------------------------CORE & INTERRUPT SIGNALS------------------------------
-
-wire                                    int_ctrl_core_interrupt_req         ;
-wire    [7:0]                           int_ctrl_core_current_int_id        ;
-wire                                    core_int_ctrl_eoi_write_valid       ;
-wire    [7:0]                           core_int_ctrl_eoi_id                ;
-wire    [7:0]                           int_ctrl_core_highest_pending_lvl_pr;
-
-//----------------------------------CSR INTERRUPT CONTROLLER SIGNALS-------------------------
-
-wire    [7:0]                           csr_int_ctrl_active_lvl_pr          ;
-wire    [15:0]                          csr_int_ctrl_global_int_enable_bit  ;
-
-//-------------------------------CSR, CORE & INTERRUPT CONTROLLER SIGNAL------------------ 
-
-wire                                    csr_core_int_ctrl_mstatus_mie       ;
-
 //---------------------------------MMR REGISTER TO INTERRUPT CONTROLLER SIGNALS---------------------------
 
 wire                                    mmr_int_ctrl_write_en               ;
-wire    [15:0]                          mmr_int_ctrl_write_addr             ;
+wire    [11:0]                          mmr_int_ctrl_write_addr             ;
 wire    [7:0]                           mmr_int_ctrl_write_data             ;
 wire                                    mmr_int_ctrl_read_en                ;
-wire    [15:0]                          mmr_int_ctrl_read_addr              ;
+wire    [11:0]                          mmr_int_ctrl_read_addr              ;
 wire    [7:0]                           int_ctrl_mmr_read_data              ;
 wire                                    int_ctrl_mmr_read_resp              ;
 
@@ -857,28 +794,136 @@ wire    [6:0]                           analog_postboot_reg5                ;
 wire    [6:0]                           analog_pre_post_boot_reg1_w         ;
 wire                                    pre_post_boot_mux_sel               ;
 
+
+wire                                    core1_debug_mode_en                 ;
+wire    [31:0]                          core1_watchdog_last_commited_pc     ;
+wire                                    core1_watchdog_commit_valid         ;
+wire                                    wdt1_reset                          ;
+wire    [2:0]                           wdt1_clk_rst_ctrl_reset_scope       ;
+wire    [7:0]                           wdt1_ip_trace_event                 ;
+wire    [31:0]                          wdt1_ip_trace_data                  ;
+
+
+wire                                    mmr_int_ctrl1_write_en              ;  
+wire    [11:0]                          mmr_int_ctrl1_write_addr            ;
+wire    [7:0]                           mmr_int_ctrl1_write_data            ;
+wire                                    mmr_int_ctrl1_read_en               ; 
+wire    [11:0]                          mmr_int_ctrl1_read_addr             ; 
+
+wire    [7:0]                           int_ctrl_mmr1_read_data             ;
+wire                                    int_ctrl_mmr1_read_resp             ;
+
+wire    [3:0]                           core1_debug_trace_itype             ;        
+wire    [15:0]                          core1_debug_trace_iaddr             ;      
+wire    [7:0]                           core1_debug_trace_cause             ;    
+wire    [1:0]                           core1_debug_trace_context           ;   
+wire                                    core1_debug_trace_ienable           ;
+wire                                    core1_debug_trace_itype_valid       ;
+wire                                    core1_debug_trace_Ist_instrn_valid  ;
+wire    [19:0]                          core1_debug_trace_delta_addr        ;  
+wire                                    core1_debug_trace_del_adr_valid     ;
+wire    [31:0]                          csr1_debug_trace_tval               ;
+wire                                    gpio_core1_trace_afvalid            ;
+wire                                    gpio_core1_trace_atready            ;
+wire                                    core1_trace_gpio_afready            ;
+wire    [15:0]                          core1_trace_gpio_atdata             ;
+wire                                    core1_trace_gpio_atvalid            ;
+
+wire    [31:0]                          axi_master_ip_debug_trace_data      ;
+wire    [7:0]                           axi_master_ip_debug_trace_event     ;
+
+
+
+wire     [31:0]                         reg1_physical_address_inst_mem           ;
+wire     [31:0]                         reg1_physical_address_data_mem           ;
+wire                                    reg1_mmu_timeout                         ;
+wire                                    reg1_data_memory_page_fault              ;
+wire                                    reg1_data_memory_read_permission_fault   ;
+wire                                    reg1_data_memory_write_permission_fault  ;
+wire                                    reg1_data_memory_addr_decode_error       ;
+wire                                    reg1_data_memory_read_slave_error        ;
+wire                                    reg1_data_memory_write_slave_error       ;
+wire                                    reg1_instruction_page_fault              ;
+wire                                    reg1_inst_execution_fault                ;
+wire                                    reg1_inst_addr_decode_error              ;
+
+wire                                    mmu1_ptw_timeout_enable                 ;
+wire                                    mmu1_prefetch_enable                    ;
+
+
+wire                                    req1_data_mem_address_decode_error      ;
+wire                                    axi1_data_mem_req_valid                 ;
+wire        [31:0]                      mmu1_axi_physical_address_data_mem      ;
+wire                                    core1_mmu_axi_mem_write_en              ;
+wire                                    core1_mmu_axi_mem_read_en               ;
+wire        [2:0]                       core1_axi_awsize                        ;
+wire        [31:0]                      mem_write_data_core1                    ;
+wire                                    exception_flush1                        ;
+wire        [31:0]                      axi_core1_mem_read_data                 ;
+wire        [1:0]                       axi_core1_rresp                         ;
+wire                                    axi_core1_rvalid                        ;
+wire                                    axi_core1_rready                        ;
+wire                                    axi_core1_bready                        ;
+wire                                    axi_core1_bvalid                        ;
+wire        [1:0]                       axi_core1_bresp                         ;
+
+
+wire        [5:0]                       gpio_int_ctrl1_irq                      ;
+wire        [3:0]                       core1_axi_wstrobe                       ;
+wire        [31:0]                      int_ctrl1_ip_trace_data                 ;
+wire        [7:0]                       int_ctrl1_ip_trace_event                ;
+wire        [31:0]                      mmu1_ip_trace_data                      ;
+wire        [7:0]                       mmu1_ip_trace_event                     ;
+wire                                    debug_pte1_valid_in                     ;
+wire        [1:0]                       pte1_debug_write_resp                   ;
+wire                                    pte1_debug_write_valid                  ;
+wire        [31:0]                      pte1_debug_read_data                    ;
+wire        [1:0]                       pte1_debug_read_resp                    ;
+wire                                    pte1_debug_read_valid                   ;
+wire                                    debug_inst_mem1_req_valid               ;
+wire        [31:0]                      inst_mem1_debug_read_data               ;
+
+wire                                    debug_pte0_valid_in                     ;   
+wire        [1:0]                       pte0_debug_write_resp                   ;
+wire                                    pte0_debug_write_valid                  ;
+wire        [31:0]                      pte0_debug_read_data                    ;
+wire        [1:0]                       pte0_debug_read_resp                    ;
+wire                                    pte0_debug_read_valid                   ;
+wire                                    debug_inst_mem0_req_valid               ;
+wire        [31:0]                      inst_mem0_debug_read_data               ;
+
+wire        [31:0]                      debug_core1_pc_addr                     ;
+wire                                    core1_debug_hart_halted                 ;
+wire                                    core1_debug_hart_reset                  ;
+wire                                    debug_core1_csr_halt_request            ;
+wire        [31:0]                      csr1_gpr_debug_read_data                ;
+wire                                    csr1_gpr_debug_read_valid               ;
+
+wire                                    core1_rstn                              ;
+wire                                    axi_bridge_rstn                         ;
+wire        [1:0]                       axi_master_clk_rst_ctrl_active_master   ;
+
+
 //-----------------------------EXPECTIONS AND FAULTS SIGNALS TO TOP REGISTER AFTER REGISTERED---------------
 
-reg     [31:0]                         reg_physical_address_inst_mem           ;
-reg     [31:0]                         reg_physical_address_data_mem           ;
-reg                                    reg_mmu_timeout                         ;
-reg                                    reg_data_memory_page_fault              ;
-reg                                    reg_data_memory_read_permission_fault   ;
-reg                                    reg_data_memory_write_permission_fault  ;
-reg                                    reg_data_memory_addr_decode_error       ;
-reg                                    reg_data_memory_read_slave_error        ;
-reg                                    reg_data_memory_write_slave_error       ;
-reg                                    reg_instruction_page_fault              ;
-reg                                    reg_inst_execution_fault                ;
-reg                                    reg_inst_addr_decode_error              ;
-reg                                    reg_sync_1_boot_load_en                 ;
-reg                                    reg_sync_2_boot_load_en                 ;
+wire     [31:0]                         reg_physical_address_inst_mem           ;
+wire     [31:0]                         reg_physical_address_data_mem           ;
+wire                                    reg_mmu_timeout                         ;
+wire                                    reg_data_memory_page_fault              ;
+wire                                    reg_data_memory_read_permission_fault   ;
+wire                                    reg_data_memory_write_permission_fault  ;
+wire                                    reg_data_memory_addr_decode_error       ;
+wire                                    reg_data_memory_read_slave_error        ;
+wire                                    reg_data_memory_write_slave_error       ;
+wire                                    reg_instruction_page_fault              ;
+wire                                    reg_inst_execution_fault                ;
+wire                                    reg_inst_addr_decode_error              ;
 
 
 //------------------------------------SIGNAL USED FOR RESET SYNCHRONIZER----------------------
 
-reg                                     rst_sync_reg1                           ;
-reg                                     rst_sync_reg2                           ;
+logic                                     rst_sync_reg1                           ;
+logic                                     rst_sync_reg2                           ;
 
 //-----------------------------------DFT SIGNALS USED IN CLK RST CONTROLLER MODULE------------------------------------
 
@@ -888,12 +933,12 @@ logic                                    test_mode_peripheral_rst            ;
 logic                                    test_mode_peripheral_rst_en         ; 
 logic                                    test_mode_debug_rst                 ;
 logic                                    test_mode_debug_rst_en              ;       
-logic                                    test_mode_clk_peripheral_mux        ;
+//logic                                    test_mode_clk_peripheral_mux        ;
 logic                                    test_mode_clk_soc_mux               ;
-logic                                    test_mode_en_peripheral_mux         ; 
+//logic                                    test_mode_en_peripheral_mux         ; 
 logic                                    test_mode_en_soc_mux                ;
 logic                                    test_mode_div_peripheral            ;
-logic                                    test_mode_div_debug                 ;
+//logic                                    test_mode_div_debug                 ;
 logic                                    test_mode_spi_rstn                  ;
 logic                                    test_mode_spi_rstn_en               ;
 logic                                    test_mode_uart_rstn_en              ;
@@ -901,17 +946,18 @@ logic                                    test_mode_uart_rstn                 ;
 logic                                    test_mode_i2c_rstn_en               ;
 logic                                    test_mode_i2c_rstn                  ;
 
+logic                                    test_mode_core1_rstn_en             ;
+logic                                    test_mode_core1_rstn                ;
+logic                                    test_mode_axi_rstn_en               ;
+logic                                    test_mode_axi_rstn                  ;
+
 logic                                    tm_clk_rst_prstn_sync               ;
 logic                                    tm_clk_rst_prstn_sync_en            ;
                             
 logic                                    tm_clk_rst_soc_rstn_sync_en         ;
 logic                                    tm_clk_rst_soc_rstn_sync            ;
                             
-logic                                    tm_clk_rst_prstn_por_sync           ;
-logic                                    tm_clk_rst_prstn_por_sync_en        ;
                             
-logic                                    tm_clk_rst_dbg_rstn_sync            ;
-logic                                    tm_clk_rst_dbg_rstn_sync_en         ;
 
 
 
@@ -920,7 +966,6 @@ logic                                   tm_mem_rc_clk_mux_en_i              ;
 logic                                   tm_mem_rc_clk_mux_i                 ;
 logic                                   tm_pll_xtal_clk_mux_en_i            ;
 logic                                   tm_pll_xtal_clk_mux_i               ;
-logic                                   tm_dbg_rc_clk_mux_en_i              ;
 logic                                   tm_dbg_rc_clk_mux_i                 ;
 logic                                   tm_jtag_dbg_pulse_rstn_en           ;
 logic                                   tm_jtag_dbg_pulse_rstn              ;
@@ -931,7 +976,6 @@ logic                                   tm_bypass_xtal_rstn_sync            ;
 logic                                   tm_bypass_xtal_rstn_sync_en            ;
 logic                                   tm_bypass_mem_rstn_sync_en          ;   
 logic                                   tm_bypass_mem_rstn_sync             ;
-logic                                   tm_bypass_dbg_rstn_sync_en          ;
 logic                                   tm_bypass_dbg_rstn_sync             ;
 logic                                   tm_bypass_boot_pulse_rstn_sync      ;
 logic                                   tm_bypass_boot_pulse_rstn_sync_en   ;
@@ -963,72 +1007,14 @@ logic                                   tm_uart_brstn                       ;
 logic                                   tm_gpio_prstn_en                    ;
 logic                                   tm_gpio_prstn                       ;
 
+
+
 //---------------------------------------------------------------------------------------------
 
 
 //------------------------------------------------GLUE LOGICS---------------------------------------------
 
 
-
-
-//                                  INSTRUCTION PPN REQUESTING TO MMU GLUE LOGIC
-
-assign  core_mmu_inst_req                       =   ~reg_sync_2_boot_load_en & ~mmu_busy                          ;
-
-
-//		            STALL LOGIC FOR THE CORE TO STALL UNTIL LOAD AND STORE IS COMPLETE
-
-assign 	stall_by_axi_data_mem_read 	            = 	core_mmu_axi_mem_read_en & ~( axi_core_rvalid & axi_core_rready & (axi_core_rresp == 2'b00) ) ;
-	
-assign 	stall_by_axi_data_mem_write 	        = 	core_mmu_axi_mem_write_en & ~( axi_core_bvalid & axi_core_bready & ( axi_core_bresp == 2'b00) )	;
-
-assign 	stall_by_load_store 		            = 	stall_by_axi_data_mem_read | stall_by_axi_data_mem_write ;
-
-
-//			                OVERALL STALL THE CORE BY INSTRUCTION OR DATA MEMORY ACCESS
-
-assign 	stall_the_core_pipeline		            =	 !mmu_instruction_hit | ~inst_mem_core_axi_rvalid  | stall_by_load_store	;
-
-
-//			                    FINAL PHYSICAL ADDRESS DEPENDING ON THE MMU ENABLE
-
-assign 	mmu_axi_physical_address_inst_mem 		= 	{ mmu_ppn_inst_mem_address  , core_mmu_inst_mem_virtual_address[11:0] } 		;
-assign 	mmu_axi_physical_address_data_mem 		= 	{ mmu_ppn_data_mem_address  , core_mmu_data_mem_virtual_address[11:0] } 		;
-
-
-//                                      INSTRUCTION TO CORE 
-
-assign  instruction_to_core                     =   ( (inst_mem_core_axi_rresp == 2'b00) && inst_mem_core_axi_rvalid && inst_mem_core_axi_arready ) ? instruction_from_mem : 32'd0 ;
-
-
-//			        THIS SIGNAL TELLS THE REQUESTED ADDRESS IS VALID OR NOT TO THE AXI WRAPPERS
-
-assign 	axi_data_mem_req_valid		            = 	mmu_data_memory_hit & ((core_mmu_axi_mem_read_en & ~ mem_read_permission_fault )|( core_mmu_axi_mem_write_en & ~mem_write_permission_fault));
-
-assign 	inst_mem_req_valid		                = 	mmu_instruction_hit &&  ~instruction_execute_permission_fault && ~ inst_page_fault  && ( ( mmu_axi_physical_address_inst_mem <= INST_MEMORY_MAX_ADDRESS ) && ( mmu_axi_physical_address_inst_mem >= INST_MEMORY_MIN_ADDRESS ) );
-
-assign 	inst_mem_addr_decode_error              = 	mmu_instruction_hit && ~( ( mmu_axi_physical_address_inst_mem <= INST_MEMORY_MAX_ADDRESS ) && ( mmu_axi_physical_address_inst_mem >= INST_MEMORY_MIN_ADDRESS ) );
-
-
-//			                    MEMORY READ AND WRITE SLAVE ERROR
-
-assign 	data_mem_read_addr_slverr		        = 	axi_core_rvalid & axi_core_rready & (axi_core_rresp == 2'b10) 	;
-
-assign 	data_mem_write_addr_slverr		        =	axi_core_bvalid & axi_core_bready & (axi_core_bresp == 2'b10) 	;
-
-assign  data_mem_addr_slverr                    =   data_mem_read_addr_slverr | data_mem_write_addr_slverr          ;
-
-
-//                  READ DATA AND VALID TO DEBUG MODULE FROM CSR OR GPR SELECTING ONE OD THE DATA AND VALID
-
-assign  csr_gpr_debug_read_data                 =   (debug_csr_gpr_address[15:12] == 4'd0) ? csr_debug_read_data : core_debug_read_data ;
-
-assign  csr_gpr_debug_read_valid                =   (debug_csr_gpr_address[15:12] == 4'd0) ? csr_debug_read_valid : core_debug_read_valid ;
-
-
-//                      AXI MASTER SELECT LOGIC WHETHER IT IS A CORE MODE OR DEBUG MODE 
-
-assign  axi_master_select                       =   debug_mode_en & ~core_mmu_axi_mem_write_en & ~core_mmu_axi_mem_read_en ;
 
 
 //                      READ AND WRITE VALID SIGNALS TO DEBUG MODULE FROM AXI MASTER WRAPPER
@@ -1063,60 +1049,90 @@ assign  analog_pre_post_boot_reg1_w             =   pre_post_boot_mux_sel ? anal
 assign analog_preboot_reg1                      =   { analog_pre_post_boot_reg1_w[6:2] ,analog_preboot_reg1_w[10:2] , analog_pre_post_boot_reg1_w[1:0] }           ;
 
 
+assign  debug_pte0_valid_in  = (debug_pte_address >= PTE_MIN_ADDRESS ) && ( debug_pte_address <= PTE_MAX_ADDRESS) && debug_pte_valid_in ;
 
+assign  debug_pte1_valid_in  = (debug_pte_address >= PTE1_MIN_ADDRESS ) && ( debug_pte_address <= PTE1_MAX_ADDRESS) && debug_pte_valid_in ;
 
+assign  pte_debug_write_resp    = (debug_pte_address >= PTE_MIN_ADDRESS ) && ( debug_pte_address <= PTE_MAX_ADDRESS) ? pte0_debug_write_resp : pte1_debug_write_resp ;
 
-//-------------------------------------CONSTANT GLUE LOGIC OF THE DFT SIGNALS---------------------------------
+assign  pte_debug_write_valid    = (debug_pte_address >= PTE_MIN_ADDRESS ) && ( debug_pte_address <= PTE_MAX_ADDRESS) ? pte0_debug_write_valid : pte1_debug_write_valid ;
+
+assign  pte_debug_read_data    = (debug_pte_address >= PTE_MIN_ADDRESS ) && ( debug_pte_address <= PTE_MAX_ADDRESS) ? pte0_debug_read_data : pte1_debug_read_data ;
+
+assign  pte_debug_read_resp    = (debug_pte_address >= PTE_MIN_ADDRESS ) && ( debug_pte_address <= PTE_MAX_ADDRESS) ? pte0_debug_read_resp : pte1_debug_read_resp ;
+
+assign  pte_debug_read_valid    = (debug_pte_address >= PTE_MIN_ADDRESS ) && ( debug_pte_address <= PTE_MAX_ADDRESS) ? pte0_debug_read_valid : pte1_debug_read_valid ;
+
+assign  debug_inst_mem0_req_valid   = ( debug_inst_mem_address_in >= INST_MEMORY_MIN_ADDRESS ) && ( debug_inst_mem_address_in <= INST_MEMORY_MAX_ADDRESS ) && debug_inst_mem_req_valid ;
+
+assign  debug_inst_mem1_req_valid   = ( debug_inst_mem_address_in >= INST_MEMORY1_MIN_ADDRESS ) && ( debug_inst_mem_address_in <= INST_MEMORY1_MAX_ADDRESS ) && debug_inst_mem_req_valid ;
+
+assign  inst_mem_debug_read_data    = ( debug_inst_mem_address_in >= INST_MEMORY_MIN_ADDRESS ) && ( debug_inst_mem_address_in <= INST_MEMORY_MAX_ADDRESS ) ? inst_mem0_debug_read_data : inst_mem1_debug_read_data  ;
+
 
 /*
+always_comb begin
+    if(Test_mode) begin
 
+        test_mode_soc_rst             = 1'b1 ;
+        test_mode_soc_rst_en          = 1'b1 ;
+        test_mode_peripheral_rst      = 1'b1 ;
+        test_mode_peripheral_rst_en   = 1'b1 ;
+        test_mode_debug_rst           = 1'b1 ;
+        test_mode_debug_rst_en        = 1'b1 ;
+        test_mode_en_peripheral_mux   = 1'b1 ;
+        test_mode_en_soc_mux          = 1'b1 ;
+        test_mode_div_peripheral      = 1'b1 ;
+        test_mode_div_debug           = 1'b1 ;
+        test_mode_spi_rstn            = 1'b1 ;
+        test_mode_spi_rstn_en         = 1'b1 ;
+        test_mode_uart_rstn_en        = 1'b1 ;
+        test_mode_uart_rstn           = 1'b1 ;
+        test_mode_i2c_rstn_en         = 1'b1 ;
+        test_mode_i2c_rstn            = 1'b1 ;
+                                      
+        tm_mem_rc_clk_mux_en_i        = 1'b1 ;
+        tm_pll_xtal_clk_mux_en_i      = 1'b1 ;
+//        tm_dbg_rc_clk_mux_en_i        = 1'b1 ;
+        tm_uart_bclk_en_i             = 1'b1 ;
 
+test_mode_core1_rstn_en     =   1'b1 ;
+test_mode_core1_rstn      =   1'b1 ;
+                            
+test_mode_axi_rstn_en     =   1'b1 ;
+test_mode_axi_rstn        =   1'b1 ;
 
-assign test_mode_soc_rst_en         = Test_mode ? 1'b1 : 1'b0;
-assign test_mode_soc_rst            = Test_mode ? 1'b1 : 1'b0;
+    end else begin
 
+        test_mode_soc_rst             = 1'b0 ;
+        test_mode_soc_rst_en          = 1'b0 ;
+        test_mode_peripheral_rst      = 1'b0 ;
+        test_mode_peripheral_rst_en   = 1'b0 ;
+        test_mode_debug_rst           = 1'b0 ;
+        test_mode_debug_rst_en        = 1'b0 ;
+        test_mode_en_peripheral_mux   = 1'b0 ;
+        test_mode_en_soc_mux          = 1'b0 ;
+        test_mode_div_peripheral      = 1'b0 ;
+        test_mode_div_debug           = 1'b0 ;
+        test_mode_spi_rstn            = 1'b0 ;
+        test_mode_spi_rstn_en         = 1'b0 ;
+        test_mode_uart_rstn_en        = 1'b0 ;
+        test_mode_uart_rstn           = 1'b0 ;
+        test_mode_i2c_rstn_en         = 1'b0 ;
+        test_mode_i2c_rstn            = 1'b0 ;
+                                    
+        tm_mem_rc_clk_mux_en_i        = 1'b0 ;
+        tm_pll_xtal_clk_mux_en_i      = 1'b0 ;
+//        tm_dbg_rc_clk_mux_en_i        = 1'b0 ;
+        tm_uart_bclk_en_i             = 1'b0;
+        test_mode_core1_rstn_en     =   1'b0 ;
+test_mode_core1_rstn      =   1'b0 ;
+                            
+test_mode_axi_rstn_en     =   1'b0 ;
+test_mode_axi_rstn        =   1'b0 ;
 
-assign test_mode_peripheral_rst_en  = Test_mode ? 1'b1 : 1'b0;
-assign test_mode_peripheral_rst     = Test_mode ? 1'b1 : 1'b0;
-
-assign test_mode_debug_rst_en       = Test_mode ? 1'b1 : 1'b0;
-assign test_mode_debug_rst          = Test_mode ? 1'b1 : 1'b0;
-
-
-assign test_mode_en_peripheral_mux  = Test_mode ? 1'b1 : 1'b0;
-assign test_mode_clk_peripheral_mux = pll_clk;
-
-assign test_mode_en_soc_mux         = Test_mode ? 1'b1 : 1'b0;
-assign test_mode_clk_soc_mux        = pll_clk;
-
-assign test_mode_div_peripheral     = Test_mode ? 1'b1 : 1'b0;
-
-assign test_mode_div_debug          = Test_mode ? 1'b1 : 1'b0;
-
-assign test_mode_spi_rstn_en        = Test_mode ? 1'b1 : 1'b0;
-assign test_mode_spi_rstn           = Test_mode ? 1'b1 : 1'b0;
-
-
-assign test_mode_uart_rstn_en       = Test_mode ? 1'b1 : 1'b0;
-assign test_mode_uart_rstn          = Test_mode ? 1'b1 : 1'b0;
-
-
-assign test_mode_i2c_rstn_en        = Test_mode ? 1'b1 : 1'b0;
-assign test_mode_i2c_rstn           = Test_mode ? 1'b1 : 1'b0;
-
-
-
-assign tm_mem_rc_clk_mux_en_i       = Test_mode ? 1'b1 : 1'b0;
-assign tm_mem_rc_clk_mux_i          = pll_clk ;
-assign tm_pll_xtal_clk_mux_en_i     = Test_mode ? 1'b1 : 1'b0;
-assign tm_pll_xtal_clk_mux_i        = pll_clk;
-assign tm_dbg_rc_clk_mux_en_i       = Test_mode ? 1'b1 : 1'b0;
-assign tm_dbg_rc_clk_mux_i          = pll_clk;
-
-assign tm_uart_bclk_en_i            = Test_mode ? 1'b1 : 1'b0;
-assign tm_uart_bclk_i               = pll_clk;
-
-
+    end
+end
 */
 
 always_comb begin
@@ -1130,22 +1146,26 @@ always_comb begin
         test_mode_debug_rst_en        = 1'b1 ;
 //        test_mode_clk_peripheral_mux  = 1'b1 ;
 //        test_mode_clk_soc_mux         = 1'b1 ;
-        test_mode_en_peripheral_mux   = 1'b1 ;
+//        test_mode_en_peripheral_mux   = 1'b1 ;
         test_mode_en_soc_mux          = 1'b1 ;
         test_mode_div_peripheral      = 1'b1 ;
-        test_mode_div_debug           = 1'b1 ;
+//        test_mode_div_debug           = 1'b1 ;
         test_mode_spi_rstn            = 1'b1 ;
         test_mode_spi_rstn_en         = 1'b1 ;
         test_mode_uart_rstn_en        = 1'b1 ;
         test_mode_uart_rstn           = 1'b1 ;
         test_mode_i2c_rstn_en         = 1'b1 ;
         test_mode_i2c_rstn            = 1'b1 ;
+        test_mode_core1_rstn_en     =   1'b1 ;
+        test_mode_core1_rstn      =   1'b1 ;                  
+        test_mode_axi_rstn_en     =   1'b1 ;
+        test_mode_axi_rstn        =   1'b1 ;
+
                                       
         tm_mem_rc_clk_mux_en_i        = 1'b1 ;
 //        tm_mem_rc_clk_mux_i           = 1'b1 ;
         tm_pll_xtal_clk_mux_en_i      = 1'b1 ;
 //        tm_pll_xtal_clk_mux_i         = 1'b1 ;
-        tm_dbg_rc_clk_mux_en_i        = 1'b1 ;
 //        tm_dbg_rc_clk_mux_i           = 1'b1 ;
         tm_jtag_dbg_pulse_rstn        = 1'b1;
         tm_jtag_dbg_pulse_rstn_en     = 1'b1;
@@ -1156,7 +1176,6 @@ always_comb begin
         tm_bypass_xtal_rstn_sync        = 1'b1; 
         tm_bypass_mem_rstn_sync_en      = 1'b1; 
         tm_bypass_mem_rstn_sync         = 1'b1; 
-        tm_bypass_dbg_rstn_sync_en      = 1'b1    ;
         tm_bypass_dbg_rstn_sync         = 1'b1    ;
         tm_bypass_boot_pulse_rstn_sync    = 1'b1  ;
         tm_bypass_boot_pulse_rstn_sync_en = 1'b1  ;
@@ -1171,6 +1190,8 @@ always_comb begin
         tm_bypass_pulse_clk_rst            = 1'b1 ;
         tm_bypass_pulse_clk_rst_en         = 1'b1 ;
 
+        tm_pinaka_rstn_en                  = 1'b1 ;
+        tm_pinaka_rstn                     = 1'b1 ;
 
 
         tm_bridge_prstn_sync_en            = 1'b1;
@@ -1186,11 +1207,7 @@ always_comb begin
         tm_clk_rst_soc_rstn_sync_en     = 1'b1;
         tm_clk_rst_soc_rstn_sync        = 1'b1;
         
-        tm_clk_rst_prstn_por_sync       = 1'b1;
-        tm_clk_rst_prstn_por_sync_en    = 1'b1;
         
-        tm_clk_rst_dbg_rstn_sync        = 1'b1;
-        tm_clk_rst_dbg_rstn_sync_en     = 1'b1;
 
         tm_gpio_prstn_en                = 1'b1    ;
         tm_gpio_prstn                   = 1'b1    ;
@@ -1207,22 +1224,27 @@ always_comb begin
         test_mode_debug_rst_en        = 1'b0 ;
 //        test_mode_clk_peripheral_mux  = 1'b0 ;
 //        test_mode_clk_soc_mux         = 1'b0 ;
-        test_mode_en_peripheral_mux   = 1'b0 ;
+//        test_mode_en_peripheral_mux   = 1'b0 ;
         test_mode_en_soc_mux          = 1'b0 ;
         test_mode_div_peripheral      = 1'b0 ;
-        test_mode_div_debug           = 1'b0 ;
+//        test_mode_div_debug           = 1'b0 ;
         test_mode_spi_rstn            = 1'b0 ;
         test_mode_spi_rstn_en         = 1'b0 ;
         test_mode_uart_rstn_en        = 1'b0 ;
         test_mode_uart_rstn           = 1'b0 ;
         test_mode_i2c_rstn_en         = 1'b0 ;
         test_mode_i2c_rstn            = 1'b0 ;
+        test_mode_core1_rstn_en     =   1'b0 ;
+        test_mode_core1_rstn      =   1'b0 ;                  
+        test_mode_axi_rstn_en     =   1'b0 ;
+        test_mode_axi_rstn        =   1'b0 ;
+
+
                                     
         tm_mem_rc_clk_mux_en_i        = 1'b0 ;
 //        tm_mem_rc_clk_mux_i           = 1'b0 ;
         tm_pll_xtal_clk_mux_en_i      = 1'b0 ;
 //        tm_pll_xtal_clk_mux_i         = 1'b0 ;
-        tm_dbg_rc_clk_mux_en_i        = 1'b0 ;
 //        tm_dbg_rc_clk_mux_i           = 1'b0 ;
         tm_jtag_dbg_pulse_rstn        = 1'b0;
         tm_jtag_dbg_pulse_rstn_en     = 1'b0;
@@ -1233,7 +1255,6 @@ always_comb begin
         tm_bypass_xtal_rstn_sync        = 1'b0; 
         tm_bypass_mem_rstn_sync_en      = 1'b0; 
         tm_bypass_mem_rstn_sync         = 1'b0; 
-        tm_bypass_dbg_rstn_sync_en      = 1'b0    ;
         tm_bypass_dbg_rstn_sync         = 1'b0    ;
         tm_bypass_boot_pulse_rstn_sync    = 1'b0  ;
         tm_bypass_boot_pulse_rstn_sync_en = 1'b0  ;
@@ -1247,6 +1268,9 @@ always_comb begin
         tm_bypass_preboot_analog_rstn      = 1'b0 ;
         tm_bypass_pulse_clk_rst            = 1'b0 ;
         tm_bypass_pulse_clk_rst_en         = 1'b0 ;
+
+        tm_pinaka_rstn_en                  = 1'b0 ;
+        tm_pinaka_rstn                     = 1'b0 ;
 
 
         tm_bridge_prstn_sync_en            = 1'b0;
@@ -1262,11 +1286,7 @@ always_comb begin
         tm_clk_rst_soc_rstn_sync_en     = 1'b0;
         tm_clk_rst_soc_rstn_sync        = 1'b0;
         
-        tm_clk_rst_prstn_por_sync       = 1'b0;
-        tm_clk_rst_prstn_por_sync_en    = 1'b0;
         
-        tm_clk_rst_dbg_rstn_sync        = 1'b0;
-        tm_clk_rst_dbg_rstn_sync_en     = 1'b0;
 
         tm_gpio_prstn_en                = 1'b0    ;
         tm_gpio_prstn                   = 1'b0    ;
@@ -1277,10 +1297,89 @@ always_comb begin
 end
 
 
+reg reg_axi_data_mem_req_valid  ;
+reg [31:0] reg_mmu_axi_physical_address_data_mem ;
+reg reg_core_mmu_axi_mem_read_en        ;
+reg [31:0] reg_mem_write_data_core ;
+reg reg_exception_flush ;
+reg reg_core_mmu_axi_mem_write_en  ;
+reg [2:0] reg_core_axi_awsize ;
+reg [3:0] reg_core_axi_wstrobe ;
+
+reg reg_axi1_data_mem_req_valid  ;
+reg [31:0] reg_mmu1_axi_physical_address_data_mem ;
+reg reg_core1_mmu_axi_mem_read_en        ;
+reg [31:0] reg_mem_write_data_core1 ;
+reg reg_exception_flush1 ;
+reg reg_core1_mmu_axi_mem_write_en  ;
+reg [2:0] reg_core1_axi_awsize ;
+reg [3:0] reg_core1_axi_wstrobe ;
+reg reg_core_debug_mode_en ;
+reg reg_core1_debug_mode_en ;
+
+
+always@(posedge core_clk or negedge core1_rstn)
+begin
+    if(!core1_rstn) begin
+  reg_axi1_data_mem_req_valid      <=  1'd0    ;
+reg_mmu1_axi_physical_address_data_mem   <= 32'd0 ;
+reg_core1_mmu_axi_mem_read_en        <= 1'd0 ;
+reg_mem_write_data_core1 <=  32'd0   ;
+reg_exception_flush1 <= 1'd0 ;
+reg_core1_mmu_axi_mem_write_en <= 1'd0 ;
+reg_core1_axi_awsize <= 3'd0 ;
+reg_core1_axi_wstrobe <= 4'd0 ;
+reg_core1_debug_mode_en <= 1'd0;
+    end      
+        else begin
+        reg_axi1_data_mem_req_valid      <=  axi1_data_mem_req_valid    ;
+reg_mmu1_axi_physical_address_data_mem   <= mmu1_axi_physical_address_data_mem ;
+reg_core1_mmu_axi_mem_read_en        <= core1_mmu_axi_mem_read_en ;
+reg_mem_write_data_core1 <=  mem_write_data_core1   ;
+reg_exception_flush1 <= exception_flush1 ;
+reg_core1_mmu_axi_mem_write_en <= core1_mmu_axi_mem_write_en ;
+reg_core1_axi_awsize <= core1_axi_awsize ;
+reg_core1_axi_wstrobe <= core1_axi_wstrobe ;
+reg_core1_debug_mode_en <= core1_debug_mode_en ;
+end
+
+end
 
 
 
-assign test_mode_clk_peripheral_mux = pll_clk;
+
+always@(posedge core_clk or negedge core_rstn)
+begin
+    if(!core_rstn) begin
+  reg_axi_data_mem_req_valid      <=  1'd0    ;
+reg_mmu_axi_physical_address_data_mem   <= 32'd0 ;
+reg_core_mmu_axi_mem_read_en        <= 1'd0 ;
+reg_mem_write_data_core <=  32'd0   ;
+reg_exception_flush <= 1'd0 ;
+reg_core_mmu_axi_mem_write_en <= 1'd0 ;
+reg_core_axi_awsize <= 3'd0 ;
+reg_core_axi_wstrobe <= 4'd0 ;
+
+reg_core_debug_mode_en <= 1'd0;
+
+    end      
+        else begin
+        reg_axi_data_mem_req_valid      <=  axi_data_mem_req_valid    ;
+reg_mmu_axi_physical_address_data_mem   <= mmu_axi_physical_address_data_mem ;
+reg_core_mmu_axi_mem_read_en        <= core_mmu_axi_mem_read_en ;
+reg_mem_write_data_core <=  mem_write_data_core   ;
+reg_exception_flush <= exception_flush ;
+reg_core_mmu_axi_mem_write_en <= core_mmu_axi_mem_write_en ;
+reg_core_axi_awsize <= core_axi_awsize ;
+reg_core_axi_wstrobe <= core_axi_wstrobe ;
+reg_core_debug_mode_en <= core_debug_mode_en ;
+end
+
+end
+
+
+
+//assign test_mode_clk_peripheral_mux = pll_clk;
 assign test_mode_clk_soc_mux        = pll_clk;
 assign tm_mem_rc_clk_mux_i          = pll_clk;
 assign tm_pll_xtal_clk_mux_i        = pll_clk;
@@ -1289,106 +1388,60 @@ assign tm_uart_bclk_i               = pll_clk;
 
 
 
-
-//assign       test_mode_soc_rst                  =   1'b0                      ;
-//assign       test_mode_soc_rst_en               =   1'b0                      ;
-//assign       test_mode_peripheral_rst           =   1'b0                      ;
-//assign       test_mode_peripheral_rst_en        =   1'b0                      ; 
-//assign       test_mode_debug_rst                =   1'b0                      ;
-//assign       test_mode_debug_rst_en             =   1'b0                      ;       
-//assign       test_mode_clk_peripheral_mux       =   1'b0                      ;
-//assign       test_mode_clk_soc_mux              =   1'b0                      ;
-//assign       test_mode_en_peripheral_mux        =   1'b0                      ; 
-//assign       test_mode_en_soc_mux               =   1'b0                      ;
-//assign       test_mode_div_peripheral           =   1'b0                      ;
-//assign       test_mode_div_debug                =   1'b0                      ;
-//assign       test_mode_spi_rstn                 =   1'b0                      ;         
-//assign       test_mode_spi_rstn_en              =   1'b0                      ; 
-//assign       test_mode_uart_rstn_en             =   1'b0                      ; 
-//assign       test_mode_uart_rstn                =   1'b0                      ; 
-//assign       test_mode_i2c_rstn_en              =   1'b0                      ; 
-//assign       test_mode_i2c_rstn                 =   1'b0                      ; 
+//-------------------------------------CONSTANT GLUE LOGIC OF THE DFT SIGNALS---------------------------------
 
 
+/*
 
+assign       test_mode_soc_rst                  =   1'b0                      ;
+assign       test_mode_soc_rst_en               =   1'b0                      ;
+assign       test_mode_peripheral_rst           =   1'b0                      ;
+assign       test_mode_peripheral_rst_en        =   1'b0                      ; 
+assign       test_mode_debug_rst                =   1'b0                      ;
+assign       test_mode_debug_rst_en             =   1'b0                      ;       
+assign       test_mode_clk_peripheral_mux       =   1'b0                      ;
+assign       test_mode_clk_soc_mux              =   1'b0                      ;
+assign       test_mode_en_peripheral_mux        =   1'b0                      ; 
+assign       test_mode_en_soc_mux               =   1'b0                      ;
+assign       test_mode_div_peripheral           =   1'b0                      ;
+assign       test_mode_div_debug                =   1'b0                      ;
+assign       test_mode_spi_rstn                 =   1'b0                      ;         
+assign       test_mode_spi_rstn_en              =   1'b0                      ; 
+assign       test_mode_uart_rstn_en             =   1'b0                      ; 
+assign       test_mode_uart_rstn                =   1'b0                      ; 
+assign       test_mode_i2c_rstn_en              =   1'b0                      ; 
+assign       test_mode_i2c_rstn                 =   1'b0                      ; 
+
+assign      test_mode_core1_rstn_en             =   1'b0                        ;
+assign      test_mode_core1_rstn                =   1'b0                        ;
+assign      test_mode_axi_rstn_en               =   1'b0                        ;
+assign      test_mode_axi_rstn                  =   1'b0                        ;
+
+
+*/
 
 //--------------------------ALWAYS BLOCK USED TO REGISTER THE SIGNAL WHICH REQUIRED FOR CDC---------------
 
 
 
 
-always_ff@(posedge core_clk or negedge core_rstn)
-begin
-
-    if(!core_rstn) begin
-
-        reg_physical_address_inst_mem                   <=      32'd0       ;
-        reg_physical_address_data_mem                   <=      32'd0       ;
-        reg_mmu_timeout                                 <=      1'd0        ;
-        reg_data_memory_page_fault                      <=      1'd0        ;
-        reg_data_memory_read_permission_fault           <=      1'd0        ;
-        reg_data_memory_write_permission_fault          <=      1'd0        ;
-        reg_data_memory_addr_decode_error               <=      1'd0        ;
-        reg_data_memory_read_slave_error                <=      1'd0        ;
-        reg_data_memory_write_slave_error               <=      1'd0        ;
-        reg_instruction_page_fault                      <=      1'd0        ;
-        reg_inst_execution_fault                        <=      1'd0        ;
-        reg_inst_addr_decode_error                      <=      1'd0        ;
-        reg_sync_1_boot_load_en                         <=      1'd0        ;
-        reg_sync_2_boot_load_en                         <=      1'd0        ;
-
-
-    end
-
-    else begin
-
-        reg_physical_address_inst_mem                   <=      mmu_axi_physical_address_inst_mem       ;
-        reg_physical_address_data_mem                   <=      mmu_axi_physical_address_data_mem       ;
-        reg_mmu_timeout                                 <=      mmu_ptw_timeout                         ;
-        reg_data_memory_page_fault                      <=      mem_page_fault                          ;
-        reg_data_memory_read_permission_fault           <=      mem_read_permission_fault               ;
-        reg_data_memory_write_permission_fault          <=      mem_write_permission_fault              ;
-        reg_data_memory_addr_decode_error               <=      req_data_mem_address_decode_error       ;
-        reg_data_memory_read_slave_error                <=      data_mem_read_addr_slverr               ;
-        reg_data_memory_write_slave_error               <=      data_mem_write_addr_slverr              ;
-        reg_instruction_page_fault                      <=      inst_page_fault                         ;
-        reg_inst_execution_fault                        <=      instruction_execute_permission_fault    ;
-        reg_inst_addr_decode_error                      <=      inst_mem_addr_decode_error              ;
-        reg_sync_1_boot_load_en                         <=      boot_load_enable                        ;
-        reg_sync_2_boot_load_en                         <=      reg_sync_1_boot_load_en                 ;
-
-    end
-
-end
-
-logic rst_sync_reg0;
-
+/*
 always_ff@(posedge rc_clk or negedge rst_for_clk_ctrl)
 begin
 
     if(!rst_for_clk_ctrl) begin
-        rst_sync_reg0   <=  1'b0            ;
         rst_sync_reg1   <=  1'b0            ;
+        rst_sync_reg2   <=  1'b0            ;
     end
 
     else begin
-        rst_sync_reg0   <=  1'b1            ;
-        rst_sync_reg1   <=  rst_sync_reg0   ;
+        rst_sync_reg1   <=  1'b1            ;
+        rst_sync_reg2   <=  rst_sync_reg1   ;
     end
 
 end
+*/
 
-//assign rst_sync_reg2 = tm_pinaka_rstn_en ? tm_pinaka_rstn : rst_sync_reg1;
-
-CKMUX2D1 i0_CKMUX2D1 (
-        .I0(rst_sync_reg1),
-        .I1(tm_pinaka_rstn),
-        .S(tm_pinaka_rstn_en), // clk_0_clksel_latch | clk_1_clksel_latch),
-        .Z(rst_sync_reg2)
-        );
-
-
-/*
     reset_sync i_pinaka_por_rstn_sync (
                                 .clk_i(rc_clk),
                                 .rstn_i(rst_for_clk_ctrl),
@@ -1396,7 +1449,9 @@ CKMUX2D1 i0_CKMUX2D1 (
                                 .tm_rstn_i(tm_pinaka_rstn),
                                 .sync_rstn_o(rst_sync_reg2)
                           );
-*/
+
+
+
 
 
 //--------------------------------------------MODULES INSTANTIATIONS---------------------------------------------------
@@ -1421,43 +1476,9 @@ PINAKA_CLK_RST_BYPASS_TOP     clk_rst_bypass_top_instance     (
             .pll_lock_done_in                   (pll_lock_done)                                 ,
             .hard_rst_n                         (hard_reset)                                    ,
 
-//                      DFT TEST MODE SIGNALS
-
-            .tm_mem_rc_clk_mux_en_i             (tm_mem_rc_clk_mux_en_i)                        ,
-            .tm_mem_rc_clk_mux_i                (tm_mem_rc_clk_mux_i)                           ,
-            .tm_pll_xtal_clk_mux_en_i           (tm_pll_xtal_clk_mux_en_i)                      ,
-            .tm_pll_xtal_clk_mux_i              (tm_pll_xtal_clk_mux_i)                         ,
-            .tm_dbg_rc_clk_mux_en_i             (tm_dbg_rc_clk_mux_en_i)                        ,
-            .tm_dbg_rc_clk_mux_i                (tm_dbg_rc_clk_mux_i)                           ,
-            .tm_jtag_dbg_pulse_rstn_i           (tm_jtag_dbg_pulse_rstn)                      ,
-            .tm_jtag_dbg_pulse_rstn_en_i        (tm_jtag_dbg_pulse_rstn_en)                   ,
-            .tm_rc_rstn_sync_i                 (tm_bypass_rc_rstn_sync)                         ,
-            .tm_rc_rstn_sync_en_i              (tm_bypass_rc_rstn_sync_en)                      ,
-            .tm_xtal_rstn_sync_i               (tm_bypass_xtal_rstn_sync)                       ,
-            .tm_xtal_rstn_sync_en_i            (tm_bypass_xtal_rstn_sync_en)                        ,
-            .tm_mem_rstn_sync_en_i             (tm_bypass_mem_rstn_sync_en)                    ,
-            .tm_mem_rstn_sync_i                (tm_bypass_mem_rstn_sync)                       ,
-            .tm_dbg_rstn_sync_en_i             (tm_bypass_dbg_rstn_sync_en)                     ,
-            .tm_dbg_rstn_sync_i                (tm_bypass_dbg_rstn_sync)                        ,
-            .tm_boot_pulse_rstn_sync_en_i     (tm_bypass_boot_pulse_rstn_sync_en)                       ,
-            .tm_boot_pulse_rstn_sync_i        (tm_bypass_boot_pulse_rstn_sync)                          ,
-            .tm_pulse_gen_rstn_sync_en_i      (tm_bypass_pulse_gen_rstn_sync_en)                        ,
-            .tm_pulse_gen_rstn_sync_i         (tm_bypass_pulse_gen_rstn_sync)                         ,
-            .tm_pll_rstn_sync_en_i            (tm_bypass_pll_rstn_sync_en)                      ,
-            .tm_pll_rstn_sync_i               (tm_bypass_pll_rstn_sync)                         ,
-            .tm_bt_pulse_gen_rstn_i           (tm_bypass_bt_pulse_gen_rstn)                     ,
-            .tm_bt_pulse_gen_rstn_en_i        (tm_bypass_bt_pulse_gen_rstn_en)                         ,
-            .tm_preboot_analog_rstn           (tm_bypass_preboot_analog_rstn)                          ,
-            .tm_preboot_analog_rstn_en_i      (tm_bypass_preboot_analog_rstn_en)                       ,
-            .tm_pulse_clk_rst_i               (tm_bypass_pulse_clk_rst),
-            .tm_pulse_clk_rst_en_i            (tm_bypass_pulse_clk_rst_en),
- 
-
-
-
 //                          FROM THE CLK RST CONTROLLER MODULE
 
-            .debug_clk_in                       (debug_clk)                                     ,
+//            .debug_clk_in                       (debug_clk)                                     ,
             .mem_clk_in                         (core_clk)                                      ,
             .debug_rst_in                       (debug_rstn)                                    ,
 
@@ -1468,11 +1489,11 @@ PINAKA_CLK_RST_BYPASS_TOP     clk_rst_bypass_top_instance     (
 
 //                          TO THE AXI SLAVE WRAPPERS MODULE
 
-            .clk_for_mem_out                    (memory_clk)                                    ,
+            .clk_for_mem_out                    (mem_debug_clk)                                 ,
 
 //                          TO THE DEBUG MODULE & PREBOOT ANALOG REGISTER
 
-            .clk_for_jtag                       (ctrl_bypass_debug_clk)                         ,
+//            .clk_for_jtag                       (ctrl_bypass_debug_clk)                         ,
 
 //                                  TO THE DEBUG MODULE
 
@@ -1499,10 +1520,40 @@ PINAKA_CLK_RST_BYPASS_TOP     clk_rst_bypass_top_instance     (
 
 //                          TO AXI SLAVE WRAPPERS, GPIO AND DEBUG MODULE
 
-            .boot_en_out                        (boot_load_enable)                              
+            .boot_en_out                        (boot_load_enable)                              ,
+
+//                                      FOR DFT PURPUSE
+
+            .tm_mem_rc_clk_mux_en_i             (tm_mem_rc_clk_mux_en_i)                          ,
+            .tm_mem_rc_clk_mux_i                (tm_mem_rc_clk_mux_i)                             ,
+            .tm_pll_xtal_clk_mux_en_i           (tm_pll_xtal_clk_mux_en_i)                        ,
+            .tm_pll_xtal_clk_mux_i              (tm_pll_xtal_clk_mux_i)                           ,
+            .tm_jtag_dbg_pulse_rstn_i           (tm_jtag_dbg_pulse_rstn)                          ,
+            .tm_jtag_dbg_pulse_rstn_en_i        (tm_jtag_dbg_pulse_rstn_en)                       ,
+            .tm_rc_rstn_sync_i                  (tm_bypass_rc_rstn_sync)                          ,
+            .tm_rc_rstn_sync_en_i               (tm_bypass_rc_rstn_sync_en)                       ,
+            .tm_xtal_rstn_sync_i                (tm_bypass_xtal_rstn_sync)                        ,
+            .tm_xtal_rstn_sync_en_i             (tm_bypass_xtal_rstn_sync_en)                     ,
+            .tm_mem_rstn_sync_en_i              (tm_bypass_mem_rstn_sync_en)                      ,
+            .tm_mem_rstn_sync_i                 (tm_bypass_mem_rstn_sync)                         ,
+            .tm_boot_pulse_rstn_sync_en_i       (tm_bypass_boot_pulse_rstn_sync_en)               ,
+            .tm_boot_pulse_rstn_sync_i          (tm_bypass_boot_pulse_rstn_sync)                  ,
+            .tm_pulse_gen_rstn_sync_en_i        (tm_bypass_pulse_gen_rstn_sync_en)                ,
+            .tm_pulse_gen_rstn_sync_i           (tm_bypass_pulse_gen_rstn_sync)                   ,
+            .tm_pll_rstn_sync_en_i              (tm_bypass_pll_rstn_sync_en)                      ,
+            .tm_pll_rstn_sync_i                 (tm_bypass_pll_rstn_sync)                         ,
+            .tm_bt_pulse_gen_rstn_i             (tm_bypass_bt_pulse_gen_rstn)                     ,
+            .tm_bt_pulse_gen_rstn_en_i          (tm_bypass_bt_pulse_gen_rstn_en)                  ,
+            .tm_preboot_analog_rstn             (tm_bypass_preboot_analog_rstn)                   ,
+            .tm_preboot_analog_rstn_en_i        (tm_bypass_preboot_analog_rstn_en)                ,
+            .tm_pulse_clk_rst_i                 (tm_bypass_pulse_clk_rst)                         ,
+            .tm_pulse_clk_rst_en_i              (tm_bypass_pulse_clk_rst_en)                      
+
+
 
             
                                                 )                                               ;
+
 
 
 
@@ -1513,7 +1564,6 @@ PINAKA_CLK_RST_BYPASS_TOP     clk_rst_bypass_top_instance     (
 
 top_clk_rst_ctrl                                #(
 
-            .HARD_RST_COUNTER                   (CLK_RST_CTRL_HARD_RST_COUNT)                   ,
             .RATIO                              (CLK_RST_CTRL_RATIO)   
 
                                                 )
@@ -1529,7 +1579,7 @@ top_clk_rst_ctrl                                #(
             .paddr_i                            (bridge_peripheral_paddr[7:0])                  ,
             .penable_i                          (bridge_peripheral_penable)                     ,
             .pwrite_i                           (bridge_peripheral_pwrite)                      ,
-            .pwdata_i                           ({bridge_peripheral_pwdata[31:30],bridge_peripheral_pwdata[5:0]})                      ,
+            .pwdata_i                           ({bridge_peripheral_pwdata[31:30],bridge_peripheral_pwdata[7:0]})                      ,
 
 //                      FROM THE APB PSEL SLAVE WRAPPER MODULE
 
@@ -1554,12 +1604,14 @@ top_clk_rst_ctrl                                #(
 
 //                              FROM THE CORE 
 
-            .debug_clksel_i                     (debug_mode_en)                                 ,
+//            .debug_clksel_i                     (core_debug_mode_en)                            ,
 
 //                              FROM THE WATCHDOG RESET MODULE
 
             .wdt_rst_scope_i                    (wdt_clk_rst_ctrl_reset_scope)                  ,
             .wdt_rst_req_i                      (wdt_reset)                                     ,
+            .wdt1_rst_scope_i                   (wdt1_clk_rst_ctrl_reset_scope)                 ,
+            .wdt1_rst_req_i                     (wdt1_reset)                                    ,
 
 //                              FROM THE DEBUG MODULE
 
@@ -1569,6 +1621,8 @@ top_clk_rst_ctrl                                #(
 
             .clk_soc_o                          (core_clk)                                      ,
             .rstn_soc_sync_o                    (core_rstn)                                     ,
+            .rstn_core1_sync_o                  (core1_rstn)                                    ,
+            .rstn_cores_comn_blk_sync_o         (axi_bridge_rstn)                               ,
 
 //                  CLK AND RST TO THE PERIPHERALS AND RELATED MODULES
 
@@ -1577,7 +1631,7 @@ top_clk_rst_ctrl                                #(
 
 //                  TO THE CLK RST BYPASS MODULE & IP AND CORE TRACE UNIT
 
-            .clk_for_debug_o                    (debug_clk)                                     ,
+//            .clk_for_debug_o                    (debug_memory_clk)                              ,
             .rstn_debug_sync_o                  (debug_rstn)                                    ,
 
 //                              TO THE I2C MODULE
@@ -1592,6 +1646,10 @@ top_clk_rst_ctrl                                #(
 
             .rstn_spi_sync_o                    (spi_presetn)                                   ,
 
+//                              FROM THE AXI MASTER WRAPPER
+
+            .core_rst_req_owner_i               (axi_master_clk_rst_ctrl_active_master)         ,
+
 //              DFT PURPOSE SIGNALS, AS OF KNOW TIED TO 0'S
 
             .test_mode_soc_rst_i                (test_mode_soc_rst)                             , 
@@ -1603,14 +1661,14 @@ top_clk_rst_ctrl                                #(
             .test_mode_debug_rst_i              (test_mode_debug_rst)                           , 
             .test_mode_debug_rst_en_i           (test_mode_debug_rst_en)                        ,
 
-            .test_mode_clk_peripheral_mux_i     (test_mode_clk_peripheral_mux)                  ,   
+//            .test_mode_clk_peripheral_mux_i     (test_mode_clk_peripheral_mux)                  ,   
             .test_mode_clk_soc_mux_i            (test_mode_clk_soc_mux)                         ,   
             
-            .test_mode_en_peripheral_mux_i      (test_mode_en_peripheral_mux)                   ,   
+//            .test_mode_en_peripheral_mux_i      (test_mode_en_peripheral_mux)                   ,   
             .test_mode_en_soc_mux_i             (test_mode_en_soc_mux)                          ,   
 
             .test_mode_div_peripheral_i         (test_mode_div_peripheral)                      ,   
-            .test_mode_div_debug_i              (test_mode_div_debug)                           ,
+//            .test_mode_div_debug_i              (test_mode_div_debug)                           ,
 
             .test_mode_spi_rstn_en_i            (test_mode_spi_rstn_en)                         ,
             .test_mode_spi_rstn_i               (test_mode_spi_rstn)                            ,
@@ -1621,22 +1679,23 @@ top_clk_rst_ctrl                                #(
             .test_mode_i2c_rstn_en_i            (test_mode_i2c_rstn_en)                         ,
             .test_mode_i2c_rstn_i               (test_mode_i2c_rstn)                            ,
 
-            .tm_clk_rst_prstn_sync_i            (tm_clk_rst_prstn_sync)                         ,
-            .tm_clk_rst_prstn_sync_en_i         (tm_clk_rst_prstn_sync_en)                      ,
-            
+            .test_mode_core1_rstn_en_i          (test_mode_core1_rstn_en)                       ,
+            .test_mode_core1_rstn_i             (test_mode_core1_rstn)                          ,
+
+            .test_mode_axi_rstn_en_i            (test_mode_axi_rstn_en)                         ,
+            .test_mode_axi_rstn_i               (test_mode_axi_rstn)                            ,
+
             .tm_clk_rst_soc_rstn_sync_en_i      (tm_clk_rst_soc_rstn_sync_en)                   ,
             .tm_clk_rst_soc_rstn_sync_i         (tm_clk_rst_soc_rstn_sync)                      ,
             
-            .tm_clk_rst_prstn_por_sync_i        (tm_clk_rst_prstn_por_sync)                   ,
-            .tm_clk_rst_prstn_por_sync_en_i     (tm_clk_rst_prstn_por_sync_en)                  ,
-            
-            .tm_clk_rst_dbg_rstn_sync_i         (tm_clk_rst_dbg_rstn_sync)                      ,
-            .tm_clk_rst_dbg_rstn_sync_en_i      (tm_clk_rst_dbg_rstn_sync_en)
+            .tm_clk_rst_prstn_sync_i            (tm_clk_rst_prstn_sync)                         ,
+            .tm_clk_rst_prstn_sync_en_i         (tm_clk_rst_prstn_sync_en)
 
 
 
                                                 )                                               ;
       
+
 
 
 //------------------------------------------DEBUG MODULE INSTANTIATION--------------------------------
@@ -1647,9 +1706,9 @@ top_clk_rst_ctrl                                #(
 debug_module		                            #(
 
             .PTE_START_ADDR                     (PTE_MIN_ADDRESS)                               ,
-            .PTE_END_ADDR                       (PTE_MAX_ADDRESS)                               ,
+            .PTE_END_ADDR                       (PTE1_MAX_ADDRESS)                              ,
             .IMEM_START_ADDR                    (INST_MEMORY_MIN_ADDRESS)                       ,
-            .IMEM_END_ADDR                      (INST_MEMORY_MAX_ADDRESS)                       ,
+            .IMEM_END_ADDR                      (INST_MEMORY1_MAX_ADDRESS)                      ,
             .DMEM_START_ADDR                    (DATA_MEMORY_MIN_ADDRESS)                       ,
             .DMEM_END_ADDR                      (DATA_MEMORY_MAX_ADDRESS)                       ,
             .PREBOOT_REG_START_ADDR             (PREBOOT_REG_START_ADDRESS)                     ,
@@ -1673,7 +1732,7 @@ debug_module		                            #(
 			
 //                      FROM THE CLK RST BYPASS MODULE
 
-			.dbg_clk				            (ctrl_bypass_debug_clk)                         ,
+			.dbg_clk				            (mem_debug_clk)                                 ,
 			.dbg_resetn				            (ctrl_bypass_debug_rstn)                        ,
             .boot_load_enable                   (boot_load_enable)                              ,
 
@@ -1744,11 +1803,17 @@ debug_module		                            #(
 			.pb_insn				            (debug_core_pb_instruction)                     ,
             .resumereq                          (debug_core_resume_req)                         ,
             .addr_core                          (debug_core_pc_addr)                            ,
+            .addr_core_core1                    (debug_core1_pc_addr)                           ,
 
-//                                  FROM THE CORE 
+//                                  FROM THE CORE0 
 
 			.hart_halted				        (core_debug_hart_halted)                        ,
 			.hart_reset				            (core_debug_hart_reset)                         ,
+
+//                                  FROM THE CORE1 
+
+			.hart_halted_core1				    (core1_debug_hart_halted)                       ,
+			.hart_reset_core1				    (core1_debug_hart_reset)                        ,
 
 //                                 TO THE CSR MODULE 
 
@@ -1760,6 +1825,7 @@ debug_module		                            #(
 			.dbg_reg_read				        (debug_csr_gpr_read_en)                         ,
 			.dbg_reg_addr				        (debug_csr_gpr_address)                         ,
             .haltreq                            (debug_core_csr_halt_request)                   ,
+            .haltreq_core1                      (debug_core1_csr_halt_request)                  ,
             .resethaltreq                       (debug_core_csr_reset_halt)                     ,
 
 //                      TO THE CLK AND RST CONTROLLER & INTERRUPT CONTROLLER MODULES
@@ -1771,6 +1837,11 @@ debug_module		                            #(
 			.dbg_reg_rdata				        (csr_gpr_debug_read_data)                       ,
 			.dbg_reg_ready				        (csr_gpr_debug_read_valid)                      ,
 
+//                      FROM THE GLUE LOGIC SELECT WHICH VALID AND DATA FROM CSR AND GPR
+
+			.dbg_reg_rdata_core1				(csr1_gpr_debug_read_data)                      ,
+			.dbg_reg_ready_core1				(csr1_gpr_debug_read_valid)                     ,
+
 //                          TO THE IP DEBUG TRACE MODULE
 
             .dbg_event_id                       (debug_ip_trace_event)                          ,
@@ -1780,554 +1851,436 @@ debug_module		                            #(
 
 
 
-//-----------------------------------------RISC V BASIC CORE INSTANTIATION---------------------------------------
 
 
 
+//----------------------------------------CORE 0 SUBSYSTEM TOP INSTATIATION--------------------------------
 
-rv32i_core 	    basic_isa_instance 			    (
 
 
-//                                  FROM THE CLK RST CONTROLLER MODULE
 
-    		.clk					            (core_clk)					                    ,
-    		.rst					            (core_rstn)					                    ,
+core_subsystem_top      #(
+    
 
-//      STALL SIGNAL TO CORE WHEN THE CORE REQUESTING DATA FROM MEMORIES STALL UNTIL CORE GETS VALID LOAD OR STORE
+            .INST_MEMORY_ADDR_WIDTH             (INST_MEMORY_ADDR_WIDTH)                        ,
+            .INST_MEMORY_MIN_ADDRESS            (INST_MEMORY_MIN_ADDRESS)                       ,
+            .INST_MEMORY_MAX_ADDRESS            (INST_MEMORY_MAX_ADDRESS)                       ,
+            .GPR_DEBUG_ADDRESS                  (CORE0_GPR_DEBUG_ADDRESS)                       ,
+            .CSR_DEBUG_ADDRESS                  (CORE0_CSR_DEBUG_ADDRESS)                       ,
+            .CORE_ID                            (CORE0_ID)                                      ,
+            .MTVECT_BASE_ADDRESS                (CORE0_MTVECT_BASE_ADDRESS)                     ,
+            .PTE_BASE_ADDRESS                   (PTE_MIN_ADDRESS)                               
 
-			.stall_by_mmu				        (stall_the_core_pipeline) 			            ,
 
-//                      FROM AXI SLAVE WRAPPER OF INSTRUCTION MEMORY MODULE AFTER GLUE LOGIC
+                                                )
 
-			.instruction				        (instruction_to_core) 				            ,
+            core_0_subsystem_top_instance       (
 
-//                          TO THE AXI INSTRUCTION MEMORY WRAPPER
 
-            .axi_inst_read_ready                (core_axi_inst_mem_rready)                      ,
+//                                      CORE CLK AND RST SIGNAL
 
-//                                  TO THE MMU MODULE
+            .core_clk                           (core_clk)                                      ,
+            .core_rstn                          (core_rstn)                                     ,
+            .memory_clk                         (mem_debug_clk)                                 ,
 
-     		.pc					                (core_mmu_inst_mem_virtual_address)		        ,
-   			.data_mem_address			        (core_mmu_data_mem_virtual_address) 		    ,  
-            .sfence_flush_o				        (mmu_tlb_flush) 				                ,
+//                                  TO THE AXI MASTER WRAPPER
 
-//                          TO THE MMU AND AXI MASTER WRAPPER MODULES
+            .core_axi_wstrobe                   (core_axi_wstrobe)                              ,
+            .mem_write_data_core                (mem_write_data_core)                           ,
+            .core_axi_awsize                    (core_axi_awsize)                               ,
+            .exception_flush                    (exception_flush)                               ,
+            .mmu_axi_physical_address_data_mem  (mmu_axi_physical_address_data_mem)             ,
+            .axi_data_mem_req_valid             (axi_data_mem_req_valid)                        ,
+            .core_mmu_axi_mem_write_en          (core_mmu_axi_mem_write_en)                     ,
+            .core_mmu_axi_mem_read_en           (core_mmu_axi_mem_read_en)                      ,
 
-			.mem_write_en				        (core_mmu_axi_mem_write_en) 			        ,
-			.mem_read_en				        (core_mmu_axi_mem_read_en) 			            ,
+//                                  FROM THE AXI MASTER WRAPPER
 
-//                              TO AXI MASTER WRAPPER SIGNALS MODULE
+            .axi_core_mem_read_data             (axi_core_mem_read_data)                        ,
+            .axi_core_rvalid                    (axi_core_rvalid)                               ,
+            .axi_core_rready                    (axi_core_rready)                               ,
+            .axi_core_rresp                     (axi_core_rresp)                                ,        
+            .axi_core_bvalid                    (axi_core_bvalid)                               ,
+            .axi_core_bready                    (axi_core_bready)                               ,
+            .axi_core_bresp                     (axi_core_bresp)                                ,
+            .req_data_mem_address_decode_error  (req_data_mem_address_decode_error)             ,
 
-			.byte_enable				        (core_axi_wstrobe) 				                ,
-			.mem_write_data				        (mem_write_data_core) 			                ,
-			.awsize					            (core_axi_awsize)			                    ,
-            .exception_flush_core_o             (exception_flush)                               ,
+//                                      TO THE WATCHDOG TIMER
 
-//                              FROM THE AXI MASTER WRAPPPER MODULE 
+            .core_watchdog_last_commited_pc     (core_watchdog_last_commited_pc)                ,
+            .core_watchdog_commit_valid         (core_watchdog_commit_valid)                    ,
 
-    		.data_from_mem				        (axi_core_mem_read_data) 		                ,
+//                              FROM THE DEBUG MODULE TO THE CORE AND CSR
 
-//                              TO THE WATCHDOG TIMER MODULE
+            .debug_core_pb_valid                (debug_core_pb_valid)                           ,
+            .debug_core_pb_instruction          (debug_core_pb_instruction)                     ,
+            .debug_csr_gpr_read_en              (debug_csr_gpr_read_en)                         ,
+            .debug_csr_gpr_address              (debug_csr_gpr_address)                         ,
+            .debug_core_csr_halt_request        (debug_core_csr_halt_request)                   ,
+            .debug_core_csr_reset_halt          (debug_core_csr_reset_halt)                     ,
+            .debug_core_resume_req              (debug_core_resume_req)                         ,
+            .debug_core_pc_addr                 (debug_core_pc_addr)                            ,
+            .debug_csr_write_data               (debug_csr_write_data)                          ,
+            .debug_csr_write_en                 (debug_csr_write_en)                            ,
 
-            .last_commited_pc                   (core_watchdog_last_commited_pc)                ,
-            .last_commit_pc_valid               (core_watchdog_commit_valid)                    ,
+//                                  TO THE CORE DEBUG TRACE IP
 
-//                                  FROM THE CSR MODULE             
-			                              
-            .csr_read_data_i			        (csr_core_read_data)			                ,
-            .mepc_i                             (csr_core_mepc)                                 ,
-            .dpc_i                              (csr_core_dpc)                                  ,
-            .csr_mtvec_i                        (csr_core_mtvec)                                ,
-            .mcause_id_i                        (csr_core_mcause)                               ,
-            .mie_i                              (csr_core_int_ctrl_mstatus_mie)                 ,
-
-//                                  TO THE CSR MODULE
-
-            .csr_read_en_o				        (core_csr_read_en)			                    ,
-            .csr_write_en_o				        (core_csr_write_en)		                        ,
-            .csr_addr_o				            (core_csr_addr)			                        ,
-            .csr_write_data_o			        (core_csr_write_data)		                    ,
-            .csr_set_bit_o				        (core_csr_set_bit)			                    ,
-            .csr_clear_bit_o			        (core_csr_clear_bit)		                    ,
-            .e_break_valid_o			        (core_csr_e_break_valid)		                ,
-            .mret_valid_o				        (core_csr_mret_valid)                           ,
-            .core_to_int_o                      (core_csr_mepc_in)                              ,
-            .csr_mcause_write_en_o              (core_csr_mcause_write_en)                      ,  
-            .csr_mstatus_mie_clear_o            (core_csr_mstatus_mie_clear)                    ,
-            .csr_mstatus_mie_set_o              (core_csr_mstatus_mie_set)                      ,  
-            .mepc_write_en_o                    (core_csr_mepc_write_en)                        ,
-            .interrupt_valid_o                  (core_csr_interrupt_valid)                      , 
-            .dpc_valid_out                      (core_csr_dpc_valid)                            ,
-            .dpc_out                            (core_csr_dpc)                                  ,
-            .exception_inst_o                   (core_csr_exception_inst)                       ,
-            .exception_inst_valid_o             (core_csr_exception_inst_valid)                 ,
-            .active_level_priority_o            (core_csr_active_level_priority)                ,
-            .trap_id_o                          (core_csr_trap_id)                              ,
-
-//                                  FROM THE DEBUG MODULE   
-
-            .pb_insn_valid_i                    (debug_core_pb_valid)                           ,
-            .pb_insn_i                          (debug_core_pb_instruction)                     ,
-            .dbg_reg_read_en_i                  (debug_csr_gpr_read_en)                         ,
-            .dbg_reg_read_addr_i                ({debug_csr_gpr_address[15:12],debug_csr_gpr_address[4:0]})     ,
-            .halt_req_i                         (debug_core_csr_halt_request)                   ,
-            .reset_halt_i                       (debug_core_csr_reset_halt)                     ,
-            .resume_req_i                       (debug_core_resume_req)                         ,
-            .first_pc_i                         (debug_core_pc_addr)                            ,
-
-//                                  TO THE DEBUG SIGNALS                             
-
-            .dbg_reg_read_data_o                (core_debug_read_data)                          ,
-            .dbg_reg_read_valid_o               (core_debug_read_valid)                         ,
-            .hart_halted_o                      (core_debug_hart_halted)                        ,
-            .hart_reset_o                       (core_debug_hart_reset)                         ,
-
-//              TO THE CSR, CLK RST CONTROLLER, AXI SLAVE WRAPPER OF INSTRUCTION MEMORY AND WATCHDOG TIMER
-            
-            .dbg_mode_o                         (debug_mode_en)                                 ,
-
-
-            .dbg_mode_axi_csr_o                 (core_inst_mem_csr_int_ctrl_debug_mode_en)      , 
-
-//                              FROM THE INTERRUPT CONTROLLER MODULE
-
-            .int_req_i                          (int_ctrl_core_interrupt_req)                   ,
-            .int_id_i                           (int_ctrl_core_current_int_id)                  ,
-            .active_level_priority_i            (int_ctrl_core_highest_pending_lvl_pr)          ,
-
-//                                  TO THE INTERRUPT CONTROLLER MODULE
-
-            .eoi_write_valid_o                  (core_int_ctrl_eoi_write_valid)                 ,      
-            .eoi_id_o                           (core_int_ctrl_eoi_id)                          ,
-
-//                                  TO THE CORE DEBUG TRACE MODULE
-
-            .it_type_o                          (core_debug_trace_itype)                        ,
-            .it_iaddr                           (core_debug_trace_iaddr)                        ,
-            .it_cause                           (core_debug_trace_cause)                        , 
-            .it_context                         (core_debug_trace_context)                      , 
-            .it_ienable_in                      (core_debug_trace_ienable)                      , 
-            .it_itype_valid                     (core_debug_trace_itype_valid)                  , 
-            .it_first_instrn_valid_in           (core_debug_trace_Ist_instrn_valid)             , 
-            .it_delta_addr                      (core_debug_trace_delta_addr)                   , 
-            .it_del_adr_valid                   (core_debug_trace_del_adr_valid)
-
-
-   						 		                )					                            ;
-
-
-
-//---------------------------------------INTERRUPT CONTROLLER INSTANTIATION----------------------------------
-
-
-
-
-soc_interrupt_control       interrupt_controller_instance       (
-
-
-//                      FROM THE CLK RST CONTROLLER MODULE
-
-            .soc_clk				            (core_clk)                                      ,
-            .soc_rst				            (core_rstn)                                     ,
-
-//                      FROM THE MMR APB WRAPPER MODULE
-
-            .soc_mmr_write_en_i		            (mmr_int_ctrl_write_en)                         ,
-            .soc_mmr_write_addr_i	            (mmr_int_ctrl_write_addr)                       ,
-            .soc_mmr_write_data_i	            (mmr_int_ctrl_write_data)                       ,
-            .soc_mmr_read_en_i		            (mmr_int_ctrl_read_en)                          ,
-            .soc_mmr_read_addr_i		        (mmr_int_ctrl_read_addr)                        ,
-
-//                      TO THE MMR APB WRAPPER MODULE
-
-            .soc_mmr_read_data_o		        (int_ctrl_mmr_read_data)                        ,
-            .soc_read_rsp_o                     (int_ctrl_mmr_read_resp)                        ,
-
-//                              FROM THE CORE
-
-            .soc_eoi_valid_i			        (core_int_ctrl_eoi_write_valid)                 ,
-            .soc_eoi_id_i			            (core_int_ctrl_eoi_id)                          ,
-            .debug_mode_valid_i                 (core_inst_mem_csr_int_ctrl_debug_mode_en)      ,
-              
-//                          INTERNAL EXCEPTIONS AND FAULTS
-
-            .ext_int0_i			                (wdt_reset)                                     ,	  
-            .ext_int1_i			                (mmu_ptw_timeout)                               ,	  
-            .ext_int2_i			                (mem_page_fault)                                ,	  
-            .ext_int3_i			                (mem_read_permission_fault)                     ,	  
-            .ext_int4_i			                (mem_write_permission_fault)                    ,	  
-            .ext_int5_i			                (req_data_mem_address_decode_error)             ,	  
-            .ext_int6_i			                (data_mem_addr_slverr)                          ,	  
-            .ext_int7_i			                (inst_page_fault)                               ,	  
-            .ext_int8_i			                (instruction_execute_permission_fault)          ,	  
-            .ext_int9_i			                (inst_mem_addr_decode_error)                    ,
-
-//                          EXTERNAL INTERRUPT FROM THE GPIO PINMUX
-
-            .ext_int10_i			            (gpio_int_ctrl_irq[0])                          ,	  
-            .ext_int11_i			            (gpio_int_ctrl_irq[1])                          ,	  
-            .ext_int12_i			            (gpio_int_ctrl_irq[2])                          ,	  
-            .ext_int13_i			            (gpio_int_ctrl_irq[3])                          ,	  
-            .ext_int14_i			            (gpio_int_ctrl_irq[4])                          ,	  
-            .ext_int15_i			            (gpio_int_ctrl_irq[5])                          ,
-
-//                                      TO THE CORE 
-
-            .interrupt_request_o		        (int_ctrl_core_interrupt_req)                   ,
-            .current_int_id_o                   (int_ctrl_core_current_int_id)                  ,
-            .highest_pending_lvl_pr_o	        (int_ctrl_core_highest_pending_lvl_pr)          ,
-
-//                                      TO THE CSR MODULE
-
-            .active_lvl_pr_i			        (csr_int_ctrl_active_lvl_pr)                    ,
-            .global_int_enable_valid_i	        (csr_core_int_ctrl_mstatus_mie)                 ,
-            .global_int_enable_bit_i	        (csr_int_ctrl_global_int_enable_bit)            ,       
-
-//                                      TO THE IP DEBUG TRACE MODULE
-
-            .trace_data_int_o                   (int_ctrl_ip_trace_data)                        ,
-            .trace_event_int_o                  (int_ctrl_ip_trace_event)                       
-
-                                  
-
-                                                )                                               ;                                                
-
-
-
-//-------------------------------------------CSR MODULE INSTANTIATION-----------------------------------------
-
-
-
-
-soc_csr_top 		 					        #(
-
-
-			.CSR_ADDR_WIDTH				        (CSR_ADDR_WIDTH)			                    ,
-			.DATA_WIDTH				            (CSR_DATA_WIDTH)			                    ,
-			.INSTRUCTION_WIDTH			        (CSR_INSTRUCTION_WIDTH)			                ,
-			.PC_WIDTH				            (CSR_PC_WIDTH)
-
-								                )
-
-			csr_top_instance			        (
-
-//                              FROM THE CLK RST CONTROLLER MODULE
-
-           .csr_clk				                (core_clk) 					                    ,
-           .csr_rstn				            (core_rstn)					                    ,
-
-//                                      TO THE CORE MODULE
-
-           .csr_read_data_o			            (csr_core_read_data)			                ,
-           .csr_mepc_o				            (csr_core_mepc)		                            ,
-           .csr_mtvec_o				            (csr_core_mtvec)		                        ,
-           .csr_mcause_o				        (csr_core_mcause)		                        ,
-           .dpc_o					            (csr_core_dpc)		                            ,
-
-//                                  TO THE CORE & INTERRUPT CONTROLLER MODULES
-
-           .mstatus_mie_o				        (csr_core_int_ctrl_mstatus_mie)		            ,
-
-//                                  FROM THE CORE MODULE
-
-           .csr_write_en_in			            (core_csr_write_en)		                        ,   		
-           .csr_addr_in				            (core_csr_addr)			                        ,
-           .csr_read_en_in				        (core_csr_read_en)			                    ,
-           .csr_write_data_in			        (core_csr_write_data)		                    ,		
-           .csr_set_bit_in				        (core_csr_set_bit)			                    ,		
-           .csr_clear_bit_in			        (core_csr_clear_bit)		                    ,
-           .csr_mepc_in				            (core_csr_mepc_in)		                        ,
-           .mret_valid_i				        (core_csr_mret_valid) 			                ,
-           .ebreak_valid_i				        (core_csr_e_break_valid)		                ,
-           .dbg_mode_valid_i			        (core_inst_mem_csr_int_ctrl_debug_mode_en)      ,      
-           .interrupt_valid_in			        (core_csr_interrupt_valid) 		                ,	
-           .mie_set				                (core_csr_mstatus_mie_set)		                ,	
-           .mie_clear				            (core_csr_mstatus_mie_clear)		            ,	
-           .csr_mepc_write_valid			    (core_csr_mepc_write_en) 		                ,
-           .interrupt_id_write_valid_i		    (core_csr_mcause_write_en)		                ,
-           .dpc_valid_i                         (core_csr_dpc_valid)                            ,
-           .dpc_i                               (core_csr_dpc)                                  ,
-           .mtval_i                             (core_csr_exception_inst)                       ,
-           .mtval_write_valid                   (core_csr_exception_inst_valid)                 ,
-           .interrupt_code_in			        (core_csr_trap_id)	                            ,
-           .interrupt_lvl_pr_i			        (core_csr_active_level_priority)		        ,
-
-//                                      TO THE MMU MODULE
-
-           .satp_mode_o				            (mmu_enable)				                    ,
-           .satp_asid_o				            (csr_mmu_current_asid)				            ,
-           .satp_ppn_o				            (csr_mmu_base_ppn)				                ,
-
-//                                      FROM THE DEBUG MODULE 
-
-           .dbg_mode_write_en_i			        (debug_csr_write_en)					        ,    
-           .dbg_mode_write_data_i			    (debug_csr_write_data)					        ,
-           .dbg_mode_csr_addr_i			        (debug_csr_gpr_address)					        ,
-           .dbg_mode_read_en_i			        (debug_csr_gpr_read_en)					        ,
-           .reset_haltreq_valid_i			    (debug_core_csr_reset_halt)		                ,
-           .haltreq_valid_i			            (debug_core_csr_halt_request)		            ,
-
-//                                  TO THE DEBUG MODULE
-                                 
-           .dbg_mode_read_data_o			    (csr_debug_read_data)					        ,
-           .dbg_csr_read_valid_o			    (csr_debug_read_valid)					        ,
-
-
-//                              TO THE INTERRUPT CONTROLLER MODULE
-
-            .int_active_level_priority_o	    (csr_int_ctrl_active_lvl_pr)	                ,
-            .mie_to_int_ctrl_o                  (csr_int_ctrl_global_int_enable_bit)            ,
-
-
-//                              TO THE CORE TRACE UNIT
-
-            .mtval_o                            (csr_debug_trace_tval)                         
-
-
-								                )					                            ;
-
-
-
-//----------------------------------------------MMU INSTANTIATION-----------------------------------------------
-
-
-
-
-mmu_core 		 					            #(
-
-
-			.VPN_WIDTH				            (MMU_VPN_WIDTH)				                    ,
-			.PPN_WIDTH				            (MMU_PPN_WIDTH)				                    ,
-			.ASID_WIDTH				            (MMU_ASID_WIDTH)			                    ,
-			.ACCESS_WIDTH				        (MMU_ACCESS_WIDTH)			                    ,
-			.L1_ENTRIES				            (MMU_L1_ENTRIES)			                    ,
-			.L2_ENTRIES				            (MMU_L2_ENTRIES)			
-
-								                )
-
-			mmu_instance				        (
-
-//                              FROM THE CLK RST CONTROLLER MODULE
-
-			.clk					            (core_clk) 					                    ,
-			.rst_n					            (core_rstn) 					                ,
-
-//				                FROM THE CSR MODULE 
-
-			.pt_base_ppn				        (csr_mmu_base_ppn) 				                ,
-			.mmu_enable				            (mmu_enable) 				                    ,
-			.current_asid				        (csr_mmu_current_asid) 				            ,
-
-//                              FROM THE TOP REGISTER MODULE
-
-			.prefetch_enable			        (mmu_prefetch_enable)                           ,
-			.ptw_timeout_enable			        (mmu_ptw_timeout_enable)		                ,
-
-//					            FROM THE CORE MODULE
-
-			.mem_read_en				        (core_mmu_axi_mem_read_en) 			            ,
-			.mem_write_en				        (core_mmu_axi_mem_write_en) 			        ,
-			.tlb_flush				            (mmu_tlb_flush)      				            ,
-            .timeout_flush                      (exception_flush)                               ,
-			.i_if_vpn				            (core_mmu_inst_mem_virtual_address[31:12]) 	    ,
-			.i_mem_vpn				            (core_mmu_data_mem_virtual_address[31:12]) 	    ,
-
-//                          TO THE AXI SLAVE WRAPPPER OF INSTRUCTION MEMORY MODULE
-
-			.o_if_ppn				            (mmu_ppn_inst_mem_address) 			            ,
-			.o_if_hit				            (mmu_instruction_hit) 			                ,
-
-//                          TO THE AXI MASTER WRAPPER MODULE
-
-			.o_mem_ppn				            (mmu_ppn_data_mem_address) 			            ,
-
-//                  USED FOR GLUE LOIC OF ARVALID SIGNAL FOR THE AXI MASTER WRAPPER MODULE
-
-			.o_mem_hit				            (mmu_data_memory_hit) 			                ,
-
-//                      USED FOR GLUE LOGIC TO GIVE NEW REQUST FOR MMU
-
-			.o_mmu_busy				            (mmu_busy)		                                ,
-
-//                            TAKEN FROM THE GLUE LOGIC
-
-			.inst_vpn_req				        (core_mmu_inst_req)				                ,
-
-
-//				                TO THE PTE MEMORY WRAPPER MODULE
-				
-			.pte_req_valid				        (mmu_pte_req_valid) 		                    ,
-			.pte_req_addr				        (mmu_pte_req_address)		                    ,
-
-//                              FROM THE PTE MEMORY WRAPPER MODULE
-
-			.mem_resp_valid				        (pte_mmu_resp_valid) 		                    ,
-			.mem_resp_ppn				        (pte_mmu_read_data[23:4]) 		                ,
-			.mem_resp_validbit			        (pte_mmu_read_data[0]) 		                    ,
-			.mem_resp_access			        (pte_mmu_read_data[3:1])		                ,
-			
-//					    TO THE TOP REGISTER MODULE & INTERRUPT CONTROLLER
-	
-			.ptw_timeout_event			        (mmu_ptw_timeout)		                        ,
-			.inst_execute_permission_fault		(instruction_execute_permission_fault) 	        ,
-			.mem_read_permission_fault		    (mem_read_permission_fault) 		            ,
-			.mem_write_permission_fault		    (mem_write_permission_fault)		            ,
-			.inst_page_fault			        (inst_page_fault)			                    ,
-			.mem_page_fault				        (mem_page_fault)                                ,
-
-//                                  TO THE IP DEBUG TRACE MODULE
-
-            .mmu_debug_event                    (mmu_ip_trace_event)                            ,
-            .mmu_debug_data                     (mmu_ip_trace_data)     
-
-
-								                )                                               ;
-
- 
-
-//------------------------------------------PAGE TABLE MEMORY INSTANTIATION---------------------------------------
-
-
-
-
-pte_wrapper     pte_wrapper_instance            (
-
-
-//                              FROM THE CLK RST CONTROLLER MODULE
-
-            .clk                                (core_clk)                                      ,
-            .rst_n                              (core_rstn)                                    ,
-
-//                              FROM THE DEBUG MODULE                              
-  
-            .dbg_valid                          (debug_pte_valid_in)                            ,
-            .dbg_addr                           (debug_pte_address)                             ,
-            .dbg_write_en                       (debug_pte_write_en)                            ,
-            .dbg_wdata                          (debug_pte_write_data)                          ,
-            .dbg_read_en                        (debug_pte_read_en)                             ,
+            .core_debug_trace_itype             (core_debug_trace_itype)                        ,         
+            .core_debug_trace_iaddr             (core_debug_trace_iaddr)                        ,        
+            .core_debug_trace_cause             (core_debug_trace_cause)                        ,         
+            .core_debug_trace_context           (core_debug_trace_context)                      ,       
+            .core_debug_trace_ienable           (core_debug_trace_ienable)                      ,       
+            .core_debug_trace_itype_valid       (core_debug_trace_itype_valid)                  ,   
+            .core_debug_trace_Ist_instrn_valid  (core_debug_trace_Ist_instrn_valid)             ,
+            .core_debug_trace_delta_addr        (core_debug_trace_delta_addr)                   ,    
+            .core_debug_trace_del_adr_valid     (core_debug_trace_del_adr_valid)                ,
+            .csr_debug_trace_tval               (csr_debug_trace_tval)                          ,
 
 //                                  TO THE DEBUG MODULE
 
-            .dbg_write_resp                     (pte_debug_write_resp)                          ,
-            .dbg_write_valid                    (pte_debug_write_valid)                         ,
-            .dbg_rdata                          (pte_debug_read_data)                           ,
-            .dbg_read_resp                      (pte_debug_read_resp)                           ,
-            .dbg_read_valid                     (pte_debug_read_valid)                          ,
+            .core_debug_hart_reset              (core_debug_hart_reset)                         ,
+            .core_debug_hart_halted             (core_debug_hart_halted)                        ,
+            .csr_gpr_debug_read_data            (csr_gpr_debug_read_data)                       ,
+            .csr_gpr_debug_read_valid           (csr_gpr_debug_read_valid)                      ,
 
-//                                  FROM THE MMU MODULE
+//                              TO AXI MASTER AND WATCHDOG TIMER
 
-            .ptw_req_valid                      (mmu_pte_req_valid)                             ,
-            .ptw_req_addr                       (mmu_pte_req_address)                           ,
+            .debug_mode_en                      (core_debug_mode_en)                            ,
 
-//                                  TO THE MMU MODULE
+//                                  FROM THE MMR REGISTER
 
-            .ptw_rdata                          (pte_mmu_read_data)                             ,
-            .ptw_resp_valid                     (pte_mmu_resp_valid)                            
+            .mmr_int_ctrl_read_addr             (mmr_int_ctrl_read_addr)                        ,
+            .mmr_int_ctrl_write_en              (mmr_int_ctrl_write_en)                         ,
+            .mmr_int_ctrl_write_addr            (mmr_int_ctrl_write_addr)                       ,
+            .mmr_int_ctrl_write_data            (mmr_int_ctrl_write_data)                       ,
+            .mmr_int_ctrl_read_en               (mmr_int_ctrl_read_en)                          ,
+
+//                                  TO THE MMR REGISTER
+
+            .int_ctrl_mmr_read_resp             (int_ctrl_mmr_read_resp)                        ,
+            .int_ctrl_mmr_read_data             (int_ctrl_mmr_read_data)                        ,
+
+//                              FROM THE WATCHDOG TIMER
+
+            .wdt_reset                          (wdt_reset)                                     ,
+
+//                                  FROM THE GPIO PINMUX
+
+            .gpio_int_ctrl_irq                  (gpio_int_ctrl_irq)                             ,
+
+//                              TO THE IP DEBUG TRACE UNIT
+
+            .int_ctrl_ip_trace_data             (int_ctrl_ip_trace_data)                        ,
+            .int_ctrl_ip_trace_event            (int_ctrl_ip_trace_event)                       , 
+            .mmu_ip_trace_data                  (mmu_ip_trace_data)                             ,
+            .mmu_ip_trace_event                 (mmu_ip_trace_event)                            ,
+
+//                                  FROM THE TOP REGISTER
+
+            .mmu_prefetch_enable                (mmu_prefetch_enable)                           ,
+            .mmu_ptw_timeout_enable             (mmu_ptw_timeout_enable)                        ,
+
+//                          FROM THE DEBUG MODULE TO THE PTE WRAPPER
+
+            .debug_pte_valid_in                 (debug_pte0_valid_in)                           ,    
+            .debug_pte_address                  (debug_pte_address)                             ,
+            .debug_pte_write_en                 (debug_pte_write_en)                            ,
+            .debug_pte_write_data               (debug_pte_write_data)                          ,
+            .debug_pte_read_en                  (debug_pte_read_en)                             ,
+
+//                          TO THE DEBUG MODULE FROM PTE WRAPPER
+
+            .pte_debug_write_resp               (pte0_debug_write_resp)                         ,
+            .pte_debug_write_valid              (pte0_debug_write_valid)                        ,
+            .pte_debug_read_data                (pte0_debug_read_data)                          , 
+            .pte_debug_read_resp                (pte0_debug_read_resp)                          ,
+            .pte_debug_read_valid               (pte0_debug_read_valid)                         ,
+
+//------------------------FROM THE AXI MASTER WRAPPER--------------------
+
+//                              WRITE ADDRESS CHANNEL
+
+            .debug_axi_inst_mem_awaddr          (debug_axi_inst_mem_awaddr)                     ,
+            .debug_axi_inst_mem_awvalid         (debug_axi_inst_mem_awvalid)                    ,
+            .axi_inst_mem_debug_awready         (axi_inst_mem_debug_awready)                    ,
+
+//                              WRITE DATA CHANNEL
+
+            .debug_axi_inst_mem_wdata           (debug_axi_inst_mem_wdata)                      ,
+            .debug_axi_inst_mem_wstrb           (debug_axi_inst_mem_wstrb)                      ,
+            .debug_axi_inst_mem_wvalid          (debug_axi_inst_mem_wvalid)                     ,
+            .inst_mem_debug_axi_wready          (inst_mem_debug_axi_wready)                     ,
+        
+//                              WRITE RESPONSE CHANNEL
+
+            .inst_mem_debug_axi_bresp           (inst_mem_debug_axi_bresp)                      ,
+            .inst_mem_debug_axi_bvalid          (inst_mem_debug_axi_bvalid)                     ,
+            .debug_axi_inst_mem_bready          (debug_axi_inst_mem_bready)                     ,
+
+//                              READ ADDRESS CHANNEL
+
+            .debug_axi_inst_mem_araddr          (debug_axi_inst_mem_araddr)                     ,
+            .debug_axi_inst_mem_arvalid         (debug_axi_inst_mem_arvalid)                    ,
+            .inst_mem_debug_axi_arready         (inst_mem_debug_axi_arready)                    ,
+    
+//                              READ DATA CHANNEL
+
+            .inst_mem_debug_axi_rdata           (inst_mem_debug_axi_rdata)                      ,
+            .inst_mem_debug_axi_rresp           (inst_mem_debug_axi_rresp)                      ,
+            .debug_axi_inst_mem_rready          (debug_axi_inst_mem_rready)                     ,
+            .inst_mem_debug_axi_rvalid          (inst_mem_debug_axi_rvalid)                     ,
+
+//------------------------------------------------------------------------------------------------------
+
+//                                  FROM THE CLK RST BYPASS MODULE
+
+            .boot_load_enable                   (boot_load_enable)                              ,
+
+//                          FROM THE DEBUG MODULE TO THE INST MEM WHILE BOOTING
+
+            .debug_inst_mem_req_valid           (debug_inst_mem0_req_valid)                     ,
+            .debug_inst_mem_write_en            (debug_inst_mem_write_en)                       ,
+            .debug_inst_mem_address_in          (debug_inst_mem_address_in)                     ,
+            .debug_inst_mem_write_data          (debug_inst_mem_write_data)                     ,
+
+//                          TO THE DEBUG MODULE FROM INST MEMORY WHILE BOOTING
+
+            .inst_mem_debug_read_data           (inst_mem0_debug_read_data)                     ,
+
+//                                  TO THE TOP REGISTER
+
+            .reg_physical_address_inst_mem      (reg_physical_address_inst_mem)                 ,
+            .reg_physical_address_data_mem      (reg_physical_address_data_mem)                 ,
+            .reg_mmu_timeout                    (reg_mmu_timeout)                               ,
+            .reg_data_memory_page_fault         (reg_data_memory_page_fault)                    ,
+            .reg_data_memory_read_permission_fault  (reg_data_memory_read_permission_fault)     ,
+            .reg_data_memory_write_permission_fault (reg_data_memory_write_permission_fault)    ,
+            .reg_data_memory_addr_decode_error  (reg_data_memory_addr_decode_error)             ,
+            .reg_data_memory_read_slave_error   (reg_data_memory_read_slave_error)              ,
+            .reg_data_memory_write_slave_error  (reg_data_memory_write_slave_error)             ,
+            .reg_instruction_page_fault         (reg_instruction_page_fault)                    ,
+            .reg_inst_execution_fault           (reg_inst_execution_fault)                      ,
+            .reg_inst_addr_decode_error         (reg_inst_addr_decode_error)           
+
 
                                                 )                                               ;
 
 
 
-//---------------------------------------AXI SLAVE WRAPPER WITH DATA MEMORY INSTANTIATION----------------------------
+
+//----------------------------------------CORE 1 SUBSYSTEMS TOP INSTANTIATION---------------------------------
 
 
 
 
-axi_instmem_wrapper						        #(
+core_subsystem_top                              #(
+    
 
-			.INST_MEMORY_ADDR_WIDTH				(INST_MEMORY_ADDR_WIDTH)	
+            .INST_MEMORY_ADDR_WIDTH             (INST_MEMORY_ADDR_WIDTH)                        ,
+            .INST_MEMORY_MIN_ADDRESS            (INST_MEMORY1_MIN_ADDRESS)                      ,
+            .INST_MEMORY_MAX_ADDRESS            (INST_MEMORY1_MAX_ADDRESS)                      ,
+            .GPR_DEBUG_ADDRESS                  (CORE1_GPR_DEBUG_ADDRESS)                       ,
+            .CSR_DEBUG_ADDRESS                  (CORE1_CSR_DEBUG_ADDRESS)                       ,
+            .CORE_ID                            (CORE1_ID)                                      ,
+            .MTVECT_BASE_ADDRESS                (CORE1_MTVECT_BASE_ADDRESS)                     , 
+            .PTE_BASE_ADDRESS                   (PTE1_MIN_ADDRESS)
 
-								                )
-		
+                                                )
 
-			axi_slave_wrapper_inst_mem_instance	(
-
-//                          CLOCK SIGNAL FROM THE CLK RST BYPASS MODULE
-
-			.ACLK					            (memory_clk)					                ,
-
-//                          RESET FROM THE CLK RST CONTROLLER MODULE
-
-			.ARESETN				            (core_rstn)					                    ,
-
-//                              FROM THE CORE 
-
-			.debug_mode_en				        (core_inst_mem_csr_int_ctrl_debug_mode_en)       ,
+            core_1_subsystem_top_instance       (
 
 
-//------------------------------------------AXI MASTER INTERFACE---------------------------------
+//                              CORE CLK AND RST SIGNAL
+
+            .core_clk                           (core_clk)                                      ,
+            .core_rstn                          (core1_rstn)                                    ,
+            .memory_clk                         (mem_debug_clk)                                 ,
+
+//                                  TO THE AXI MASTER WRAPPER
+
+            .core_axi_wstrobe                   (core1_axi_wstrobe)                             ,
+            .mem_write_data_core                (mem_write_data_core1)                          ,
+            .core_axi_awsize                    (core1_axi_awsize)                              ,
+            .exception_flush                    (exception_flush1)                              ,
+            .mmu_axi_physical_address_data_mem  (mmu1_axi_physical_address_data_mem)            ,
+            .axi_data_mem_req_valid             (axi1_data_mem_req_valid)                       ,
+            .core_mmu_axi_mem_write_en          (core1_mmu_axi_mem_write_en)                    ,
+            .core_mmu_axi_mem_read_en           (core1_mmu_axi_mem_read_en)                     ,
 
 
-//	            		            WRITE ADDRESS CHANNEL
+//                                  FROM THE AXI MASTER WRAPPER
 
-			.AWADDR					            (debug_axi_inst_mem_awaddr)			            ,
-			.AWVALID				            (debug_axi_inst_mem_awvalid)		            ,
-			.AWREADY				            (debug_axi_inst_mem_awready)		            ,
-			
-//			                        WRITE DATA CHANNEL
+            .axi_core_mem_read_data             (axi_core1_mem_read_data)                       ,
+            .axi_core_rvalid                    (axi_core1_rvalid)                              ,
+            .axi_core_rready                    (axi_core1_rready)                              ,
+            .axi_core_rresp                     (axi_core1_rresp)                               ,        
+            .axi_core_bvalid                    (axi_core1_bvalid)                              ,
+            .axi_core_bready                    (axi_core1_bready)                              ,
+            .axi_core_bresp                     (axi_core1_bresp)                               ,
+            .req_data_mem_address_decode_error  (req1_data_mem_address_decode_error)            ,
 
-			.WDATA					            (inst_mem_debug_axi_wdata)			            ,
-			.WSTRB					            (debug_axi_inst_mem_wstrb)			            ,
-			.WVALID					            (inst_mem_debug_axi_wvalid)			            ,
-			.WREADY					            (debug_axi_inst_mem_wready)			            ,
-			
-//		            	            WRITE RESPONSE CHANNEL
+//                                  TO THE WATCHDOG TIMER
 
-			.BRESP					            (inst_mem_debug_axi_bresp)			            ,
-			.BVALID					            (inst_mem_debug_axi_bvalid)			            ,
-			.BREADY					            (debug_axi_inst_mem_bready)			            ,
-			
-//	            		            READ ADDRESS CHANNEL
+            .core_watchdog_last_commited_pc     (core1_watchdog_last_commited_pc)               ,
+            .core_watchdog_commit_valid         (core1_watchdog_commit_valid)                   ,
 
-			.debug_ARADDR				        (debug_axi_inst_mem_araddr)			            ,
-			.debug_ARVALID				        (debug_axi_inst_mem_arvalid)		            ,
-			.debug_ARREADY				        (inst_mem_debug_axi_arready)		            ,
-			
-//	            		            READ DATA CHANNEL
+//                          FROM THE DEBUG MODULE TO THE CORE AND CSR
 
-			.debug_RDATA				        (inst_mem_debug_axi_rdata)			            ,
-			.debug_RRESP				        (inst_mem_debug_axi_rresp)			            ,
-			.debug_RVALID				        (inst_mem_debug_axi_rvalid)			            ,
-			.debug_RREADY				        (debug_axi_inst_mem_rready)			            ,
+            .debug_core_pb_valid                (debug_core_pb_valid)                           ,
+            .debug_core_pb_instruction          (debug_core_pb_instruction)                     ,
+            .debug_csr_gpr_read_en              (debug_csr_gpr_read_en)                         ,
+            .debug_csr_gpr_address              (debug_csr_gpr_address)                         ,
+            .debug_core_csr_halt_request        (debug_core1_csr_halt_request)                  ,
+            .debug_core_csr_reset_halt          (debug_core_csr_reset_halt)                     ,
+            .debug_core_resume_req              (debug_core_resume_req)                         ,
+            .debug_core_pc_addr                 (debug_core1_pc_addr)                           ,
+            .debug_csr_write_data               (debug_csr_write_data)                          ,
+            .debug_csr_write_en                 (debug_csr_write_en)                            ,
 
-//----------------------------------------------------------------------------------------------------
+//                              TO THE CORE DEBUG TRACE IP
 
-
-//------------------------------CORE READ ONLY INTERFACES----------------------------------------------
-
-//	                                READ ADDRESS CHANNEL		                    
-
-			.core_ARADDR				        (mmu_axi_physical_address_inst_mem)	            ,
-			.core_ARVALID				        (inst_mem_req_valid)			                ,
-			.core_ARREADY				        (inst_mem_core_axi_arready)			            ,
-			
-//			                        READ DATA CHANNEL
-
-			.core_RDATA				            (instruction_from_mem)			                ,
-			.core_RRESP				            (inst_mem_core_axi_rresp)			            ,
-			.core_RVALID				        (inst_mem_core_axi_rvalid)			            ,
-			.core_RREADY				        (core_axi_inst_mem_rready)		                ,
-
-//---------------------------------------------------------------------------------------------------------
-
-//                              FROM THE CLK RST BYASS MODULE
-
-            .boot_en                            (boot_load_enable)                              ,
-
-//                              FROM THE DEBUG MODULE       
-
-            .imem_boot_valid                    (debug_inst_mem_req_valid)                      ,
-            .imem_boot_we                       (debug_inst_mem_write_en)                       ,
-            .imem_boot_addr                     (debug_inst_mem_address_in)                     ,
-            .imem_boot_wr_data                  (debug_inst_mem_write_data)                     ,
+            .core_debug_trace_itype             (core1_debug_trace_itype)                       ,         
+            .core_debug_trace_iaddr             (core1_debug_trace_iaddr)                       ,        
+            .core_debug_trace_cause             (core1_debug_trace_cause)                       ,         
+            .core_debug_trace_context           (core1_debug_trace_context)                     ,       
+            .core_debug_trace_ienable           (core1_debug_trace_ienable)                     ,       
+            .core_debug_trace_itype_valid       (core1_debug_trace_itype_valid)                 ,   
+            .core_debug_trace_Ist_instrn_valid  (core1_debug_trace_Ist_instrn_valid)            ,
+            .core_debug_trace_delta_addr        (core1_debug_trace_delta_addr)                  ,    
+            .core_debug_trace_del_adr_valid     (core1_debug_trace_del_adr_valid)               ,
+            .csr_debug_trace_tval               (csr1_debug_trace_tval)                         ,
 
 //                                  TO THE DEBUG MODULE
 
-            .imem_boot_rdata                    (inst_mem_debug_read_data)
+            .core_debug_hart_reset              (core1_debug_hart_reset )                       ,
+            .core_debug_hart_halted             (core1_debug_hart_halted )                      ,
+            .csr_gpr_debug_read_data            (csr1_gpr_debug_read_data)                      ,
+            .csr_gpr_debug_read_valid           (csr1_gpr_debug_read_valid)                     ,
+
+//                              TO AXI MASTER AND WATCHDOG TIMER
+
+            .debug_mode_en                      (core1_debug_mode_en)                           ,
+
+//                                  FROM THE MMR REGISTER
+
+            .mmr_int_ctrl_read_addr             (mmr_int_ctrl1_read_addr)                       ,
+            .mmr_int_ctrl_write_en              (mmr_int_ctrl1_write_en)                        ,
+            .mmr_int_ctrl_write_addr            (mmr_int_ctrl1_write_addr)                      ,
+            .mmr_int_ctrl_write_data            (mmr_int_ctrl1_write_data)                      ,
+            .mmr_int_ctrl_read_en               (mmr_int_ctrl1_read_en)                         ,
+
+//                                  TO THE MMR REGISTER
+
+            .int_ctrl_mmr_read_resp             (int_ctrl_mmr1_read_resp)                       ,
+            .int_ctrl_mmr_read_data             (int_ctrl_mmr1_read_data)                       ,
+
+//                                  FROM THE WATCHDOG TIMER
+
+            .wdt_reset                          (wdt1_reset)                                    ,
+
+//                                  FROM THE GPIO PINMUX
+
+            .gpio_int_ctrl_irq                  (gpio_int_ctrl1_irq)                            ,
+    
+
+//                                  TO THE IP DEBUG TRACE UNIT
+
+            .int_ctrl_ip_trace_data             (int_ctrl1_ip_trace_data)                       ,
+            .int_ctrl_ip_trace_event            (int_ctrl1_ip_trace_event)                      , 
+            .mmu_ip_trace_data                  (mmu1_ip_trace_data)                            ,
+            .mmu_ip_trace_event                 (mmu1_ip_trace_event)                           ,
+
+//                                  FROM THE TOP REGISTER
+
+            .mmu_prefetch_enable                (mmu1_prefetch_enable)                          ,
+            .mmu_ptw_timeout_enable             (mmu1_ptw_timeout_enable)                       ,
+
+//                              FROM THE DEBUG MODULE TO THE PTE WRAPPER
+
+            .debug_pte_valid_in                 (debug_pte1_valid_in)                           ,
+            .debug_pte_address                  (debug_pte_address)                             ,
+            .debug_pte_write_en                 (debug_pte_write_en)                            ,
+            .debug_pte_write_data               (debug_pte_write_data)                          ,
+            .debug_pte_read_en                  (debug_pte_read_en)                             ,
+
+//                              TO THE DEBUG MODULE FROM PTE WRAPPER
+
+            .pte_debug_write_resp               (pte1_debug_write_resp)                         ,   
+            .pte_debug_write_valid              (pte1_debug_write_valid)                        ,
+            .pte_debug_read_data                (pte1_debug_read_data)                          , 
+            .pte_debug_read_resp                (pte1_debug_read_resp)                          ,
+            .pte_debug_read_valid               (pte1_debug_read_valid)                         ,
+
+//------------------------FROM THE AXI MASTER WRAPPER--------------------
+
+//                                  WRITE ADDRESS CHANNEL
+
+            .debug_axi_inst_mem_awaddr          (debug_axi_inst_mem1_awaddr)                    ,
+            .debug_axi_inst_mem_awvalid         (debug_axi_inst_mem1_awvalid)                   ,
+            .axi_inst_mem_debug_awready         (axi_inst_mem1_debug_awready)                   ,
+
+//                                  WRITE DATA CHANNEL
+
+            .debug_axi_inst_mem_wdata           (debug_axi_inst_mem1_wdata)                     ,
+            .debug_axi_inst_mem_wstrb           (debug_axi_inst_mem1_wstrb)                     ,
+            .debug_axi_inst_mem_wvalid          (debug_axi_inst_mem1_wvalid)                    ,
+            .inst_mem_debug_axi_wready          (inst_mem1_debug_axi_wready)                    ,
+        
+//                                  WRITE RESPONSE CHANNEL
+
+            .inst_mem_debug_axi_bresp           (inst_mem1_debug_axi_bresp)                     ,
+            .inst_mem_debug_axi_bvalid          (inst_mem1_debug_axi_bvalid)                    ,
+            .debug_axi_inst_mem_bready          (debug_axi_inst_mem1_bready)                    ,
+
+//                                  READ ADDRESS CHANNEL
+
+            .debug_axi_inst_mem_araddr          (debug_axi_inst_mem1_araddr)                    ,
+            .debug_axi_inst_mem_arvalid         (debug_axi_inst_mem1_arvalid)                   ,
+            .inst_mem_debug_axi_arready         (inst_mem1_debug_axi_arready)                   ,
+
+//                                      READ DATA CHANNEL
+
+            .inst_mem_debug_axi_rdata           (inst_mem1_debug_axi_rdata)                     ,
+            .inst_mem_debug_axi_rresp           (inst_mem1_debug_axi_rresp)                     ,
+            .debug_axi_inst_mem_rready          (debug_axi_inst_mem1_rready)                    ,
+            .inst_mem_debug_axi_rvalid          (inst_mem1_debug_axi_rvalid)                    ,
+
+//----------------------------------------------------------------
+
+//                              FROM THE CLK RST BYPASS MODULE
+
+            .boot_load_enable                   (boot_load_enable)                              ,
+
+//                          FROM THE DEBUG MODULE TO THE INST MEM WHILE BOOTING
+
+            .debug_inst_mem_req_valid           (debug_inst_mem1_req_valid)                     ,
+            .debug_inst_mem_write_en            (debug_inst_mem_write_en)                       ,
+            .debug_inst_mem_address_in          (debug_inst_mem_address_in)                     ,
+            .debug_inst_mem_write_data          (debug_inst_mem_write_data)                     ,
+
+//                          TO THE DEBUG MODULE FROM INST MEMORY WHILE BOOTING
+
+            .inst_mem_debug_read_data           (inst_mem1_debug_read_data)                     ,
+
+//                                  TO THE TOP REGISTER
+
+            .reg_physical_address_inst_mem      (reg1_physical_address_inst_mem)                ,
+            .reg_physical_address_data_mem      (reg1_physical_address_data_mem)                ,
+            .reg_mmu_timeout                    (reg1_mmu_timeout)                              ,
+            .reg_data_memory_page_fault         (reg1_data_memory_page_fault)                   ,
+            .reg_data_memory_read_permission_fault  (reg1_data_memory_read_permission_fault)    ,
+            .reg_data_memory_write_permission_fault (reg1_data_memory_write_permission_fault)   ,
+            .reg_data_memory_addr_decode_error  (reg1_data_memory_addr_decode_error)            ,
+            .reg_data_memory_read_slave_error   (reg1_data_memory_read_slave_error)             ,
+            .reg_data_memory_write_slave_error  (reg1_data_memory_write_slave_error)            ,
+            .reg_instruction_page_fault         (reg1_instruction_page_fault)                   ,
+            .reg_inst_execution_fault           (reg1_inst_execution_fault)                     ,
+            .reg_inst_addr_decode_error         (reg1_inst_addr_decode_error)           
 
 
-								                )					                            ;
-                                           
+                                                )                                               ;
+
+
 
 
 //-----------------------------------AXI MASTER WRAPPER INSTANTIATION OF THE DATA MEMORY------------------------------
@@ -2359,6 +2312,9 @@ axi_wrapper_top 						        #(
 			.IMEM_START_ADDR			        (INST_MEMORY_MIN_ADDRESS)		                ,
 			.IMEM_END_ADDR				        (INST_MEMORY_MAX_ADDRESS)		                ,
 
+			.IMEM1_START_ADDR			        (INST_MEMORY1_MIN_ADDRESS)		                ,
+			.IMEM1_END_ADDR				        (INST_MEMORY1_MAX_ADDRESS)		                ,
+
             .GPIO_REG_START_ADDR                (GPIO_REG_MIN_ADDRESS)                          ,
             .GPIO_REG_END_ADDR                  (GPIO_REG_MAX_ADDRESS)                          ,
 
@@ -2375,11 +2331,21 @@ axi_wrapper_top 						        #(
             .IP_TRACE_END_ADDR                  (IP_TRACE_MAX_ADDRESS)                          ,
 
             .CORE_TRACE_START_ADDR              (CORE_TRACE_MIN_ADDRESS)                        ,
-            .CORE_TRACE_END_ADDR                (CORE_TRACE_MAX_ADDRESS)                        
+            .CORE_TRACE_END_ADDR                (CORE_TRACE_MAX_ADDRESS)                        ,                    
             
+            .CORE1_TRACE_START_ADDR             (CORE1_TRACE_MIN_ADDRESS)                       ,
+            .CORE1_TRACE_END_ADDR               (CORE1_TRACE_MAX_ADDRESS)                       ,                     
 
-								                )	
+            .MMR_REGISTER1_START_ADDR           (MMR1_REGISTER_MIN_ADDRESS)                     ,
+            .MMR_REGISTER1_END_ADDR             (MMR1_REGISTER_MAX_ADDRESS)                     ,               
+								                	
+            .TOP_REG1_START_ADDR                (TOP_REG1_MIN_ADDRESS)                          ,
+            .TOP_REG1_END_ADDR                  (TOP_REG1_MAX_ADDRESS)                          ,
 
+            .WATCHDOG1_START_ADDR               (WATCHDOG1_MIN_ADDRESS)                         ,
+            .WATCHDOG1_END_ADDR                 (WATCHDOG1_MAX_ADDRESS)                        
+
+                                                )
 
 		axi_master_wrapper_data_mem_instance    (
 
@@ -2387,11 +2353,7 @@ axi_wrapper_top 						        #(
 //                          FROM THE CLK RST CONTROLLER MODULE
 
 			.clk					            (core_clk)					                    ,
-			.rst_n					            (core_rstn)					                    ,
-
-//                      THIS SIGNAL SELECT THE MASTER, 0 FOR CORE AND 1 FOR THE DEBUG MODULE
-
-			.master_select				        (axi_master_select)				                ,
+			.rst_n					            (axi_bridge_rstn)					            ,
 
 //                              TO THE TOP REGISTER MODULE
 
@@ -2399,20 +2361,21 @@ axi_wrapper_top 						        #(
 			
 //                          REQUEST VALID SIGNAL USING GLUE LOGIC
 
-			.core_valid				            (axi_data_mem_req_valid)			            ,
+			.core_valid				            (reg_axi_data_mem_req_valid)			            ,
 
 //						        FROM THE MMU MODULE
 
-			.core_addr				            (mmu_axi_physical_address_data_mem)			    ,
+			.core_addr				            (reg_mmu_axi_physical_address_data_mem)			    ,
 
 //                                  FROM THE CORE
 
-			.core_write_en				        (core_mmu_axi_mem_write_en)			            ,
-			.core_read_en				        (core_mmu_axi_mem_read_en)			            ,
-			.core_awsize				        (core_axi_awsize)			                    ,
-			.core_wdata				            (mem_write_data_core)			                ,
-			.core_byte_en				        (core_axi_wstrobe)				                ,
-            .flush                              (exception_flush)                               ,
+			.core_write_en				        (reg_core_mmu_axi_mem_write_en)			            ,
+			.core_read_en				        (reg_core_mmu_axi_mem_read_en)			            ,
+			.core_awsize				        (reg_core_axi_awsize)			                    ,
+			.core_wdata				            (reg_mem_write_data_core)			                ,
+			.core_byte_en				        (reg_core_axi_wstrobe)				                ,
+            .flush0                             (reg_exception_flush)                               ,
+            .core_dbg_mode                      (reg_core_debug_mode_en)                            ,
 
 //                              USED FOR THE GLUE LOGIC 
 
@@ -2424,6 +2387,40 @@ axi_wrapper_top 						        #(
 			.core_write_ready_out			    (axi_core_bready)			                    ,
 			.core_write_valid_out			    (axi_core_bvalid) 			                    ,
 			.core_write_resp			        (axi_core_bresp)			                    ,
+
+
+//                              TO THE TOP REGISTER MODULE
+
+            .core1_illegal_addr                 (req1_data_mem_address_decode_error)            ,
+			
+//                          REQUEST VALID SIGNAL USING GLUE LOGIC
+
+			.core1_valid				        (reg_axi1_data_mem_req_valid)			            ,
+
+//						        FROM THE MMU MODULE
+
+			.core1_addr				            (reg_mmu1_axi_physical_address_data_mem)			,
+
+//                                  FROM THE CORE
+
+			.core1_write_en				        (reg_core1_mmu_axi_mem_write_en)			        ,
+			.core1_read_en				        (reg_core1_mmu_axi_mem_read_en)			            ,
+			.core1_awsize				        (reg_core1_axi_awsize)			                    ,
+			.core1_wdata				        (reg_mem_write_data_core1)			                ,
+			.core1_byte_en				        (reg_core1_axi_wstrobe)				                ,
+            .flush1                             (reg_exception_flush1)                              ,
+            .core1_dbg_mode                     (reg_core1_debug_mode_en)                           ,
+
+//                              USED FOR THE GLUE LOGIC 
+
+			.core1_read_data				    (axi_core1_mem_read_data)		                ,
+			.core1_read_resp				    (axi_core1_rresp)			                    ,
+			.core1_read_valid_out			    (axi_core1_rvalid) 			                    ,
+			.core1_read_ready_out			    (axi_core1_rready) 			                    ,
+			.core1_write_ready_out			    (axi_core1_bready)			                    ,
+			.core1_write_valid_out			    (axi_core1_bvalid) 			                    ,
+			.core1_write_resp			        (axi_core1_bresp)			                    ,
+
 
 //                              FROM THE DEBUG MODULE   
 
@@ -2525,14 +2522,14 @@ axi_wrapper_top 						        #(
 
 			.im_axi_awaddr				        (debug_axi_inst_mem_awaddr)			            ,
 			.im_axi_awvalid				        (debug_axi_inst_mem_awvalid)		            ,
-			.im_axi_awready				        (debug_axi_inst_mem_awready)		            ,
+			.im_axi_awready				        (axi_inst_mem_debug_awready)		            ,
 						
 //                              WRITE DATA CHANNEL
 
-			.im_axi_wdata				        (inst_mem_debug_axi_wdata)			            ,
+			.im_axi_wdata				        (debug_axi_inst_mem_wdata)			            ,
 			.im_axi_wstrb				        (debug_axi_inst_mem_wstrb)			            ,
-			.im_axi_wvalid				        (inst_mem_debug_axi_wvalid)			            ,
-			.im_axi_wready				        (debug_axi_inst_mem_wready)			            ,
+			.im_axi_wvalid				        (debug_axi_inst_mem_wvalid)			            ,
+			.im_axi_wready				        (inst_mem_debug_axi_wready)		            ,
 			
 //          			        WRITE RESPONSE CHANNEL
 
@@ -2551,11 +2548,54 @@ axi_wrapper_top 						        #(
 			.im_axi_rdata				        (inst_mem_debug_axi_rdata)			            ,
 			.im_axi_rresp				        (inst_mem_debug_axi_rresp)			            ,
 			.im_axi_rvalid				        (inst_mem_debug_axi_rvalid)			            ,
-			.im_axi_rready				        (debug_axi_inst_mem_rready)			
+			.im_axi_rready				        (debug_axi_inst_mem_rready)		                ,
 
-	
+
+//----------------------------AXI SLAVE WRAPPER OF INSTRUCTION MEMORY 1 INTERFACE---------------------
+
+
+//                              WRITE ADDRESS CHANNEL
+
+			.im1_axi_awaddr				        (debug_axi_inst_mem1_awaddr)			            ,
+			.im1_axi_awvalid				        (debug_axi_inst_mem1_awvalid)		            ,
+			.im1_axi_awready				        (axi_inst_mem1_debug_awready)		            ,
+						
+//                              WRITE DATA CHANNEL
+
+			.im1_axi_wdata				        (debug_axi_inst_mem1_wdata)			            ,
+			.im1_axi_wstrb				        (debug_axi_inst_mem1_wstrb)			            ,
+			.im1_axi_wvalid				        (debug_axi_inst_mem1_wvalid)		            ,
+			.im1_axi_wready				        (inst_mem1_debug_axi_wready)			        ,
+			
+//          			        WRITE RESPONSE CHANNEL
+
+			.im1_axi_bresp				        (inst_mem1_debug_axi_bresp)			            ,
+			.im1_axi_bvalid				        (inst_mem1_debug_axi_bvalid)			        ,
+			.im1_axi_bready				        (debug_axi_inst_mem1_bready)			        ,
+			
+//          	                READ ADDRESS CHANNEL
+
+			.im1_axi_araddr				        (debug_axi_inst_mem1_araddr)			        ,
+			.im1_axi_arvalid				    (debug_axi_inst_mem1_arvalid)		            ,
+			.im1_axi_arready				    (inst_mem1_debug_axi_arready)		            ,
+			
+//          			        READ DATA CHANNEL
+
+			.im1_axi_rdata				        (inst_mem1_debug_axi_rdata)			            ,
+			.im1_axi_rresp				        (inst_mem1_debug_axi_rresp)			            ,
+			.im1_axi_rvalid				        (inst_mem1_debug_axi_rvalid)			        ,
+			.im1_axi_rready				        (debug_axi_inst_mem1_rready)			        ,
+
+//                              TRACE DATA AND EVENT TO IP TRACE MODULE
+
+            .trace_event_id                     (axi_master_ip_debug_trace_event)               ,
+            .trace_data                         (axi_master_ip_debug_trace_data)                ,
+
+//                              TO THE CLK RST CTRL MODULE
+
+            .active_master                      (axi_master_clk_rst_ctrl_active_master)         
+
 								                )					                            ;
-
 
 
 //------------------------------------AXI SLAVE WRAPPER WITH DATA MEMORY INSTANTIATION-----------------------------
@@ -2575,11 +2615,11 @@ axi_datamem_wrapper						        #(
 
 //                          FROM THE CLK RST BYPASS MODULE
 
-			.ACLK					            (memory_clk)					                ,
+			.ACLK					            (mem_debug_clk)					                ,
 
 //                          FROM THE CLK RST CONTROLLER MODULE
 
-			.ARESETN				            (core_rstn)					                    ,
+			.ARESETN				            (axi_bridge_rstn)					            ,
 			
 //----------------------------------AXI INTERFACE------------------------------------------------
 
@@ -2635,6 +2675,7 @@ axi_datamem_wrapper						        #(
 
 
 
+
 //----------------------------------------AXI TO APB BRIDGE INSTANTIATION---------------------------------------
 
 
@@ -2643,9 +2684,6 @@ axi_datamem_wrapper						        #(
 top_bridge 							            #(
 
 			.FIFO_DEPTH				            (BRIDGE_FIFO_DEPTH)			                    ,
-			.ADDR_WIDTH				            (AXI_ADDR_WIDTH)			                    ,
-			.DATA_WIDTH				            (AXI_DATA_WIDTH)			                    ,
-			.STRB_WIDTH				            (STROBE_WIDTH)				                    ,
 			.FIFO_WIDTH				            (BRIDGE_FIFO_WIDTH) 			                ,
 			.TIMEOUT_CNT_WIDTH			        (APB_TIMEOUT_COUNT_WIDTH)		                ,
 			.TIMEOUT_VALUE				        (APB_TIMEOUT_VALUE)			
@@ -2658,12 +2696,13 @@ top_bridge 							            #(
 
 			.pclk				            	(pclk)					                        ,
 			.aclk					            (core_clk)					                    ,
-			.resetn					            (core_rstn)					                    ,
+			.resetn					            (axi_bridge_rstn)					            ,
+
 // ----------------------------DFT TEST SIGNALS -----------------------------------------------
 
             .tm_bridge_prstn_sync_en_i               (tm_bridge_prstn_sync_en)                          ,
-			.tm_bridge_prstn_sync_i                  (tm_bridge_prstn_sync)                             ,
-
+			.tm_bridge_prstn_sync_i                  (tm_bridge_prstn_sync)                             ,            
+			
 //--------------------------------------AXI INTERFACE SIGNALS--------------------------------- 
 
 
@@ -2735,6 +2774,7 @@ top_bridge 							            #(
 
 
 
+
 //--------------------------------------APB SLAVE PSEL WRAPPER INSTANTIATION--------------------------------------------
 
 
@@ -2763,7 +2803,19 @@ apb_slave_psel_wrapper						    #(
             .IP_TRACE_MIN_ADDRESS               (IP_TRACE_MIN_ADDRESS)                          ,
             .IP_TRACE_MAX_ADDRESS               (IP_TRACE_MAX_ADDRESS)                          ,         
             .CORE_TRACE_MIN_ADDRESS             (CORE_TRACE_MIN_ADDRESS)                        ,
-            .CORE_TRACE_MAX_ADDRESS             (CORE_TRACE_MAX_ADDRESS)                                 
+            .CORE_TRACE_MAX_ADDRESS             (CORE_TRACE_MAX_ADDRESS)                        ,
+            .CORE1_TRACE_MIN_ADDRESS            (CORE1_TRACE_MIN_ADDRESS)                       ,
+            .CORE1_TRACE_MAX_ADDRESS            (CORE1_TRACE_MAX_ADDRESS)                       ,
+            .WATCHDOG1_MIN_ADDRESS              (WATCHDOG1_MIN_ADDRESS)                         ,
+            .WATCHDOG1_MAX_ADDRESS              (WATCHDOG1_MAX_ADDRESS)                         ,
+            .MMR1_REGISTER_MIN_ADDRESS          (MMR1_REGISTER_MIN_ADDRESS)                     ,
+            .MMR1_REGISTER_MAX_ADDRESS          (MMR1_REGISTER_MAX_ADDRESS)                     ,  
+            .TOP_REG1_MAX_ADDRESS               (TOP_REG1_MAX_ADDRESS)                          ,
+            .TOP_REG1_MIN_ADDRESS               (TOP_REG1_MIN_ADDRESS)                          
+
+
+
+            
 
 								                )
 
@@ -2794,6 +2846,10 @@ apb_slave_psel_wrapper						    #(
             .analog_reg_prdata                  (analog_reg_prdata)                             ,
             .ip_trace_prdata                    (ip_trace_prdata)                               ,
             .core_trace_prdata                  (core_trace_prdata)                             ,
+            .core1_trace_prdata                 (core1_trace_prdata)                            ,
+            .top_reg1_prdata                    (top_reg1_prdata)                               ,
+            .watchdog1_prdata                   (watchdog1_prdata)                              ,
+            .mmr_reg1_prdata                    (mmr_reg1_prdata)                               ,
 
 //                          PREADY SIGNALS FROM DIFFERENT PERIPHERALS    
 
@@ -2808,6 +2864,10 @@ apb_slave_psel_wrapper						    #(
             .analog_reg_pready                  (analog_reg_pready)                             ,
             .ip_trace_pready                    (ip_trace_pready)                               ,
             .core_trace_pready                  (core_trace_pready)                             ,
+            .core1_trace_pready                 (core1_trace_pready)                            ,
+            .top_reg1_pready                    (top_reg1_pready)                               ,
+            .watchdog1_pready                   (watchdog1_pready)                              ,
+            .mmr_reg1_pready                    (mmr_reg1_pready)                               ,
 
 //                          PSLVERR SIGNALS FROM DIFFERENT PERIPHERALS     
 
@@ -2821,7 +2881,11 @@ apb_slave_psel_wrapper						    #(
             .mmr_reg_pslverr                    (mmr_reg_pslverr)                               ,
             .analog_reg_pslverr                 (analog_reg_pslverr)                            ,
             .ip_trace_pslverr                   (ip_trace_pslverr)                              ,
-            .core_trace_pslverr                 (core_trace_pslverr)                            , 
+            .core_trace_pslverr                 (core_trace_pslverr)                            ,
+            .core1_trace_pslverr                (core1_trace_pslverr)                           ,
+            .top_reg1_pslverr                   (top_reg1_pslverr)                              ,
+            .watchdog1_pslverr                  (watchdog1_pslverr)                             ,
+            .mmr_reg1_pslverr                   (mmr_reg1_pslverr)                              ,
 
 //                          PSEL SIGNALS TO DIFFERENT PERIPHERALS  
 
@@ -2835,10 +2899,15 @@ apb_slave_psel_wrapper						    #(
             .mmr_reg_psel                       (mmr_reg_psel)                                  ,
             .analog_reg_psel                    (analog_reg_psel)                               ,
             .ip_trace_psel                      (ip_trace_psel)                                 ,
-            .core_trace_psel                    (core_trace_psel)   
+            .core_trace_psel                    (core_trace_psel)                               ,
+            .core1_trace_psel                   (core1_trace_psel)                              ,
+            .top_reg1_psel                      (top_reg1_psel)                                 ,
+            .watchdog1_psel                     (watchdog1_psel)                                ,
+            .mmr_reg1_psel                      (mmr_reg1_psel)                                 
 
 
 								                )	                                            ;
+
 
 
 
@@ -2899,6 +2968,7 @@ i2c_wrapper 							        #(
 
 
 
+
 //--------------------------------------SPI WITH APB SLAVE INSTANTIATION---------------------------------------------
 
 
@@ -2955,6 +3025,7 @@ spi_wrapper 							        #(
 
 
 
+
 //---------------------------------------UART WITH APB SLAVE INSTANTIATION----------------------------------------------
 
 
@@ -2973,6 +3044,7 @@ uart_top 	uart_wrapper_instance			    (
             .tm_en_i                            (tm_uart_bclk_en_i)                             ,
             .tm_uart_brstn_en_i                 (tm_uart_brstn_en)                              ,
             .tm_uart_brstn_i                      (tm_uart_brstn)                                 ,
+
 
 //                          FROM THE AXI-APB BRIDGE MODULE
 
@@ -3006,6 +3078,7 @@ uart_top 	uart_wrapper_instance			    (
 
 
 								                )			                            		;
+
 
 
 
@@ -3046,7 +3119,7 @@ watchdog_timer  watchdog_timer_instance         (
 
 //                              FROM THE CORE 
 
-            .cpu_dbg_halt                       (debug_mode_en)                                 ,
+            .cpu_dbg_halt                       (core_debug_mode_en)                            ,
             .cpu_commit_pc                      (core_watchdog_last_commited_pc)                ,
             .cpu_commit_valid                   (core_watchdog_commit_valid)                    ,
 
@@ -3064,7 +3137,68 @@ watchdog_timer  watchdog_timer_instance         (
             .trace_data                         (wdt_ip_trace_data)             
 
                                                 )                                               ;
+ 
+
+
+
+//------------------------------------WATCHDOG TIMER 1 MODULE INSTANTIATION--------------------------
+
+
+
+
+watchdog_timer  watchdog_timer1_instance        (
+    
+
+//                      FROM THE CLK RST CONTROLLER MODULE
+
+            .pclk                               (pclk)                                          ,
+            .presetn                            (presetn)                                       ,
+
+//                      FROM THE AXI-APB BRIDGE MODULE
+
+            .penable                            (bridge_peripheral_penable)                     ,
+            .pwrite                             (bridge_peripheral_pwrite)                      ,
+            .paddr                              (bridge_peripheral_paddr[7:0])                  ,
+            .pwdata                             (bridge_peripheral_pwdata)                      ,
+
+//                      FROM THE APB PSEL SLAVE WRAPPER MODULE
+
+            .psel                               (watchdog1_psel)                                ,
+
+//                      TO THE APB PSEL SLAVE WRAPPER MODULE
+
+            .prdata                             (watchdog1_prdata)                              ,
+            .pready                             (watchdog1_pready)                              ,
+            .pslverr                            (watchdog1_pslverr)                             ,
+
+//                          WATCHDOG CLK AND RST SIGNALS
+
+            .wdt_clk                            (rc_clk)                                        ,
+            .wdt_rstn                           (rst_sync_reg2)                                 ,
+
+//                              FROM THE CORE 
+
+            .cpu_dbg_halt                       (core1_debug_mode_en)                           ,
+            .cpu_commit_pc                      (core1_watchdog_last_commited_pc)               ,
+            .cpu_commit_valid                   (core1_watchdog_commit_valid)                   ,
+
+
+//                              TO THE INTERRUPT CONTROLLER AND CLK RST TOP MODULES
+                              
+            .wdt_reset                          (wdt1_reset)                                    ,
+
+//                              TO THE CLK RST CONTROLLER MODULE
+
+            .reset_scope                        (wdt1_clk_rst_ctrl_reset_scope)                 ,
+
+//                              TO THE IP DEBUG TRACE
+
+            .trace_event_id                     (wdt1_ip_trace_event)                           ,
+            .trace_data                         (wdt1_ip_trace_data)             
+
+                                                )                                               ;
                        
+
 
 
 //----------------------------------------GPIO PINMUX INSTANTIATION-------------------------------------
@@ -3078,9 +3212,9 @@ gpio_top_regfile    gpio_top_reg_instance       (
 //                      FROM THE CLK RST CONTROLLER MODULE
 
             .pclk                               (pclk)                                          ,
-            .clk_out_w                          (debug_clk)                                     ,
-            .atclk_w                            (debug_clk)                                     ,
-
+            .clk_out_w                          (core_clk)                                      ,
+            .atclk_w                            (core_clk)                                      ,
+            .atclk1_w                           (core_clk)                                      ,
 // ----------------- DFT TEST SIGNALS -----------------------------------------------------------
             .tm_gpio_prstn_i                    (tm_gpio_prstn)                                 ,
             .tm_gpio_prstn_en_i                 (tm_gpio_prstn_en)                              ,
@@ -3185,11 +3319,26 @@ gpio_top_regfile    gpio_top_reg_instance       (
             .atvalid_w                          (core_trace_gpio_atvalid)                       ,
             .afready_w                          (core_trace_gpio_afready)                       ,
 
+//                              TO THE CORE1 DEBUG TRACE MODULE                
+
+            .afvalid1_w                          (gpio_core1_trace_afvalid)                     ,
+            .atready1_w                          (gpio_core1_trace_atready)                     ,
+
+
+//                              FROM THE CORE1 DEBUG TRACE MODULE
+
+            .atdata1_w                           (core1_trace_gpio_atdata)                      ,
+            .atvalid1_w                          (core1_trace_gpio_atvalid)                     ,
+            .afready1_w                          (core1_trace_gpio_afready)                     ,
+
 //                              TO THE INTERRUPT CONTRROLLER MODULE
 
-            .irq_in_w                           (gpio_int_ctrl_irq)                             ,
-            
-// DFT gpio's for scan insertion            
+            .irq_in_w                           (gpio_int_ctrl_irq)                             ,   
+ 
+//                              TO THE INTERRUPT CONTRROLLER1 MODULE
+
+            .irq_in1_w                           (gpio_int_ctrl1_irq)                           ,
+
             .test_mode_w    (Test_mode),
             .scan_in_1_w    (scan_in_1),
             .scan_in_2_w    (scan_in_2),
@@ -3197,7 +3346,7 @@ gpio_top_regfile    gpio_top_reg_instance       (
             .scan_in_4_w    (scan_in_4),
             .scan_in_5_w    (scan_in_5),
             .scan_in_6_w    (scan_in_6),
- 
+
             .scan_out_1_w    (scan_out_1),
             .scan_out_2_w    (scan_out_2),
             .scan_out_3_w    (scan_out_3),
@@ -3205,8 +3354,12 @@ gpio_top_regfile    gpio_top_reg_instance       (
             .scan_out_5_w    (scan_out_5),
             .scan_out_6_w    (scan_out_6),
             .scan_enable_w     (scan_enable)
+            
+
     
+
                                                 )                                               ;
+
 
 
 
@@ -3268,7 +3421,68 @@ top_register_cdc    top_register_instance       (
 
                                                 )                                               ;
 
+
+
+//----------------------------------------TOP REGISTER 1 INSTANTIATION----------------------------
+
+
+
+
+top_register_cdc    top_register1_instance       (
+
+//                              FROM THE CLK RST CONTROLLER MODULE
+
+            .pclk                               (pclk)                                          ,
+            .presetn                            (presetn)                                       ,
+
+            .sys_clk                            (core_clk)                                      ,
+            .sys_rst_n                          (core1_rstn)                                    ,
+
+//                              FROM THE AXI-APB BRIDGE MODULE
+
+            .paddr                              (bridge_peripheral_paddr[7:0])                  ,
+            .penable                            (bridge_peripheral_penable)                     ,
+            .pwrite                             (bridge_peripheral_pwrite)                      ,
+            .pwdata                             (bridge_peripheral_pwdata)                      ,
+
+//                              FROM THE APB PSEL SLAVE WRAPPER MODULE
+
+            .psel                               (top_reg1_psel)                                 ,
+
+//                              TO THE APB PSEL SLAVE WRAPPER MODULE 
+
+            .prdata                             (top_reg1_prdata)                               ,
+            .pready                             (top_reg1_pready)                               ,
+            .pslverr                            (top_reg1_pslverr)                              ,
+
+//                                  FROM THE MMU MODULE AFTER REGISTERED
+
+            .ptw_timeout_event                  (reg1_mmu_timeout)                              ,
+            .instr_page_fault                   (reg1_instruction_page_fault)                   ,
+            .mem_page_fault                     (reg1_data_memory_page_fault)                   ,
+            .instr_permission_fault             (reg1_inst_execution_fault)                     ,
+            .read_permission_fault              (reg1_data_memory_read_permission_fault)        ,
+            .write_permission_fault             (reg1_data_memory_write_permission_fault)       ,
+            .addr_error                         (reg1_physical_address_data_mem)                ,
+            .captured_instr_error_pc            (reg1_physical_address_inst_mem)                , 
+
+//                              TO THE MMU MODULE
+
+            .pre_fetch_en                       (mmu1_prefetch_enable)                          ,
+            .mmu_timeout_enable                 (mmu1_ptw_timeout_enable)                       ,
             
+//                              MEMORIES FAULTS SIGNALS AFTER REGISTERED
+
+            .instr_mem_addr_decode_error        (reg1_inst_addr_decode_error)                   ,            
+            .mem_addr_decode_error              (reg1_data_memory_addr_decode_error)            ,
+            .mem_addr_read_slverr               (reg1_data_memory_read_slave_error)             ,
+            .mem_addr_write_slverr              (reg1_data_memory_write_slave_error)                    
+
+
+                                                )                                               ;
+
+
+
 
 //----------------------------------------INTERRUPT MMR REGISTER INSTANTIATION-------------------------------  
 
@@ -3277,6 +3491,7 @@ top_register_cdc    top_register_instance       (
 
 soc_mmr_apb_wrapper     mmr_register_instance   (
 
+
 //                          FROM THE CLK RST CONTROLLER MODULE
 
             .pclk                               (pclk)                                          ,
@@ -3284,7 +3499,7 @@ soc_mmr_apb_wrapper     mmr_register_instance   (
 
 //                          FROM THE AXI-APB BRIDGE MODULE
 
-            .paddr                              (bridge_peripheral_paddr[15:0])                 ,
+            .paddr                              (bridge_peripheral_paddr[11:0])                 ,
             .penable                            (bridge_peripheral_penable)                     ,
             .pwrite                             (bridge_peripheral_pwrite)                      ,
             .pwdata                             (bridge_peripheral_pwdata[7:0])                 ,
@@ -3316,6 +3531,53 @@ soc_mmr_apb_wrapper     mmr_register_instance   (
 
 
 
+
+//----------------------------------------MMR REGISTER 1 INSTANTANTIATION-----------------------
+
+
+
+
+soc_mmr_apb_wrapper     mmr_register1_instance   (
+
+//                          FROM THE CLK RST CONTROLLER MODULE
+
+            .pclk                               (pclk)                                          ,
+            .presetn                            (presetn)                                       ,
+
+//                          FROM THE AXI-APB BRIDGE MODULE
+
+            .paddr                              (bridge_peripheral_paddr[11:0])                 ,
+            .penable                            (bridge_peripheral_penable)                     ,
+            .pwrite                             (bridge_peripheral_pwrite)                      ,
+            .pwdata                             (bridge_peripheral_pwdata[7:0])                 ,
+
+//                          FROM THE APB SLAVE PSEL WRAPPER MODULE
+
+            .psel                               (mmr_reg1_psel)                                 ,
+
+//                          TO THE APB SLAVE PSEL WRAPPER MODULE
+
+            .prdata                             (mmr_reg1_prdata)                               ,
+            .pready                             (mmr_reg1_pready)                               ,
+            .pslverr                            (mmr_reg1_pslverr)                              ,
+
+//                          TO THE INTERRUPT CONTROLLER MODULE
+
+            .soc_mmr_write_en_i                 (mmr_int_ctrl1_write_en)                        ,
+            .soc_mmr_write_addr_i               (mmr_int_ctrl1_write_addr)                      ,
+            .soc_mmr_write_data_i               (mmr_int_ctrl1_write_data)                      ,
+            .soc_mmr_read_en_i                  (mmr_int_ctrl1_read_en)                         ,
+            .soc_mmr_read_addr_i                (mmr_int_ctrl1_read_addr)                       ,
+
+//                          FROM THE INTERRUPT CONTROLLER MODULE
+
+            .soc_mmr_read_data_o                (int_ctrl_mmr1_read_data)                       ,    
+            .soc_read_rsp_i                     (int_ctrl_mmr1_read_resp)    
+
+                                                )                                               ;
+
+
+
 //-------------------------------------DEBUG TRACE FOR IPs MODULE INSTANTITION--------------------------------   
  
 
@@ -3327,12 +3589,12 @@ trace_system_top    ip_debug_trace_instance     (
 //                          FROM THE CLK RST CONTROLLER MODULE
 
             .sys_clk                            (core_clk)                                      ,
-            .sys_rst_n                          (core_rstn)                                     ,
+            .sys_rst_n                          (axi_bridge_rstn)                                     ,
 
             .pclk                               (pclk)                                          ,
             .presetn                            (presetn)                                       ,
 
-            .debug_clk                          (debug_clk)                                     ,
+            .debug_clk                          (core_clk)                                      ,
             .debug_rst                          (debug_rstn)                                    ,
 
 //                          FROM THE AXI-APB BRIDGE MODULE
@@ -3357,6 +3619,12 @@ trace_system_top    ip_debug_trace_instance     (
             .watchdog_data_i                    (wdt_ip_trace_data)                             ,
             .watchdog_event_i                   (wdt_ip_trace_event)                            ,
 
+//                              FROM THE WATCHDOG TIMER1 MODULE
+
+            .watchdog1_data_i                   (wdt1_ip_trace_data)                            ,
+            .watchdog1_event_i                  (wdt1_ip_trace_event)                           ,
+
+
 //                                  FROM THE I2C MODULE
 
             .i2c_data_i                         (i2c_ip_trace_data)                             ,
@@ -3372,6 +3640,12 @@ trace_system_top    ip_debug_trace_instance     (
             .mmu_data_i                         (mmu_ip_trace_data)                             ,
             .mmu_event_i                        (mmu_ip_trace_event)                            ,
 
+//                                  FROM THE MMU1 MODULE
+
+            .mmu1_data_i                        (mmu1_ip_trace_data)                            ,
+            .mmu1_event_i                       (mmu1_ip_trace_event)                           ,
+
+
 //                                  FROM THE UART MODULE
 
             .uart_data_i                        (uart_ip_trace_data)                            ,
@@ -3382,10 +3656,21 @@ trace_system_top    ip_debug_trace_instance     (
             .intr_data_i                        (int_ctrl_ip_trace_data)                        ,
             .intr_event_i                       (int_ctrl_ip_trace_event)                       ,
 
+//                              FROM THE INTERRUPT CONTROLLER1 MODULE
+
+            .intr1_data_i                       (int_ctrl1_ip_trace_data)                       ,
+            .intr1_event_i                      (int_ctrl1_ip_trace_event)                      ,
+
+
 //                              FROM THE AXI-APB BRIDGE MODULE
 
             .bridge_data_i                      (bridge_ip_trace_data)                          ,
             .bridge_event_i                     (bridge_ip_trace_event)                         ,
+
+//                              FROM AXI MASTER WRAPPER MODULE
+
+            .axi_master_data_i                  (axi_master_ip_debug_trace_data)                ,
+            .axi_master_event_i                 (axi_master_ip_debug_trace_event)               ,
 
 //                                  FROM THE DEBUG MODULE
 
@@ -3402,6 +3687,7 @@ trace_system_top    ip_debug_trace_instance     (
 
 
 
+
 //--------------------------------------CORE DEBUG TRACE MODULE INSTANTITION--------------------------
 
 
@@ -3411,7 +3697,7 @@ top_core_trace          core_debug_trace_instance       (
 
 //                          FROM THE CLK RST CONTROLLER MODULE
 
-            .it_clk                             (debug_clk)                                     ,
+            .it_clk                             (core_clk)                                      ,
             .it_rst_n                           (debug_rstn)                                    ,
 
 
@@ -3449,7 +3735,7 @@ top_core_trace          core_debug_trace_instance       (
 
 //                                  FROM THE CSR MODULE
 
-            .it_tval                            (csr_debug_trace_tval)                         ,
+            .it_tval                            (csr_debug_trace_tval)                          ,
 
 //                          FROM THE GPIO PINMUX MODULE
 
@@ -3463,7 +3749,72 @@ top_core_trace          core_debug_trace_instance       (
             .atvalid_o                          (core_trace_gpio_atvalid)                       
 
                                                 )                                               ;
+ 
+
+
+//--------------------------------------CORE 1 DEBUG TRACE UNIT INSTANTIATION-------------------------
+
+
+
+
+top_core_trace          core1_debug_trace_instance       (
+
+//                          FROM THE CLK RST CONTROLLER MODULE
+
+            .it_clk                             (core_clk)                                      ,
+            .it_rst_n                           (debug_rstn)                                    ,
+
+
+            .pclk_i                             (pclk)                                          ,
+            .presetn_i                          (presetn)                                       ,
+
+//                          FROM THE AXI-APB BRIDGE MODULE
+
+            .paddr_i                            (bridge_peripheral_paddr[7:0])                  ,
+            .penable_i                          (bridge_peripheral_penable)                     ,
+            .pwrite_i                           (bridge_peripheral_pwrite)                      ,
+            .pwdata_i                           (bridge_peripheral_pwdata[1:0])                 ,
+
+//                          FROM THE APB SLAVE PSEL WRAPPER MODULE
+
+            .psel_i                             (core1_trace_psel)                              ,
+
+//                          TO THE APB SLAVE PSEL WRAPPER MODULE
+
+            .prdata_o                           (core1_trace_prdata)                            ,
+            .pready_o                           (core1_trace_pready)                            ,
+            .pslverr_o                          (core1_trace_pslverr)                           ,
+
+//                          FROM THE RV32I CORE MODULE
+
+            .it_itype                           (core1_debug_trace_itype)                       ,
+            .it_iaddr                           (core1_debug_trace_iaddr)                       ,
+            .it_cause                           (core1_debug_trace_cause)                       ,
+            .it_context                         (core1_debug_trace_context)                     ,
+            .it_ienable_in                      (core1_debug_trace_ienable)                     ,       
+            .it_itype_valid                     (core1_debug_trace_itype_valid)                 ,
+            .it_first_instrn_valid_in           (core1_debug_trace_Ist_instrn_valid)            ,
+            .it_delta_addr                      (core1_debug_trace_delta_addr)                  ,
+            .it_del_adr_valid                   (core1_debug_trace_del_adr_valid)               ,
+
+//                                  FROM THE CSR MODULE
+
+            .it_tval                            (csr1_debug_trace_tval)                         ,
+
+//                          FROM THE GPIO PINMUX MODULE
+
+            .afvalid_i                          (gpio_core1_trace_afvalid)                      ,
+            .atready_i                          (gpio_core1_trace_atready)                      ,
+
+//                          TO THE GPIO PINMUX MODULE
+
+            .afready_o                          (core1_trace_gpio_afready)                      ,           
+            .atdata_o                           (core1_trace_gpio_atdata)                       ,
+            .atvalid_o                          (core1_trace_gpio_atvalid)                       
+
+                                                )                                               ;
     
+
 
 
 //----------------------------------------ANALOG REGISTER INSTANTIATION-----------------------------------
@@ -3542,7 +3893,7 @@ analog_preboot      preboot_analog_register_instance        (
 
 //                              CLK & RST SIGNALS FROM CLK RST BYPASS MODULE
 
-            .debug_clk                          (ctrl_bypass_debug_clk)                         ,
+            .debug_clk                          (mem_debug_clk)                                 ,
             .debug_rst_n                        (preboot_analog_rstn)                           ,
 
 //                              FROM THE DEBUG MODULE
@@ -3565,6 +3916,8 @@ analog_preboot      preboot_analog_register_instance        (
 
 
                                                 )                                               ;
+
+
 
 
 

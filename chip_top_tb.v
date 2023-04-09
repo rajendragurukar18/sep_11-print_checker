@@ -106,7 +106,9 @@ initial begin
     rc_clk=0;
     pll_clk=0;
     xtal_in=0;
-    $deposit(chip_top_tb.u_chip_top.pinaka_top_instance.basic_isa_instance.pc[31:0], 32'b0);
+    $deposit(chip_top_tb.u_chip_top.pinaka_top_instance.core_0_subsystem_top_instance.basic_isa_instance.pc[31:0], 32'b0);
+     $deposit(chip_top_tb.u_chip_top.pinaka_top_instance.core_1_subsystem_top_instance.basic_isa_instance.pc[31:0], 32'b0);
+   //  $deposit(chip_top_tb.u_chip_top.pinaka_top_instance.basic_isa_instance.pc[31:0], 32'b0);
     reset_n_drv=0;
     //reset_n=0;
     //tck_delay=10ns;
@@ -140,7 +142,6 @@ trace_if trace_vif(
                     .core_clk_i(chip_top_tb.u_chip_top.pinaka_top_instance.gpio_top_reg_instance.pinmux_gpio_ss_instance.atclk),
                     . pclk_i(chip_top_tb.u_chip_top.pinaka_top_instance.gpio_top_reg_instance.pinmux_gpio_ss_instance.atclk)
                 );
-
 
 /*
 //always #(tck_delay) tclk=~tclk;//
@@ -271,8 +272,7 @@ assign i2c_vif.penable = u_chip_top.pinaka_top_instance.i2c_wrapper_instance.pen
 assign i2c_vif.paddr = u_chip_top.pinaka_top_instance.i2c_wrapper_instance.paddr;
 assign i2c_vif.pwdata = u_chip_top.pinaka_top_instance.i2c_wrapper_instance.pwdata;
 
-assign gpio17 = (u_chip_top.pinaka_top_instance.gpio_top_reg_instance.pinmux_gpio_ss_instance.pinmux1[23:21]==3'd3) ? (1'b1) :1'bz;
-
+assign gpio17 = ((u_chip_top.pinaka_top_instance.gpio_top_reg_instance.pinmux_gpio_ss_instance.pinmux1[23:21]==3'd3)||(u_chip_top.pinaka_top_instance.gpio_top_reg_instance.pinmux_gpio_ss_instance.pinmux1[23:21]==3'd5)) ? (1'b1) :1'bz;
 
 
 
@@ -325,9 +325,7 @@ assign trace_vif.fifo_full   = chip_top_tb.u_chip_top.pinaka_top_instance.core_d
 assign trace_vif.sf3_valid   = chip_top_tb.u_chip_top.pinaka_top_instance.core_debug_trace_instance.i_itrace_top.te_inst.inst_trace_enformat3_sf3.sf3_valid ;
 //assign trace_vif.fifo_write_en  = chip_top_tb.u_chip_top.pinaka_top_instance.core_debug_trace_instance.fifo_write_en ;
 
-
-
-
+// -------------------------
 // -------------------------
 // Connect DUT signals to UART interface
 // -------------------------
@@ -381,6 +379,12 @@ assign gpio10 = (u_chip_top.pinaka_top_instance.gpio_top_reg_instance.pinmux_gpi
 assign gpio11 = (u_chip_top.pinaka_top_instance.gpio_top_reg_instance.pinmux_gpio_ss_instance.pinmux1[5:3]==3'd001) ? (int_vif.gpio_pad_in[3]) :1'bz;
 assign gpio12 = (u_chip_top.pinaka_top_instance.gpio_top_reg_instance.pinmux_gpio_ss_instance.pinmux1[8:6]==3'd001) ? (int_vif.gpio_pad_in[4]) :1'bz;
 assign gpio13 = (u_chip_top.pinaka_top_instance.gpio_top_reg_instance.pinmux_gpio_ss_instance.pinmux1[11:9]==3'd001) ? (int_vif.gpio_pad_in[5]) :1'bz;
+assign gpio14 = (u_chip_top.pinaka_top_instance.gpio_top_reg_instance.pinmux_gpio_ss_instance.pinmux1[14:12]==3'd001) ? (int_vif.gpio_pad_in[6]) :1'bz;
+assign gpio15 = (u_chip_top.pinaka_top_instance.gpio_top_reg_instance.pinmux_gpio_ss_instance.pinmux1[17:15]==3'd001) ? (int_vif.gpio_pad_in[7]) :1'bz;
+assign gpio16 = (u_chip_top.pinaka_top_instance.gpio_top_reg_instance.pinmux_gpio_ss_instance.pinmux1[20:18]==3'd001) ? (int_vif.gpio_pad_in[8]) :1'bz;
+assign gpio17 = (u_chip_top.pinaka_top_instance.gpio_top_reg_instance.pinmux_gpio_ss_instance.pinmux1[23:21]==3'd001) ? (int_vif.gpio_pad_in[9]) :1'bz;
+assign gpio18 = (u_chip_top.pinaka_top_instance.gpio_top_reg_instance.pinmux_gpio_ss_instance.pinmux1[26:24]==3'd001) ? (int_vif.gpio_pad_in[10]) :1'bz;
+assign gpio19 = (u_chip_top.pinaka_top_instance.gpio_top_reg_instance.pinmux_gpio_ss_instance.pinmux1[29:27]==3'd001) ? (int_vif.gpio_pad_in[11]) :1'bz;
 
    
 
@@ -403,33 +407,159 @@ initial begin
 
    uvm_config_db#(virtual gpio_if)::set(null,"*","gpio_vif",gpio_vif);
 
- uvm_config_db #(virtual trace_if)::set(null, "*","vif", trace_vif);
+   uvm_config_db #(virtual trace_if)::set(null, "*","vif", trace_vif);
 
-   
     run_test("soc_base_test");
 end 
 
 
-//handshake block
+/*
+//Core0 Handshake
 initial begin
-    forever begin
-        @(posedge u_chip_top.pinaka_top_instance.axi_slave_wrapper_data_mem_instance.ACLK);
-        if(u_chip_top.pinaka_top_instance.axi_slave_wrapper_data_mem_instance.u_data_memory.u_sram7.mem[2047]=='hC0FFEE)
-        begin
-            handshake_from_c_to_sv=1;
-            $display("HANDSHAKE : Requets Received from C");
-            u_chip_top.pinaka_top_instance.axi_slave_wrapper_data_mem_instance.u_data_memory.u_sram7.mem[2047]='h00000000;            
-        end
+  forever begin
 
-        if(handshake_from_sv_to_c==1)
-        begin
-            u_chip_top.pinaka_top_instance.axi_slave_wrapper_data_mem_instance.u_data_memory.u_sram7.mem[2047]='h7EA;
-            $display("HANDSHAKE : Request Sent from SV to C");
-            handshake_from_sv_to_c=0;
-        end
+    @(posedge u_chip_top.pinaka_top_instance.axi_slave_wrapper_data_mem_instance.ACLK);
+
+    // ========================================================
+    // CORE 0 SV -> C
+    // ========================================================
+
+    if (handshake_core0_from_sv_to_c)
+    begin
+
+      u_chip_top.pinaka_top_instance.axi_slave_wrapper_data_mem_instance.u_data_memory.u_sram3.mem[2047] = 32'h000007EA;
+
+      $display("HANDSHAKE CORE0 : Request Sent from SV to C");
+
+      handshake_core0_from_sv_to_c = 0;
     end
+
+    // ========================================================
+    // CORE 0 C -> SV
+    // ========================================================
+
+    if (u_chip_top.pinaka_top_instance.axi_slave_wrapper_data_mem_instance.u_data_memory.u_sram3.mem[2047] === 32'hC0FFEE)
+    begin
+
+      handshake_core0_from_c_to_sv = 1;
+
+      $display("HANDSHAKE CORE0 : Request Received from C");
+
+      u_chip_top.pinaka_top_instance.axi_slave_wrapper_data_mem_instance.u_data_memory.u_sram3.mem[2047] = 32'h00000000;
+    end
+
+  end
 end
 
+//Core1 Handshake
+initial begin
+    forever begin
+
+    @(posedge u_chip_top.pinaka_top_instance.axi_slave_wrapper_data_mem_instance.ACLK);
+
+    // ========================================================
+    // CORE 1 SV -> C
+    // ========================================================
+
+    if (handshake_core1_from_sv_to_c)
+    begin
+
+      u_chip_top.pinaka_top_instance.axi_slave_wrapper_data_mem_instance.u_data_memory.u_sram7.mem[2047] = 32'h000007EA;
+
+      $display("HANDSHAKE CORE1 : Request Sent from SV to C");
+
+      handshake_core1_from_sv_to_c = 0;
+    end
+
+    // ========================================================
+    // CORE 1 C -> SV
+    // ========================================================
+
+    if (u_chip_top.pinaka_top_instance.axi_slave_wrapper_data_mem_instance.u_data_memory.u_sram7.mem[2047] === 32'hC0FFEE)
+    begin
+
+      handshake_core1_from_c_to_sv = 1;
+
+      $display("HANDSHAKE CORE1 : Request Received from C");
+
+      u_chip_top.pinaka_top_instance.axi_slave_wrapper_data_mem_instance.u_data_memory.u_sram7.mem[2047] = 32'h00000000;
+    end
+
+     end
+end
+*/
+
+
+
+
+
+always @(u_chip_top.pinaka_top_instance.axi_slave_wrapper_data_mem_instance.u_data_memory.u_sram3.mem[2047]) begin
+
+    if (u_chip_top.pinaka_top_instance.axi_slave_wrapper_data_mem_instance. u_data_memory.u_sram3.mem[2047] === 32'h00C0FFEE)
+    begin
+
+        handshake_core0_from_c_to_sv = 1'b1;
+
+        $display("[%0t] HANDSHAKE CORE0 : Request Received from C",
+                 $time);
+
+         u_chip_top.pinaka_top_instance.axi_slave_wrapper_data_mem_instance.u_data_memory.u_sram3.mem[2047] = 32'h00000000;
+    end
+
+end
+
+
+always @(u_chip_top.pinaka_top_instance.axi_slave_wrapper_data_mem_instance.u_data_memory.u_sram7.mem[2047]) begin
+
+    if (u_chip_top.pinaka_top_instance. axi_slave_wrapper_data_mem_instance.u_data_memory.u_sram7.mem[2047] === 32'h00C0FFEE)
+    begin
+
+        handshake_core1_from_c_to_sv = 1'b1;
+
+        $display("[%0t] HANDSHAKE CORE1 : Request Received from C",$time);
+
+        
+        u_chip_top.pinaka_top_instance.axi_slave_wrapper_data_mem_instance.u_data_memory.u_sram7.mem[2047] = 32'h00000000;
+    end
+
+end
+
+always @(u_chip_top.pinaka_top_instance.axi_slave_wrapper_data_mem_instance.u_data_memory.u_sram7.mem[2047]) begin
+
+    $display("[%0t] SRAM7[2047] = %08h",$time,
+            
+        u_chip_top.pinaka_top_instance.axi_slave_wrapper_data_mem_instance.u_data_memory.u_sram7.mem[2047]);
+end
+
+always @(posedge u_chip_top.pinaka_top_instance.axi_slave_wrapper_data_mem_instance.ACLK) begin
+
+
+    if (handshake_core0_from_sv_to_c)
+    begin
+
+        u_chip_top.pinaka_top_instance.axi_slave_wrapper_data_mem_instance.u_data_memory.u_sram3.mem[2047] = 32'h000007EA;
+
+        $display("[%0t] HANDSHAKE CORE0 : Response Sent from SV to C",$time);
+
+        handshake_core0_from_sv_to_c = 1'b0;
+    end
+
+
+    
+    if (handshake_core1_from_sv_to_c)
+    begin
+
+        u_chip_top.pinaka_top_instance.axi_slave_wrapper_data_mem_instance.u_data_memory.u_sram7.mem[2047] = 32'h000007EA;
+
+        $display("[%0t] HANDSHAKE CORE1 : Response Sent from SV to C",$time);
+
+        handshake_core1_from_sv_to_c = 1'b0;
+    end
+
+end
+
+
+/*
 //C print mechanism
 //C info print
 always @(u_chip_top.pinaka_top_instance.axi_slave_wrapper_data_mem_instance.u_data_memory.u_sram7.mem[2045]) begin
@@ -440,12 +570,61 @@ end
 always @(u_chip_top.pinaka_top_instance.axi_slave_wrapper_data_mem_instance.u_data_memory.u_sram7.mem[2044]) begin
    $display("[C_PRINT][ERROR]:%h",u_chip_top.pinaka_top_instance.axi_slave_wrapper_data_mem_instance.u_data_memory.u_sram7.mem[2044]);
 end
+*/
+
+// ============================================================
+// CORE 0 INFO PRINT
+// ============================================================
+
+always @(u_chip_top.pinaka_top_instance.axi_slave_wrapper_data_mem_instance.u_data_memory.u_sram3.mem[2045])
+begin
+
+    $display("[C_PRINT][CORE0][INFO]: %h",u_chip_top.pinaka_top_instance.axi_slave_wrapper_data_mem_instance.u_data_memory.u_sram3.mem[2045]);
+
+end
+
+
+// ============================================================
+// CORE 0 ERROR PRINT
+// ============================================================
+
+always @(u_chip_top.pinaka_top_instance.axi_slave_wrapper_data_mem_instance.u_data_memory.u_sram3.mem[2044])
+begin
+
+    $display("[C_PRINT][CORE0][ERROR]: %h",u_chip_top.pinaka_top_instance.axi_slave_wrapper_data_mem_instance.u_data_memory.u_sram3.mem[2044]);
+
+end
+
+
+// ============================================================
+// CORE 1 INFO PRINT
+// ============================================================
+
+always @(u_chip_top.pinaka_top_instance.axi_slave_wrapper_data_mem_instance.u_data_memory.u_sram7.mem[2045])
+begin
+
+    $display("[C_PRINT][CORE1][INFO]: %h",u_chip_top.pinaka_top_instance.axi_slave_wrapper_data_mem_instance.u_data_memory.u_sram7.mem[2045]);
+
+end
+
+
+// ============================================================
+// CORE 1 ERROR PRINT
+// ============================================================
+
+always @(u_chip_top.pinaka_top_instance.axi_slave_wrapper_data_mem_instance.u_data_memory.u_sram7.mem[2044])
+begin
+
+    $display("[C_PRINT][CORE1][ERROR]: %h",u_chip_top.pinaka_top_instance.axi_slave_wrapper_data_mem_instance.u_data_memory.u_sram7.mem[2044]);
+
+end
+
+
 
 initial begin
 	$shm_open("wave.shm");
 	$shm_probe("ACTMF");
 end
-
 //********** MMU PTE Delay Model starts ****************\\
 /*
     int pte_resp_delay;
