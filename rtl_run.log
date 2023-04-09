@@ -1,5 +1,5 @@
 xrun(64): 20.09-s009: (c) Copyright 1995-2021 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	20.09-s009: Started on Apr 09, 2023 at 19:49:49 IST
+TOOL:	xrun(64)	20.09-s009: Started on Apr 09, 2023 at 19:57:52 IST
 xrun
 	-uvm
 	-sv
@@ -265,9 +265,9 @@ xrun
 	+CORE1_SOC_TEST=soc_base_test
 	+CORE0_C_TEST=dc_beq
 	+CORE1_C_TEST=dummy
-	+ntb_random_seed=48137
-	+log_dir=/home/train70/Desktop/dual_checker/push1_core0_1/sim/results/logs/dual_core_48137
-	-l /home/train70/Desktop/dual_checker/push1_core0_1/sim/results/logs/dual_core_48137/rtl_run.log
+	+ntb_random_seed=54242
+	+log_dir=/home/train70/Desktop/dual_checker/push1_core0_1/sim/results/logs/dual_core_54242
+	-l /home/train70/Desktop/dual_checker/push1_core0_1/sim/results/logs/dual_core_54242/rtl_run.log
 
    User defined plus("+") options:
 	+UVM_VERBOSITY=UVM_NONE
@@ -280,8 +280,8 @@ xrun
 	+CORE1_SOC_TEST=soc_base_test
 	+CORE0_C_TEST=dc_beq
 	+CORE1_C_TEST=dummy
-	+ntb_random_seed=48137
-	+log_dir=/home/train70/Desktop/dual_checker/push1_core0_1/sim/results/logs/dual_core_48137
+	+ntb_random_seed=54242
+	+log_dir=/home/train70/Desktop/dual_checker/push1_core0_1/sim/results/logs/dual_core_54242
 
 Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /tools/eda/cadence/XCELIUM2009/tools/methodology/UVM/CDNS-1.1d
 file: ../rtl/ip/axi2apb_bridge/axi_typedef_pkg.sv
@@ -2704,4 +2704,4 @@ xmvlog: *W,SPDUSD: Include directory ../dv/tb/pinmux_checker given but not used.
 	Total errors/warnings found outside modules and primitives:
 		errors: 1, warnings: 2
 xrun: *E,VLGERR: An error occurred during parsing.  Review the log file for errors with the code *E and fix those identified problems to proceed.  Exiting with code (status 1).
-TOOL:	xrun(64)	20.09-s009: Exiting on Apr 09, 2023 at 19:49:52 IST  (total: 00:00:03)
+TOOL:	xrun(64)	20.09-s009: Exiting on Apr 09, 2023 at 19:57:55 IST  (total: 00:00:03)
